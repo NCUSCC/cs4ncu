@@ -1,0 +1,13 @@
+site_name: cs4ncu 项目介绍
+theme:
+  name: material
+nav:
+  - 首页: index.md
+  - 课程内容概述:
+    - 第零课: docs/lesson0.md
+    - 第一课: docs/lesson1.md
+    - 第二课: docs/lesson2.md
+    - 第三课: docs/lesson3.md
+    - 第四课: docs/lesson4.md
+    - 第五课: docs/lesson5.md
+    - 第六课: docs/lesson6.md
