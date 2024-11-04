@@ -22,6 +22,9 @@
     
       <link rel="stylesheet" href="assets/stylesheets/main.0253249f.min.css">
       
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
       
 
 
@@ -34,10 +37,12 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Fira Code"}</style>
       
     
+    
+      <link rel="stylesheet" href="css/custom.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -49,7 +54,12 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="pink">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -58,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-mkdocs" class="md-skip">
+        <a href="#cs4ncu" class="md-skip">
           Skip to content
         </a>
       
@@ -101,8 +111,8 @@
       </div>
     </div>
     
+      
     
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -233,18 +243,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Commands
+      📖 目录
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Project layout
+      项目简介
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      课程内容概述
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      参与方式
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      联系我们
     </span>
   </a>
   
@@ -474,18 +511,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Commands
+      📖 目录
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Project layout
+      项目简介
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      课程内容概述
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      参与方式
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      联系我们
     </span>
   </a>
   
@@ -506,21 +570,68 @@
                   
 
 
-<h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
+<h1 id="cs4ncu">cs4ncu 项目介绍</h1>
+<p>欢迎来到 <strong>cs4ncu</strong> 项目！这是由南昌大学超算俱乐部打造并维护的公共 GitHub 仓库，旨在为南昌大学学生及互联网用户提供计算机科学的基础知识和技能。通过一系列精心编写的文档和教程，我们希望帮助您在计算机科学领域打下坚实的基础，开启探索之旅。</p>
+<hr />
+<h2 id="_1">📖 目录</h2>
 <ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
+<li><a href="#cs4ncu-项目介绍">cs4ncu 项目介绍</a></li>
+<li><a href="#-目录">📖 目录</a></li>
+<li><a href="#项目简介">项目简介</a></li>
+<li><a href="#课程内容概述">课程内容概述</a></li>
+<li><a href="#参与方式">参与方式</a></li>
+<li><a href="#联系我们">联系我们</a></li>
 </ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre>
+<hr />
+<h2 id="_2">项目简介</h2>
+<p><strong>cs4ncu</strong> 项目涵盖了从计算机基础知识到前沿技术应用的广泛主题，旨在降低学习门槛，让更多人享受计算机科学的魅力。无论您是计算机新手，还是有一定经验的学习者，都能在这里找到适合自己的内容。</p>
+<h2 id="_3">课程内容概述</h2>
+<ol>
+<li>
+<p><strong>第零课：赛博扫盲——计算机基础知识科普</strong><br />
+   了解计算机的基本组成、操作系统、网络原理等，帮助您摆脱“电脑小白”的困境。</p>
+</li>
+<li>
+<p><strong>第一课：计算机爱好者如是说——计算机的奇妙与实用</strong><br />
+   从不同角度探索计算机的重要性，了解其在各行各业的应用，以及学习计算机科学的意义。</p>
+</li>
+<li>
+<p><strong>第二课：昌大计算机地图——南昌大学的计算机学习指路</strong><br />
+   为您指引在南昌大学学习计算机的资源和途径，包括课程设置、实验室、社团活动和竞赛信息。</p>
+</li>
+<li>
+<p><strong>第三课：程序语言的妙趣横生——各种编程语言的特点与用法</strong><br />
+   介绍主流编程语言的特点、适用场景和学习建议，帮助您选择最适合的编程语言入门。</p>
+</li>
+<li>
+<p><strong>第四课：开发者的魔法工具箱——常用集成开发环境（IDE）介绍</strong><br />
+   掌握常用的开发工具和环境配置，提高编程效率，打造舒适的编码体验。</p>
+</li>
+<li>
+<p><strong>第五课：前沿技术与未来趋势</strong><br />
+   了解当今计算机科学领域的前沿技术，如人工智能、大数据、云计算等，拓宽视野，紧跟时代步伐。</p>
+</li>
+<li>
+<p><strong>第六课：心态篇——勇敢前行，自信成长</strong><br />
+   探讨学习计算机科学过程中可能遇到的挑战，分享调整心态和保持动力的技巧。</p>
+</li>
+</ol>
+<hr />
+<h2 id="_4">参与方式</h2>
+<p>我们诚挚地邀请对计算机科学感兴趣的同学和朋友参与到 <strong>cs4ncu</strong> 项目中来：</p>
+<ul>
+<li><strong>贡献内容</strong>：如果您有优质的文章、教程或学习资料，欢迎提交 Pull Request，与大家分享您的成果。</li>
+<li><strong>提出建议</strong>：对于项目的改进和优化，您可以通过提交 Issues 反馈宝贵的意见和建议。</li>
+<li><strong>加入讨论</strong>：参与讨论区，与其他学习者和开发者交流经验、分享心得，共同进步。</li>
+</ul>
+<hr />
+<h2 id="_5">联系我们</h2>
+<ul>
+<li><strong>GitHub 仓库</strong>：<a href="https://github.com/NCUSCC/cs4ncu">cs4ncu</a></li>
+<li><strong>南昌大学超算俱乐部官网</strong>：<a href="https://github.com/NCUSCC">访问官网</a></li>
+</ul>
+<hr />
+<p>让我们一起探索计算机科学的世界，开启无限可能的未来！🚀</p>
 
 
 
@@ -571,6 +682,8 @@ docs/
     
     
       <script src="assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="js/custom.js"></script>
       
     
   </body>
