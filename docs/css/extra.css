@@ -1,0 +1,110 @@
+/*
+  ===================================================================
+  cs4ncu - 自定义样式表 (v1.2 - 强力修复版)
+  ===================================================================
+*/
+
+/* 
+  第一部分：日间模式 (Default Scheme) - 全局颜色变量
+*/
+[data-md-color-scheme="default"] {
+    /* ... (这部分内容保持不变) ... */
+    --md-default-bg-color: #F9F7F7;
+    --md-default-fg-color: #112D4E;
+    --md-default-fg-color--light: #3F72AF;
+    --md-primary-fg-color: #F9F7F7;
+    --md-primary-bg-color: #112D4E;
+    --md-accent-fg-color: #3F72AF;
+    --md-code-bg-color: #DBE2EF;
+    --md-admonition-bg-color: #DBE2EF;
+    --md-typeset-table-color: rgba(219, 226, 239, 0.4);
+  }
+  
+  /* 
+    第二部分：特定组件样式覆盖 (全局)
+  */
+  .md-nav--secondary .md-nav__link--active { font-weight: 700; }
+  .md-toc__link--active { font-weight: 700; }
+  .md-toc__link {
+    border-left: 2px solid transparent;
+    padding-left: 14px;
+    transition: all 0.2s ease-in-out;
+  }
+  .md-content a[href^="http"] {
+    transition: color 0.2s ease-in-out;
+  }
+  
+  /* 
+    第三部分：日间模式 (Default Scheme) - 特定组件颜色
+  */
+  [data-md-color-scheme="default"] {
+    /* 左侧导航栏 */
+    .md-nav--secondary .md-nav__link--active { color: #112D4E !important; }
+    .md-nav__item--active > .md-nav__link { color: #3F72AF !important; }
+  
+    /* 右侧目录 */
+    .md-toc__link--active { color: #112D4E; border-left-color: #112D4E; }
+    .md-toc__link { color: #3F72AF; }
+    .md-toc__link:hover { color: #112D4E; }
+  
+    /* 外部链接 */
+    .md-content a[href^="http"] { color: #7fb0ec; }
+    .md-content a[href^="http"]:hover { color: #126ede; }
+  }
+  
+  /* 
+    第四部分：夜间模式 (Slate Scheme)
+  */
+  [data-md-color-scheme="slate"] {
+    /* --- 全局颜色变量 --- */
+    --md-default-bg-color: #27374D;
+    --md-default-fg-color: #DDE6ED;
+    --md-default-fg-color--light: #9DB2BF;
+    --md-primary-fg-color: #DDE6ED;
+    --md-primary-bg-color: #526D82;
+    --md-accent-fg-color: #9DB2BF;
+    --md-code-bg-color: #526D82;
+    --md-admonition-bg-color: #526D82;
+    --md-typeset-table-color: rgba(157, 178, 191, 0.2);
+  
+    /* --- 特定组件颜色 --- */
+    /* 左侧导航栏 */
+    .md-nav--secondary .md-nav__link--active { color: #DDE6ED !important; }
+    .md-nav__item--active > .md-nav__link { color: #9DB2BF !important; }
+  
+    /* 右侧目录 */
+    .md-toc__link--active { color: #DDE6ED; border-left-color: #9DB2BF; }
+    .md-toc__link { color: #9DB2BF; }
+    .md-toc__link:hover { color: #DDE6ED; }
+  
+    /* 外部链接 */
+    .md-content a[href^="http"] { color: #FFCB8B; }
+    .md-content a[href^="http"]:hover { color: #FFDDBB; }
+  }
+  
+  /*
+    ===================================================================
+    第五部分：终极修复 - 强制覆盖 :visited 链接颜色
+    ===================================================================
+  */
+  /*
+    我们将同时为日间和夜间模式下的 :visited 状态应用最高优先级覆盖。
+    这个规则将确保无论主题内部如何定义，我们的颜色设置都将生效。
+  */
+  
+  /* 日间模式下的 :visited 状态 */
+  [data-md-color-scheme="default"] .md-source:visited .md-source__repository {
+    color: var(--md-primary-fg-color) !important;
+  }
+  [data-md-color-scheme="default"] .md-source:visited .md-source__icon svg {
+    fill: var(--md-primary-fg-color) !important;
+  }
+  
+  
+  /* 夜间模式下的 :visited 状态 */
+  [data-md-color-scheme="slate"] .md-source:visited .md-source__repository {
+    color: var(--md-primary-fg-color) !important;
+  }
+  [data-md-color-scheme="slate"] .md-source:visited .md-source__icon svg {
+    fill: var(--md-primary-fg-color) !important;
+  }

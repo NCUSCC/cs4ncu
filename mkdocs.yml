@@ -1,12 +1,67 @@
-site_name: cs4ncu 项目介绍
+# mkdocs.yml
+
+# --- 网站基本信息 ---
+site_name: CS for NCU - 南昌大学计算机学习指北
+site_url: https://ncuscc.github.io/cs4ncu/
+site_author: 南昌大学超算俱乐部
+site_description: '一个由南昌大学超算俱乐部 (NCUSCC) 打造并维护，面向新生的计算机科学入门指南。'
+
+# --- 仓库信息 ---
+repo_name: NCUSCC/cs4ncu
+repo_url: https://github.com/NCUSCC/cs4ncu
+edit_uri: 'edit/main/docs/' # 允许用户直接在 GitHub 上编辑页面
+
+# --- 主题配置 ---
 theme:
   name: material
+  language: zh # 设置语言为中文
+
+  # --- 外观与功能 ---
+  # 我们在这里配置日夜间模式切换器。
+  # 具体的颜色将由 extra.css 文件精确控制。
   palette:
-    primary: 'cyan'
-    accent: 'pink'
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: 切换到夜间模式
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: 切换到日间模式
+
+  # 字体配置 (你的设置很好，予以保留)
   font:
     text: 'Roboto'
     code: 'Fira Code'
+
+  # Logo 和 Favicon (建议添加)
+  # logo: assets/images/logo.svg
+  # favicon: assets/images/favicon.png
+
+  # 增强功能
+  features:
+    - navigation.tabs # 启用顶部标签页导航
+    - navigation.sections # 左侧导航自动展开子章节
+    - content.code.copy # 为所有代码块添加“复制”按钮
+    - content.code.annotate # 允许代码块注释
+    - search.suggest # 搜索时提供建议
+
+# --- 插件配置 (强烈建议添加) ---
+plugins:
+  - search:
+      lang: zh # 启用中文搜索支持
+  - tags   # 启用标签系统
+
+# --- Markdown 扩展 (增强内容显示) ---
+markdown_extensions:
+  - admonition # 支持美观的提示框 (note, warning, tip 等)
+  - pymdownx.details # 支持可折叠的内容块
+  - pymdownx.superfences # 支持嵌套的代码块和图表
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+
+# --- 导航结构 (你的设置很好，予以保留) ---
 nav:
   - 首页: index.md
   - 第零课：赛博扫盲:
@@ -23,7 +78,9 @@ nav:
   - 第四课: lesson4.md
   - 第五课: lesson5.md
   - 第六课: lesson6.md
+
+# --- 自定义文件链接 (你的设置很好，予以保留) ---
 extra_css:
-  - 'css/custom.css'
+  - 'css/extra.css'
 extra_javascript:
   - 'js/custom.js'
