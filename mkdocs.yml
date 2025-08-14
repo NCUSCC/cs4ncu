@@ -15,24 +15,31 @@ edit_uri: 'edit/main/docs/' # 允许用户直接在 GitHub 上编辑页面
 theme:
   name: material
   language: zh # 设置语言为中文
+  custom_dir: overrides
 
   # --- 外观与功能 ---
   # 我们在这里配置日夜间模式切换器。
   # 具体的颜色将由 extra.css 文件精确控制。
   palette:
-    - scheme: default
-      toggle:
-        icon: material/brightness-7
-        name: 切换到夜间模式
-    - scheme: slate
-      toggle:
-        icon: material/brightness-4
-        name: 切换到日间模式
+  - scheme: default
+    primary: custom  # <-- 激活自定义颜色
+    accent: custom   # <-- 激活自定义颜色
+    toggle:
+      icon: material/brightness-7
+      name: 切换到夜间模式
+
+  # 夜间模式：告诉主题使用你在 CSS 中定义的 'slate' 方案
+  - scheme: slate
+    primary: custom  # <-- 激活自定义颜色
+    accent: custom   # <-- 激活自定义颜色
+    toggle:
+      icon: material/brightness-4
+      name: 切换到日间模式
 
   # 字体配置 (你的设置很好，予以保留)
   font:
     text: 'Roboto'
-    code: 'Fira Code'
+    code: 'JetBrains Mono'
 
   # Logo 和 Favicon (建议添加)
   # logo: assets/images/logo.svg
@@ -44,7 +51,9 @@ theme:
     - navigation.sections # 左侧导航自动展开子章节
     - content.code.copy # 为所有代码块添加“复制”按钮
     - content.code.annotate # 允许代码块注释
+    - content.code.select
     - search.suggest # 搜索时提供建议
+    - navigation.tags 
 
 # --- 插件配置 (强烈建议添加) ---
 plugins:
@@ -52,32 +61,86 @@ plugins:
       lang: zh # 启用中文搜索支持
   - tags   # 启用标签系统
 
+
 # --- Markdown 扩展 (增强内容显示) ---
+# 合并后的 mkdocs.yml 配置
+
 markdown_extensions:
-  - admonition # 支持美观的提示框 (note, warning, tip 等)
-  - pymdownx.details # 支持可折叠的内容块
-  - pymdownx.superfences # 支持嵌套的代码块和图表
-  - pymdownx.highlight:
-      anchor_linenums: true
+  # --- 基础与美化扩展 ---
+
+  # Admonition: 漂亮的提示框 (note, warning, tip 等)
+  - admonition
+
+  # Details: 可折叠的内容块
+  - pymdownx.details
+  
+  # SmartyPants: 自动将普通标点转换为更美观的印刷体标点
+  - pymdownx.smartsymbols
+
+  # Tabbed: 创建可以切换内容的标签页
+  - pymdownx.tabbed:
+      alternate_style: true
+
+  # --- 代码与高亮扩展 ---
+
+  # SuperFences: 强大的代码块，支持嵌套和图表
+  - pymdownx.superfences
+
   - pymdownx.inlinehilite
+
+  # Highlight: 为代码块提供语法高亮 (合并了两个列表的配置)
+  - pymdownx.highlight:
+      anchor_linenums: true # 允许链接到代码的特定行
+      line_spans: __span    # (来自第二个列表) 方便 CSS 进行更细致的样式控制
+      pygments_lang_class: true
+
+  # InlineHilite: 支持行内代码高亮
+  - pymdownx.inlinehilite
+
+  # --- 功能与交互扩展 ---
+
+  # Tasklist: 可交互的任务列表/清单
+  - pymdownx.tasklist:
+      custom_checkbox: true # 允许用 CSS 自定义复选框的样式
+
+  # CriticMarkup: 支持建议修订的语法，方便协作审阅
+  - pymdownx.critic
+
+  # TOC (Table of Contents): 自动生成目录
+  - toc:
+      permalink: true # 为每个标题添加一个永久链接图标
 
 # --- 导航结构 (你的设置很好，予以保留) ---
 nav:
-  - 首页: index.md
-  - 第零课：赛博扫盲:
-    - 课程介绍: lesson0/intro.md
-    - 自助解决问题: lesson0/self-help.md
-    - 认识笔记本电脑: lesson0/laptop.md
-    - 高效打字技巧: lesson0/typing.md
-    - 文件管理基础: lesson0/files.md
-    - 常用软件科普: lesson0/software.md
-    - 开发环境配置: lesson0/development.md
-  - 第一课: lesson1.md
-  - 第二课: lesson2.md
-  - 第三课: lesson3.md
-  - 第四课: lesson4.md
-  - 第五课: lesson5.md
-  - 第六课: lesson6.md
+  - '首页': 'index.md'
+  - '章一：赛博扫盲':
+    - '本章导览': 'chapters/ch1-cyber-literacy/index.md'
+    - '自助解决问题': 'chapters/ch1-cyber-literacy/01-self-help.md'
+    - '认识笔记本电脑': 'chapters/ch1-cyber-literacy/02-laptop.md'
+    - '高效打字技巧': 'chapters/ch1-cyber-literacy/03-typing.md'
+    - '文件管理基础': 'chapters/ch1-cyber-literacy/04-files.md'
+    - '常用软件科普': 'chapters/ch1-cyber-literacy/05-software.md'
+    - '开发环境配置': 'chapters/ch1-cyber-literacy/06-development.md'
+  - '章二：(规划中)':
+    - '敬请期待...': 'chapters/ch2-prelude-to-programming/index.md'
+  - '章三：(规划中)':
+    - '敬请期待...': 'chapters/ch3-deep-dive/index.md'
+  - '章四：(规划中)':
+    - '敬请期待...': 'chapters/ch4-data-structures/index.md'
+  - '章五：(规划中)':
+    - '敬请期待...': 'chapters/ch5-algorithms/index.md'
+  - '章六：(规划中)':
+    - '敬请期待...': 'chapters/ch6-project-practice/index.md'
+  - 指南与社区:
+    - 定制化指南:
+      - '自定义样式 (CSS)': 'guides/customization/styling.md'
+      - '自定义提示框 (Admonition)': 'guides/customization/admonitions.md'
+    - 贡献指南:
+      - '如何贡献 (How to Contribute)': 'guides/contributing/how-to-contribute.md'
+      - '行为准则 (Code of Conduct)': 'guides/contributing/code-of-conduct.md'
+      - '写作规范 (Writing Style Guide)': 'guides/contributing/writing-guide.md'
+      - '搭建开发环境': 'guides/contributing/development-setup.md'
+  - '标签索引': 'tags.md'
 
 # --- 自定义文件链接 (你的设置很好，予以保留) ---
 extra_css:
