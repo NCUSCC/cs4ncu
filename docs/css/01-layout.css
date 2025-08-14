@@ -1,0 +1,78 @@
+/**
+ * @file        01-layout.css
+ * @description 网站布局 (Layout) 样式。
+ * @summary
+ *   定义了网站主要结构元素的视觉表现，例如左右导航栏、目录等。
+ *   这些样式依赖于 `00-variables.css` 中定义的颜色变量。
+ */
+
+/* ==========================================================================
+   1. 结构性调整 (与颜色无关)
+   ========================================================================== */
+
+/* 增强激活状态的导航链接的视觉重量 */
+.md-nav--secondary .md-nav__link--active,
+.md-toc__link--active {
+  font-weight: 700;
+}
+
+/* 为右侧目录链接添加左边框和过渡效果，提升交互体验 */
+.md-toc__link {
+  border-left: 2px solid transparent;
+  padding-left: 14px;
+  transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+
+/* ==========================================================================
+   2. 日间模式 (Default Scheme) 布局颜色
+   ========================================================================== */
+
+[data-md-color-scheme="default"] {
+  /* 左侧导航栏 */
+  .md-nav__item--active > .md-nav__link {
+    color: var(--md-accent-fg-color) !important;
+  }
+  .md-nav--secondary .md-nav__link--active {
+    color: var(--md-default-fg-color) !important;
+  }
+
+  /* 右侧目录 */
+  .md-toc__link {
+    color: var(--md-default-fg-color--light);
+  }
+  .md-toc__link:hover {
+    color: var(--md-default-fg-color);
+  }
+  .md-toc__link--active {
+    color: var(--md-default-fg-color);
+    border-left-color: var(--md-default-fg-color);
+  }
+}
+
+
+/* ==========================================================================
+   3. 夜间模式 (Slate Scheme) 布局颜色
+   ========================================================================== */
+
+[data-md-color-scheme="slate"] {
+  /* 左侧导航栏 */
+  .md-nav__item--active > .md-nav__link {
+    color: var(--md-default-fg-color--light) !important;
+  }
+  .md-nav--secondary .md-nav__link--active {
+    color: var(--md-default-fg-color) !important;
+  }
+
+  /* 右侧目录 */
+  .md-toc__link {
+    color: var(--md-default-fg-color--light);
+  }
+  .md-toc__link:hover {
+    color: var(--md-default-fg-color);
+  }
+  .md-toc__link--active {
+    color: var(--md-default-fg-color);
+    border-left-color: var(--md-accent-fg-color);
+  }
+}

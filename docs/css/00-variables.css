@@ -1,0 +1,94 @@
+/**
+ * @file        00-variables.css
+ * @description 设计令牌 (Design Tokens) - 定义网站全局颜色方案。
+ * @version     2.0
+ * @author      [Your Name/Team]
+ * @summary
+ *   此文件是网站视觉设计的核心，通过 CSS 自定义属性 (变量) 定义了所有颜色方案。
+ *   这种方法实现了样式与结构的分离，使得全局视觉风格的修改和维护变得高效、可控。
+ *   主要包含日间模式 (default) 和夜间模式 (slate) 的完整颜色定义。
+ */
+
+/* ==========================================================================
+   1. 日间模式 (Default Scheme) 变量
+   ========================================================================== */
+
+   [data-md-color-scheme="default"] {
+    /* --- 主色板 (Primary Palette) --- */
+    --md-primary-fg-color:        #F9F7F7; /* 主要元素的前景色 (如 Top Bar 文本/图标) */
+    --md-primary-bg-color:        #112D4E; /* 主要元素的背景色 (如 Top Bar 背景) */
+  
+    /* --- 强调色 (Accent Palette) --- */
+    --md-accent-fg-color:         #0052b5; /* 可交互元素的高亮色 (如悬停链接、激活按钮) */
+  
+    /* --- 默认/基础色 (Default Palette) --- */
+    --md-default-fg-color:        #112D4E; /* 页面主要文本颜色 */
+    --md-default-fg-color--light: #3F72AF; /* 较浅的文本颜色 (如次要信息、链接) */
+    --md-default-bg-color:        #F9F7F7; /* 页面主背景色 */
+  
+    /* --- 特定组件颜色 --- */
+    --md-typeset-a-color:         #3F72AF; /* 正文链接颜色，与次要文本颜色保持一致 */
+    --md-admonition-bg-color:     #F7F7F7;                          /* 提示框背景色 */
+    --md-typeset-table-color:     rgba(219, 226, 239, 0.4);         /* 表格边框和条纹色 */
+  
+    /* --- 代码块颜色 (Code Palette) --- */
+    --md-code-bg-color:           #faf4ed; /* 代码块背景色 (Rosé Pine Dawn - Base) */
+    --md-code-fg-color:           #575279; /* 代码块默认文字颜色 (Rosé Pine Dawn - Text) */
+    --md-code-hl-color:           rgba(110, 106, 134, 0.15); /* 高亮行背景色 */
+  
+    /* 代码语法高亮颜色 (Rosé Pine Dawn) */
+    --md-code-hl-keyword-color:     #907aa9;  /* 关键字 (Iris) e.g., if, for, import */
+    --md-code-hl-operator-color:    #797593;  /* 操作符 (Subtle) e.g., =, +, > */
+    --md-code-hl-function-color:    #d7827e;  /* 函数名 (Rose) e.g., print() */
+    --md-code-hl-string-color:      #ea9d34;  /* 字符串 (Gold) e.g., "hello" */
+    --md-code-hl-number-color:      #ea9d34;  /* 数字 (Gold) e.g., 123, 4.5 */
+    --md-code-hl-constant-color:    #ea9d34;  /* 常量 (Gold) e.g., True, False, NULL */
+    --md-code-hl-comment-color:     #9893a5;  /* 注释 (Muted) e.g., # a comment */
+    --md-code-hl-name-color:        #575279;  /* 变量、类名等 (Text) */
+    --md-code-hl-special-color:     #b4637a;  /* 特殊变量、标签 (Love) */
+    --md-code-hl-variable-color:    #575279;  /* 变量 (Text) */
+    --md-code-hl-punctuation-color: #9893a5;  /* 标点 (Muted) e.g., (), {} */
+    --md-code-hl-generic-color:     #286983;  /* 泛型、注解 (Pine) */
+  }
+  
+  /* ==========================================================================
+     2. 夜间模式 (Slate Scheme) 变量
+     ========================================================================== */
+  
+  [data-md-color-scheme="slate"] {
+    /* --- 主色板 (Primary Palette) --- */
+    --md-primary-fg-color:        #27374D; /* 主要元素的前景色 (如 Top Bar 文本/图标) */
+    --md-primary-bg-color:        #DDE6ED; /* 主要元素的背景色 (如 Top Bar 背景) */
+  
+    /* --- 强调色 (Accent Palette) --- */
+    --md-accent-fg-color:         #90afc2; /* 可交互元素的高亮色 (如悬停链接、激活按钮) */
+  
+    /* --- 默认/基础色 (Default Palette) --- */
+    --md-default-fg-color:        #DDE6ED; /* 页面主要文本颜色 */
+    --md-default-fg-color--light: #9DB2BF; /* 较浅的文本颜色 (如次要信息、链接) */
+    --md-default-bg-color:        #27374D; /* 页面主背景色 */
+  
+    /* --- 特定组件颜色 --- */
+    --md-typeset-a-color:         #9DB2BF; /* 正文链接颜色，与次要文本颜色保持一致 */
+    --md-admonition-bg-color:     #29394e;                          /* 提示框背景色 */
+    --md-typeset-table-color:     rgba(157, 178, 191, 0.2);         /* 表格边框和条纹色 */
+  
+    /* --- 代码块颜色 (Code Palette) --- */
+    --md-code-bg-color:           #191724; /* 代码块背景色 (Rosé Pine Moon - Base) */
+    --md-code-fg-color:           #e0def4; /* 代码块默认文字颜色 (Rosé Pine Moon - Text) */
+    --md-code-hl-color:           rgba(129, 124, 157, 0.15); /* 高亮行背景色 */
+  
+    /* 代码语法高亮颜色 (Rosé Pine Moon) */
+    --md-code-hl-keyword-color:     #c4a7e7;  /* 关键字 (Iris) */
+    --md-code-hl-operator-color:    #908caa;  /* 操作符 (Subtle) */
+    --md-code-hl-function-color:    #eb6f92;  /* 函数名 (Rose) */
+    --md-code-hl-string-color:      #f6c177;  /* 字符串 (Gold) */
+    --md-code-hl-number-color:      #f6c177;  /* 数字 (Gold) */
+    --md-code-hl-constant-color:    #f6c177;  /* 常量 (Gold) */
+    --md-code-hl-comment-color:     #6e6a86;  /* 注释 (Muted) */
+    --md-code-hl-name-color:        #e0def4;  /* 变量、类名等 (Text) */
+    --md-code-hl-special-color:     #ebbcba;  /* 特殊变量、标签 (Love) */
+    --md-code-hl-variable-color:    #e0def4;  /* 变量 (Text) */
+    --md-code-hl-punctuation-color: #6e6a86;  /* 标点 (Muted) */
+    --md-code-hl-generic-color:     #31748f;  /* 泛型、注解 (Pine) */
+  }
