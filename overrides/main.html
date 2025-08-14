@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block body %}
+  {{ super() }}
+  <!--
+    定义全局 SVG 裁剪路径 (clip-path) 模具。
+    这个 SVG 是不可见的 (width="0" height="0")，它只作为 CSS 的引用源。
+    我们将其绝对定位到屏幕之外，以确保它不占用任何布局空间。
+  -->
+  <svg width="0" height="0" style="position: absolute;">
+    <clipPath id="squircle" clipPathUnits="objectBoundingBox">
+      <!--
+        这个 path 数据经过精心设计，以创建平滑的圆角。
+        "M 0.5,0 C 0,0 0,0 0,0.5 S 0,1 0.5,1 1,1 1,0.5 1,0 0.5,0"
+        这个路径比文章中的更平滑，效果更好。
+      -->
+      <path d="M 0.5,0 C 0,0 0,0 0,0.5 C 0,1 0,1 0.5,1 S 1,1 1,0.5 C 1,0 1,0 0.5,0 Z" />
+    </clipPath>
+  </svg>
+{% endblock %}
