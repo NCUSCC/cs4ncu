@@ -1,0 +1,18 @@
+/**
+ * @file        extra.css
+ * @description 主自定义样式表入口 (Main Custom Stylesheet Entrypoint)。
+ * @author      南昌大学超算俱乐部 (NCUSCC)
+ * @version     2.0.0
+ * @see         https://github.com/NCUSCC/cs4ncu
+ *
+ * @summary
+ *   此文件作为所有自定义 CSS 模块的加载器。
+ *   请不要在此文件中直接编写样式规则，应将规则添加到对应的模块化文件中。
+ *   加载顺序经过精心设计，以确保正确的样式覆盖和依赖关系。
+ */
+
+ @import "00-variables.css";    /* 核心：定义全局颜色、字体等设计变量 */
+ @import "01-layout.css";       /* 结构：定义网站主要布局元素的样式，如导航栏、目录 */
+ @import "02-components.css";   /* 组件：定义通用 UI 组件的样式，如链接、表格 */
+ @import "03-admonitions.css";  /* 插件：定义 admonition (提示框) 等插件的特定样式 */
+ @import "99-fixes.css";        /* 修复：包含高优先级的样式，用于修正或覆盖特定问题 */

@@ -1,0 +1,32 @@
+/**
+ * @file        02-components.css
+ * @description UI 组件 (Components) 样式。
+ * @summary
+ *   定义了内容区域中常见 UI 元素的样式，如外部链接等。
+     可能要遗弃，设置的有问题
+ */
+
+/* ==========================================================================
+   1. 外部链接
+   ========================================================================== */
+
+/* 为所有外部链接添加平滑的颜色过渡效果 */
+.md-content a[href^="http"] {
+    transition: color 0.2s ease-in-out;
+  }
+  
+  /* 日间模式下的外部链接颜色 */
+  [data-md-color-scheme="default"] .md-content a[href^="http"] {
+    color: #7fb0ec;
+  }
+  [data-md-color-scheme="default"] .md-content a[href^="http"]:hover {
+    color: #c97016;
+  }
+  
+  /* 夜间模式下的外部链接颜色 */
+  [data-md-color-scheme="slate"] .md-content a[href^="http"] {
+    color: #FFCB8B;
+  }
+  [data-md-color-scheme="slate"] .md-content a[href^="http"]:hover {
+    color: #FFDDBB;
+  }
