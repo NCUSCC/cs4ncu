@@ -15,22 +15,23 @@
 
    [data-md-color-scheme="default"] {
     /* --- 主色板 (Primary Palette) --- */
-    --md-primary-fg-color:        #F9F7F7; /* 主要元素的前景色 (如 Top Bar 文本/图标) */
-    --md-primary-bg-color:        #112D4E; /* 主要元素的背景色 (如 Top Bar 背景) */
-  
+    --md-primary-fg-color:        #F9F7F7; /* 主要元素的背景色 (如 Top Bar 背景) */
+    --md-primary-bg-color:        #112D4E; /* 主要元素的前景色 (如 Top Bar 文本/图标) */
+    --md-primary-fg-color--dark:  #F9F7F7; 
+    --md-primary-fg-color--light: #F9F7F7; 
     /* --- 强调色 (Accent Palette) --- */
     --md-accent-fg-color:         #0052b5; /* 可交互元素的高亮色 (如悬停链接、激活按钮) */
   
     /* --- 默认/基础色 (Default Palette) --- */
     --md-default-fg-color:        #112D4E; /* 页面主要文本颜色 */
     --md-default-fg-color--light: #3F72AF; /* 较浅的文本颜色 (如次要信息、链接) */
+    
     --md-default-bg-color:        #F9F7F7; /* 页面主背景色 */
   
     /* --- 特定组件颜色 --- */
     --md-typeset-a-color:         #3F72AF; /* 正文链接颜色，与次要文本颜色保持一致 */
     --md-admonition-bg-color:     #F7F7F7;                          /* 提示框背景色 */
-    --md-typeset-table-color:     rgba(219, 226, 239, 0.4);         /* 表格边框和条纹色 */
-  
+    --md-typeset-table-color:     rgba(219, 226, 239, 0.4); 
     /* --- 代码块颜色 (Code Palette) --- */
     --md-code-bg-color:           #faf4ed; /* 代码块背景色 (Rosé Pine Dawn - Base) */
     --md-code-fg-color:           #575279; /* 代码块默认文字颜色 (Rosé Pine Dawn - Text) */
@@ -59,6 +60,8 @@
     /* --- 主色板 (Primary Palette) --- */
     --md-primary-fg-color:        #27374D; /* 主要元素的前景色 (如 Top Bar 文本/图标) */
     --md-primary-bg-color:        #DDE6ED; /* 主要元素的背景色 (如 Top Bar 背景) */
+    --md-primary-fg-color--dark:  #27374D; 
+    --md-primary-fg-color--light: #27374D;
   
     /* --- 强调色 (Accent Palette) --- */
     --md-accent-fg-color:         #90afc2; /* 可交互元素的高亮色 (如悬停链接、激活按钮) */

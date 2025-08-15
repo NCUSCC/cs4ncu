@@ -14,19 +14,3 @@
 .md-content a[href^="http"] {
     transition: color 0.2s ease-in-out;
   }
-  
-  /* 日间模式下的外部链接颜色 */
-  [data-md-color-scheme="default"] .md-content a[href^="http"] {
-    color: #7fb0ec;
-  }
-  [data-md-color-scheme="default"] .md-content a[href^="http"]:hover {
-    color: #c97016;
-  }
-  
-  /* 夜间模式下的外部链接颜色 */
-  [data-md-color-scheme="slate"] .md-content a[href^="http"] {
-    color: #FFCB8B;
-  }
-  [data-md-color-scheme="slate"] .md-content a[href^="http"]:hover {
-    color: #FFDDBB;
-  }
