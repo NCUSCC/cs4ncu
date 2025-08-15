@@ -65,14 +65,6 @@
          <lastmod>2025-08-15</lastmod>
     </url>
     <url>
-         <loc>https://ncuscc.github.io/cs4ncu/chapters/ch2-prelude-to-programming/</loc>
-         <lastmod>2025-08-15</lastmod>
-    </url>
-    <url>
-         <loc>https://ncuscc.github.io/cs4ncu/chapters/ch3-deep-dive/</loc>
-         <lastmod>2025-08-15</lastmod>
-    </url>
-    <url>
          <loc>https://ncuscc.github.io/cs4ncu/chapters/ch3-ncu-learning-guide/</loc>
          <lastmod>2025-08-15</lastmod>
     </url>
@@ -82,10 +74,6 @@
     </url>
     <url>
          <loc>https://ncuscc.github.io/cs4ncu/chapters/ch3-ncu-learning-guide/02-find-your-tribe/</loc>
-         <lastmod>2025-08-15</lastmod>
-    </url>
-    <url>
-         <loc>https://ncuscc.github.io/cs4ncu/chapters/ch4-data-structures/</loc>
          <lastmod>2025-08-15</lastmod>
     </url>
     <url>
@@ -105,15 +93,11 @@
          <lastmod>2025-08-15</lastmod>
     </url>
     <url>
-         <loc>https://ncuscc.github.io/cs4ncu/chapters/ch5-algorithms/</loc>
-         <lastmod>2025-08-15</lastmod>
-    </url>
-    <url>
-         <loc>https://ncuscc.github.io/cs4ncu/chapters/ch6-project-practice/</loc>
-         <lastmod>2025-08-15</lastmod>
-    </url>
-    <url>
          <loc>https://ncuscc.github.io/cs4ncu/guides/contributing/code-of-conduct/</loc>
+         <lastmod>2025-08-15</lastmod>
+    </url>
+    <url>
+         <loc>https://ncuscc.github.io/cs4ncu/guides/contributing/development-log/</loc>
          <lastmod>2025-08-15</lastmod>
     </url>
     <url>
@@ -130,6 +114,10 @@
     </url>
     <url>
          <loc>https://ncuscc.github.io/cs4ncu/guides/customization/admonitions/</loc>
+         <lastmod>2025-08-15</lastmod>
+    </url>
+    <url>
+         <loc>https://ncuscc.github.io/cs4ncu/guides/customization/code-blocks-styling/</loc>
          <lastmod>2025-08-15</lastmod>
     </url>
     <url>
