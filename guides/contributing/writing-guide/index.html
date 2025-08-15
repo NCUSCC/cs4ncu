@@ -15,10 +15,10 @@
         <link rel="canonical" href="https://ncuscc.github.io/cs4ncu/guides/contributing/writing-guide/">
       
       
-        <link rel="prev" href="../code-of-conduct/">
+        <link rel="prev" href="../development-setup/">
       
       
-        <link rel="next" href="../development-setup/">
+        <link rel="next" href="../writing-prompt/">
       
       
       <link rel="icon" href="../../../assets/ncuscc-logo.svg">
@@ -647,29 +647,6 @@
   
   <span class="md-ellipsis">
     必备软件推荐
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../chapters/ch1-farewell-to-newbie/06-dev-environment-setup/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    搭建基础开发环境
     
   </span>
   
@@ -1391,6 +1368,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../development-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    搭建开发环境
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1502,6 +1502,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="1. 用 admonition (提示框) 赋予段落生命">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      自定义样式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      官方默认样式
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1524,9 +1548,36 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      带标题的代码块
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      带行号的代码块
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#hl_lines" class="md-nav__link">
     <span class="md-ellipsis">
-      行号与高亮 (hl_lines)
+      使用高亮 (hl_lines) 的代码块
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      效果展示
     </span>
   </a>
   
@@ -1543,7 +1594,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       第三部分：内容结构与协作
     </span>
@@ -1593,6 +1644,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      第五部分：零散的细节
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1609,12 +1669,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../development-setup/" class="md-nav__link">
+      <a href="../writing-prompt/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    搭建开发环境
+    写作指令 (prompt)
     
   </span>
   
@@ -1671,10 +1731,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_7" >
         
           
-          <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5_7" id="__nav_5_7_label" tabindex="">
             
   
   
@@ -1687,8 +1747,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_6">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_7">
             <span class="md-nav__icon md-icon"></span>
             自定义指南
           </label>
@@ -1753,6 +1813,83 @@
   
   <span class="md-ellipsis">
     自定义代码块 (Code Blocks)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_8" id="__nav_5_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    开发附录
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_8">
+            <span class="md-nav__icon md-icon"></span>
+            开发附录
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendices/admonitions-examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    提示框样例
     
   </span>
   
@@ -1936,6 +2073,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="1. 用 admonition (提示框) 赋予段落生命">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      自定义样式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      官方默认样式
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1958,9 +2119,36 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      带标题的代码块
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      带行号的代码块
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#hl_lines" class="md-nav__link">
     <span class="md-ellipsis">
-      行号与高亮 (hl_lines)
+      使用高亮 (hl_lines) 的代码块
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      效果展示
     </span>
   </a>
   
@@ -1977,7 +2165,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       第三部分：内容结构与协作
     </span>
@@ -2022,6 +2210,15 @@
   <a href="#emoji" class="md-nav__link">
     <span class="md-ellipsis">
       第四部分：Emoji 使用的艺术
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      第五部分：零散的细节
     </span>
   </a>
   
@@ -2215,17 +2412,31 @@
 <hr />
 <h2 id="_3">第二部分：善用项目特性<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>我们启用了强大的 MkDocs 扩展，它们是你的“神兵利器” 🗡️，请在合适的场景下尽情使用。</p>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 附上如何正确写这些语法</li>
-</ul>
 <h3 id="1-admonition">1. 用 <code>admonition</code> (提示框) 赋予段落生命<a class="headerlink" href="#1-admonition" title="Permanent link">&para;</a></h3>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 要更新一下，到时候先明确一下 一些东西，意向也好，但是肯定是要在 重写一下  admonition 的客制化内容，再处理一下</li>
-</ul>
-<p>不同的信息，需要不同的“语气”。提示框就是我们表达语气的最佳工具。</p>
-<div class="admonition example">
-<p class="admonition-title">一个好的例子，就像指南针 🧭</p>
-<p>它能清晰地为你指明理解复杂概念的方向。下面是不同提示框的核心用途：</p>
+<p>不同的信息，需要不同的“语气”。提示框就是我们表达语气的最佳工具。<a href="../../../guides/appendices/admonitions-examples/">提示框样例</a>里面收录了所有本框架支持的提示框样式。</p>
+<details class="example">
+<summary>Admonition 用法示例</summary>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>!!! reminder &quot;这是一个标题&quot;
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    这里是提示框的内容，需要缩进四个空格。
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>也可以包含列表。
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>和其他 Markdown 元素。
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>??? danger &quot;这是一个默认折叠的折叠框&quot;
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    这里是提示框的内容，需要缩进四个空格。
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>也可以包含列表。
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>和其他 Markdown 元素。
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>???+ danger &quot;这是一个默认展开的折叠框&quot;
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    这里是提示框的内容，需要缩进四个空格。
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>也可以包含列表。
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>和其他 Markdown 元素。  
+</span></code></pre></div>
+</details>
+<h4 id="_4">自定义样式<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p>这些是我们精心设计过的、具有独特视觉风格的提示框。</p>
 <table>
 <thead>
 <tr>
@@ -2238,48 +2449,114 @@
 <tr>
 <td style="text-align: left;"><strong><code>danger</code></strong></td>
 <td style="text-align: left;">龙 🐉</td>
-<td style="text-align: left;"><strong>不可逆的风险</strong></td>
+<td style="text-align: left;"><strong>严重警告</strong>：用于描述不可逆的、有破坏性的操作或重大风险。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong><code>alert</code></strong></td>
-<td style="text-align: left;">克苏鲁 🗼</td>
-<td style="text-align: left;"><strong>潜在的陷阱</strong></td>
+<td style="text-align: left;">克苏鲁 🐙</td>
+<td style="text-align: left;"><strong>潜在陷阱</strong>：用于提醒用户注意可能导致非预期结果或错误的细节。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong><code>declaration</code></strong></td>
 <td style="text-align: left;">号角 🎺</td>
-<td style="text-align: left;"><strong>重要宣告/官方定义</strong></td>
+<td style="text-align: left;"><strong>重要宣告</strong>：用于发布官方定义、规则、原则或重要声明。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong><code>example</code></strong></td>
-<td style="text-align: left;">指南针 🧭</td>
-<td style="text-align: left;"><strong>指引性的例子</strong></td>
+<td style="text-align: left;">钥匙 🔑</td>
+<td style="text-align: left;"><strong>最佳实践</strong>：提供一个清晰、可参考的正面例子或操作指引。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong><code>reminder</code></strong></td>
 <td style="text-align: left;">感叹号 ❗</td>
-<td style="text-align: left;"><strong>友善的提醒/要点</strong></td>
+<td style="text-align: left;"><strong>友好提醒</strong>：用于强调关键点、备忘录或需要记住的重要信息。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong><code>story</code></strong></td>
 <td style="text-align: left;">书本 📖</td>
-<td style="text-align: left;"><strong>背景故事/个人经历</strong></td>
+<td style="text-align: left;"><strong>背景故事</strong>：用于讲述一段个人经历、项目历史或补充性的背景信息。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong><code>quote</code></strong></td>
 <td style="text-align: left;">引号 💬</td>
-<td style="text-align: left;"><strong>引用他人观点</strong></td>
+<td style="text-align: left;"><strong>引用观点</strong>：用于直接引用他人的话、书籍或文章中的段落。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong><code>author</code></strong></td>
-<td style="text-align: left;">笔者 ✍️</td>
-<td style="text-align: left;"><strong>作者的补充/题外话</strong></td>
+<td style="text-align: left;">笔者/羽毛笔 ✍️</td>
+<td style="text-align: left;"><strong>作者补充</strong>：用于作者发表一些题外话、个人见解或元评论。</td>
 </tr>
 </tbody>
 </table>
-</div>
+<hr />
+<h4 id="_5">官方默认样式<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p>这些是 Material for MkDocs 的标准类型，我们没有对其进行特殊样式定制，它们会显示主题的默认外观。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">类型 (<code>!!! &lt;type&gt;</code>)</th>
+<th style="text-align: left;">图标意象</th>
+<th style="text-align: left;">核心用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><code>note</code></strong></td>
+<td style="text-align: left;">铅笔 📝</td>
+<td style="text-align: left;"><strong>中性信息</strong>：用于提供补充性的、不带强烈感情色彩的普通信息。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>info</code></strong></td>
+<td style="text-align: left;">信息 ℹ️</td>
+<td style="text-align: left;"><strong>参考信息</strong>：与 <code>note</code> 类似，同样用于提供一般性的参考资料。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>abstract</code></strong></td>
+<td style="text-align: left;">摘要 📋</td>
+<td style="text-align: left;"><strong>内容摘要</strong>：用于在文章开头提供“太长不看”(TL;DR) 版本或总结。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>tip</code></strong></td>
+<td style="text-align: left;">灯泡 💡</td>
+<td style="text-align: left;"><strong>实用技巧</strong>：提供建议、捷径或能提高效率的小窍门。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>success</code></strong></td>
+<td style="text-align: left;">勾号 ✅</td>
+<td style="text-align: left;"><strong>成功状态</strong>：表示一个操作已成功完成或一个问题得到了正确解决。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>question</code></strong></td>
+<td style="text-align: left;">问号 ❓</td>
+<td style="text-align: left;"><strong>提出问题</strong>：用于常见问题解答 (FAQ) 或引导读者思考某个问题。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>failure</code></strong></td>
+<td style="text-align: left;">叉号 ❌</td>
+<td style="text-align: left;"><strong>失败状态</strong>：明确指出一个错误、失败的操作或不推荐的做法。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>bug</code></strong></td>
+<td style="text-align: left;">臭虫 🐞</td>
+<td style="text-align: left;"><strong>报告缺陷</strong>：专门用于描述一个已知的软件缺陷或问题。</td>
+</tr>
+</tbody>
+</table>
+<p>合理地使用这些提示框，会让你的文档结构分明，重点突出，极大提升读者的阅读体验。</p>
 <h3 id="2-tabbed">2. 用 <code>tabbed</code> (标签页) 化繁为简<a class="headerlink" href="#2-tabbed" title="Permanent link">&para;</a></h3>
 <p>当信息存在多个“平行世界”（如不同操作系统、不同配置方案）时，使用标签页来组织它们。</p>
+<details class="example">
+<summary>Tabbed 用法示例</summary>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>=== &quot;Windows 操作系统&quot;
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    在 Windows 上，下载 <span class="sb">`.exe`</span> 安装包，双击运行即可。
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>=== &quot;macOS 操作系统&quot;
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    在 macOS 上，我们推荐使用 Homebrew: <span class="sb">`brew install a-cool-tool`</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>=== &quot;Linux (Ubuntu) 操作系统&quot;
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    在 Linux 上，使用 <span class="sb">`apt`</span> 包管理器: <span class="sb">`sudo apt install a-cool-tool`</span>
+</span></code></pre></div>
+</details>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Windows 操作系统</label><label for="__tabbed_1_2">macOS 操作系统</label><label for="__tabbed_1_3">Linux (Ubuntu) 操作系统</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -2293,37 +2570,79 @@
 </div>
 </div>
 </div>
+<p>好的，完全没问题。为这一部分添加介绍性文本，可以让协作者更好地理解这些高级功能的价值和用法。</p>
+<p>下面是为您添加了介绍性文本后的 <code>高级代码块特性</code> 部分。我保持了您原有的结构和示例，只在其中穿插了解释性文字。</p>
+<hr />
 <h3 id="3">3. 高级代码块特性<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
-<h4 id="hl_lines">行号与高亮 (<code>hl_lines</code>)<a class="headerlink" href="#hl_lines" title="Permanent link">&para;</a></h4>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 有更多代码框相关的语法写法</li>
-</ul>
-<p>使用 <code>hl_lines</code> 引导读者关注代码的关键部分。</p>
-<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">示例代码</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span>
-<span class="normal"><a href="#__codelineno-0-5">5</a></span>
-<span class="normal"><a href="#__codelineno-0-6">6</a></span>
-<span class="normal"><a href="#__codelineno-0-7">7</a></span>
-<span class="normal"><a href="#__codelineno-0-8">8</a></span>
-<span class="normal"><a href="#__codelineno-0-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 这是一个 Python 示例</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="k">def</span><span class="w"> </span><span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>    <span class="c1"># 第 3 行将被高亮，这是函数的基线条件</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="hll">    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
-</span></span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>        <span class="k">return</span> <span class="n">n</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a>    <span class="c1"># 第 5-7 行将被高亮，展示递归调用的核心逻辑</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="hll">    <span class="n">result</span> <span class="o">=</span> <span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
-</span></span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="hll">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;fib(</span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2">) -&gt; </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span></span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="hll">    <span class="k">return</span> <span class="n">result</span>
+<p>标准的 Markdown 代码块足以展示代码，但通过 Material for MkDocs 启用的高级特性，我们可以将代码的呈现和解释提升到新的高度。这些功能对于编写技术教程、代码分析和文档至关重要。</p>
+<h4 id="_6">带标题的代码块<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<p>为代码块添加一个标题（通常是文件名）可以立即为读者提供上下文。这对于展示配置文件、脚本或不同文件之间的交互尤为重要。</p>
+<details class="example">
+<summary>带命名代码块用法示例</summary>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="sb">```yaml</span><span class="w"> </span>title=&quot;config.yml&quot;
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nt">site_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">My Docs</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nt">theme</span><span class="p">:</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="sb">```</span>
+</span></code></pre></div>
+</details>
+<h4 id="_7">带行号的代码块<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<p>在解释代码时，能够精确地引用特定行号会非常方便。使用 <code>linenums</code> 即可开启行号显示。你甚至可以指定起始行号（例如 <code>linenums="10"</code>），这在展示大文件片段时很有用。</p>
+<details class="example">
+<summary>带行号代码块用法示例</summary>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="sb">```python</span><span class="w"> </span>linenums=&quot;10&quot;
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">def</span><span class="w"> </span><span class="nf">my_function</span><span class="p">():</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="c1"># 这行会从第 10 行开始编号</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="sb">```</span>
+</span></code></pre></div>
+</details>
+<h4 id="hl_lines">使用高亮 (<code>hl_lines</code>) 的代码块<a class="headerlink" href="#hl_lines" title="Permanent link">&para;</a></h4>
+<p>高亮特定代码行是引导读者注意力的最强工具。当你想让读者聚焦于某几行关键代码时，<code>hl_lines</code> 是你的不二之选。它可以高亮单行（<code>hl_lines="4"</code>）、一个范围（<code>hl_lines="7-9"</code>）或多组不连续的行（<code>hl_lines="4 7-9"</code>）。这些特性可以自由组合，以达到最佳的展示效果。</p>
+<details class="example">
+<summary>行号与高亮代码块用法示例</summary>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="sb">```python</span><span class="w"> </span>hl_lines=&quot;4 7-9&quot; title=&quot;示例代码&quot; linenums=&quot;1&quot;
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="c1"># 这是一个 Python 示例</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">def</span><span class="w"> </span><span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="c1"># 第 4 行将被高亮</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>        <span class="k">return</span> <span class="n">n</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    <span class="c1"># 第 7-9 行将被高亮</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    <span class="n">result</span> <span class="o">=</span> <span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;fib(</span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2">) -&gt; </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    <span class="k">return</span> <span class="n">result</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="sb">```</span>
+</span></code></pre></div>
+</details>
+<h4 id="_8">效果展示<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">展示高亮</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span>
+<span class="normal"><a href="#__codelineno-5-7">7</a></span>
+<span class="normal"><a href="#__codelineno-5-8">8</a></span>
+<span class="normal"><a href="#__codelineno-5-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c1"># 这是一个 Python 示例</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="k">def</span><span class="w"> </span><span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a>    <span class="c1"># 第 4 行将被高亮，这是函数的基线条件</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="hll">    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+</span></span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a>        <span class="k">return</span> <span class="n">n</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6"></a>    <span class="c1"># 第 7-9 行将被高亮，展示递归调用的核心逻辑</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="hll">    <span class="n">result</span> <span class="o">=</span> <span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="hll">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;fib(</span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2">) -&gt; </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span></span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="hll">    <span class="k">return</span> <span class="n">result</span>
 </span></span></code></pre></div></td></tr></table></div>
 <hr />
-<h2 id="_4">第三部分：内容结构与协作<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="_9">第三部分：内容结构与协作<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
 <h3 id="1-tasklist">1. <code>tasklist</code> (任务列表) 追踪章节进度<a class="headerlink" href="#1-tasklist" title="Permanent link">&para;</a></h3>
-<div class="admonition reminder">
-<p class="admonition-title">本指南当前状态 ✅</p>
 <p>对于<strong>正在撰写或规划中</strong>的章节，我们强烈推荐在<strong>章节导览页 (<code>index.md</code>)</strong> 的顶部使用任务列表来追踪进度。这能让所有协作者对本章状态一目了然。</p>
-</div>
+<details class="example">
+<summary>Tasklist 用法示例</summary>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">- [x]</span> 已完成的任务
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">- [ ]</span> 未完成的任务
+</span></code></pre></div>
+</details>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 确定指南核心原则</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 融合 MkDocs 插件特性</li>
@@ -2336,37 +2655,55 @@
 <p class="admonition-title">操作前请注意 ⚠️</p>
 <p>在为一篇文章打标签前，请<strong>务必</strong>先访问网站的<strong>“标签索引”</strong>页面，查看已有的所有标签，尽量复用，避免创造相似意义的新标签。</p>
 </div>
-<p><strong>示例 (<code>01-self-help.md</code> 的 Frontmatter):</strong>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nn">---</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">tags</span><span class="p">:</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">排错</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">思维方式</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">新手入门</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nn">---</span>
-</span></code></pre></div></p>
+<p><strong>示例 (<code>01-self-help.md</code> 的 Frontmatter):</strong></p>
+<details class="example">
+<summary>Tasklist 用法示例</summary>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nn">---</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nt">tags</span><span class="p">:</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">排错</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">思维方式</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">新手入门</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="nn">---</span>
+</span></code></pre></div>
+</details>
 <h3 id="3-details">3. <code>details</code> (可折叠内容) 保持页面清爽<a class="headerlink" href="#3-details" title="Permanent link">&para;</a></h3>
 <p>对于非核心、但有必要提供的信息（如错误日志、大段代码），请用可折叠块将其“藏”起来。</p>
 <details class="example">
+<summary>Details (可折叠内容) 用法示例</summary>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>??? example &quot;这是一个默认折叠的标题&quot;
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    这里是需要被隐藏的内容。
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    它可以包含任何 Markdown 元素，比如代码块：
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="sb">    ```python</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello from a collapsible block!&quot;</span><span class="p">)</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="sb">    ```</span>
+</span></code></pre></div>
+</details>
+<details class="example">
 <summary>点击查看一份（虚构的）冗长错误日志</summary>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Traceback (most recent call last):
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  File &quot;/Users/cs4ncu/project/main.py&quot;, line 42, in &lt;module&gt;
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    process_data(data)
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  File &quot;/Users/cs4ncu/project/utils.py&quot;, line 128, in process_data
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    raise ValueError(&quot;Incompatible data format found.&quot;)
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>ValueError: Incompatible data format found.
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>... (此处省略 100 行) ...
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Traceback (most recent call last):
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>  File &quot;/Users/cs4ncu/project/main.py&quot;, line 42, in &lt;module&gt;
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    process_data(data)
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>  File &quot;/Users/cs4ncu/project/utils.py&quot;, line 128, in process_data
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    raise ValueError(&quot;Incompatible data format found.&quot;)
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>ValueError: Incompatible data format found.
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>... (此处省略 100 行) ...
 </span></code></pre></div>
 </details>
 <hr />
 <h2 id="emoji">第四部分：Emoji 使用的艺术<a class="headerlink" href="#emoji" title="Permanent link">&para;</a></h2>
-<p>Emoji 是我们与读者情感交流的桥梁。<strong>核心原则</strong>：用 Emoji 强化情绪和语义，而非装饰。</p>
-<ul>
-<li>✅ <strong>推荐</strong>: <code>配置完成 ✅</code> <code>本节内容正在施工中 🚧</code> <code>这是一个值得深思的问题 🤔</code></li>
-<li>❌ <strong>避免</strong>: <code>我今天太开心了 😂😂😂，因为我学会了 Python 🐍🎉🚀！！！</code> (过度花哨)</li>
-</ul>
+<p>目前觉得就是别用 emoji，不用 emoji 的效果最好</p>
 <hr />
+<h2 id="_10">第五部分：零散的细节<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 一个 Prompt 让 AI 严格照着指南修改文本</li>
+<li>Admonition 里面的 list 上面一定要多空一行</li>
+<li>标题里面 表格里面 尽量不用 ` 去写行内代码</li>
+<li>
+<p>重要的名词用英文解释一下，特别是看中文容易歧义的</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 一个 Prompt 让 AI 严格照着指南修改文本</p>
+</li>
 </ul>
 <blockquote>
 <p>这份指南本身就是我们共同创作的第一份作品。让我们一起遵守它、完善它，用我们的智慧和热情 🙏，为南昌大学的学子们点亮一条清晰、温暖的计算机学习之路。</p>
