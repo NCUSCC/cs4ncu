@@ -11,10 +11,15 @@ repo_name: NCUSCC/cs4ncu
 repo_url: https://github.com/NCUSCC/cs4ncu
 edit_uri: 'edit/main/docs/' # 允许用户直接在 GitHub 上编辑页面
 
+# 版权信息
+copyright: Copyright &copy; cs4ncu 2024 ~ now | 南昌大学超算俱乐部 NCUSCC
+
 # --- 主题配置 ---
 theme:
   name: material
   language: zh # 设置语言为中文
+  logo : assets/NCUSCC.jpg
+  favicon: assets/NCUSCC.png
   custom_dir: overrides
 
   # --- 外观与功能 ---
@@ -168,3 +173,10 @@ extra_css:
   - 'css/extra.css'
 extra_javascript:
   - 'js/custom.js'
+
+# 额外配置项
+extra:
+  generator: false
+  social:
+  - icon: simple/github
+    link: https://github.com/NCUSCC
