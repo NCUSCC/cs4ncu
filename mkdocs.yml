@@ -138,7 +138,6 @@ nav:
       - '成为打字高手': 'chapters/ch1-farewell-to-newbie/03-efficient-typing.md'
       - '文件管理的艺术': 'chapters/ch1-farewell-to-newbie/04-file-management.md'
       - '必备软件推荐': 'chapters/ch1-farewell-to-newbie/05-essential-software.md'
-      - '搭建基础开发环境': 'chapters/ch1-farewell-to-newbie/06-dev-environment-setup.md'
     - '章二：规划你的未来':
       - '本章导览': 'chapters/ch2-plan-your-future/index.md'
       - '大学生涯路径概览': 'chapters/ch2-plan-your-future/01-career-paths-overview.md'
@@ -168,13 +167,16 @@ nav:
   - '贡献与开发':
     - '如何贡献': 'guides/contributing/how-to-contribute.md'
     - '行为准则': 'guides/contributing/code-of-conduct.md'
-    - '写作规范': 'guides/contributing/writing-guide.md'
     - '搭建开发环境': 'guides/contributing/development-setup.md'
+    - '写作规范': 'guides/contributing/writing-guide.md'
+    - '写作指令 (prompt)': 'guides/contributing/writing-prompt.md'
     - '开发日志': 'guides/contributing/development-log.md'
     - '自定义指南':
       - '自定义样式 (CSS)': 'guides/customization/styling.md'
       - '自定义提示框 (Admonition)': 'guides/customization/admonitions.md'
       - '自定义代码块 (Code Blocks)': 'guides/customization/code-blocks-styling.md'
+    - '开发附录':
+      - '提示框样例': 'guides/appendices/admonitions-examples.md'
 
   # 顶层导航 6: 索引
   - '索引':
