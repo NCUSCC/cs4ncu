@@ -1,0 +1,63 @@
+# 工作流名称，会显示在 GitHub Actions 页面
+name: Deploy CS for NCU Docs
+
+# 工作流的触发条件
+on:
+  # 1. 自动触发：当有代码推送到 main 分支时
+  push:
+    branches:
+      - main  # 确保这是你的主分支名称
+
+  # 2. 手动触发：允许你在 GitHub Actions 页面手动运行此工作流
+  workflow_dispatch:
+
+# 定义工作流所需的权限，以允许推送到 gh-pages 分支
+permissions:
+  contents: write
+
+# 工作流中运行的任务
+jobs:
+  deploy:
+    # 运行此任务的虚拟机环境
+    runs-on: ubuntu-latest
+
+    # 任务中的步骤
+    steps:
+      # 步骤 1: 检出你的仓库代码
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 步骤 2: 设置 Python 环境
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      # 步骤 3: 安装 uv
+      - name: Install uv
+        run: pipx install uv
+
+      # 步骤 4: 配置依赖缓存 (关键性能优化)
+      - name: Cache uv virtual environment
+        uses: actions/cache@v4
+        with:
+          path: ./.venv
+          key: ${{ runner.os }}-uv-${{ hashFiles('**/pyproject.toml') }}
+          restore-keys: |
+            ${{ runner.os }}-uv-
+
+      # 步骤 5: 同步环境并安装依赖
+      - name: Install dependencies with uv
+        run: uv sync
+
+      # 步骤 6: 构建文档网站 (使用 --strict 保证质量)
+      - name: Build documentation
+        run: uv run mkdocs build --clean --strict
+
+      # 步骤 7: 部署到 GitHub Pages
+      # 这一步会自动将 `./site` 目录的内容推送到本仓库的 `gh-pages` 分支
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
