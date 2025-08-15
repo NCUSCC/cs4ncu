@@ -187,3 +187,60 @@
     mask-image: var(--md-admonition-icon--author);
   }
   
+
+  /* ==========================================================================
+   4. 修正可折叠箭头颜色 (Fix for Collapsible Arrow Color)
+   ========================================================================== */
+
+/*
+ * 默认情况下，展开/折叠箭头 (summary::after) 的颜色由主题的
+ * --md-icon-color 定义。我们需要重写它，使其与每种提示框
+ * 的自定义颜色保持一致。
+ */
+
+/* 危险 (Danger) Arrow */
+.md-typeset .danger > summary::after {
+  background-color: var(--admonition-danger-color);
+}
+
+/* 警告 (Alert) Arrow */
+.md-typeset .alert > summary::after {
+  background-color: var(--admonition-alert-color);
+}
+
+/* 声明 (Declaration) Arrow */
+.md-typeset .declaration > summary::after {
+  background-color: var(--admonition-declaration-color);
+}
+
+/* 提醒 (Reminder) Arrow */
+.md-typeset .reminder > summary::after {
+  background-color: var(--admonition-reminder-color);
+}
+
+/* 例子 (Example) Arrow */
+.md-typeset .example > summary::after {
+  background-color: var(--admonition-example-color);
+}
+
+/* 故事 (Story) Arrow */
+.md-typeset .story > summary::after {
+  background-color: var(--admonition-story-color);
+}
+
+/* 引用 (Quote) Arrow */
+.md-typeset .quote > summary::after {
+  background-color: var(--admonition-quote-color);
+}
+
+/* 笔者说 (Author's Note) Arrow */
+.md-typeset .author > summary::after {
+  background-color: var(--admonition-author-color);
+}
+
+/* 去掉 边框 */
+.md-typeset .admonition,
+.md-typeset details {
+  border: none !important;
+  box-shadow: none !important;
+}
