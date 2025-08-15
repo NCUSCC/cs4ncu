@@ -160,9 +160,11 @@ nav:
     - '行为准则': 'guides/contributing/code-of-conduct.md'
     - '写作规范': 'guides/contributing/writing-guide.md'
     - '搭建开发环境': 'guides/contributing/development-setup.md'
+    - '开发日志': 'guides/contributing/development-log.md'
     - '自定义指南':
       - '自定义样式 (CSS)': 'guides/customization/styling.md'
       - '自定义提示框 (Admonition)': 'guides/customization/admonitions.md'
+      - '自定义代码块 (Code Blocks)': 'guides/customization/code-blocks-styling.md'
 
   # 顶层导航 6: 索引
   - '索引':
