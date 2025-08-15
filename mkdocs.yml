@@ -18,9 +18,11 @@ copyright: Copyright &copy; cs4ncu 2024 ~ now | 南昌大学超算俱乐部 NCUS
 theme:
   name: material
   language: zh # 设置语言为中文
-  logo : assets/NCUSCC.jpg
-  favicon: assets/NCUSCC.png
+  favicon: assets/ncuscc-logo.svg
   custom_dir: overrides
+
+  icon:
+    logo: my-logo/logo
 
   # --- 外观与功能 ---
   # 我们在这里配置日夜间模式切换器。
@@ -78,6 +80,13 @@ markdown_extensions:
 
   # Details: 可折叠的内容块
   - pymdownx.details
+
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
   
   # SmartyPants: 自动将普通标点转换为更美观的印刷体标点
   - pymdownx.smartsymbols
@@ -114,6 +123,7 @@ markdown_extensions:
   # TOC (Table of Contents): 自动生成目录
   - toc:
       permalink: true # 为每个标题添加一个永久链接图标
+  
 
 nav:
   # 顶层导航 1: 首页
