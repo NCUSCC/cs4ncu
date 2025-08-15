@@ -4,29 +4,5 @@
  * @summary
  *   此文件用于存放高优先级的样式覆盖规则，以解决由主题、
  *   插件或浏览器特性引起的特定视觉问题。
- *   使用 `!important` 时应在此处添加注释，说明原因。
+ *   使用 `!important` 时应在此处添加注释，说明原因。但是暂时已经没问题要修了
  */
-
-/* ==========================================================================
-   1. 修复：仓库链接在 :visited 状态下颜色错误
-   ========================================================================== */
-/*
- * 问题：浏览器默认的 :visited 样式会覆盖主题对顶部仓库链接的颜色设置，
- *      导致在点击链接后，其颜色在日间/夜间模式切换时不再正确响应。
- * 解决：使用 `!important` 强制覆盖 :visited 状态，使其颜色始终
- *      继承自主色板的前景色变量 (`--md-primary-fg-color`)。
- */
-
-/* 日间模式下的 :visited 状态修复 */
-[data-md-color-scheme="default"] .md-source:visited .md-source__repository,
-[data-md-color-scheme="default"] .md-source:visited .md-source__icon svg {
-  color: var(--md-primary-fg-color) !important;
-  fill: var(--md-primary-fg-color) !important; /* SVG 使用 fill 属性上色 */
-}
-
-/* 夜间模式下的 :visited 状态修复 */
-[data-md-color-scheme="slate"] .md-source:visited .md-source__repository,
-[data-md-color-scheme="slate"] .md-source:visited .md-source__icon svg {
-  color: var(--md-primary-fg-color) !important;
-  fill: var(--md-primary-fg-color) !important;
-}
