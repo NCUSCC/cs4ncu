@@ -151,6 +151,8 @@ nav:
       - '编程语言巡礼': 'chapters/ch4-hardcore-skills/01-language-tour.md'
       - 'Git 与 GitHub 基础': 'chapters/ch4-hardcore-skills/02-git-and-github-basics.md'
       - '下一步学习地图': 'chapters/ch4-hardcore-skills/03-further-learning-map.md'
+    - '章五：人际关系处理': 
+      - '本章导览': 'chapters/ch5-interpersonal-Treatment/index.md'
 
   # 顶层导航 3: 团队特色研究
   - '团队特色研究':
