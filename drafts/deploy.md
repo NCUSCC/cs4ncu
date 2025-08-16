@@ -114,7 +114,7 @@ mkdocs serve
 
 ```yaml
 # mkdocs.yml
-repo_url: https://github.com/<你的组织或用户名>/<你的仓库名>/
+repo_url: https://github.com/<你用户名>/<你的仓库名>/
 ```
 
 **第 2 步：执行发布命令**

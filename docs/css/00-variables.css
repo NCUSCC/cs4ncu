@@ -30,7 +30,7 @@
   
     /* --- 特定组件颜色 --- */
     --md-typeset-a-color:         #3F72AF; /* 正文链接颜色，与次要文本颜色保持一致 */
-    --md-admonition-bg-color:     #F7F7F7;                          /* 提示框背景色 */
+    --md-admonition-bg-color:     #fffefc;                          /* 提示框背景色 */
     --md-typeset-table-color:     rgba(219, 226, 239, 0.4); 
     /* --- 代码块颜色 (Code Palette) --- */
     --md-code-bg-color:           #faf4ed; /* 代码块背景色 (Rosé Pine Dawn - Base) */
@@ -73,7 +73,7 @@
   
     /* --- 特定组件颜色 --- */
     --md-typeset-a-color:         #9DB2BF; /* 正文链接颜色，与次要文本颜色保持一致 */
-    --md-admonition-bg-color:     #29394e;                          /* 提示框背景色 */
+    --md-admonition-bg-color:     #2e4058;                          /* 提示框背景色 */
     --md-typeset-table-color:     rgba(157, 178, 191, 0.2);         /* 表格边框和条纹色 */
   
     /* --- 代码块颜色 (Code Palette) --- */

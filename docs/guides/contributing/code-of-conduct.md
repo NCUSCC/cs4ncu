@@ -2,7 +2,6 @@
 tags:
   - 社区
   - 行为准则
-  - 贡献指南
 ---
 
 # 社区行为准则 (Code of Conduct)
@@ -68,8 +67,8 @@ tags:
 
 如果您目睹或经历了违反本行为准则的事件，或有任何其他疑虑，请立即通过以下方式与项目管理团队取得联系。**所有报告都将被严格保密。**
 
-*   **举报专用邮箱**：`cs4ncu.community@example.com` (待补充)
-*   **在 Discord 中私信管理员**
+<!-- *   **举报专用邮箱**：`cs4ncu.community@example.com` (待补充) -->
+*   **在 [Discord](https://discord.gg/Rux6DHRStP) 中私信管理员**
 
 请在报告中尽可能提供详细信息，如：事件描述、发生时间、相关链接 (Issue, PR, 聊天记录截图等)、涉及人员等。
 
