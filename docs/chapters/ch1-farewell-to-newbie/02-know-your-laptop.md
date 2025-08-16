@@ -1,7 +1,9 @@
 ---
 tags:
-  - 务实
-  - 新手入门
+  - Topic-OperatingSystem
+  - Type-Concept
+  - Level-Foundational
+  - Action-Learning
 ---
 # 认识你的笔记本电脑
 

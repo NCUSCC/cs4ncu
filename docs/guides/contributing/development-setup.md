@@ -1,6 +1,11 @@
 ---
 tags:
-  - 环境构建
+  - Topic-DevOps
+  - Topic-Shell
+  - Type-Tutorial
+  - Level-Beginner
+  - Action-Setup
+  - Context-Project
 ---
 
 # 搭建基础环境

@@ -1,6 +1,11 @@
 ---
 tags:
-  - 贡献指南
+  - Topic-Git
+  - Topic-GitHub
+  - Type-Guide
+  - Level-Beginner
+  - Action-Collaboration
+  - Context-Project
 ---
 
 # 如何向 CS for NCU 贡献

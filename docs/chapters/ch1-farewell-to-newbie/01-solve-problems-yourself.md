@@ -1,7 +1,10 @@
 ---
 tags:
-  - 务虚
-  - 新手入门
+  - Topic-MindsetModel
+  - Topic-SelfManagement
+  - Type-Guide
+  - Level-Beginner
+  - Action-Learning
 ---
 
 # 核心第一课：遇到问题，学会自助

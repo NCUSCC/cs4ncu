@@ -1,7 +1,10 @@
 ---
 tags:
-  - prompt
-  - 写作风格
+  - Topic-AI-AssistedDev
+  - Type-Guide
+  - Level-Intermediate
+  - Action-Writing
+  - Context-Project
 ---
 尝试使用这个 prompt 来帮助你构建文档格式。
 

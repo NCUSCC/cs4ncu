@@ -1,6 +1,10 @@
 ---
 tags:
-  - CSS
+  - Topic-CSS
+  - Type-Tutorial
+  - Level-Intermediate
+  - Action-Building
+  - Context-Project
 ---
 
 # 颜色主题定制指南

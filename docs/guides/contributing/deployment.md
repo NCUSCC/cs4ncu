@@ -1,7 +1,11 @@
 ---
 tags:
-  - 部署
-  - github
+  - Topic-DevOps
+  - Topic-GitHub
+  - Type-Guide
+  - Level-Intermediate
+  - Action-Deployment
+  - Context-Project
 ---
 
 # 网站部署指南：自动化与规范
