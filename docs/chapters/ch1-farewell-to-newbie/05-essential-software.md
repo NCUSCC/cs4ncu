@@ -1,10 +1,10 @@
 ---
 tags:
-  - 软件推荐
-  - 效率
-  - 新手入门
-  - PDF
-  - 网络工具
+  - Topic-Software
+  - Topic-ProductivityTools
+  - Type-ResourceList
+  - Level-Beginner
+  - Action-Setup
 ---
 
 # 必备软件：清理与构建你的数字工具箱

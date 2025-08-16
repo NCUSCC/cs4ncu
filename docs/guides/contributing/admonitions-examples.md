@@ -1,3 +1,12 @@
+---
+tags:
+  - Topic-CSS
+  - Topic-Markdown
+  - Type-Example
+  - Level-Beginner
+  - Action-Writing
+  - Context-Project
+---
 # 提示框样式展示 (Admonition Style Showcase)
 
 这将展示所有自定义和默认的提示框样式，包括静态 `!!!` 和可折叠 `???` 两种形式，以便全面测试 CSS 样式的正确性。

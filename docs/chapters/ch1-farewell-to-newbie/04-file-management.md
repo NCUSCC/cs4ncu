@@ -1,9 +1,9 @@
 ---
 tags:
-  - 文件管理
-  - 新手入门
-  - 压缩包
-  - 效率
+  - Topic-FileManagement
+  - Type-Guide
+  - Level-Beginner
+  - Action-Optimizing
 ---
 
 # 文件、扩展名与压缩包

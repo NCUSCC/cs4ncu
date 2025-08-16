@@ -1,12 +1,14 @@
 ---
 tags:
-  - 开发环境
-  - 贡献指南
-  - uv
-  - Python
+  - Topic-DevOps
+  - Topic-Shell
+  - Type-Tutorial
+  - Level-Beginner
+  - Action-Setup
+  - Context-Project
 ---
 
-# 搭建开发环境
+# 搭建基础环境
 
 为了能够实时预览您对文档的修改，或参与网站功能的开发，您需要在本地搭建开发环境。
 
@@ -16,11 +18,11 @@ tags:
 
 在开始之前，请确保您的系统中已经安装了以下两个核心工具：
 
-1.  **Git**
-    Git 是一个开源的分布式版本控制系统，是我们协作的基石。如果您尚未安装，请访问 [Git 官网](https://git-scm.com/) 下载并安装。
+1.  **Git** <br>
+    一个开源的分布式版本控制系统，是我们协作的基石。如果您尚未安装，请访问 [Git 官网](https://git-scm.com/) 下载并安装。
 
-2.  **uv**
-    `uv` 是一个用 Rust 编写的极速 Python 包管理器。它将极大简化我们的环境管理。请参考 [uv 官方文档](https://github.com/astral-sh/uv#installation) 完成安装。
+2.  **uv** <br>
+    一个用 Rust 编写的极速 Python 包管理器。它将极大简化我们的环境管理。请参考 [uv 官方文档](https://github.com/astral-sh/uv#installation) 完成安装。
 
 ## 第二步：Fork 与克隆项目
 
@@ -49,8 +51,9 @@ tags:
     ```bash
     uv sync
     ```
-    ??? example "“魔法”命令解析：uv sync"
-        `uv sync` 命令会读取项目中的 `requirements.lock` 文件，并执行以下操作：
+
+    ??? story "“魔法”命令解析：uv sync"
+        `uv sync` 命令会读取项目中的配置文件，并执行以下操作：
 
         -   **创建虚拟环境**：在项目根目录下的 `.venv` 文件夹中创建一个隔离的 Python 环境，避免与您的系统环境产生冲突。
         -   **安装依赖**：以最快的速度精确地安装所有项目依赖，例如 MkDocs 及其相关插件。

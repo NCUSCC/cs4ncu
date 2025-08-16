@@ -1,8 +1,9 @@
 ---
 tags:
-  - 硬件
-  - 新手入门
-  - 笔记本电脑
+  - Topic-OperatingSystem
+  - Type-Concept
+  - Level-Foundational
+  - Action-Learning
 ---
 # 认识你的笔记本电脑
 

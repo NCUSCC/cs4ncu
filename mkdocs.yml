@@ -160,25 +160,31 @@ nav:
 
   # 顶层导航 4: 昌大专属附录
   - '昌大专属附录':
-    - '附录 A：保研细则解析': 'appendices/a1-postgraduate-recommendation.md'
-    - '附录 B：考研经验分享': 'appendices/a2-postgraduate-entrance-exam.md'
-    - '附录 C：转专业完全指南': 'appendices/a3-major-transfer-guide.md'
-    - '附录 D：各培养方案导读': 'appendices/a4-program-guides.md'
+    - '保研细则解析': 'appendices/a1-postgraduate-recommendation.md'
+    - '考研经验分享': 'appendices/a2-postgraduate-entrance-exam.md'
+    - '转专业完全指南': 'appendices/a3-major-transfer-guide.md'
+    - '各培养方案导读': 'appendices/a4-program-guides.md'
 
   # 顶层导航 5: 贡献与开发
-  - '贡献与开发':
-    - '如何贡献': 'guides/contributing/how-to-contribute.md'
-    - '行为准则': 'guides/contributing/code-of-conduct.md'
-    - '搭建开发环境': 'guides/contributing/development-setup.md'
-    - '写作规范': 'guides/contributing/writing-guide.md'
-    - '写作指令 (prompt)': 'guides/contributing/writing-prompt.md'
-    - '开发日志': 'guides/contributing/development-log.md'
-    - '自定义指南':
-      - '自定义样式 (CSS)': 'guides/customization/styling.md'
-      - '自定义提示框 (Admonition)': 'guides/customization/admonitions.md'
-      - '自定义代码块 (Code Blocks)': 'guides/customization/code-blocks-styling.md'
-    - '开发附录':
-      - '提示框样例': 'guides/appendices/admonitions-examples.md'
+  - '贡献指南':
+    - '核心准则':
+      - '行为准则': 'guides/contributing/code-of-conduct.md'
+      - '贡献流程': 'guides/contributing/how-to-contribute.md'
+    - '开发环境与工作流':
+      - '搭建基础环境': 'guides/contributing/development-setup.md'
+      - '分支保护策略': 'guides/contributing/branch-protection.md'
+      - '网站部署': 'guides/contributing/deployment.md'
+    - '开发实践指南':
+      - '调整全局样式 (CSS)': 'guides/contributing/styling.md'
+      - '调整项目配色': 'guides/contributing/colors.md'
+      - '调整提示框样式': 'guides/contributing/admonitions.md'
+    - '内容贡献指南':
+        - '写作规范': 'guides/contributing/writing-guide.md'
+        - '写作指令 (prompt)': 'guides/contributing/writing-prompt.md'
+    - '附录与参考':
+      - '提示框样式样例': 'guides/contributing/admonitions-examples.md'
+      - '一份开发手记': 'guides/contributing/development-log.md'
+
 
   # 顶层导航 6: 索引
   - '索引':
