@@ -1,7 +1,10 @@
 ---
 tags:
-  - 务实
-  - 新手入门
+  - Topic-Software
+  - Topic-ProductivityTools
+  - Type-ResourceList
+  - Level-Beginner
+  - Action-Setup
 ---
 
 # 必备软件：清理与构建你的数字工具箱

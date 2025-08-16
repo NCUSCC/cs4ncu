@@ -1,7 +1,11 @@
 ---
 tags:
-  - 样例
-  - CSS
+  - Topic-CSS
+  - Topic-Markdown
+  - Type-Example
+  - Level-Beginner
+  - Action-Writing
+  - Context-Project
 ---
 # 提示框样式展示 (Admonition Style Showcase)
 

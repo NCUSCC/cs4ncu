@@ -1,7 +1,10 @@
 ---
 tags:
-  - 开发
-  - github
+  - Topic-GitHub
+  - Type-Specification
+  - Level-Intermediate
+  - Action-Collaboration
+  - Context-Project
 ---
 
 # 我们的 Git 工作流与分支保护

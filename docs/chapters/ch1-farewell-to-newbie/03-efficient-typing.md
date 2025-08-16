@@ -1,7 +1,9 @@
 ---
 tags:
-  - 务实
-  - 新手入门
+  - Topic-Typing
+  - Type-Guide
+  - Level-Beginner
+  - Action-Optimizing
 ---
 
 # 高效打字与键盘操作

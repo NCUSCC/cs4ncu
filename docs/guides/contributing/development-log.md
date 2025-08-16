@@ -1,7 +1,9 @@
 ---
 tags:
-  - 开发
-  - 决策日志
+  - Type-Experience
+  - Level-Beginner
+  - Action-Learning
+  - Context-Project
 ---
 
 # 一份来自 teapot1de 的开发手记

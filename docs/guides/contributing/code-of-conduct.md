@@ -1,7 +1,10 @@
 ---
 tags:
-  - 社区
-  - 行为准则
+  - Topic-Communication
+  - Type-Specification
+  - Level-Beginner
+  - Action-Collaboration
+  - Context-Project
 ---
 
 # 社区行为准则 (Code of Conduct)

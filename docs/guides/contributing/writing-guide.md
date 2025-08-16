@@ -1,7 +1,10 @@
 ---
 tags:
-  - Markdown
-  - 写作风格
+  - Topic-Markdown
+  - Type-Specification
+  - Level-Beginner
+  - Action-Writing
+  - Context-Project
 ---
 
 # 内容创作与风格指南
@@ -70,7 +73,7 @@ tags:
 ### 1. 用 `admonition` (提示框) 赋予段落生命
 
 
-不同的信息，需要不同的“语气”。提示框就是我们表达语气的最佳工具。[提示框样例](../appendices/admonitions-examples.md)里面收录了所有本框架支持的提示框样式。
+不同的信息，需要不同的“语气”。提示框就是我们表达语气的最佳工具。[提示框样例](./admonitions-examples.md)里面收录了所有本框架支持的提示框样式。
 
 ??? example "Admonition 用法示例"
     ```markdown

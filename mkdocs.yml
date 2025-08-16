@@ -165,21 +165,22 @@ nav:
 
   # 顶层导航 5: 贡献与开发
   - '贡献指南':
-    - '行为准则': 'guides/contributing/code-of-conduct.md'
-    - '如何贡献': 'guides/contributing/how-to-contribute.md'
-    - '搭建基础环境': 'guides/contributing/development-setup.md'
-    - '开发贡献':
-      - '自定义指南':
-        - '自定义样式 (CSS)': 'guides/customization/styling.md'
-        - '自定义色彩': 'guides/customization/color-styling.md'
-        - '自定义提示框 (Admonition)': 'guides/customization/admonitions.md'
-    - '内容贡献':
+    - '核心准则':
+      - '行为准则': 'guides/contributing/code-of-conduct.md'
+      - '贡献流程': 'guides/contributing/how-to-contribute.md'
+    - '开发环境与工作流':
+      - '搭建基础环境': 'guides/contributing/development-setup.md'
+      - '分支保护策略': 'guides/contributing/branch-protection.md'
+      - '网站部署': 'guides/contributing/deployment.md'
+    - '开发实践指南':
+      - '调整全局样式 (CSS)': 'guides/contributing/styling.md'
+      - '调整项目配色': 'guides/contributing/colors.md'
+      - '调整提示框样式': 'guides/contributing/admonitions.md'
+    - '内容贡献指南':
         - '写作规范': 'guides/contributing/writing-guide.md'
         - '写作指令 (prompt)': 'guides/contributing/writing-prompt.md'
-    - '附录':
-      - '提示框样例': 'guides/appendices/admonitions-examples.md'
-      - '分支保护策略': 'guides/appendices/branch-protect.md'
-      - '网站部署': 'guides/appendices/deploy.md'
+    - '附录与参考':
+      - '提示框样式样例': 'guides/contributing/admonitions-examples.md'
       - '一份开发手记': 'guides/contributing/development-log.md'
 
 
