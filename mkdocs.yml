@@ -58,16 +58,16 @@ theme:
     - navigation.sections # 左侧导航自动展开子章节
     - content.code.copy # 为所有代码块添加“复制”按钮
     - content.code.annotate # 允许代码块注释
-    - content.code.select
     - search.suggest # 搜索时提供建议
     - navigation.tags 
+    - content.action.view
 
 # --- 插件配置 (强烈建议添加) ---
 plugins:
   - search:
       lang: zh # 启用中文搜索支持
   - tags   # 启用标签系统
-
+  - git-authors
 
 # --- Markdown 扩展 (增强内容显示) ---
 # 合并后的 mkdocs.yml 配置
