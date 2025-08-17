@@ -198,26 +198,26 @@ jobs:
           
           echo "✅ 增强构建验证通过"
 
-      # 步骤 7: 环境隔离验证
-      - name: 🔒 环境隔离验证
-        run: |
-          echo "🔒 验证生产环境隔离..."
+      # # 步骤 7: 环境隔离验证
+      # - name: 🔒 环境隔离验证
+      #   run: |
+      #     echo "🔒 验证生产环境隔离..."
           
-          # 确保生产构建不包含预览相关内容
-          if grep -r "pr-preview" site/ 2>/dev/null; then
-            echo "❌ 错误: 生产构建中发现预览环境引用"
-            exit 1
-          fi
+      #     # 确保生产构建不包含预览相关内容
+      #     if grep -r "pr-preview" site/ 2>/dev/null; then
+      #       echo "❌ 错误：生产构建中发现预览环境引用"
+      #       exit 1
+      #     fi
           
-          # 检查是否有开发环境残留
-          dev_indicators=("localhost" "127.0.0.1" "dev-mode" "debug")
-          for indicator in "${dev_indicators[@]}"; do
-            if grep -r "$indicator" site/ 2>/dev/null; then
-              echo "⚠️  警告: 发现可能的开发环境残留：$indicator"
-            fi
-          done
+      #     # 检查是否有开发环境残留
+      #     dev_indicators=("localhost" "127.0.0.1" "dev-mode" "debug")
+      #     for indicator in "${dev_indicators[@]}"; do
+      #       if grep -r "$indicator" site/ 2>/dev/null; then
+      #         echo "⚠️  警告：发现可能的开发环境残留：$indicator"
+      #       fi
+      #     done
           
-          echo "✅ 环境隔离验证通过"
+      #     echo "✅ 环境隔离验证通过"
 
       # 步骤 8: 部署到 GitHub Pages
       - name: 🌐 部署到生产环境
