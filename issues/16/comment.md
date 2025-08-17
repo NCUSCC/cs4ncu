@@ -1,0 +1,1 @@
+To resolve the issue with the homepage content not matching the actual situation, we recommend updating the page to reflect the latest information and ensuring all discrepancies are addressed. If you require any assistance updating the content, please let us know.
