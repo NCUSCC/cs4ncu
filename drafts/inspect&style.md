@@ -16,7 +16,7 @@
 
 **第 1 步：基础检查（排除常见错误）**
 
-1.  **强制清除缓存**：这是解决前端问题的第一步。使用 `Ctrl + Shift + R` (Windows/Linux) 或 `Cmd + Shift + R` (Mac) 强制刷新页面，以确保浏览器加载的是最新的 CSS 文件。
+1.  **强制清除缓存**：这是解决前端问题的第一步。使用 ++ctrl+shift+R++ (Windows/Linux) 或 ++cmd+shift+r++ (Mac) 强制刷新页面，以确保浏览器加载的是最新的 CSS 文件。
 2.  **验证配置文件**：检查 `mkdocs.yml` 文件，确认 `extra_css` 的路径是否正确，以及 `theme.palette` 是否已设置为 `primary: custom` 和 `accent: custom`，以告知主题我们正在使用完全自定义的颜色方案。
 3.  **检查库版本**：运行 `pip show mkdocs-material` 确认主题版本。旧版本可能存在已知的 bug（如 v8.5.9 的颜色覆盖问题）。确保使用的是最新稳定版。
 

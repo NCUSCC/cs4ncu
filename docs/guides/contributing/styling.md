@@ -111,14 +111,13 @@ theme:
 
 ??? example "点击查看 `00-variables.css` 中的日夜间模式实现"
     ```css title="css/00-variables.css"
-    /* 日间模式 (默认) */
+    /*日间模式 (默认) */
     [data-md-color-scheme="default"] {
       --md-primary-fg-color:        #005BAC; /* 主前景色 (深蓝) */
       --md-default-bg-color:        #FFFFFF; /* 默认背景色 (白) */
-      /* ... 其他日间模式变量 ... */
+      /* ... 其他日间模式变量 ...*/
     }
-
-    /* 夜间模式 */
+    /*夜间模式*/
     [data-md-color-scheme="slate"] {
       --md-primary-fg-color:        #90C8FF; /* 主前景色 (亮蓝) */
       --md-default-bg-color:        #121212; /* 默认背景色 (深灰) */
