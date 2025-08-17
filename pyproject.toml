@@ -10,3 +10,6 @@ dependencies = [
     "mkdocs-material>=9.6.16",
     "pymdown-extensions>=10.16.1",
 ]
+
+[tool.setuptools]
+packages = []
