@@ -91,7 +91,6 @@ jobs:
 
   # 生产环境部署
   deploy:
-  deploy:
     name: 🚀 生产环境部署
     runs-on: ubuntu-latest
     needs: cleanup-stale-previews
@@ -184,11 +183,11 @@ jobs:
           
           # 质量检查
           if [[ $html_files -lt 5 ]]; then
-            echo "⚠️  警告: HTML文件数量偏少 ($html_files)，可能存在构建问题"
+            echo "⚠️  警告: HTML 文件数量偏少 ($html_files)，可能存在构建问题"
           fi
           
           if [[ $css_files -lt 1 ]]; then
-            echo "⚠️  警告: 未找到CSS文件，样式可能有问题"
+            echo "⚠️  警告: 未找到 CSS 文件，样式可能有问题"
           fi
           
           # 检查构建日志中的警告
@@ -214,7 +213,7 @@ jobs:
           dev_indicators=("localhost" "127.0.0.1" "dev-mode" "debug")
           for indicator in "${dev_indicators[@]}"; do
             if grep -r "$indicator" site/ 2>/dev/null; then
-              echo "⚠️  警告: 发现可能的开发环境残留: $indicator"
+              echo "⚠️  警告: 发现可能的开发环境残留：$indicator"
             fi
           done
           
@@ -249,7 +248,7 @@ jobs:
           if curl -sSf -I "$site_url" > /dev/null 2>&1; then
             echo "✅ 网站可访问性验证通过"
           else
-            echo "⚠️  注意: 网站可访问性验证失败，可能需要等待DNS传播"
+            echo "⚠️  注意: 网站可访问性验证失败，可能需要等待 DNS 传播"
           fi
           
           echo "🎉 生产环境部署完成！"
