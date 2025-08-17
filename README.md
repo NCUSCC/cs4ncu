@@ -117,6 +117,9 @@
   本项目基于 [**MIT License**](./LICENSE) 授权。这意味着你可以自由地使用、修改和分发，只需保留原始的版权和许可声明。
 
   ---
+
   <div align="center">
-    *Crafted with ❤️ and ☕ by the NCUSCC community.*
+
+*Crafted with ❤️ and ☕ by the NCUSCC community.*
+
   </div>
