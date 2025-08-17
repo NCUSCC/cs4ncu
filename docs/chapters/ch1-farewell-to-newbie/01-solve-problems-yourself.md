@@ -83,6 +83,6 @@ AI 时代，你拥有了前所未有的强大工具。当你对一个概念很�
 
 提问是一门艺术。在你向任何人 (包括学长学姐) 提问之前，请务必花 20 分钟阅读或观看以下至少一份材料。这会极大增加你获得有效帮助的概率。
 
-*   **文字圣经**：[《提问的智慧》- GitHub 中文版](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)
-*   **视频解读**：[程序员如何正确地问问题 - Bilibili](https://www.bilibili.com/video/BV1dx4y1579Z/)
-*   **知乎文章**：[如何正确提出问题 - 知乎专栏](https://zhuanlan.zhihu.com/p/664680014)
+-   **文字圣经**：[《提问的智慧》- GitHub 中文版](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)
+-   **视频解读**：[程序员如何正确地问问题 - Bilibili](https://www.bilibili.com/video/BV1dx4y1579Z/)
+-   **知乎文章**：[如何正确提出问题 - 知乎专栏](https://zhuanlan.zhihu.com/p/664680014)

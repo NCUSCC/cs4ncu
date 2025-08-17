@@ -110,6 +110,8 @@ markdown_extensions:
 
   # InlineHilite: 支持行内代码高亮
   - pymdownx.inlinehilite
+  - pymdownx.blocks.caption
+  - pymdownx.keys
 
   # --- 功能与交互扩展 ---
 
@@ -176,6 +178,7 @@ nav:
       - '调整全局样式 (CSS)': 'guides/contributing/styling.md'
       - '调整项目配色': 'guides/contributing/colors.md'
       - '调整提示框样式': 'guides/contributing/admonitions.md'
+      - '调整图片样式': 'guides/contributing/figure.md'
     - '内容贡献指南':
         - '写作规范': 'guides/contributing/writing-guide.md'
         - '写作指令 (prompt)': 'guides/contributing/writing-prompt.md'
