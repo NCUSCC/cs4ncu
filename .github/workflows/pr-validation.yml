@@ -3,12 +3,12 @@ name: 'PR 构建与预览验证'
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened]
+    types: [opened, synchronize, reopened, closed] # 增加了 closed 以便触发清理
     branches: [main]
 
 # 申请部署到 Pages 所需的权限
 permissions:
-  contents: read
+  contents: write # 清理时需要 write 权限来推送 gh-pages 分支
   pages: write
   id-token: write
 
@@ -19,47 +19,65 @@ concurrency:
 jobs:
   build-and-deploy-preview:
     name: '构建并部署预览'
+    # 只有在 PR 不是被关闭时才运行此 job
+    if: github.event.action != 'closed'
     runs-on: ubuntu-latest
     
-    # 你可以添加一个环境来在 PR 页面显示预览链接
+    # 在 PR 页面显示预览链接
     environment:
       name: pr-preview-${{ github.event.pull_request.number }}
       url: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-preview/pr-${{ github.event.pull_request.number }}/
       
     steps:
-      # 步骤 1: 智能文件变更检测 (可选，如果想每次都跑可以删掉这一步)
-      - name: 🔍 智能文件变更检测
-        id: changes
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - run: |
-          changed_files=$(git diff --name-only ${{ github.event.pull_request.base.sha }}...${{ github.event.pull_request.head.sha }})
-          build_patterns=("^docs/" "^mkdocs\.yml$" "^\.github/workflows/")
-          should_build="false"
-          for pattern in "${build_patterns[@]}"; do
-            if [[ "$changed_files" =~ $pattern ]]; then
-              should_build="true"
-              break
-            fi
-          done
-          echo "should-build=$should_build" >> $GITHUB_OUTPUT
-
-      # 步骤 2: 构建网站
-      - name: 🔨 构建预览网站
-        if: steps.changes.outputs.should-build == 'true'
-        # 我们需要重新 checkout PR 的代码
+      # 步骤 1: 拉取代码 (一次性完成)
+      # 拉取 PR 的最新代码，并获取完整历史记录以便进行 diff
+      - name: 🚚 拉取代码
         uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha }}
-      
-      # --- 这里是你所有的构建和验证步骤 ---
+          fetch-depth: 0 
+
+      # 步骤 2: 智能文件变更检测 (已修正逻辑)
+      - name: 🔍 智能文件变更检测
+        id: changes
+        run: |
+          # 获取基础分支和当前分支之间的文件差异
+          changed_files=$(git diff --name-only ${{ github.event.pull_request.base.sha }}...HEAD)
+          
+          # 定义需要触发构建的文件/目录模式 (正则表达式)
+          # 规则: docs 目录，mkdocs.yml 文件，或此工作流文件本身
+          build_patterns=("^docs/" "^mkdocs\.yml$" "^\.github/workflows/pr-validation\.yml$")
+          
+          echo "检查变更的文件列表:"
+          echo "${changed_files}"
+          
+          should_build="false"
+          
+          # 逐行读取文件列表并与模式进行匹配
+          while IFS= read -r file; do
+            for pattern in "${build_patterns[@]}"; do
+              if [[ "$file" =~ $pattern ]]; then
+                echo "✅ 文件 '${file}' 匹配模式 '${pattern}'，需要构建。"
+                should_build="true"
+                break 2 # 匹配成功，跳出内外两层循环
+              fi
+            done
+          done <<< "${changed_files}"
+          
+          if [[ "$should_build" == "false" ]]; then
+            echo "❌ 未检测到需要构建的变更。"
+          fi
+
+          echo "should-build=$should_build" >> $GITHUB_OUTPUT
+
+      # 步骤 3: 设置 Python 环境
       - name: Set up Python
         if: steps.changes.outputs.should-build == 'true'
         uses: actions/setup-python@v4
         with:
           python-version: "3.12"
 
+      # 步骤 4: 安装 uv 并缓存依赖
       - name: Install uv
         if: steps.changes.outputs.should-build == 'true'
         run: pipx install uv
@@ -75,11 +93,12 @@ jobs:
         if: steps.changes.outputs.should-build == 'true'
         run: uv sync
 
-      - name: 严格模式构建验证
+      # 步骤 5: 严格模式构建网站
+      - name: 🔨 严格模式构建验证
         if: steps.changes.outputs.should-build == 'true'
         run: uv run mkdocs build --clean --strict --verbose
       
-      # 步骤 3: 部署到 GitHub Pages (预览环境)
+      # 步骤 6: 部署到 GitHub Pages (预览环境)
       - name: 🌐 部署预览环境
         if: steps.changes.outputs.should-build == 'true'
         uses: peaceiris/actions-gh-pages@v3
@@ -87,4 +106,29 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site
           destination_dir: pr-preview/pr-${{ github.event.pull_request.number }}
-          keep_files: false # 每次都覆盖
+          keep_files: false # 每次都覆盖旧的预览
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+
+
+  cleanup-preview:
+    name: '清理预览环境'
+    # 仅在 PR 被关闭 (closed) 或合并 (merged) 时运行
+    if: github.event.action == 'closed'
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 🗑️ 删除预览目录
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # 通过发布一个空目录到目标位置来实现删除
+          publish_dir: ./empty-dir-for-cleanup 
+          destination_dir: pr-preview/pr-${{ github.event.pull_request.number }}
+          keep_files: false
+          allow_empty_commit: true # 必须允许空提交以记录删除操作
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          
+      # 在 peaceiris/actions-gh-pages 运行前创建一个临时的空目录
+      - run: mkdir ./empty-dir-for-cleanup
