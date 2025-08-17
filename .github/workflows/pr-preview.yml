@@ -1,0 +1,422 @@
+# 智能 PR 验证工作流
+name: 📋 智能 PR 验证与预览
+
+# 触发条件：PR 创建、更新、重新打开
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches: [main]
+
+# 权限配置
+permissions:
+  contents: read
+  pull-requests: write
+  pages: write
+  id-token: write
+
+# 并发控制：同一 PR 的多次推送只保留最新的
+concurrency:
+  group: pr-preview-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  # 第一阶段：智能文件检测
+  detect-changes:
+    name: 🔍 智能文件变更检测
+    runs-on: ubuntu-latest
+    outputs:
+      should-build: ${{ steps.changes.outputs.should-build }}
+      changed-files: ${{ steps.changes.outputs.changed-files }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 分析文件变更
+        id: changes
+        run: |
+          echo "🔍 开始分析文件变更..."
+          
+          # 获取变更的文件列表
+          changed_files=$(git diff --name-only ${{ github.event.pull_request.base.sha }}...${{ github.event.pull_request.head.sha }})
+          echo "changed-files<<EOF" >> $GITHUB_OUTPUT
+          echo "$changed_files" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+          
+          echo "📁 变更文件列表："
+          echo "$changed_files"
+          
+          # 定义需要触发构建的文件模式
+          build_patterns=(
+            "^docs/"
+            "^mkdocs\.yml$"
+            "^pyproject\.toml$"
+            "^overrides/"
+            "^\.github/workflows/"
+            "^README\.md$"
+          )
+          
+          # 定义跳过构建的文件模式  
+          skip_patterns=(
+            "^class0/"
+            "^main\.py$"
+            "^drafts/"
+            "^\.gitignore$"
+            "^\.mailmap$"
+            "^\.markdownlint\.yaml$"
+            "^\.python-version$"
+            "^uv\.lock$"
+            "^issues/"
+          )
+          
+          should_build="false"
+          
+          # 检查是否有文件匹配构建模式
+          while IFS= read -r file; do
+            if [[ -z "$file" ]]; then
+              continue
+            fi
+            
+            # 首先检查是否在跳过列表中
+            skip_file="false"
+            for pattern in "${skip_patterns[@]}"; do
+              if [[ $file =~ $pattern ]]; then
+                echo "⏭️  跳过文件: $file (匹配跳过模式: $pattern)"
+                skip_file="true"
+                break
+              fi
+            done
+            
+            # 如果不在跳过列表中，检查是否需要构建
+            if [[ $skip_file == "false" ]]; then
+              for pattern in "${build_patterns[@]}"; do
+                if [[ $file =~ $pattern ]]; then
+                  echo "✅ 触发构建: $file (匹配构建模式: $pattern)"
+                  should_build="true"
+                  break 2
+                fi
+              done
+              
+              # 如果文件不匹配任何已知模式，默认触发构建（安全策略）
+              echo "❓ 未知文件类型，安全起见触发构建: $file"
+              should_build="true"
+              break
+            fi
+          done <<< "$changed_files"
+          
+          echo "should-build=$should_build" >> $GITHUB_OUTPUT
+          
+          if [[ $should_build == "true" ]]; then
+            echo "🚀 检测结果: 需要构建文档"
+          else
+            echo "⏭️  检测结果: 跳过文档构建"
+          fi
+
+  # 第二阶段：PR 状态通知（开始构建）
+  notify-start:
+    name: 💬 通知构建开始
+    runs-on: ubuntu-latest
+    needs: detect-changes
+    if: needs.detect-changes.outputs.should-build == 'true'
+    steps:
+      - name: 发布开始构建评论
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+            
+            // 查找现有的构建状态评论
+            const existingComment = comments.find(comment => 
+              comment.user.login === 'github-actions[bot]' && 
+              comment.body.includes('📋 PR 预览构建状态')
+            );
+            
+            const commentBody = `## 📋 PR 预览构建状态
+            
+            🔄 **正在构建中...**
+            
+            📁 **检测到的相关文件变更:**
+            \`\`\`
+            ${{ needs.detect-changes.outputs.changed-files }}
+            \`\`\`
+            
+            ⏳ 请稍候，文档正在构建和部署中...
+            
+            ---
+            *🤖 此评论由智能 PR 验证工作流自动生成*`;
+            
+            if (existingComment) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existingComment.id,
+                body: commentBody
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: commentBody
+              });
+            }
+
+  # 第三阶段：严格模式构建验证
+  build-and-preview:
+    name: 🔨 严格构建与预览部署
+    runs-on: ubuntu-latest
+    needs: [detect-changes, notify-start]
+    if: needs.detect-changes.outputs.should-build == 'true'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+
+      - name: Install uv
+        run: pipx install uv
+
+      - name: Cache uv virtual environment
+        uses: actions/cache@v4
+        with:
+          path: ./.venv
+          key: ${{ runner.os }}-uv-${{ hashFiles('**/pyproject.toml') }}-pr
+          restore-keys: |
+            ${{ runner.os }}-uv-
+
+      - name: Install dependencies with uv
+        run: uv sync
+
+      - name: 🔍 严格模式构建验证
+        run: |
+          echo "🔨 开始严格模式构建验证..."
+          
+          # 使用 --strict 模式确保没有警告
+          # 使用 --clean 确保干净构建
+          uv run mkdocs build --clean --strict --verbose
+          
+          echo "✅ 严格模式构建验证通过"
+
+      - name: 📊 构建质量检查
+        run: |
+          echo "📊 执行构建质量检查..."
+          
+          # 检查生成的网站目录
+          if [[ ! -d "site" ]]; then
+            echo "❌ 错误: site 目录未生成"
+            exit 1
+          fi
+          
+          # 检查必要文件是否存在
+          required_files=("site/index.html" "site/sitemap.xml")
+          for file in "${required_files[@]}"; do
+            if [[ ! -f "$file" ]]; then
+              echo "❌ 错误: 必要文件 $file 未生成"
+              exit 1
+            fi
+          done
+          
+          # 统计生成的文件数量
+          total_files=$(find site -type f | wc -l)
+          html_files=$(find site -name "*.html" | wc -l)
+          
+          echo "📈 构建统计:"
+          echo "  - 总文件数: $total_files"
+          echo "  - HTML文件数: $html_files"
+          
+          if [[ $html_files -lt 5 ]]; then
+            echo "⚠️  警告: HTML文件数量似乎偏少，请检查构建配置"
+          fi
+          
+          echo "✅ 构建质量检查通过"
+
+      - name: 🌐 部署预览环境  
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          destination_dir: pr-preview/pr-${{ github.event.pull_request.number }}
+          keep_files: false
+
+  # 第四阶段：构建成功通知
+  notify-success:
+    name: ✅ 通知构建成功
+    runs-on: ubuntu-latest
+    needs: [detect-changes, build-and-preview]
+    if: needs.detect-changes.outputs.should-build == 'true' && success()
+    steps:
+      - name: 发布构建成功评论
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+            
+            const existingComment = comments.find(comment => 
+              comment.user.login === 'github-actions[bot]' && 
+              comment.body.includes('📋 PR 预览构建状态')
+            );
+            
+            const previewUrl = `https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-preview/pr-${{ github.event.pull_request.number }}/`;
+            
+            const commentBody = `## 📋 PR 预览构建状态
+            
+            ✅ **构建成功！**
+            
+            🌐 **预览链接:** [查看预览网站](${previewUrl})
+            
+            📁 **处理的文件变更:**
+            \`\`\`
+            ${{ needs.detect-changes.outputs.changed-files }}
+            \`\`\`
+            
+            🎉 恭喜！您的文档变更已成功构建并部署到预览环境。
+            
+            ---
+            *🤖 此评论由智能 PR 验证工作流自动生成*`;
+            
+            if (existingComment) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existingComment.id,
+                body: commentBody
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: commentBody
+              });
+            }
+
+  # 第五阶段：构建失败通知
+  notify-failure:
+    name: ❌ 通知构建失败
+    runs-on: ubuntu-latest
+    needs: [detect-changes, build-and-preview]
+    if: needs.detect-changes.outputs.should-build == 'true' && failure()
+    steps:
+      - name: 发布构建失败评论
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+            
+            const existingComment = comments.find(comment => 
+              comment.user.login === 'github-actions[bot]' && 
+              comment.body.includes('📋 PR 预览构建状态')
+            );
+            
+            const workflowUrl = `https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}`;
+            
+            const commentBody = `## 📋 PR 预览构建状态
+            
+            ❌ **构建失败**
+            
+            📁 **尝试处理的文件变更:**
+            \`\`\`
+            ${{ needs.detect-changes.outputs.changed-files }}
+            \`\`\`
+            
+            🔧 **问题排查:**
+            - 请检查您的 Markdown 语法是否正确
+            - 请确认所有链接和图片路径有效
+            - 请查看 [详细错误日志](${workflowUrl}) 获取更多信息
+            
+            💡 **提示:** 您可以在本地运行 \`uv run mkdocs build --strict\` 来重现并修复问题。
+            
+            ---
+            *🤖 此评论由智能 PR 验证工作流自动生成*`;
+            
+            if (existingComment) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existingComment.id,
+                body: commentBody
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: commentBody
+              });
+            }
+
+  # 第六阶段：跳过构建通知
+  notify-skipped:
+    name: ⏭️ 通知跳过构建
+    runs-on: ubuntu-latest
+    needs: detect-changes
+    if: needs.detect-changes.outputs.should-build == 'false'
+    steps:
+      - name: 发布跳过构建评论
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+            
+            const existingComment = comments.find(comment => 
+              comment.user.login === 'github-actions[bot]' && 
+              comment.body.includes('📋 PR 预览构建状态')
+            );
+            
+            const commentBody = `## 📋 PR 预览构建状态
+            
+            ⏭️ **智能跳过构建**
+            
+            📁 **检测到的文件变更:**
+            \`\`\`
+            ${{ needs.detect-changes.outputs.changed-files }}
+            \`\`\`
+            
+            🎯 **跳过原因:** 本次变更不涉及文档相关文件，无需构建预览。
+            
+            📋 **会触发构建的文件类型:**
+            - \`docs/\` 目录下的文档文件
+            - \`mkdocs.yml\` 配置文件  
+            - \`pyproject.toml\` 依赖配置
+            - \`overrides/\` 主题覆盖文件
+            - \`.github/workflows/\` 工作流文件
+            - \`README.md\` 首页文档
+            
+            ---
+            *🤖 此评论由智能 PR 验证工作流自动生成*`;
+            
+            if (existingComment) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existingComment.id,
+                body: commentBody
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: commentBody
+              });
+            }
