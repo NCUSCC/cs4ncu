@@ -4,7 +4,7 @@ tags:
   - Type-Specification
   - Level-Beginner
   - Action-Collaboration
-  - Context-Project
+  - Context-Project 
 ---
 
 # 社区行为准则 (Code of Conduct)
@@ -71,7 +71,7 @@ tags:
 如果您目睹或经历了违反本行为准则的事件，或有任何其他疑虑，请立即通过以下方式与项目管理团队取得联系。**所有报告都将被严格保密。**
 
 <!-- *   **举报专用邮箱**：`cs4ncu.community@example.com` (待补充) -->
-*   **在 [Discord](https://discord.gg/Rux6DHRStP) 中私信管理员**
+*   **在 [:fontawesome-brands-discord: Discord](https://discord.gg/Rux6DHRStP) 中私信管理员**
 
 请在报告中尽可能提供详细信息，如：事件描述、发生时间、相关链接 (Issue, PR, 聊天记录截图等)、涉及人员等。
 
@@ -90,4 +90,4 @@ tags:
 
 ---
 
-本行为准则适用于所有 `CS for NCU` 的社区空间，包括但不限于 GitHub 仓库、Discord 服务器以及其他官方交流渠道。
+本行为准则适用于所有 `CS for NCU` 的社区空间，包括但不限于 GitHub 仓库、Discord 服务器以及其他官方交流渠道
