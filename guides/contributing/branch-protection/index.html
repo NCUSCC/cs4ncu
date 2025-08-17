@@ -1564,10 +1564,52 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="main 分支的核心保护规则">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      所有变更必须通过拉取请求 (Pull Request)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      PR 必须经过审查批准
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      更新后需要重新审查
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      保持干净、线性的提交历史
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       标准贡献流程
     </span>
@@ -1720,6 +1762,29 @@
   
   <span class="md-ellipsis">
     调整提示框样式
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../figure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    调整图片样式
     
   </span>
   
@@ -2051,10 +2116,52 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="main 分支的核心保护规则">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      所有变更必须通过拉取请求 (Pull Request)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      PR 必须经过审查批准
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      更新后需要重新审查
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      保持干净、线性的提交历史
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       标准贡献流程
     </span>
@@ -2113,36 +2220,44 @@
 
   
   
+    
+      
+    
+    <a href="https://github.com/NCUSCC/cs4ncu/raw/main/docs/guides/contributing/branch-protection.md" title="查看本页的源代码" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
 
 
 <h1 id="git">我们的 Git 工作流与分支保护<a class="headerlink" href="#git" title="Permanent link">&para;</a></h1>
 <p>为了保持 <code>main</code> 分支的绝对稳定和项目历史的清晰，我们建立了一套明确的协作流程。</p>
 <p>这些不仅仅是口头约定，它们由 GitHub 的分支保护规则强制执行，以确保一个对<strong>所有人（包括项目管理员）</strong>都公平、一致的贡献环境。</p>
 <hr />
-<h3 id="main"><code>main</code> 分支的核心保护规则<a class="headerlink" href="#main" title="Permanent link">&para;</a></h3>
+<h2 id="main"><code>main</code> 分支的核心保护规则<a class="headerlink" href="#main" title="Permanent link">&para;</a></h2>
 <p>我们的 <code>main</code> 分支受到以下 GitHub 设置的保护：</p>
-<p><strong>1. 所有变更必须通过拉取请求 (Pull Request)</strong></p>
+<h3 id="pull-request">所有变更必须通过拉取请求 (Pull Request)<a class="headerlink" href="#pull-request" title="Permanent link">&para;</a></h3>
 <p>我们不允许任何人直接向 <code>main</code> 分支推送代码。所有修改，无论大小，都必须通过 PR 的方式提交，以便进行讨论和审查。</p>
 <ul>
 <li><strong>GitHub 设置</strong>: <code>Require a pull request before merging</code> 已启用。</li>
 </ul>
-<p><strong>2. PR 必须经过审查批准</strong></p>
+<h3 id="pr">PR 必须经过审查批准<a class="headerlink" href="#pr" title="Permanent link">&para;</a></h3>
 <p>一个 PR 在合并前，必须获得至少一名项目维护者的审查和明确批准 (Approve)。这确保了每一行代码都经过了复核。</p>
 <ul>
 <li><strong>GitHub 设置</strong>: <code>Require approvals</code> 已设置为 1。</li>
 </ul>
-<p><strong>3. 更新后需要重新审查</strong></p>
+<h3 id="_1">更新后需要重新审查<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p>如果一个 PR 在被批准后，贡献者又推送了新的代码，那么之前的批准状态会自动失效。这保证了最终合并的代码就是被审查过的代码。</p>
 <ul>
 <li><strong>GitHub 设置</strong>: <code>Dismiss stale pull request approvals when new commits are pushed</code> 已启用。</li>
 </ul>
-<p><strong>4. 保持干净、线性的提交历史</strong></p>
+<h3 id="_2">保持干净、线性的提交历史<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>我们通过“压缩合并”的方式来合并 PR。这意味着一个 PR 中的多次零散提交（比如“修复错字”、“调整格式”）会被合并成一个有意义的、完整的提交记录，最终进入 <code>main</code> 分支。</p>
 <ul>
 <li><strong>GitHub 设置</strong>: <code>Require linear history</code> 已启用，我们约定使用 <strong>Squash and merge</strong>。</li>
 </ul>
 <hr />
-<h3 id="_1">标准贡献流程<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<h2 id="_3">标准贡献流程<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>这是将你的贡献融入项目的唯一路径，对所有人都一样：</p>
 <ol>
 <li><strong>Fork</strong> 仓库到你自己的 GitHub 账户。</li>
@@ -2162,6 +2277,28 @@
   
   
 
+
+  <aside class="md-source-file">
+    
+    
+    
+      
+  
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="贡献者">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
+      
+    </span>
+    <nav>
+      
+        <a href="mailto:121592812+ywh555hhh@users.noreply.github.com">teapot1de</a>
+    </nav>
+  </span>
+
+    
+    
+  </aside>
 
 
 
@@ -2217,7 +2354,7 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.sections", "content.code.copy", "content.code.annotate", "content.code.select", "search.suggest", "navigation.tags"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.sections", "content.code.copy", "content.code.annotate", "search.suggest", "navigation.tags", "content.action.view"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.50899def.min.js"></script>
