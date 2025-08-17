@@ -4,58 +4,91 @@ name: '部署 PR 预览并评论'
 
 on:
   workflow_run:
-    # 关键：监视上面那个工作流！名字必须完全匹配！
     workflows: ["构建 PR 预览环境"]
     types:
       - completed
 
-# 关键：这里申请所有需要的写入权限
 permissions:
   contents: write
   pull-requests: write
   pages: write
 
 jobs:
-  deploy-and-comment:
+  get-pr-number:
     runs-on: ubuntu-latest
-    # 确保只对 PR 触发的构建进行操作
     if: github.event.workflow_run.event == 'pull_request'
-
+    outputs:
+      pr_number: ${{ steps.find-pr.outputs.pr_number }}
+      should_deploy: ${{ steps.check-conclusion.outputs.should_deploy }}
     steps:
-      # 步骤 1: 根据构建结果进行操作
-      - name: 📝 处理构建结果
+      - name: 检查构建结果
+        id: check-conclusion
+        run: |
+          if [[ "${{ github.event.workflow_run.conclusion }}" == "success" ]]; then
+            echo "should_deploy=true" >> $GITHUB_OUTPUT
+          else
+            echo "should_deploy=false" >> $GITHUB_OUTPUT
+          fi
+      - name: 查找关联的 PR
+        id: find-pr
         uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            // 从事件载荷中安全地获取 PR 信息
-            const pr = ${{ toJSON(github.event.workflow_run.pull_requests[0]) }};
-            const pr_number = pr.number;
-            const conclusion = "${{ github.event.workflow_run.conclusion }}";
-            const repo_full_name = "${{ github.repository }}";
-            const [owner, repo] = repo_full_name.split('/');
-            const preview_url = `https://${owner}.github.io/${repo}/pr-preview/pr-${pr_number}/`;
+            const head_sha = "${{ github.event.workflow_run.head_sha }}";
+            const { data: pull_requests } = await github.rest.repos.listPullRequestsAssociatedWithCommit({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              commit_sha: head_sha,
+            });
+            if (pull_requests.length === 0) {
+              core.setFailed(`在 commit SHA (${head_sha}) 上找不到关联的 Pull Request。`);
+              return;
+            }
+            const pr_number = pull_requests[0].number;
+            core.setOutput('pr_number', pr_number);
+
+  deploy-and-comment:
+    runs-on: ubuntu-latest
+    needs: get-pr-number
+    # 只要找到了 PR 号就运行，在内部根据 should_deploy 判断
+    if: needs.get-pr-number.outputs.pr_number
+    steps:
+      - name: 📥 下载构建产物
+        if: needs.get-pr-number.outputs.should_deploy == 'true'
+        uses: actions/download-artifact@v4
+        with:
+          name: preview-site-${{ needs.get-pr-number.outputs.pr_number }}
+          path: ./site
+
+      - name: 🌐 部署预览环境
+        if: needs.get-pr-number.outputs.should_deploy == 'true'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          destination_dir: pr-preview/pr-${{ needs.get-pr-number.outputs.pr_number }}
+          keep_files: false
+
+      - name: 📝 发表或更新评论
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const pr_number = ${{ needs.get-pr-number.outputs.pr_number }};
+            const should_deploy = "${{ needs.get-pr-number.outputs.should_deploy }}" === "true";
+            const preview_url = `https://${context.repo.owner}.github.io/${context.repo.repo}/pr-preview/pr-${pr_number}/`;
             const logs_url = "${{ github.event.workflow_run.html_url }}";
             
             let commentBody = '';
-
-            if (conclusion === 'success') {
-              // 检查构建产物是否存在。如果构建被跳过，产物就不会存在。
-              // (注意：此脚本无法直接检查产物，但我们可以通过后续步骤是否成功来判断)
-              // 这里我们先乐观地生成成功消息，如果后续部署失败，可以更新评论
+            if (should_deploy) {
               commentBody = `## 📋 PR 预览构建状态\n\n✅ **构建成功！**\n\n🌐 **预览链接:** [查看预览网站](${preview_url})\n\n[查看构建日志](${logs_url})`;
-              
-              // 添加一个标签，表示需要部署
-              core.setOutput('should_deploy', 'true');
-
-            } else { // failure, cancelled, etc.
+            } else {
               commentBody = `## 📋 PR 预览构建状态\n\n❌ **构建失败**\n\n请检查 [详细错误日志](${logs_url}) 获取更多信息。`;
-              core.setOutput('should_deploy', 'false');
             }
 
-            // --- 查找并更新或创建评论 ---
             const { data: comments } = await github.rest.issues.listComments({
-              owner: owner, repo: repo, issue_number: pr_number,
+              owner: context.repo.owner, repo: context.repo.repo, issue_number: pr_number,
             });
             const existingComment = comments.find(comment => 
               comment.user.login === 'github-actions[bot]' && 
@@ -64,29 +97,10 @@ jobs:
 
             if (existingComment) {
               await github.rest.issues.updateComment({
-                owner: owner, repo: repo, comment_id: existingComment.id, body: commentBody
+                owner: context.repo.owner, repo: context.repo.repo, comment_id: existingComment.id, body: commentBody
               });
             } else {
               await github.rest.issues.createComment({
-                owner: owner, repo: repo, issue_number: pr_number, body: commentBody
+                owner: context.repo.owner, repo: context.repo.repo, issue_number: pr_number, body: commentBody
               });
             }
-        id: handle-result # 给这个步骤一个 ID，以便后续步骤可以引用它的输出
-
-      # 步骤 2: 下载构建产物（如果需要部署）
-      - name: 📥 下载构建产物
-        if: steps.handle-result.outputs.should_deploy == 'true'
-        uses: actions/download-artifact@v4
-        with:
-          name: preview-site-${{ github.event.workflow_run.pull_requests[0].number }}
-          path: ./site
-
-      # 步骤 3: 部署到 GitHub Pages（如果需要部署）
-      - name: 🌐 部署预览环境
-        if: steps.handle-result.outputs.should_deploy == 'true'
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site
-          destination_dir: pr-preview/pr-${{ github.event.workflow_run.pull_requests[0].number }}
-          keep_files: false # 每次都是全新部署，不保留旧文件
