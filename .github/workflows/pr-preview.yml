@@ -3,7 +3,7 @@ name: 📋 智能 PR 验证与预览
 
 # 触发条件：PR 创建、更新、重新打开
 on:
-  pull_request:
+  pull_request_target:
     types: [opened, synchronize, reopened]
     branches: [main]
 
@@ -175,7 +175,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
+        with:
+            ref: ${{ github.event.pull_request.head.sha }}
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
