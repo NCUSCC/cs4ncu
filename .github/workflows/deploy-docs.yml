@@ -1,5 +1,5 @@
-# 工作流名称，会显示在 GitHub Actions 页面
-name: Deploy CS for NCU Docs
+# 增强的生产部署工作流
+name: 🚀 生产环境部署
 
 # 工作流的触发条件
 on:
@@ -11,15 +11,93 @@ on:
   # 2. 手动触发：允许你在 GitHub Actions 页面手动运行此工作流
   workflow_dispatch:
 
-# 定义工作流所需的权限，以允许推送到 gh-pages 分支
+# 定义工作流所需的权限
 permissions:
   contents: write
+  pages: write
+  id-token: write
+
+# 并发控制：确保生产部署的原子性
+concurrency:
+  group: production-deploy
+  cancel-in-progress: false
 
 # 工作流中运行的任务
 jobs:
-  deploy:
-    # 运行此任务的虚拟机环境
+  # 清理过期预览环境
+  cleanup-stale-previews:
+    name: 🧹 清理过期预览环境
     runs-on: ubuntu-latest
+    steps:
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          fetch-depth: 0
+
+      - name: 清理已关闭 PR 的预览环境
+        run: |
+          echo "🧹 开始清理过期预览环境..."
+          
+          if [[ ! -d "pr-preview" ]]; then
+            echo "ℹ️  未找到预览目录，无需清理"
+            exit 0
+          fi
+          
+          cd pr-preview
+          
+          # 获取所有预览目录
+          for pr_dir in pr-*; do
+            if [[ ! -d "$pr_dir" ]]; then
+              continue
+            fi
+            
+            # 提取 PR 编号
+            pr_number=${pr_dir#pr-}
+            
+            if [[ ! "$pr_number" =~ ^[0-9]+$ ]]; then
+              echo "⚠️  跳过无效目录: $pr_dir"
+              continue
+            fi
+            
+            echo "🔍 检查 PR #$pr_number 状态..."
+            
+            # 检查 PR 状态
+            pr_status=$(curl -s \
+              -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+              -H "Accept: application/vnd.github.v3+json" \
+              "https://api.github.com/repos/${{ github.repository }}/pulls/$pr_number" \
+              | jq -r '.state // "not_found"')
+            
+            if [[ "$pr_status" == "closed" ]] || [[ "$pr_status" == "not_found" ]]; then
+              echo "🗑️  删除已关闭/不存在的 PR #$pr_number 预览环境"
+              rm -rf "$pr_dir"
+            else
+              echo "✅ PR #$pr_number 仍然开放，保留预览环境"
+            fi
+          done
+          
+          # 检查是否有变更需要提交
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git config --local user.email "action@github.com"
+            git config --local user.name "GitHub Action"
+            git add -A
+            git commit -m "🧹 自动清理过期PR预览环境"
+            git push
+            echo "✅ 预览环境清理完成并已提交"
+          else
+            echo "ℹ️  无过期预览环境需要清理"
+          fi
+
+  # 生产环境部署
+  deploy:
+  deploy:
+    name: 🚀 生产环境部署
+    runs-on: ubuntu-latest
+    needs: cleanup-stale-previews
+    environment:
+      name: production
+      url: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
 
     # 任务中的步骤
     steps:
@@ -31,7 +109,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.11"
+          python-version: "3.12"
 
       # 步骤 3: 安装 uv
       - name: Install uv
@@ -42,7 +120,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ./.venv
-          key: ${{ runner.os }}-uv-${{ hashFiles('**/pyproject.toml') }}
+          key: ${{ runner.os }}-uv-${{ hashFiles('**/pyproject.toml') }}-prod
           restore-keys: |
             ${{ runner.os }}-uv-
 
@@ -50,14 +128,128 @@ jobs:
       - name: Install dependencies with uv
         run: uv sync
 
-      # 步骤 6: 构建文档网站 (使用 --strict 保证质量)
-      - name: Build documentation
-        run: uv run mkdocs build --clean --strict
+      # 步骤 6: 增强的构建验证
+      - name: 🔨 增强构建验证
+        run: |
+          echo "🔨 开始增强构建验证..."
+          
+          # 记录构建开始时间
+          build_start_time=$(date +%s)
+          
+          # 使用 --strict 保证质量，--verbose 提供详细日志
+          echo "📝 开始详细构建过程..."
+          uv run mkdocs build --clean --strict --verbose 2>&1 | tee build.log
+          
+          # 记录构建结束时间并计算耗时
+          build_end_time=$(date +%s)
+          build_duration=$((build_end_time - build_start_time))
+          
+          echo "⏱️  构建耗时: ${build_duration}s"
+          
+          # 详细的构建质量检查
+          echo "🔍 执行详细构建质量检查..."
+          
+          # 检查生成的网站目录
+          if [[ ! -d "site" ]]; then
+            echo "❌ 严重错误: site 目录未生成"
+            exit 1
+          fi
+          
+          # 检查必要文件
+          required_files=(
+            "site/index.html"
+            "site/sitemap.xml"
+            "site/search/search_index.json"
+          )
+          
+          for file in "${required_files[@]}"; do
+            if [[ ! -f "$file" ]]; then
+              echo "❌ 严重错误: 必要文件 $file 未生成"
+              exit 1
+            fi
+          done
+          
+          # 统计生成文件
+          total_files=$(find site -type f | wc -l)
+          html_files=$(find site -name "*.html" | wc -l)
+          css_files=$(find site -name "*.css" | wc -l)
+          js_files=$(find site -name "*.js" | wc -l)
+          
+          echo "📊 详细构建统计:"
+          echo "  - 总文件数: $total_files"
+          echo "  - HTML文件: $html_files"
+          echo "  - CSS文件: $css_files"
+          echo "  - JS文件: $js_files"
+          echo "  - 构建耗时: ${build_duration}s"
+          
+          # 质量检查
+          if [[ $html_files -lt 5 ]]; then
+            echo "⚠️  警告: HTML文件数量偏少 ($html_files)，可能存在构建问题"
+          fi
+          
+          if [[ $css_files -lt 1 ]]; then
+            echo "⚠️  警告: 未找到CSS文件，样式可能有问题"
+          fi
+          
+          # 检查构建日志中的警告
+          warning_count=$(grep -c "WARNING" build.log || true)
+          if [[ $warning_count -gt 0 ]]; then
+            echo "⚠️  构建过程中有 $warning_count 个警告，请检查构建日志"
+          fi
+          
+          echo "✅ 增强构建验证通过"
 
-      # 步骤 7: 部署到 GitHub Pages
-      # 这一步会自动将 `./site` 目录的内容推送到本仓库的 `gh-pages` 分支
-      - name: Deploy to GitHub Pages
+      # 步骤 7: 环境隔离验证
+      - name: 🔒 环境隔离验证
+        run: |
+          echo "🔒 验证生产环境隔离..."
+          
+          # 确保生产构建不包含预览相关内容
+          if grep -r "pr-preview" site/ 2>/dev/null; then
+            echo "❌ 错误: 生产构建中发现预览环境引用"
+            exit 1
+          fi
+          
+          # 检查是否有开发环境残留
+          dev_indicators=("localhost" "127.0.0.1" "dev-mode" "debug")
+          for indicator in "${dev_indicators[@]}"; do
+            if grep -r "$indicator" site/ 2>/dev/null; then
+              echo "⚠️  警告: 发现可能的开发环境残留: $indicator"
+            fi
+          done
+          
+          echo "✅ 环境隔离验证通过"
+
+      # 步骤 8: 部署到 GitHub Pages
+      - name: 🌐 部署到生产环境
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site
+          # 生产环境部署到根目录，与预览环境完全隔离
+          destination_dir: .
+          keep_files: true  # 保留预览环境文件
+          exclude_assets: 'pr-preview/**'
+
+      # 步骤 9: 部署后验证
+      - name: ✅ 部署验证
+        run: |
+          echo "✅ 执行部署后验证..."
+          
+          # 等待一段时间让部署生效
+          echo "⏳ 等待部署生效..."
+          sleep 30
+          
+          # 验证网站可访问性（可选，需要网站已配置完成）
+          site_url="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+          
+          echo "🌐 验证网站可访问性: $site_url"
+          
+          # 使用 curl 进行基本可访问性检查
+          if curl -sSf -I "$site_url" > /dev/null 2>&1; then
+            echo "✅ 网站可访问性验证通过"
+          else
+            echo "⚠️  注意: 网站可访问性验证失败，可能需要等待DNS传播"
+          fi
+          
+          echo "🎉 生产环境部署完成！"

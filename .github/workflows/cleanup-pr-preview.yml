@@ -1,0 +1,120 @@
+# PR 预览清理工作流
+name: 🧹 清理 PR 预览环境
+
+# 触发条件：PR 关闭或合并时
+on:
+  pull_request:
+    types: [closed]
+    branches: [main]
+
+# 权限配置
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  cleanup-preview:
+    name: 🗑️ 清理预览环境
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出 gh-pages 分支
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          fetch-depth: 1
+
+      - name: 清理 PR 预览资源
+        id: cleanup
+        run: |
+          echo "🧹 开始清理 PR #${{ github.event.pull_request.number }} 的预览环境..."
+          
+          pr_preview_dir="pr-preview/pr-${{ github.event.pull_request.number }}"
+          
+          if [[ -d "$pr_preview_dir" ]]; then
+            echo "🗑️  删除预览目录: $pr_preview_dir"
+            rm -rf "$pr_preview_dir"
+            
+            # 检查是否为空的 pr-preview 目录，如果是则删除
+            if [[ -d "pr-preview" ]] && [[ -z "$(ls -A pr-preview)" ]]; then
+              echo "🗂️  删除空的 pr-preview 目录"
+              rmdir pr-preview
+            fi
+            
+            echo "cleanup-performed=true" >> $GITHUB_OUTPUT
+            echo "✅ 预览环境清理完成"
+          else
+            echo "ℹ️  未找到 PR #${{ github.event.pull_request.number }} 的预览环境"
+            echo "cleanup-performed=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: 提交清理变更
+        if: steps.cleanup.outputs.cleanup-performed == 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          
+          git add -A
+          git commit -m "🧹 清理 PR #${{ github.event.pull_request.number }} 预览环境
+          
+          - 删除预览目录: pr-preview/pr-${{ github.event.pull_request.number }}
+          - 触发原因: PR 关闭/合并
+          - 清理时间: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          
+          git push
+          
+          echo "✅ 清理变更已提交到 gh-pages 分支"
+
+      - name: 发布清理完成通知
+        if: steps.cleanup.outputs.cleanup-performed == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const commentBody = `## 🧹 预览环境清理完成
+            
+            ✅ **清理状态**: 已成功清理
+            
+            🗑️ **清理内容:**
+            - 预览目录: \`pr-preview/pr-${{ github.event.pull_request.number }}\`
+            - 清理时间: ${new Date().toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })}
+            
+            💾 **清理详情:**
+            - PR 预览环境已从 GitHub Pages 中移除
+            - 相关静态资源已清理完毕
+            - 不再占用存储空间
+            
+            🎉 感谢您的贡献！
+            
+            ---
+            *🤖 此通知由预览清理工作流自动生成*`;
+            
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: commentBody
+            });
+
+      - name: 发布无需清理通知
+        if: steps.cleanup.outputs.cleanup-performed == 'false'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const commentBody = `## 🧹 预览环境清理状态
+            
+            ℹ️ **清理状态**: 无需清理
+            
+            📋 **说明:**
+            - 本 PR 未创建预览环境，或已提前清理
+            - 可能原因：文件变更不涉及文档内容，智能检测跳过了构建
+            
+            🎉 感谢您的贡献！
+            
+            ---
+            *🤖 此通知由预览清理工作流自动生成*`;
+            
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: commentBody
+            });
