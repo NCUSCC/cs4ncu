@@ -1,0 +1,90 @@
+# 文件名: .github/workflows/pr-preview-build.yml
+
+name: '构建 PR 预览环境'
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches: [main]
+
+permissions:
+  contents: read # 只读权限，非常安全
+
+concurrency:
+  group: pr-preview-build-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  # 阶段一：检测文件变更
+  detect-changes:
+    name: 🔍 智能文件变更检测
+    runs-on: ubuntu-latest
+    outputs:
+      should-build: ${{ steps.changes.outputs.should-build }}
+      changed-files: ${{ steps.changes.outputs.changed-files }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      # --- 你的文件变更分析脚本，保持不变 ---
+      - name: 分析文件变更
+        id: changes
+        run: |
+          # (这里是你原来的完整分析脚本，我省略了以保持简洁)
+          changed_files=$(git diff --name-only ${{ github.event.pull_request.base.sha }}...${{ github.event.pull_request.head.sha }})
+          echo "changed-files<<EOF" >> $GITHUB_OUTPUT
+          echo "$changed_files" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+          build_patterns=("^docs/" "^mkdocs\.yml$" "^\.github/workflows/")
+          should_build="false"
+          for pattern in "${build_patterns[@]}"; do
+            if [[ "$changed_files" =~ $pattern ]]; then
+              should_build="true"
+              break
+            fi
+          done
+          echo "should-build=$should_build" >> $GITHUB_OUTPUT
+
+  # 阶段二：构建网站
+  build:
+    name: 🔨 构建预览网站
+    runs-on: ubuntu-latest
+    needs: detect-changes
+    if: needs.detect-changes.outputs.should-build == 'true'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        # 关键：明确检出 PR 的代码进行构建
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+
+      - name: Install uv
+        run: pipx install uv
+
+      - name: Cache uv virtual environment
+        uses: actions/cache@v4
+        with:
+          path: ./.venv
+          key: ${{ runner.os }}-uv-${{ hashFiles('**/pyproject.toml') }}-pr
+          restore-keys: |
+            ${{ runner.os }}-uv-
+
+      - name: Install dependencies with uv
+        run: uv sync
+
+      - name: 🔍 严格模式构建验证
+        run: uv run mkdocs build --clean --strict --verbose
+
+      # 关键步骤：将构建好的 `site` 目录作为产物上传
+      - name: 📦 上传构建产物
+        uses: actions/upload-artifact@v4
+        with:
+          name: preview-site-${{ github.event.pull_request.number }}
+          path: ./site
