@@ -103,6 +103,8 @@ jobs:
       # 步骤 1: 检出你的仓库代码
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 
 
       # 步骤 2: 设置 Python 环境
       - name: Set up Python
