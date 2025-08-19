@@ -138,31 +138,37 @@ nav:
     - '课程导览': 'course/index.md'
     - '章一：大学思维与心态':
       - '本章导览': 'course/ch1/index.md'
-      - '学会自己解决问题': 'course/ch1/01.md'
-      - '找到你的内在驱动力': 'course/ch1/02.md'
+      - '告别单行道': 'course/ch1/01.md'
+      - '自我导航': 'course/ch1/02.md'
+      - '学会解决问题': 'course/ch1/03.md'
     - '章二：数字时代基本功':
       - '本章导览': 'course/ch2/index.md'
-      - '重新认识笔记本': 'course/ch2/01.md'
-      - '成为打字高手': 'course/ch2/02.md'
-      - '文件管理的艺术': 'course/ch2/03.md'
-      - '必备软件推荐': 'course/ch2/04.md'
+      - '认识笔记本': 'course/ch2/01.md'
+      - '键盘与打字': 'course/ch2/02.md'
+      - '文件管理入门': 'course/ch2/03.md'
+      - '必备软件': 'course/ch2/04.md'
     - '章三：现代学习工作流':
       - '本章导览': 'course/ch3/index.md'
-      - '合法科学上网': 'course/ch3/01.md'
-      - '共享协作文档': 'course/ch3/02.md'
-      - '最简约的 markdown 语法': 'course/ch3/03.md'
-      - '最基础的 ai 使用手册': 'course/ch3/04.md'
-      - '云笔记': 'course/ch3/05.md'
+      - '连接世界': 'course/ch3/01.md'
+      - 'Markdown 入门': 'course/ch3/02.md'
+      - '云端协作': 'course/ch3/03.md'
+      - 'AI 副驾': 'course/ch3/04.md'
+      - '构建第二大脑': 'course/ch3/05.md'
     - '章四：专业探索与规划':
       - '本章导览': 'course/ch4/index.md'
-      - '大学生涯路径概览': 'course/ch4/01.md'
-      - '编程语言巡礼': 'course/ch4/02.md'
-      - '寻找你的技术“部落”': 'course/ch4/03.md'
-      - '下一步学习地图': 'course/ch4/04.md'
+      - '毕业路径总览': 'course/ch4/01.md'
+      - '认识自己': 'course/ch4/02.md'
+      - '实践与验证': 'course/ch4/03.md'
+      - '开启远征': 'course/ch4/04.md'
   # 顶层导航 3: 团队特色研究
   - '进阶技能与视野':
     - '专题：终极编辑器 VS Code': 'specials/vscode-the-ultimate-ide/index.md'
-
+    - '个人成长与探索':
+      - '走出内卷，定义成功': 'specials/personal-journey/beyond-rat-race.md'
+      - '应对焦虑与冒名顶替综合征': 'specials/personal-journey/anxiety-and-impostor-syndrome.md'
+      - '精力管理': 'specials/personal-journey/energy-management.md'
+      - '有效沟通': 'specials/personal-journey/effective-communication.md'
+      
   # 顶层导航 4: 昌大专属附录
   - '昌大专属资源库':
     - '保研细则解析': 'ncu/a1-postgraduate-recommendation.md'
