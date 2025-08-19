@@ -77,7 +77,8 @@ markdown_extensions:
 
   # Admonition: 漂亮的提示框 (note, warning, tip 等)
   - admonition
-
+  - attr_list
+  - md_in_html
   # Details: 可折叠的内容块
   - pymdownx.details
 
@@ -129,8 +130,9 @@ markdown_extensions:
 
 nav:
   # 顶层导航 1: 首页
-  - '首页': 'index.md'
-
+  - '首页': 
+    - '简介': 'index.md'
+    - '课程导览': 'overview.md'
   - '本科生通识第零课':
     - '课程导览': 'course/index.md'
     - '章一：大学思维与心态':
@@ -156,8 +158,6 @@ nav:
       - '编程语言巡礼': 'course/ch4/02.md'
       - '寻找你的技术“部落”': 'course/ch4/03.md'
       - '下一步学习地图': 'course/ch4/04.md'
-
-
   # 顶层导航 3: 团队特色研究
   - '进阶技能与视野':
     - '专题：终极编辑器 VS Code': 'specials/vscode-the-ultimate-ide/index.md'
