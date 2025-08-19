@@ -4,7 +4,7 @@
 site_name: CS for NCU - 昌大学习指南
 site_url: https://cs4ncu.space/
 site_author: 南昌大学超算俱乐部
-site_description: '一个由南昌大学超算俱乐部 (NCUSCC) 打造并维护，面向新生的计算机科学入门指南。'
+site_description: '一份由南昌大学学生为所有本科生打造的开源寻路图。我们致力于打破信息壁垒，提供一套开放、实用、可持续进化的知识体系与成长路径。'
 
 # --- 仓库信息 ---
 repo_name: NCUSCC/cs4ncu
@@ -61,6 +61,7 @@ theme:
     - search.suggest # 搜索时提供建议
     - navigation.tags 
     - content.action.view
+    - navigation.top
 
 # --- 插件配置 (强烈建议添加) ---
 plugins:
@@ -209,3 +210,7 @@ extra:
   social:
   - icon: simple/github
     link: https://github.com/NCUSCC
+  - icon: fontawesome/brands/qq # <--- 示例
+    link: https://qm.qq.com/q/VLuObOsLg4
+  - icon: fontawesome/brands/discord # <--- 示例
+    link: https://discord.gg/Rux6DHRStP

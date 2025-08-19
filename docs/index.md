@@ -73,7 +73,7 @@
 -   :material-book-open-page-variant-outline: **阅读贡献指南**
 
     ---
-    我们建议您首先阅读项目的 **[项目共建指南](./contributing/index.md)**，以了解协作的基本流程。
+    我们建议您首先阅读项目的 **[项目共建指南](./guides/contributing/how-to-contribute.md)**，以了解协作的基本流程。
 
 -   :fontawesome-brands-github-alt: **从 Issue 开始**
 
