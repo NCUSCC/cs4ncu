@@ -148,41 +148,55 @@ nav:
       - '本部分导览': 'course/part3/index.md'
       - '第五章：设定探索方向': 'course/part3/ch5-the-output.md'
       - '第六章：低成本实践与验证': 'course/part3/ch6-the-test.md'
-  # - '本科生通识第零课':
-  #   - '课程导览': 'course/index.md'
-  #   - '章一：大学思维与心态':
-  #     - '本章导览': 'course/ch1/index.md'
-  #     - '主动选择': 'course/ch1/01.md'
-  #     - '为自己负责': 'course/ch1/02.md'
-  #     - '主动争取': 'course/ch1/03.md'
-  #   - '章二：数字时代基本功':
-  #     - '本章导览': 'course/ch2/index.md'
-  #     - '认识笔记本': 'course/ch2/01.md'
-  #     - '键盘与打字': 'course/ch2/02.md'
-  #     - '文件管理入门': 'course/ch2/03.md'
-  #     - '必备软件': 'course/ch2/04.md'
-  #   - '章三：现代学习工作流':
-  #     - '本章导览': 'course/ch3/index.md'
-  #     - '连接世界': 'course/ch3/01.md'
-  #     - 'Markdown 入门': 'course/ch3/02.md'
-  #     - '云端协作': 'course/ch3/03.md'
-  #     - 'AI 副驾': 'course/ch3/04.md'
-  #     - '构建第二大脑': 'course/ch3/05.md'
-  #   - '章四：专业探索与规划':
-  #     - '本章导览': 'course/ch4/index.md'
-  #     - '毕业路径总览': 'course/ch4/01.md'
-  #     - '认识自己': 'course/ch4/02.md'
-  #     - '实践与验证': 'course/ch4/03.md'
-  #     - '开启远征': 'course/ch4/04.md'
   # 顶层导航 3: 团队特色研究
+  # - '进阶技能与视野':
+  #   - '认识你的电脑':
+  #     - '打字': 'specials/personal-journey/beyond-rat-race.md'
+  #     - '电脑': 'specials/personal-journey/beyond-rat-race.md'
+  #   - '计算机基本功':
+  #     - 'git': 'specials/personal-journey/beyond-rat-race.md'
+  #     - 'linux': 'specials/personal-journey/beyond-rat-race.md'
+  #     - 'Latex': 'specials/personal-journey/beyond-rat-race.md'
+  #   - '个人成长与探索':
+  #     - '走出内卷，定义成功': 'specials/personal-journey/beyond-rat-race.md'
+  #     - '应对焦虑与冒名顶替综合征': 'specials/personal-journey/anxiety-and-impostor-syndrome.md'
+  #     - '精力管理': 'specials/personal-journey/energy-management.md'
+  #     - '有效沟通': 'specials/personal-journey/effective-communication.md'
+  #     - '健康管理': 'specials/personal-journey/healthy-management.md'
+  #   - '专题：终极编辑器 VS Code': 'specials/vscode-the-ultimate-ide/index.md'
+
+      # ------------------------------------------------------------------
+  # 进阶技能与视野模块 (Advanced Skills & Horizons)
+  # ------------------------------------------------------------------
   - '进阶技能与视野':
-    - '专题：终极编辑器 VS Code': 'specials/vscode-the-ultimate-ide/index.md'
-    - '个人成长与探索':
-      - '走出内卷，定义成功': 'specials/personal-journey/beyond-rat-race.md'
-      - '应对焦虑与冒名顶替综合征': 'specials/personal-journey/anxiety-and-impostor-syndrome.md'
-      - '精力管理': 'specials/personal-journey/energy-management.md'
-      - '有效沟通': 'specials/personal-journey/effective-communication.md'
-      - '健康管理': 'specials/personal-journey/healthy-management.md'
+    - '本部分导览': 'skills/index.md'
+    - '思维与认知':
+      - '优绩主义': 'skills/mindset/meritocracy.md'
+      - '名校情节': 'skills/mindset/elite-complex.md'
+      - '做题家思维': 'skills/mindset/solver-mindset.md'
+      - '幸存者偏差': 'skills/mindset/survivorship-bias.md'
+      - '合作与博弈': 'skills/mindset/collaboration.md'
+      - '焦虑与内耗': 'skills/mindset/anxiety-impostor.md'
+    - '工具与技能':
+      - '电脑认知': 'skills/tools/computer-basics.md'
+      - '高效打字': 'skills/tools/typing.md'
+      - 'Git': 'skills/tools/git.md'
+      - 'Linux': 'skills/tools/linux.md'
+      - 'LaTeX': 'skills/tools/latex.md'
+      - 'Prompt Engineering': 'skills/tools/prompt-engineering.md'
+      - '网络工具': 'skills/tools/network-proxy.md'
+      - 'VS Code 指南':
+        - '导览与配置': 'skills/tools/vscode/index.md'
+        - '插件推荐': 'skills/tools/vscode/extensions.md'
+    - '大学生存指南':
+      - '实验班解读': 'skills/guides/innovation-classes.md'
+      - '精力管理': 'skills/guides/energy-management.md'
+      - '健康管理': 'skills/guides/healthy-management.md'
+      - '沟通技巧': 'skills/guides/communication.md'
+      - '团队协作': 'skills/guides/teamwork.md'
+      - '信息差': 'skills/guides/information-gap.md'
+      - '开源经历': 'skills/guides/open-source-journey.md'
+      - '聪明消费': 'skills/guides/smart-spending.md'
       
   # 顶层导航 4: 昌大专属附录
   - '昌大专属资源库':
