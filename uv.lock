@@ -1,5 +1,5 @@
 version = 1
-revision = 2
+revision = 3
 requires-python = ">=3.12"
 
 [[package]]
@@ -112,7 +112,7 @@ dependencies = [
 requires-dist = [
     { name = "mkdocs", specifier = ">=1.6.1" },
     { name = "mkdocs-git-authors-plugin", specifier = ">=0.10.0" },
-    { name = "mkdocs-material", specifier = ">=9.6.17" },
+    { name = "mkdocs-material", specifier = "==9.6.17" },
     { name = "pymdown-extensions", specifier = ">=10.16.1" },
 ]
 
