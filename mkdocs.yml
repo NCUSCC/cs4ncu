@@ -136,30 +136,44 @@ nav:
     - '课程导览': 'overview.md'
   - '本科生通识第零课':
     - '课程导览': 'course/index.md'
-    - '章一：大学思维与心态':
-      - '本章导览': 'course/ch1/index.md'
-      - '告别单行道': 'course/ch1/01.md'
-      - '自我导航': 'course/ch1/02.md'
-      - '学会解决问题': 'course/ch1/03.md'
-    - '章二：数字时代基本功':
-      - '本章导览': 'course/ch2/index.md'
-      - '认识笔记本': 'course/ch2/01.md'
-      - '键盘与打字': 'course/ch2/02.md'
-      - '文件管理入门': 'course/ch2/03.md'
-      - '必备软件': 'course/ch2/04.md'
-    - '章三：现代学习工作流':
-      - '本章导览': 'course/ch3/index.md'
-      - '连接世界': 'course/ch3/01.md'
-      - 'Markdown 入门': 'course/ch3/02.md'
-      - '云端协作': 'course/ch3/03.md'
-      - 'AI 副驾': 'course/ch3/04.md'
-      - '构建第二大脑': 'course/ch3/05.md'
-    - '章四：专业探索与规划':
-      - '本章导览': 'course/ch4/index.md'
-      - '毕业路径总览': 'course/ch4/01.md'
-      - '认识自己': 'course/ch4/02.md'
-      - '实践与验证': 'course/ch4/03.md'
-      - '开启远征': 'course/ch4/04.md'
+    - '第一部分：决策的基础':
+      - '本部分导览': 'course/part1/index.md'
+      - '第一章：思维模式转换': 'course/part1/ch1-mindset.md'
+      - '第二章：自我认知方法': 'course/part1/ch2-the-self.md'
+    - '第二部分：决策的依据':
+      - '本部分导览': 'course/part2/index.md'
+      - '第三章：信息辨析能力': 'course/part2/ch3-information-filter.md'
+      - '第四章：信息获取入门': 'course/part2/ch4-info-gathering.md'
+    - '第三部分：决策的实践':
+      - '本部分导览': 'course/part3/index.md'
+      - '第五章：设定探索方向': 'course/part3/ch5-the-output.md'
+      - '第六章：低成本实践与验证': 'course/part3/ch6-the-test.md'
+  # - '本科生通识第零课':
+  #   - '课程导览': 'course/index.md'
+  #   - '章一：大学思维与心态':
+  #     - '本章导览': 'course/ch1/index.md'
+  #     - '主动选择': 'course/ch1/01.md'
+  #     - '为自己负责': 'course/ch1/02.md'
+  #     - '主动争取': 'course/ch1/03.md'
+  #   - '章二：数字时代基本功':
+  #     - '本章导览': 'course/ch2/index.md'
+  #     - '认识笔记本': 'course/ch2/01.md'
+  #     - '键盘与打字': 'course/ch2/02.md'
+  #     - '文件管理入门': 'course/ch2/03.md'
+  #     - '必备软件': 'course/ch2/04.md'
+  #   - '章三：现代学习工作流':
+  #     - '本章导览': 'course/ch3/index.md'
+  #     - '连接世界': 'course/ch3/01.md'
+  #     - 'Markdown 入门': 'course/ch3/02.md'
+  #     - '云端协作': 'course/ch3/03.md'
+  #     - 'AI 副驾': 'course/ch3/04.md'
+  #     - '构建第二大脑': 'course/ch3/05.md'
+  #   - '章四：专业探索与规划':
+  #     - '本章导览': 'course/ch4/index.md'
+  #     - '毕业路径总览': 'course/ch4/01.md'
+  #     - '认识自己': 'course/ch4/02.md'
+  #     - '实践与验证': 'course/ch4/03.md'
+  #     - '开启远征': 'course/ch4/04.md'
   # 顶层导航 3: 团队特色研究
   - '进阶技能与视野':
     - '专题：终极编辑器 VS Code': 'specials/vscode-the-ultimate-ide/index.md'
