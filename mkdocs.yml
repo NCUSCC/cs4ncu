@@ -60,10 +60,15 @@ theme:
     - content.code.annotate # 允许代码块注释
     - search.suggest # 搜索时提供建议
     - navigation.tags 
+<<<<<<< HEAD
     - content.action.view
     - navigation.top
     - navigation.footer  # 显示文档底部区域（导航指示器依赖此区域）
     - navigation.prev_next
+=======
+    - navigation.footer  # 显示文档底部区域（导航指示器依赖此区域）
+    - navigation.prev_next  # 启用“上一章/下一章”跳转
+>>>>>>> caf8d99 (保存本地修改，准备合并上游代码)
 
 # --- 插件配置 (强烈建议添加) ---
 plugins:
