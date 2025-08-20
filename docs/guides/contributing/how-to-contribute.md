@@ -26,7 +26,7 @@ tags:
 -   **如果你想参与贡献**：请浏览[标记为 `good first issue` 或 `help wanted` 的 Issues](https://github.com/ncuscc/cs4ncu/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22%2C%22help+wanted%22)，这些是我们推荐新人上手的任务。
 -   **如果你想写些什么**：请浏览[内容进度记录](https://github.com/NCUSCC/cs4ncu/issues/8)确认是否有其他人已经在写类似话题了，以避免与现有选题重复。如遇相似主题，您可在相关 Issue 下方参与讨论、寻求合作，或撰写不同视角的衍生内容。我们欢迎并珍视每一位贡献者带来的多元视角。
 !!! tip "沟通是关键"
-    对于较大的改动或全新的内容章节，我们强烈建议您在创建 Issue 后，加入我们的 [Discord 社区服务器](https://discord.gg/Rux6DHRStP)进行讨论。这能帮助我们更好地对齐目标，确保您的宝贵时间被用在最有效的地方。
+    对于较大的改动或全新的内容章节，我们强烈建议您在创建 Issue 后，加入我们的 [:fontawesome-brands-discord: Discord 社区服务器](https://discord.gg/Rux6DHRStP)进行讨论。这能帮助我们更好地对齐目标，确保您的宝贵时间被用在最有效的地方。
 
 在您选定或创建了一个 Issue 后，请在评论区留言，例如“我来认领这个任务！”（`I'd like to work on this!`），管理员会为您分配任务。
 
@@ -52,9 +52,9 @@ tags:
 1.  **沟通**：同样地，先通过 Issue 与我们确认您想撰写的主题。
 2.  **创作**：在您最喜欢的编辑器（如 Word, Typora, VS Code 等）中完成您的文章草稿。
 3.  **提交**：将您的 `.md` 或 `.docx` 文件通过邮件发送给项目管理员。
-    *   **邮箱地址**：`teapot1de@qq.com`
-    *   **邮件标题**：`[CS for NCU 贡献] - <您的文章标题>`
-    *   **邮件正文**：请附上相关的 Issue 链接。
+    -   **邮箱地址**：`teapot1de@qq.com`
+    -   **邮件标题**：`[CS for NCU 贡献] - <您的文章标题>`
+    -   **邮件正文**：请附上相关的 Issue 链接。
 4.  **协作**：我们会有一位管理员与您对接，协助您完成后续的格式调整、Git 提交、Pull Request 创建等所有技术流程。您可以选择全程参与学习，也可以全权委托我们发布。
 
 !!! success "我们的承诺"
@@ -71,15 +71,15 @@ tags:
 3.  **Clone 到本地**：`git clone https://github.com/YOUR_USERNAME/cs4ncu.git`
 4.  **创建新分支**：`git checkout -b feature/your-meaningful-branch-name`
 5.  **本地创作与测试**：
-    *   **[《搭建基础环境》](./development-setup.md)**。  
-    *   在 `docs/` 目录下创建或修改相应的 `.md` 文件。
-    *   打开 `mkdocs.yml` 文件，在其中 nav: 部分，仿照现有格式，添加新页面的标题和相对路径。
-    *   **重要**：请务必遵守我们的 **[《写作规范》](./writing-guide.md)**。
-    *   在项目根目录下运行 `uv run mkdocs serve`，通过访问 `http://127.0.0.1:8000` 在本地实时预览您的修改效果。
+    -   **[《搭建基础环境》](./development-setup.md)**。  
+    -   在 `docs/` 目录下创建或修改相应的 `.md` 文件。
+    -   打开 `mkdocs.yml` 文件，在其中 nav: 部分，仿照现有格式，添加新页面的标题和相对路径。
+    -   **重要**：请务必遵守我们的 **[《写作规范》](./writing-guide.md)**。
+    -   在项目根目录下运行 `uv run mkdocs serve`，通过访问 `http://127.0.0.1:8000` 在本地实时预览您的修改效果。
 6.  **提交代码**：
-    *   `git add .`
-    *   `git commit -m "feat: 添加关于XXX的指南 (closes #123)"` (请遵循良好的 Commit Message 规范，并关联 Issue)
-    *   `git push origin feature/your-meaningful-branch-name`
+    -   `git add .`
+    -   `git commit -m "feat: 添加关于XXX的指南 (closes #123)"` (请遵循良好的 Commit Message 规范，并关联 Issue)
+    -   `git push origin feature/your-meaningful-branch-name`
 7.  **创建 Pull Request (PR)**：回到您 Fork 的 GitHub 仓库页面，点击 "Contribute" -> "Open pull request"，将您的分支合并到主仓库的 `main` 分支。
 
 !!! tip "不必追求完美！"

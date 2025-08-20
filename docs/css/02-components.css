@@ -14,3 +14,9 @@
 .md-content a[href^="http"] {
     transition: color 0.2s ease-in-out;
   }
+
+figcaption {
+    text-align: center;
+    font-style: italic; /* 斜体 */    
+    font-size: 0.7em;   /* 字体大小为默认的 70% */
+  }

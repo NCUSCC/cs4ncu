@@ -1,39 +1,93 @@
-# CS for NCU
-### 南昌大学计算机学习指北
+<h1 align="center">CS for NCU</h1>
 
-欢迎来到 **CS for NCU** 项目。本项目由南昌大学超算俱乐部 (NCUSCC) 发起，并由众多社区贡献者共同维护。它是一份面向所有技术爱好者的开源学习指南，更是一部旨在传承经验、有温度的“寻路图”。
-
-!!! author "我们的核心理念"
-    我们相信，一份优秀的学习指南，应当根植于真实的学习情境。CS for NCU 的内容构建遵循以下原则：
-
-    *    **聚焦真实**：内容优先服务于南昌大学学习者在学习路径上遇到的实际问题。
-    *    **沉淀经验**：分享并沉淀来自社区成员在实践中踩过的坑与总结出的心得。
-    *    **高质量指路**：对于更广阔的通用知识，我们致力于筛选并引荐领域内最优质的外部学习资源。
+<p align="center">一份由南昌大学学生为所有本科生打造的开源寻路图</p>
 
 ---
 
-## 项目内容结构 {#our-structure}
+**CS for NCU** 项目由南昌大学超算俱乐部 (NCUSCC) 发起，并由众多社区贡献者共同维护。我们致力于打破信息壁垒，为互联网时代的每一位大学生，提供一套开放、实用、可持续进化的知识体系与成长路径。
 
-为了帮助学习者建立清晰的成长路径，我们设计了如下的内容组织结构：
+<h2 align="center" markdown="1">:material-map-search-outline: 从哪里开始？</h2>
 
--   **核心成长路径**
-    这是我们为初学者规划的主干学习脉络。它将引导您从零开始，循序渐进地构建扎实的知识体系，为后续的深入探索打下坚实基础。
+<div class="grid cards" markdown>
 
--   **团队特色研究**
-    此部分汇集了项目核心维护团队在特定工具或领域（如 VS Code 编辑器）的深度研究成果。我们希望能为您提供经过充分实践检验的“最优解”，以提升您的学习与开发效率。
+-   :material-map-check-outline: **推荐路线：课程导览**
 
--   **昌大专属附录**
-    这是一本面向特定需求的专题手册。所有与南昌大学特定环境、政策相关的深度话题（如保研细则、考研经验、转专业流程等）均收录于此，供您按需查阅。
+    ---
+    如果你不确定从何读起，这里为你提供了我们推荐的学习路线和一份完整的“世界地图”，助你快速了解本站的全貌。
 
----
+    **[:octicons-arrow-right-24: 查看导览](./overview.md)**
 
-## 期待您的参与 {#how-to-contribute}
+-   :material-school: **本科生通识第零课**
 
-CS for NCU 的生命力源于社区的开放与共享。我们诚挚地邀请您参与到内容的共建中来。每一次修订，每一次分享，都是对项目非常有价值的贡献。
+    ---
+    这是我们为所有人设计的、结构化的核心成长路径。它将带你抛弃高中生思维、掌握数字时代的基本功，并跟上时代的潮流。
 
-!!! example "如何参与贡献？"
-    1.  我们建议您首先阅读项目的 **[贡献指南](./guides/contributing/how-to-contribute.md)**，以了解协作的基本流程。
-    2.  您可以从解决一个标记为 **[good first issue](https://github.com/NCUSCC/cs4ncu/labels/good%20first%20issue)** 的任务开始，迈出贡献的第一步。
-    3.  若在阅读过程中发现任何笔误或有待改进之处，直接点击页面右上方的 **“编辑此页”** 按钮，即可轻松提交您的修订建议。
+    **[:octicons-arrow-right-24: 开始学习](./course/index.md)**
 
-让我们共同努力，构建并维护一份真正能帮助到后来者的学习资源。
+-   :material-compass-outline: **进阶技能与视野**
+
+    ---
+    这里是可供你自由探索的专题知识库。无论是硬核的技术教程，还是关于职业发展的深度分享，都将极大拓展你的能力边界。
+
+    **[:octicons-arrow-right-24: 探索专题](./specials/vscode-the-ultimate-ide/index.md)**
+
+-   :material-map-legend: **昌大专属资源库**
+
+    ---
+    这里沉淀了南昌大学最接地气的“独家情报”。从转专业、保研考研到校园资源的深度挖掘，助你更好地利用昌大资源。
+
+    **[:octicons-arrow-right-24: 查看资源](./ncu/a1-postgraduate-recommendation.md)**
+
+</div>
+
+<h2 align="center" markdown="1">:material-lightbulb-group-outline: 我们的理念</h2>
+
+<div class="grid cards" markdown>
+
+-   :material-account-group-outline: **经验传承**
+
+    ---
+    我们不仅分享知识，更沉淀来自朋辈（Peer）的真实经验，这是本项目最宝贵的财富。
+
+-   :material-foot-print: **真情实感**
+
+    ---
+    我们拒绝空洞的说教。这里的所有内容，都源于我们亲自踩过的坑、走过的弯路和收获的喜悦。
+
+-   :material-rocket-launch-outline: **基础通用**
+
+    ---
+    我们相信，通识知识是所有专业学生发展的基石，我们致力于提供一套能让所有本科生受益的现代化思维模式与数字基本功。
+
+-   :material-toolbox-outline: **授人以渔**
+
+    ---
+    我们致力于筛选并引荐领域内最优质的外部学习资源，并提供探索未知领域的方法论，而非简单的知识堆砌。
+
+</div>
+
+<h2 align="center" markdown="1">:material-handshake-outline: 期待您的参与</h2>
+
+<div class="grid cards" markdown>
+
+-   :material-book-open-page-variant-outline: **阅读贡献指南**
+
+    ---
+    我们建议您首先阅读项目的 **[项目共建指南](./guides/contributing/how-to-contribute.md)**，以了解协作的基本流程。
+
+-   :fontawesome-brands-github-alt: **从 Issue 开始**
+
+    ---
+    您可以从解决一个标记为 **[good first issue](https://github.com/NCUSCC/cs4ncu/labels/good%20first%20issue)** 的任务开始，迈出贡献的第一步。
+
+-   :simple-qq: **加入 QQ 群讨论**
+
+    ---
+    想和我们直接讨论项目？欢迎加入我们的官方项目 **[QQ 交流群](https://qm.qq.com/q/VLuObOsLg4)**。
+
+-   :simple-discord: **加入 Discord 社群**
+
+    ---
+    觉得我们是群很有趣很棒的人？欢迎加入我们的 **[Discord 社区](https://discord.gg/Rux6DHRStP) **，与更多伙伴交流。
+
+</div>

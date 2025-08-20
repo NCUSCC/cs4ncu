@@ -6,13 +6,15 @@ tags:
   - Action-Writing
   - Context-Project
 ---
+# 风格指导 Prompt
+
 尝试使用这个 prompt 来帮助你构建文档格式。
 
 这个 prompt 本身就是一份详尽的“操作手册”，确保 AI 在处理任何文档时，都能成为一名完美的 `CS for NCU` 内容贡献者。
 
 ---
 
-`````
+`````markdown
 
 ### **AI 内容标准化处理指令 (Prompt) v3.0 - 最终完整版**
 

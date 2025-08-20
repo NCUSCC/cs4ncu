@@ -1,10 +1,10 @@
 # mkdocs.yml
 
 # --- 网站基本信息 ---
-site_name: CS for NCU - 南昌大学计算机学习指北
-site_url: https://ncuscc.github.io/cs4ncu/
+site_name: CS for NCU - 昌大学习指南
+site_url: https://cs4ncu.space/
 site_author: 南昌大学超算俱乐部
-site_description: '一个由南昌大学超算俱乐部 (NCUSCC) 打造并维护，面向新生的计算机科学入门指南。'
+site_description: '一份由南昌大学学生为所有本科生打造的开源寻路图。我们致力于打破信息壁垒，提供一套开放、实用、可持续进化的知识体系与成长路径。'
 
 # --- 仓库信息 ---
 repo_name: NCUSCC/cs4ncu
@@ -58,18 +58,17 @@ theme:
     - navigation.sections # 左侧导航自动展开子章节
     - content.code.copy # 为所有代码块添加“复制”按钮
     - content.code.annotate # 允许代码块注释
-    - content.code.select
     - search.suggest # 搜索时提供建议
     - navigation.tags 
-    - navigation.footer  # 显示文档底部区域（导航指示器依赖此区域）
-    - navigation.prev_next  # 启用“上一章/下一章”跳转
+    - content.action.view
+    - navigation.top
 
 # --- 插件配置 (强烈建议添加) ---
 plugins:
   - search:
       lang: zh # 启用中文搜索支持
   - tags   # 启用标签系统
-
+  - git-authors
 
 # --- Markdown 扩展 (增强内容显示) ---
 # 合并后的 mkdocs.yml 配置
@@ -79,7 +78,8 @@ markdown_extensions:
 
   # Admonition: 漂亮的提示框 (note, warning, tip 等)
   - admonition
-
+  - attr_list
+  - md_in_html
   # Details: 可折叠的内容块
   - pymdownx.details
 
@@ -112,6 +112,8 @@ markdown_extensions:
 
   # InlineHilite: 支持行内代码高亮
   - pymdownx.inlinehilite
+  - pymdownx.blocks.caption
+  - pymdownx.keys
 
   # --- 功能与交互扩展 ---
 
@@ -129,46 +131,53 @@ markdown_extensions:
 
 nav:
   # 顶层导航 1: 首页
-  - '首页': 'index.md'
-
-  # 顶层导航 2: 核心成长路径
-  - '核心成长路径':
-    - '章一：告别电脑小白':
-      - '本章导览': 'chapters/ch1-farewell-to-newbie/index.md'
-      - '学会自己解决问题': 'chapters/ch1-farewell-to-newbie/01-solve-problems-yourself.md'
-      - '重新认识笔记本': 'chapters/ch1-farewell-to-newbie/02-know-your-laptop.md'
-      - '成为打字高手': 'chapters/ch1-farewell-to-newbie/03-efficient-typing.md'
-      - '文件管理的艺术': 'chapters/ch1-farewell-to-newbie/04-file-management.md'
-      - '必备软件推荐': 'chapters/ch1-farewell-to-newbie/05-essential-software.md'
-    - '章二：规划你的未来':
-      - '本章导览': 'chapters/ch2-plan-your-future/index.md'
-      - '大学生涯路径概览': 'chapters/ch2-plan-your-future/01-career-paths-overview.md'
-      - '找到你的内在驱动力': 'chapters/ch2-plan-your-future/02-find-your-why.md'
-    - '章三：在 NCU 高效学习':
-      - '本章导览': 'chapters/ch3-ncu-learning-guide/index.md'
-      - '解锁昌大隐藏资源': 'chapters/ch3-ncu-learning-guide/01-ncu-hidden-gems.md'
-      - '寻找你的技术“部落”': 'chapters/ch3-ncu-learning-guide/02-find-your-tribe.md'
-    - '章四：硬核技能入门':
-      - '本章导览': 'chapters/ch4-hardcore-skills/index.md'
-      - '编程语言巡礼': 'chapters/ch4-hardcore-skills/01-language-tour.md'
-      - 'Git 与 GitHub 基础': 'chapters/ch4-hardcore-skills/02-git-and-github-basics.md'
-      - '下一步学习地图': 'chapters/ch4-hardcore-skills/03-further-learning-map.md'
-    - '章五：人际关系处理': 
-      - '本章导览': 'chapters/ch5-interpersonal-Treatment/index.md'
-
+  - '首页': 
+    - '简介': 'index.md'
+    - '课程导览': 'overview.md'
+  - '本科生通识第零课':
+    - '课程导览': 'course/index.md'
+    - '章一：大学思维与心态':
+      - '本章导览': 'course/ch1/index.md'
+      - '告别单行道': 'course/ch1/01.md'
+      - '自我导航': 'course/ch1/02.md'
+      - '学会解决问题': 'course/ch1/03.md'
+    - '章二：数字时代基本功':
+      - '本章导览': 'course/ch2/index.md'
+      - '认识笔记本': 'course/ch2/01.md'
+      - '键盘与打字': 'course/ch2/02.md'
+      - '文件管理入门': 'course/ch2/03.md'
+      - '必备软件': 'course/ch2/04.md'
+    - '章三：现代学习工作流':
+      - '本章导览': 'course/ch3/index.md'
+      - '连接世界': 'course/ch3/01.md'
+      - 'Markdown 入门': 'course/ch3/02.md'
+      - '云端协作': 'course/ch3/03.md'
+      - 'AI 副驾': 'course/ch3/04.md'
+      - '构建第二大脑': 'course/ch3/05.md'
+    - '章四：专业探索与规划':
+      - '本章导览': 'course/ch4/index.md'
+      - '毕业路径总览': 'course/ch4/01.md'
+      - '认识自己': 'course/ch4/02.md'
+      - '实践与验证': 'course/ch4/03.md'
+      - '开启远征': 'course/ch4/04.md'
   # 顶层导航 3: 团队特色研究
-  - '团队特色研究':
+  - '进阶技能与视野':
     - '专题：终极编辑器 VS Code': 'specials/vscode-the-ultimate-ide/index.md'
-
+    - '个人成长与探索':
+      - '走出内卷，定义成功': 'specials/personal-journey/beyond-rat-race.md'
+      - '应对焦虑与冒名顶替综合征': 'specials/personal-journey/anxiety-and-impostor-syndrome.md'
+      - '精力管理': 'specials/personal-journey/energy-management.md'
+      - '有效沟通': 'specials/personal-journey/effective-communication.md'
+      
   # 顶层导航 4: 昌大专属附录
-  - '昌大专属附录':
-    - '保研细则解析': 'appendices/a1-postgraduate-recommendation.md'
-    - '考研经验分享': 'appendices/a2-postgraduate-entrance-exam.md'
-    - '转专业完全指南': 'appendices/a3-major-transfer-guide.md'
-    - '各培养方案导读': 'appendices/a4-program-guides.md'
+  - '昌大专属资源库':
+    - '保研细则解析': 'ncu/a1-postgraduate-recommendation.md'
+    - '考研经验分享': 'ncu/a2-postgraduate-entrance-exam.md'
+    - '转专业完全指南': 'ncu/a3-major-transfer-guide.md'
+    - '各培养方案导读': 'ncu/a4-program-guides.md'
 
   # 顶层导航 5: 贡献与开发
-  - '贡献指南':
+  - '项目共建指南':
     - '核心准则':
       - '行为准则': 'guides/contributing/code-of-conduct.md'
       - '贡献流程': 'guides/contributing/how-to-contribute.md'
@@ -176,10 +185,12 @@ nav:
       - '搭建基础环境': 'guides/contributing/development-setup.md'
       - '分支保护策略': 'guides/contributing/branch-protection.md'
       - '网站部署': 'guides/contributing/deployment.md'
+      - '智能 PR 验证系统': 'guides/contributing/pr-workflow-guide.md'
     - '开发实践指南':
       - '调整全局样式 (CSS)': 'guides/contributing/styling.md'
       - '调整项目配色': 'guides/contributing/colors.md'
       - '调整提示框样式': 'guides/contributing/admonitions.md'
+      - '调整图片样式': 'guides/contributing/figure.md'
     - '内容贡献指南':
         - '写作规范': 'guides/contributing/writing-guide.md'
         - '写作指令 (prompt)': 'guides/contributing/writing-prompt.md'
@@ -187,7 +198,8 @@ nav:
       - '提示框样式样例': 'guides/contributing/admonitions-examples.md'
       - '一份开发手记': 'guides/contributing/development-log.md'
 
-
+  - '关于我们':
+    - '我们的初心': 'aboutus/heart.md'
   # 顶层导航 6: 索引
   - '索引':
     - '标签索引': 'tags.md'
@@ -204,3 +216,7 @@ extra:
   social:
   - icon: simple/github
     link: https://github.com/NCUSCC
+  - icon: fontawesome/brands/qq # <--- 示例
+    link: https://qm.qq.com/q/VLuObOsLg4
+  - icon: fontawesome/brands/discord # <--- 示例
+    link: https://discord.gg/Rux6DHRStP

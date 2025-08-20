@@ -1,0 +1,80 @@
+# 文件名: .github/workflows/pr-validation.yml
+name: 'PR 构建验证'
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches: [main]
+
+# 申请最低权限：只需读取仓库内容即可
+permissions:
+  contents: read
+
+concurrency:
+  group: pr-validation-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  build-validation:
+    name: '严格模式构建验证'
+    runs-on: ubuntu-latest
+      
+    steps:
+      # 步骤 1: 拉取代码
+      - name: 🚚 拉取代码
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0 
+
+      # 步骤 2: 智能文件变更检测 (可选，如果想每次都跑可以删掉这一步)
+      - name: 🔍 智能文件变更检测
+        id: changes
+        run: |
+          changed_files=$(git diff --name-only ${{ github.event.pull_request.base.sha }}...HEAD)
+          build_patterns=("^docs/" "^mkdocs\.yml$" "^\.github/workflows/pr-validation\.yml$")
+          echo "检查变更的文件列表:"
+          echo "${changed_files}"
+          should_build="false"
+          while IFS= read -r file; do
+            for pattern in "${build_patterns[@]}"; do
+              if [[ "$file" =~ $pattern ]]; then
+                echo "✅ 文件 '${file}' 匹配模式 '${pattern}'，需要构建。"
+                should_build="true"
+                break 2
+              fi
+            done
+          done <<< "${changed_files}"
+          if [[ "$should_build" == "false" ]]; then
+            echo "❌ 未检测到需要构建的变更，跳过后续步骤。"
+          fi
+          echo "should-build=$should_build" >> $GITHUB_OUTPUT
+
+      # 步骤 3: 设置 Python 环境
+      - name: Set up Python
+        if: steps.changes.outputs.should-build == 'true'
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+
+      # 步骤 4: 安装 uv 并缓存依赖
+      - name: Install uv
+        if: steps.changes.outputs.should-build == 'true'
+        run: pipx install uv
+
+      - name: Cache dependencies
+        if: steps.changes.outputs.should-build == 'true'
+        uses: actions/cache@v4
+        with:
+          path: ./.venv
+          key: ${{ runner.os }}-uv-${{ hashFiles('**/pyproject.toml') }}-pr
+
+      - name: Install dependencies
+        if: steps.changes.outputs.should-build == 'true'
+        run: uv sync
+
+      # 步骤 5: 核心验证步骤 - 严格模式构建
+      # 这一步会检查所有内部链接、配置等是否正确。如果构建失败，工作流会失败。
+      - name: 🔨 严格模式构建验证
+        if: steps.changes.outputs.should-build == 'true'
+        run: uv run mkdocs build --clean --strict --verbose
