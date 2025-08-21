@@ -1,125 +1,112 @@
-  <div align="center">
+<div align="center">
 
-  <!-- 在这里放上你们的 Logo，如果没有，可以暂时注释掉或找人设计一个 -->
-  <!-- <img src="docs/assets/images/logo.png" alt="cs4ncu Logo" width="150"/> -->
+  <!-- Logo for 寻路之南 can be placed here once designed -->
+  <!-- <img src="docs/assets/logo.png" alt="寻路之南 Logo" width="150"/> -->
 
-  # CS for NCU
-  ### 南昌大学计算机学习指北
+  # 寻路之南
+  ### 写给普通人的大学成长指南
 
-  一份由南昌大学超算俱乐部 (NCUSCC) 倾力打造，面向所有热爱技术之人的开源学习指南。
+  由一群普通本科生发起的开源项目，致力于分享一套从自我认知开始的成长方法论。<br>我们始于南昌大学，但这份指南属于每一位渴望主动把握大学生涯的你。
 
-  [![Status](https://img.shields.io/badge/status-active-success.svg?style=flat-square)]()
-  [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](/LICENSE)
   [![GitHub Stars](https://img.shields.io/github/stars/NCUSCC/cs4ncu.svg?style=flat-square)](https://github.com/NCUSCC/cs4ncu/stargazers)
   [![GitHub Forks](https://img.shields.io/github/forks/NCUSCC/cs4ncu.svg?style=flat-square)](https://github.com/NCUSCC/cs4ncu/network/members)
   [![GitHub Issues](https://img.shields.io/github/issues/NCUSCC/cs4ncu.svg?style=flat-square)](https://github.com/NCUSCC/cs4ncu/issues)
+  [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](/LICENSE)
 
-  </div>
+</div>
 
-  ---
+---
 
-  > **“我们相信，最好的学习，是和一群志同道合的人，一起探索未知，并把所学分享给更多的人。”**
+### 我们的故事与初心
 
-  `cs4ncu` 是一个有温度的技术社区项目。我们致力于将碎片化的知识系统化，将复杂的技术通俗化，为南昌大学乃至更广泛的初学者，铺就一条通往计算机科学殿堂的平坦之路。
+我们曾仰望过《上交求生指南》那样的精英灯塔，但很快发现，他们的航线固然璀璨，其起点、风速、洋流都与我们不同。我们需要一份更具普适性的海图，一套更基础、更关注内在的航行方法。
 
-  **✨ 在线阅读，即刻开始 >> [https://ncuscc.github.io/cs4ncu/](https://ncuscc.github.io/cs4ncu/) ✨**
+我们为这份初心，取名为“寻路之南” 。它是一份“寻路者的指南”，也是一场始于南昌大学的探索。它承载着我们的起点，也指向我们共同的目标：在迷雾中，为自己找到南方——那个温暖、清晰、充满生命力的方向。
 
-  ## 🎯 项目核心
+这个位置，让我们得以摆脱纯粹的精英视角或自怨自艾的受害者心态。它让我们相信，我们的故事——一个关于**“在还不错的平台上，如何通过自我认知与系统构建，来超越平台局限”**的故事——对最广大的学生群体，具有最真实的参考意义。
 
-  | 特色 | 描述 |
-  | :--- | :--- |
-  | 🧭 **昌大定制** | 深度整合南昌大学的课程、资源与社区，提供最贴近本校学生的学习路径。 |
-  | 🌱 **新手友好** | 所有内容从零开始，我们假设你没有任何基础，手把手带你入门。 |
-  | 🔄 **持续进化** | 知识在迭代，我们的内容也在。这是一个与时俱进、不断生长的知识库。 |
-  | 💖 **社区共建** | 你既是读者，也可以是作者。我们期待你的每一次分享与贡献。 |
+这就是我们的立足点：不仰望神坛，也不俯视深渊，只是脚踏实地，与每一个努力向上的你同行。
 
-  ---
+---
 
-  ## 🗺️ 探索我们的知识地图
+### 在线阅读
 
-  我们精心设计了模块化的课程体系，你可以按需探索，也可以跟随我们的脚步，一步步构建你的知识大厦。
+**我们强烈建议您在线阅读，以获得最佳体验。**
 
-  <details>
-  <summary><strong>📚 点击展开/折叠课程大纲</strong></summary>
+**➡️ [https://cs4ncu.space/](https://cs4ncu.space/)**
 
-  | 章节 | 主题 | 简介 | 状态 |
-  | :--- | :--- | :--- | :---: |
-  | **`主线`** | **核心成长路径** | *建议所有 NCU 读者按顺序阅读* | |
-  | `L1` | **告别电脑小白** | 从选购电脑到文件管理，打好数字时代的基础。 | ✅ |
-  | `L2` | **规划你的未来** | 抬头看路，清晰了解考研、就业等大学生涯方向。 | 建设中 |
-  | `L3` | **在 NCU 高效学习** | 解锁昌大专属的平台、资源与技术社群。 | 建设中 |
-  | `L4` | **硬核技能入门** | 迈出第一步，学习编程语言与 Git 等核心工具。 | 规划中 |
-  | **`专题`** | **特色内容** | *我们引以为傲的“独门秘籍”* | |
-  | `S1` | **终极编辑器：VS Code** | 深入探索 VS Code/Cursor，打造属于你的神级IDE。 | 规划中 |
-  | **`附录`** | **昌大专属手册** | *根据你的需求，随时查阅* | |
-  | `A1` | **保研细则解析** | 深入解读数计/软件学院的保研“游戏规则”。 | 规划中 |
-  | `A2` | **考研经验分享** | 来自学长学姐的考研战场第一手情报。 | 规划中 |
-  | `A3` | **转专业完全指南** | 从动机到流程，覆盖转专业的方方面面。 | 规划中 |
-  | `A4` | **各培养方案导读** | 对比数计、软院、实验班等的异同。 | 规划中 |
+---
 
-  </details>
+### 内容结构
 
-  ---
+本指南主要由以下几个核心部分构成，我们建议您从“寻路指南”开始。
 
-  ## 🚀 Get Started / 快速开始
+| 模块 | 核心内容 |
+| :--- | :--- |
+| **开始之前** | **建议从这里开始。** 这里有写给新读者的第一封信 (`第负一课`)，以及一份网站的完整地图 (`全站导览`)。|
+| **核心课程** | 本项目的主体。包括了作为基石的 **`本科生通识第零课`** 和作为拓展的 **`第零点五课堂`**。 |
+| **昌大专属** | 沉淀了独属于南昌大学的实用信息与经验，例如转专业、保研考研等。 |
+| **关于我们** | 你可以在这里找到我们的完整初心、项目共建指南和内容索引。 |
 
-  想要在本地运行或为项目添砖加瓦？我们使用 `uv`，一个极速的 Python 包管理器，让一切变得简单。
+---
 
-  1.  **环境准备**
-      *   安装 [Git](https://git-scm.com/)
-      *   安装 [uv](https://github.com/astral-sh/uv#installation)
+### 本地开发与贡献
 
-  2.  **克隆并进入项目**
-      ```bash
-      git clone https://github.com/NCUSCC/cs4ncu.git
-      cd cs4ncu
-      ```
+如果你希望在本地运行、修改网站，或参与项目共建，欢迎继续阅读。
 
-  3.  **同步环境**
-      这条命令会像魔法一样，帮你创建好虚拟环境并安装所有依赖。
-      ```bash
-      uv sync
-      ```
+1.  **环境准备**
+    *   安装 [Git](https://git-scm.com/)
+    *   安装 [uv](https://github.com/astral-sh/uv#installation) (一个极速的 Python 包管理器)
 
-  4.  **启动！**
-      ```bash
-      uv run mkdocs serve
-      ```
-      在浏览器中打开 `http://127.0.0.1:8000`，开始你的探索之旅吧！
+2.  **克隆并进入项目**
+    ```bash
+    git clone https://github.com/NCUSCC/cs4ncu.git
+    cd cs4ncu
+    ```
 
-  ## 💖 We Need You / 成为贡献者
+3.  **同步环境**
+    ```bash
+    uv sync
+    ```
 
-  `cs4ncu` 的成长离不开每一位社区成员的贡献。我们欢迎任何形式的帮助！
+4.  **启动！**
+    ```bash
+    uv run mkdocs serve
+    ```
+    在浏览器中打开 `http://127.0.0.1:8000` 即可。
 
-  | 贡献方式 | 如何开始 |
-  | :--- | :--- |
-  | ✍️ **内容创作** | 修正错别字、完善现有章节、撰写全新内容。 |
-  | 💡 **提出建议** | 发现内容问题或有新的想法？请大胆地 [**提出 Issue**](https://github.com/NCUSCC/cs4ncu/issues/new/choose)！ |
-  | 💻 **代码贡献** | 帮助我们优化网站功能、修复 Bug、改进自动化流程。 |
+### 欢迎参与共建
 
-  **不确定从哪里开始？**
-  没关系！我们为你准备了适合新手的任务，点击这里查看 👉 [**`good first issue`**](https://github.com/NCUSCC/cs4ncu/labels/good%20first%20issue)
+`寻路之南` 的成长离不开每一位社区成员的贡献。我们欢迎任何形式的帮助！
 
-  > **每一次微小的贡献，都在点亮更多人前行的道路。**
+| 贡献方式 | 如何开始 |
+| :--- | :--- |
+| **内容创作** | 修正错别字、完善现有章节、撰写全新内容。 |
+| **提出建议** | 发现内容问题或有新的想法？请大胆地 [**提出 Issue**](https://github.com/NCUSCC/cs4ncu/issues/new/choose)！ |
+| **代码贡献** | 帮助我们优化网站功能、修复 Bug、改进自动化流程。 |
 
-  ## ✨ Our Contributors / 贡献者们
+不确定从哪里开始？我们为你准备了适合新手的任务 👉 [**`good first issue`**](https://github.com/NCUSCC/cs4ncu/labels/good%20first%20issue)
 
-  我们由衷感谢每一位为本项目注入心血的贡献者。你们是 `cs4ncu` 最宝贵的财富。
+> 每一次微小的贡献，都在点亮更多人前行的道路。
 
-  <a href="https://github.com/NCUSCC/cs4ncu/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=NCUSCC/cs4ncu" alt="Contributors" />
-  </a>
+### 我们的贡献者
 
-  *(由 [contrib.rocks](https://contrib.rocks) 自动生成)*
+我们由衷感谢每一位为本项目注入心血的贡献者。
 
-  ## 📜 License / 开源协议
+<a href="https://github.com/NCUSCC/cs4ncu/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=NCUSCC/cs4ncu" alt="Contributors" />
+</a>
 
-  本项目基于 [**MIT License**](./LICENSE) 授权。这意味着你可以自由地使用、修改和分发，只需保留原始的版权和许可声明。
+*(由 [contrib.rocks](https://contrib.rocks) 自动生成)*
 
-  ---
+### 开源协议
 
-  <div align="center">
+本项目基于 [**MIT License**](./LICENSE) 授权。
 
-*Crafted with ❤️ and ☕ by the NCUSCC community.*
+---
 
-  </div>
+<div align="center">
+
+*Crafted with ❤️ and ☕ by the community.*
+
+</div>
