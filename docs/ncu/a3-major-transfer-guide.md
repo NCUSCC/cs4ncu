@@ -1,3 +1,13 @@
+---
+tags:
+  - Topic-MajorTransfer
+  - Topic-转专业指南
+  - Type-Guide
+  - Level-Beginner
+  - Action-MajorTransfer
+---
+
+
 # 附录 C：转专业完全指南
 
 <div class="grid cards" markdown>
