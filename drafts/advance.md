@@ -1,116 +1,64 @@
-好的，这部分内容是 `CS for NCU` 项目的精髓所在，是真正能拉开人和人之间差距的地方。
+- '第零点五课堂':
+- '本部分导览': 'skills/index.md'
 
-“进阶技能与视野”（Specials）专题库，应该像一个**“自助式技能树”**，学生可以在完成“第零课”的基础构建后，根据自己的兴趣和需求，自由点亮不同的能力。
+# 模块一：认知与心智 —— 升级你的思维内核
+- '认知与心智':
+    - '导览：为何从“心”开始': 'skills/mindset/index.md'
+    - '破除思维定式':
+    - '优绩主义的陷阱': 'skills/mindset/meritocracy.md'
+    - '名校情节的枷锁': 'skills/mindset/elite-complex.md'
+    - '“做题家思维”突围': 'skills/mindset/solver-mindset.md'
+    - '洞察认知偏差':
+    - '幸存者偏差': 'skills/mindset/survivorship-bias.md'
+    - '确认偏差': 'skills/mindset/confirmation-bias.md'
+    - '冒名顶替综合征': 'skills/mindset/impostor-syndrome.md'
+    - '构建心智模型':
+    - '贝叶斯思考法则': 'skills/mindset/bayesian-thinking.md'
+    - '合作与博弈': 'skills/mindset/collaboration.md'
+    - '情绪与心理健康':
+    - '应对焦虑与内耗': 'skills/mindset/anxiety-impostor.md'
 
-以下是我为你设计的进阶专题大纲，分为四大模块，每个模块下都包含了一系列具体的主题。这个结构旨在覆盖一个现代大学生从**硬核技能**到**软性实力**，再到**职业规划**的全方位成长路径。
+# 模块二：元能力：学会学习 —— 掌握学习的“方法论”
+- '元能力：学会学习':
+    - '导览：学习本身是一门技术': 'skills/learning/index.md'
+    - '元学习与元认知': 'skills/learning/meta-learning.md'
+    - '高效信息输入': 'skills/learning/information-intake.md'
+    - '知识内化与巩固': 'skills/learning/knowledge-consolidation.md'
+    - '精力管理与专注力': 'skills/learning/energy-management.md'
 
----
+# 模块三：工具与系统 —— 打造你的效率武器库
+- '工具与系统':
+    - '导览：不止是工具，更是系统': 'skills/tools/index.md'
+    - '数字素养基础':
+    - '电脑认知': 'skills/tools/computer-basics.md'
+    - '高效打字': 'skills/tools/typing.md'
+    - '网络工具与信息安全': 'skills/tools/network-proxy.md'
+    - '个人信息管理':
+    - '云笔记构建第二大脑': 'skills/tools/cloud-notes.md'
+    - '在线协作文档': 'skills/tools/collaboration-docs.md'
+    - '任务管理与 GTD': 'skills/tools/task-management.md'
+    - '专业生产力工具':
+    - 'Git: 版本控制的艺术': 'skills/tools/git.md'
+    - 'Linux: 命令行初探': 'skills/tools/linux.md'
+    - 'LaTeX: 学术排版利器': 'skills/tools/latex.md'
+    - 'Prompt Engineering: 与 AI 高效对话': 'skills/tools/prompt-engineering.md'
+    - 'VS Code 指南':
+    - '导览与配置': 'skills/tools/vscode/index.md'
+    - '插件推荐': 'skills/tools/vscode/extensions.md'
 
-### 进阶专题内容大纲 (Skill Tree)
-
-#### 模块一：硬核工具与技术 (Hardcore Tools & Tech)
-*这个模块是“数字时代基本功”的 Pro Max 版，聚焦于那些能极大提升生产力和专业性的高杠杆工具。*
-
-1.  **终极编辑器：VS Code 完全配置指南**
-    *   工作区与多项目管理
-    *   调试器（Debugger）的艺术：从 `print` 到断点
-    *   Dev Containers：一键拥有纯净的开发环境
-    *   打造个性化开发流：Snippets、Tasks 与扩展推荐
-
-2.  **命令行与 Shell 入门：从小白到高手**
-    *   为什么程序员钟爱命令行？（效率、自动化、服务器操作）
-    *   常用命令与管道（Pipe）的魔力
-    *   配置你的专属终端（Oh My Zsh / Starship）
-    *   Shell 脚本入门：让重复工作自动化
-
-3.  **Git 与 GitHub 入门：现代协作的基石**
-    *   版本控制的核心思想：Git 到底解决了什么问题？
-    *   高频命令实战：`clone`, `add`, `commit`, `push`, `pull`, `branch`
-    *   GitHub Flow：如何优雅地参与开源项目（Fork & Pull Request）
-    *   打造你的 GitHub 个人名片
-
-4.  **构建你的第二大脑：个人知识库（PKM）搭建实战**
-    *   超越笔记：从线性记录到网状思考
-    *   主流工具选型：Obsidian vs Logseq vs Notion
-    *   Zettelkasten（卡片盒笔记法）实践入门
-    *   如何利用知识库辅助学习、研究与创作
-
-5.  **AI 赋能：不止于聊天的生产力革命**
-    *   Prompt Engineering（提示词工程）入门：如何向 AI 精准提问
-    *   Copilot / Codeium：你的 AI 编程伙伴
-    *   利用 AI 辅助阅读论文、调试代码、生成测试用例
-    *   AI 绘画与多模态工具初探
-
----
-
-#### 模块二：高效学习与思考 (Efficient Learning & Thinking)
-*这个模块是“大学思维与心态”的深化，提供具体的方法论，真正做到“授人以渔”。*
-
-1.  **如何高效学习：从费曼技巧到项目制学习**
-    *   费曼学习法：以教为学的终极奥义
-    *   刻意练习：走出舒适区的成长路径
-    *   项目制学习（PBL）：构建知识体系的最佳方式
-    *   间隔重复与主动回忆：对抗遗忘曲线
-
-2.  **信息素养：在信息的海洋中冲浪，而非溺水**
-    *   如何精准使用搜索引擎（Google Hacking）
-    *   RSS：定制你的高质量信息源
-    *   事实核查（Fact Check）与批判性思维入门
-    *   如何高效阅读技术文档和官方教程
-
-3.  **计算思维：像程序员一样思考问题**
-    *   抽象、分解、模式识别与算法思维
-    *   如何将一个复杂的大问题拆解成可执行的小任务
-    *   伪代码与流程图：规划你的解决方案
-    *   从生活问题到程序逻辑的映射
-
----
-
-#### 模块三：职业发展与规划 (Career Development & Planning)
-*这个模块是“专业探索与规划”的实践篇，提供走向社会或继续深造的具体路径指南。*
-
-1.  **求职之路：从第一份实习到毕业 Offer**
-    *   如何写一份能通过筛选的技术简历
-    *   实习信息渠道与投递策略
-    *   面试准备：从算法题（LeetCode）到行为面试（STAR 法则）
-    *   经营你的 LinkedIn 与技术博客，让机会找到你
-
-2.  **深入理解保研与考研：信息、选择与心态**
-    *   （承接昌大专属库）不同院校、不同方向的差异分析
-    *   联系导师的正确姿势：邮件撰写与面试技巧
-    *   跨专业考研/保研的机遇与挑战
-    *   考研期间的时间管理与心态调整
-
-3.  **留学申请指南：探索世界的另一种可能**
-    *   选校与定位：如何找到适合自己的项目
-    *   文书写作：个人陈述（PS）与推荐信（RL）的核心要点
-    *   标准化考试（托福/雅思/GRE）备考策略
-    *   科研/实习经历对申请的加成
-
----
-
-#### 模块四：个人成长与探索 (Personal Growth & Exploration)
-*这个模块关注技术之外的“人”，帮助学生建立健康的心理，实现全面发展。*
-
-1.  **走出内卷，定义成功：寻找你的内在驱动力**
-    *   （承接第一章）深入探讨“优绩主义”的陷阱
-    *   固定型思维 vs 成长型思维
-    *   如何找到并坚持自己的兴趣，而非随波逐流
-    *   探索的价值：Side Project 与个人创作
-
-2.  **积极心态与心理健康：应对焦虑与冒名顶替综合征**
-    *   认识并接纳不确定性
-    *   “我就是个菜鸟”：如何克服冒名顶替综合征（Imposter Syndrome）
-    *   正念与冥想：给大脑做个 SPA
-    *   何时以及如何寻求专业的心理帮助
-
-3.  **精力管理：比时间管理更重要的事**
-    *   为什么你总是感到疲惫？（体能、情绪、思维、精神精力）
-    *   工作、休息与娱乐的健康循环
-    *   番茄工作法与深度工作（Deep Work）
-    *   高质量休息的艺术：如何真正地“充电”
-
-4.  **有效沟通：技术之外的核心竞争力**
-    *   结构化写作：如何清晰地写一封邮件、一份报告
-    *   公众演讲入门：从课堂展示到技术分享
-    *   同理心与非暴力沟通：团队协作的润滑剂
+# 模块四：生活与实践 —— 将能力融入大学日常
+- '生活与实践':
+    - '导览：从知道到做到': 'skills/practice/index.md'
+    - '人际与协作':
+    - '沟通技巧': 'skills/practice/communication.md'
+    - '团队协作': 'skills/practice/teamwork.md'
+    - '财务与消费':
+    - '财商启蒙': 'skills/practice/financial-literacy.md'
+    - '聪明消费：如何点外卖更省钱': 'skills/practice/smart-spending.md'
+    - '健康与习惯':
+    - '健康管理': 'skills/practice/healthy-management.md'
+    - '机遇与探索':
+    - '打破信息差': 'skills/practice/information-gap.md'
+    - '开源之旅': 'skills/practice/open-source-journey.md'
+    - '实验班与特殊项目解读': 'skills/practice/innovation-classes.md'
+    - '职业规划启蒙': 'skills/practice/career-planning.md'
