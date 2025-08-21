@@ -29,7 +29,7 @@
     ---
     这里是可供你自由探索的专题知识库。无论是硬核的技术教程，还是关于职业发展的深度分享，都将极大拓展你的能力边界。
 
-    **[:octicons-arrow-right-24: 探索专题](./specials/vscode-the-ultimate-ide/index.md)**
+    **[:octicons-arrow-right-24: 探索专题](./skills/index.md)**
 
 -   :material-map-legend: **昌大专属资源库**
 

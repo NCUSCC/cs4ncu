@@ -1,1 +1,86 @@
+# ----------------------------------------------------------------
+# MkDocs specific
+# ----------------------------------------------------------------
+# 默认的构建输出目录
 site/
+
+
+# MkDocs 在某些情况下创建的备份文件
+mkdocs.yml.bak
+
+# 一些插件（如 awesome-pages）生成的缓存文件
+.cache/
+*.pages
+
+# ----------------------------------------------------------------
+# Python specific
+# ----------------------------------------------------------------
+# 字节码和编译文件
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 虚拟环境目录
+# 根据你自己的虚拟环境目录名取消注释或添加
+# venv/
+# env/
+.venv/
+.env/
+
+# Python 打包和安装目录
+*.egg-info/
+*.egg
+build/
+dist/
+eggs/
+parts/
+bin/
+include/
+lib/
+lib64/
+local/
+share/
+wheels/
+pip-wheel-metadata/
+
+# Pip/virtualenv 生成的文件
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ----------------------------------------------------------------
+# IDE and Editor specific
+# ----------------------------------------------------------------
+# VSCode
+.vscode/
+*.code-workspace
+
+# JetBrains (PyCharm, WebStorm, etc.)
+.idea/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+
+# ----------------------------------------------------------------
+# OS specific
+# ----------------------------------------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ----------------------------------------------------------------
+# Other
+# ----------------------------------------------------------------
+# 日志文件
+*.log
