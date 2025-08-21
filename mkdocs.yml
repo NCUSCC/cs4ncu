@@ -226,8 +226,11 @@ nav:
     - '本部分导览': 'ncu/index.md'
     - '保研': 
       - '计科推免全流程': 'ncu/recommendation/cs.md'
+    - '转专业': 
+      # - '转专业总则'
+      - '计科转专业全流程': 'ncu/transfer/cs.md'
     - '考研经验分享': 'ncu/a2-postgraduate-entrance-exam.md'
-    - '转专业完全指南': 'ncu/a3-major-transfer-guide.md'
+    # - '转专业完全指南': 'ncu/a3-major-transfer-guide.md'
     - '各培养方案导读': 'ncu/a4-program-guides.md'
 
   # 顶层导航 5: 贡献与开发
