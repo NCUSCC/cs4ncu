@@ -5,15 +5,19 @@
          <lastmod>2025-08-21</lastmod>
     </url>
     <url>
-         <loc>https://cs4ncu.space/overview/</loc>
-         <lastmod>2025-08-21</lastmod>
-    </url>
-    <url>
          <loc>https://cs4ncu.space/tags/</loc>
          <lastmod>2025-08-21</lastmod>
     </url>
     <url>
          <loc>https://cs4ncu.space/aboutus/heart/</loc>
+         <lastmod>2025-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://cs4ncu.space/before/overview/</loc>
+         <lastmod>2025-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://cs4ncu.space/before/prologue-the-start/</loc>
          <lastmod>2025-08-21</lastmod>
     </url>
     <url>
@@ -113,6 +117,10 @@
          <lastmod>2025-08-21</lastmod>
     </url>
     <url>
+         <loc>https://cs4ncu.space/ncu/</loc>
+         <lastmod>2025-08-21</lastmod>
+    </url>
+    <url>
          <loc>https://cs4ncu.space/ncu/a1-postgraduate-recommendation/</loc>
          <lastmod>2025-08-21</lastmod>
     </url>
@@ -133,87 +141,155 @@
          <lastmod>2025-08-21</lastmod>
     </url>
     <url>
-         <loc>https://cs4ncu.space/skills/guides/communication/</loc>
+         <loc>https://cs4ncu.space/skills/communication/</loc>
          <lastmod>2025-08-21</lastmod>
     </url>
     <url>
-         <loc>https://cs4ncu.space/skills/guides/energy-management/</loc>
+         <loc>https://cs4ncu.space/skills/communication/skills/communication/</loc>
          <lastmod>2025-08-21</lastmod>
     </url>
     <url>
-         <loc>https://cs4ncu.space/skills/guides/healthy-management/</loc>
+         <loc>https://cs4ncu.space/skills/communication/teamwork/teamwork/</loc>
          <lastmod>2025-08-21</lastmod>
     </url>
     <url>
-         <loc>https://cs4ncu.space/skills/guides/information-gap/</loc>
+         <loc>https://cs4ncu.space/skills/growth/</loc>
          <lastmod>2025-08-21</lastmod>
     </url>
     <url>
-         <loc>https://cs4ncu.space/skills/guides/innovation-classes/</loc>
+         <loc>https://cs4ncu.space/skills/growth/finance/financial-literacy/</loc>
          <lastmod>2025-08-21</lastmod>
     </url>
     <url>
-         <loc>https://cs4ncu.space/skills/guides/open-source-journey/</loc>
+         <loc>https://cs4ncu.space/skills/growth/finance/smart-spending/</loc>
          <lastmod>2025-08-21</lastmod>
     </url>
     <url>
-         <loc>https://cs4ncu.space/skills/guides/smart-spending/</loc>
+         <loc>https://cs4ncu.space/skills/growth/health/healthy-management/</loc>
          <lastmod>2025-08-21</lastmod>
     </url>
     <url>
-         <loc>https://cs4ncu.space/skills/guides/teamwork/</loc>
+         <loc>https://cs4ncu.space/skills/growth/opportunity/career-planning/</loc>
          <lastmod>2025-08-21</lastmod>
     </url>
     <url>
-         <loc>https://cs4ncu.space/skills/mindset/anxiety-impostor/</loc>
+         <loc>https://cs4ncu.space/skills/growth/opportunity/information-gap/</loc>
          <lastmod>2025-08-21</lastmod>
     </url>
     <url>
-         <loc>https://cs4ncu.space/skills/mindset/collaboration/</loc>
+         <loc>https://cs4ncu.space/skills/growth/opportunity/innovation-classes/</loc>
          <lastmod>2025-08-21</lastmod>
     </url>
     <url>
-         <loc>https://cs4ncu.space/skills/mindset/elite-complex/</loc>
+         <loc>https://cs4ncu.space/skills/growth/opportunity/open-source-journey/</loc>
          <lastmod>2025-08-21</lastmod>
     </url>
     <url>
-         <loc>https://cs4ncu.space/skills/mindset/meritocracy/</loc>
+         <loc>https://cs4ncu.space/skills/learning/</loc>
          <lastmod>2025-08-21</lastmod>
     </url>
     <url>
-         <loc>https://cs4ncu.space/skills/mindset/solver-mindset/</loc>
+         <loc>https://cs4ncu.space/skills/learning/consolidation/knowledge-consolidation/</loc>
          <lastmod>2025-08-21</lastmod>
     </url>
     <url>
-         <loc>https://cs4ncu.space/skills/mindset/survivorship-bias/</loc>
+         <loc>https://cs4ncu.space/skills/learning/energy/energy-management/</loc>
          <lastmod>2025-08-21</lastmod>
     </url>
     <url>
-         <loc>https://cs4ncu.space/skills/tools/computer-basics/</loc>
+         <loc>https://cs4ncu.space/skills/learning/intake/information-intake/</loc>
          <lastmod>2025-08-21</lastmod>
     </url>
     <url>
-         <loc>https://cs4ncu.space/skills/tools/git/</loc>
+         <loc>https://cs4ncu.space/skills/learning/meta/meta-learning/</loc>
          <lastmod>2025-08-21</lastmod>
     </url>
     <url>
-         <loc>https://cs4ncu.space/skills/tools/latex/</loc>
+         <loc>https://cs4ncu.space/skills/mindset/</loc>
          <lastmod>2025-08-21</lastmod>
     </url>
     <url>
-         <loc>https://cs4ncu.space/skills/tools/linux/</loc>
+         <loc>https://cs4ncu.space/skills/mindset/bias/confirmation-bias/</loc>
          <lastmod>2025-08-21</lastmod>
     </url>
     <url>
-         <loc>https://cs4ncu.space/skills/tools/network-proxy/</loc>
+         <loc>https://cs4ncu.space/skills/mindset/bias/sunk-cost/</loc>
          <lastmod>2025-08-21</lastmod>
     </url>
     <url>
-         <loc>https://cs4ncu.space/skills/tools/prompt-engineering/</loc>
+         <loc>https://cs4ncu.space/skills/mindset/bias/survivorship-bias/</loc>
          <lastmod>2025-08-21</lastmod>
     </url>
     <url>
-         <loc>https://cs4ncu.space/skills/tools/typing/</loc>
+         <loc>https://cs4ncu.space/skills/mindset/fixed/elite-complex/</loc>
+         <lastmod>2025-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://cs4ncu.space/skills/mindset/fixed/meritocracy/</loc>
+         <lastmod>2025-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://cs4ncu.space/skills/mindset/fixed/solver-mindset/</loc>
+         <lastmod>2025-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://cs4ncu.space/skills/mindset/mental/anxiety-impostor/</loc>
+         <lastmod>2025-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://cs4ncu.space/skills/mindset/mental/impostor-syndrome/</loc>
+         <lastmod>2025-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://cs4ncu.space/skills/mindset/model/bayesian-thinking/</loc>
+         <lastmod>2025-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://cs4ncu.space/skills/mindset/model/collaboration/</loc>
+         <lastmod>2025-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://cs4ncu.space/skills/tools/</loc>
+         <lastmod>2025-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://cs4ncu.space/skills/tools/literacy/computer-basics/</loc>
+         <lastmod>2025-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://cs4ncu.space/skills/tools/literacy/network-proxy/</loc>
+         <lastmod>2025-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://cs4ncu.space/skills/tools/literacy/typing/</loc>
+         <lastmod>2025-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://cs4ncu.space/skills/tools/pkm/cloud-notes/</loc>
+         <lastmod>2025-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://cs4ncu.space/skills/tools/pkm/collaboration-docs/</loc>
+         <lastmod>2025-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://cs4ncu.space/skills/tools/pkm/task-management/</loc>
+         <lastmod>2025-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://cs4ncu.space/skills/tools/pro/git/</loc>
+         <lastmod>2025-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://cs4ncu.space/skills/tools/pro/latex/</loc>
+         <lastmod>2025-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://cs4ncu.space/skills/tools/pro/linux/</loc>
+         <lastmod>2025-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://cs4ncu.space/skills/tools/pro/prompt-engineering/</loc>
          <lastmod>2025-08-21</lastmod>
     </url>
     <url>
