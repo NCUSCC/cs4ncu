@@ -138,7 +138,8 @@ nav:
     - '先别慌，我们聊聊': 'before/prologue-the-start.md'
     - '全站导览': 'before/overview.md'
   - '本科生通识第零课':
-    - '课程导览': 'course/index.md'
+    - '核心原则': 'course/the-core.md'   
+    - '完整课程导览': 'course/index.md'
     - '第一部分：决策的基础':
       - '本部分导览': 'course/part1/index.md'
       - '第一章：思维模式转换': 'course/part1/ch1-mindset.md'
@@ -223,7 +224,8 @@ nav:
   # 顶层导航 4: 昌大专属附录
   - '昌大专属资源库':
     - '本部分导览': 'ncu/index.md'
-    - '保研细则解析': 'ncu/a1-postgraduate-recommendation.md'
+    - '保研': 
+      - '计科推免全流程': 'ncu/recommendation/cs.md'
     - '考研经验分享': 'ncu/a2-postgraduate-entrance-exam.md'
     - '转专业完全指南': 'ncu/a3-major-transfer-guide.md'
     - '各培养方案导读': 'ncu/a4-program-guides.md'
