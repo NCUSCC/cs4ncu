@@ -13,7 +13,7 @@
 这是我们为你准备的最重要的起点。
 
 <p style="font-size: 1.2em; margin: 1.5em 0;" markdown>
-    <strong><a href="./before/prologue-the-start.md">  翻开《第负一课：先别慌，我们聊聊》 :octicons-arrow-right-24:</a></strong>
+    <strong><a href="./before/prologue-the-start/">  翻开《第负一课：先别慌，我们聊聊》 :octicons-arrow-right-24:</a></strong>
 </p>
 
 ---
@@ -36,7 +36,7 @@
     ---
     这里是我们为你精心设计的**核心成长路径**，它会像一位向导，带你从重塑思维开始，一步步构建起应对大学挑战的完整能力体系。**这，就是我们的‘本科生通识第零课’。**
 
-    **[:octicons-arrow-right-24: 浏览通识第零课](./course/index.md)**
+    **[:octicons-arrow-right-24: 浏览通识第零课](./course/the-core.md)**
 
 -   :material-treasure-chest: **“我想自由探索特定技能”**
 
