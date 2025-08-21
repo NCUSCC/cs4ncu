@@ -62,3 +62,17 @@
     - '开源之旅': 'skills/practice/open-source-journey.md'
     - '实验班与特殊项目解读': 'skills/practice/innovation-classes.md'
     - '职业规划启蒙': 'skills/practice/career-planning.md'
+
+
+
+
+        - '围城思维': 'skills/mindset/fixed/fortress-besieged.md' # <--- 新增
+        - '技术崇拜': 'skills/mindset/fixed/tech-fetishism.md' # <--- 新增
+        - '知识的傲慢': 'skills/mindset/fixed/intellectual-arrogance.md' # <--- 新增
+      - “利益视角”
+      - 幸福者避让原则
+      - “规则博弈”的内核：成为规则的“玩家”，而非奴隶
+  
+  “批评者困境”虚伪与嫉妒
+
+  信息 茧房

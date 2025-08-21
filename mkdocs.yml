@@ -1,10 +1,10 @@
 # mkdocs.yml
 
 # --- 网站基本信息 ---
-site_name: CS for NCU - 昌大学习指南
+site_name: 寻路之南
 site_url: https://cs4ncu.space/
-site_author: 南昌大学超算俱乐部
-site_description: '一份由南昌大学学生为所有本科生打造的开源寻路图。我们致力于打破信息壁垒，提供一套开放、实用、可持续进化的知识体系与成长路径。'
+site_author: NCUSCC & Community Contributors
+site_description: '寻路之南——写给普通人的大学成长指南。我们由一群普通本科生发起，致力于分享一套从自我认知开始的成长方法论。'
 
 # --- 仓库信息 ---
 repo_name: NCUSCC/cs4ncu
@@ -62,6 +62,8 @@ theme:
     - navigation.tags 
     - content.action.view
     - navigation.top
+    - navigation.footer  # 显示文档底部区域（导航指示器依赖此区域）
+    - navigation.prev_next
 
 # --- 插件配置 (强烈建议添加) ---
 plugins:
@@ -131,9 +133,10 @@ markdown_extensions:
 
 nav:
   # 顶层导航 1: 首页
-  - '首页': 
-    - '简介': 'index.md'
-    - '课程导览': 'overview.md'
+  - '首页': 'index.md'
+  - '开始之前':
+    - '先别慌，我们聊聊': 'before/prologue-the-start.md'
+    - '全站导览': 'before/overview.md'
   - '本科生通识第零课':
     - '课程导览': 'course/index.md'
     - '第一部分：决策的基础':
@@ -148,39 +151,8 @@ nav:
       - '本部分导览': 'course/part3/index.md'
       - '第五章：设定探索方向': 'course/part3/ch5-the-output.md'
       - '第六章：低成本实践与验证': 'course/part3/ch6-the-test.md'
-  - '第零点五1课堂':
-    - '本部分导览': 'skills/index.md'
-    - '思维与认知':
-      - '优绩主义': 'skills/mindset/meritocracy.md'
-      - '名校情节': 'skills/mindset/elite-complex.md'
-      - '做题家思维': 'skills/mindset/solver-mindset.md'
-      - '幸存者偏差': 'skills/mindset/survivorship-bias.md'
-      - '合作与博弈': 'skills/mindset/collaboration.md'
-      - '焦虑与内耗': 'skills/mindset/anxiety-impostor.md'
-    - '工具与技能':
-      - '电脑认知': 'skills/tools/computer-basics.md'
-      - '高效打字': 'skills/tools/typing.md'
-      - 'Git': 'skills/tools/git.md'
-      - 'Linux': 'skills/tools/linux.md'
-      - 'LaTeX': 'skills/tools/latex.md'
-      - 'Prompt Engineering': 'skills/tools/prompt-engineering.md'
-      - '网络工具': 'skills/tools/network-proxy.md'
-      - 'VS Code 指南':
-        - '导览与配置': 'skills/tools/vscode/index.md'
-        - '插件推荐': 'skills/tools/vscode/extensions.md'
-    - '大学生存指南':
-      - '实验班解读': 'skills/guides/innovation-classes.md'
-      - '精力管理': 'skills/guides/energy-management.md'
-      - '健康管理': 'skills/guides/healthy-management.md'
-      - '沟通技巧': 'skills/guides/communication.md'
-      - '团队协作': 'skills/guides/teamwork.md'
-      - '信息差': 'skills/guides/information-gap.md'
-      - '开源经历': 'skills/guides/open-source-journey.md'
-      - '聪明消费': 'skills/guides/smart-spending.md'
-
   - '第零点五课堂':
     - '本部分导览': 'skills/index.md'
-
     # 模块一：认知与心智 (内核)
     - '认知与心智':
       - '导览': 'skills/mindset/index.md'
@@ -191,14 +163,13 @@ nav:
       - '认知偏差':
         - '幸存者偏差': 'skills/mindset/bias/survivorship-bias.md'
         - '确认偏差': 'skills/mindset/bias/confirmation-bias.md'
-        - '沉没成本': 'skills/mindset/bias/sunk-cost.md' # <--- 新增
+        - '沉没成本': 'skills/mindset/bias/sunk-cost.md'
       - '心智模型':
         - '贝叶斯法则': 'skills/mindset/model/bayesian-thinking.md'
         - '合作与博弈': 'skills/mindset/model/collaboration.md'
       - '心理健康':
         - '冒名顶替综合征': 'skills/mindset/mental/impostor-syndrome.md'
         - '焦虑与内耗': 'skills/mindset/mental/anxiety-impostor.md'
-
     # 模块二：学会学习 (引擎)
     - '学会学习':
       - '导览': 'skills/learning/index.md'
@@ -239,7 +210,7 @@ nav:
       - '财务管理':
         - '财商启蒙': 'skills/growth/finance/financial-literacy.md'
         - '聪明消费': 'skills/growth/finance/smart-spending.md'
-      - '身心健康':
+      - '身体健康':
         - '健康管理': 'skills/growth/health/healthy-management.md'
       - '机遇探索':
         - '信息差': 'skills/growth/opportunity/information-gap.md'
@@ -251,6 +222,7 @@ nav:
 
   # 顶层导航 4: 昌大专属附录
   - '昌大专属资源库':
+    - '本部分导览': 'ncu/index.md'
     - '保研细则解析': 'ncu/a1-postgraduate-recommendation.md'
     - '考研经验分享': 'ncu/a2-postgraduate-entrance-exam.md'
     - '转专业完全指南': 'ncu/a3-major-transfer-guide.md'
