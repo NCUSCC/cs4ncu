@@ -170,6 +170,7 @@ nav:
         - '合作与博弈': 'skills/mindset/model/collaboration.md'
       - '心理健康':
         - '冒名顶替综合征': 'skills/mindset/mental/impostor-syndrome.md'
+        - '学会独处': 'skills/mindset/mental/learn-to-be-alone.md'
         - '焦虑与内耗': 'skills/mindset/mental/anxiety-impostor.md'
     # 模块二：学会学习 (引擎)
     - '学会学习':
@@ -183,7 +184,9 @@ nav:
     - '沟通与协作':
       - '导览': 'skills/communication/index.md'
       - '沟通技巧': 'skills/communication/skills/communication.md'
+      - '构建人际关系网': 'skills/communication/skills/network-of-relationships.md'
       - '团队协作': 'skills/communication/teamwork/teamwork.md'
+      - '人际矛盾处理': 'skills/communication/skills/dealing-conflicts.md'
     
     # 模块四：工具与系统 (兵器)
     - '工具与系统':
