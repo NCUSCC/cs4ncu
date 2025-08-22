@@ -52,7 +52,8 @@ tags:
     - [ ] `合作与博弈` (`skills/mindset/model/collaboration.md`)
 - #### 心理健康
     - [ ] `冒名顶替综合征` (`skills/mindset/mental/impostor-syndrome.md`)
-    - [ ] `焦虑与内耗` (`skills/mindset/mental/anxiety-impostor.md`)
+    - [x] `焦虑与内耗` (`skills/mindset/mental/anxiety-impostor.md`)
+    - [x] `学会独处` 
 
 ---
 
@@ -68,7 +69,9 @@ tags:
 ### 模块三：沟通与协作 (链接)
 - [ ] **模块导览** (`skills/communication/index.md`)
 - [ ] `沟通技巧` (`skills/communication/skills/communication.md`)
-- [ ] `团队协作` (`skills/communication/teamwork/teamwork.md`)
+- [x] `理性应对人际矛盾`
+- [x] `如何构建清晰的个人社交价值网` 
+- [x] `团队协作` (`skills/communication/teamwork/teamwork.md`)
 
 ---
 
