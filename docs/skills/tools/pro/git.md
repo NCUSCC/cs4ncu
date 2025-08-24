@@ -69,8 +69,7 @@ git 有很多指令，对于新手来说常用的并不多，以下为一些指�
 # 如何写好 commit message
 commit message 相当于是对自己一次代码更改的简单说明，同时当于他人合作时，别人也可以一眼看出你这次更改主要是什么内容。
 
-有很多项目都有着自己的贡献指南，有指出在贡献此项目时候 commit
- message 应该有怎样的一个规范。我们完全可以通过查看别人的commit 记录来模仿以此规范自己的 commit message，在次便不对此进行额外阐述。
+有很多项目都有着自己的贡献指南，有指出在贡献此项目时候 commit message 应该有怎样的一个规范。我们完全可以通过查看别人的commit 记录来模仿以此规范自己的 commit message，在次便不对此进行额外阐述。
 
 # 如何提交 PR（Pull Request）
 一句话概括其流程：Fork → Clone → 新建分支 → 改代码 → commit → push → 在 GitHub 点 “Compare & pull request” → 填标题/描述 → 提交。
