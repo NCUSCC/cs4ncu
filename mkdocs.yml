@@ -204,6 +204,7 @@ nav:
         - 'Linux': 'skills/tools/pro/linux.md'
         - 'LaTeX': 'skills/tools/pro/latex.md'
         - 'Prompt Engineering': 'skills/tools/pro/prompt-engineering.md'
+        - 'Docker' : 'skills/tools/pro/docker.md'
       - 'VS Code 指南':
         - '导览与配置': 'skills/tools/vscode/index.md'
         - '插件推荐': 'skills/tools/vscode/extensions.md'
