@@ -79,6 +79,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#git-github" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -2332,6 +2337,21 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Git
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -2344,6 +2364,43 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#git-github_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      简单说说 git &amp; github 能做些什么
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-github_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      git 与 github 之间的关系
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2409,6 +2466,29 @@
   
   <span class="md-ellipsis">
     Prompt Engineering
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker
     
   </span>
   
@@ -3987,6 +4067,34 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#git-github_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      简单说说 git &amp; github 能做些什么
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-github_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      git 与 github 之间的关系
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -4013,9 +4121,54 @@
   
 
 
-  <h1>Git</h1>
-
-
+<h1 id="git-github">git &amp; github<a class="headerlink" href="#git-github" title="Permanent link">&para;</a></h1>
+<p>git 的学习一定是<strong>非常注重实践</strong>的
+其中一些指令的作用相信也能在一次次实践中弄懂。</p>
+<p>故以下只对 git 的学习进行简单指导，包括如何注册等便不再提及，还需读者自己多去实践与搜索相关知识。</p>
+<h2 id="git-github_1">简单说说 git &amp; github 能做些什么<a class="headerlink" href="#git-github_1" title="Permanent link">&para;</a></h2>
+<ol>
+<li>记录历史：每次改动都存一个快照，可随时比较、回退。</li>
+<li>并行开发：不同人在不同分支上开发，最后合并。</li>
+<li>备份与同步：本地、远程仓库互为备份；push/pull 即可同步。</li>
+<li>代码审查：通过 Pull Request / Merge Request 流程讨论和审阅代码。</li>
+<li>发布管理：打 Tag 做版本发布，或用分支维护多个线上版本。</li>
+</ol>
+<p>对于新手来说，可以试着将自己刚学习编程时候写的代码全都通过 git 上传到 github 进行保存与管理。</p>
+<p>以下概念需要读者自行搜索了解：
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>仓库（repo）、工作区、暂存区、版本库、分支、合并
+</span></code></pre></div></p>
+<h2 id="git-github_2">git 与 github 之间的关系<a class="headerlink" href="#git-github_2" title="Permanent link">&para;</a></h2>
+<p>git 只是一个装在本地电脑里的工具，负责做版本控制，可以记录文件的每一次变化。</p>
+<p>而 github 是全球最大的开源代码托管平台（简单来说就是一个可以存代码仓库的网站），把 Git 仓库放到云端服务器上，方便多人共享、浏览和协作，还提供 Issues、Pull Request、CI/CD 等附加功能。也有人将 github 比喻成“程序员的朋友圈 + 代码仓库”。</p>
+<p>❓新手常见问题:</p>
+<p>Q：一定要用 Git 命令吗？</p>
+<p>A：不需要！ 平台提供网页操作（上传/下载/编辑），入门可不学命令</p>
+<p>Q：私有项目收费吗？</p>
+<p>A：主流平台（GitHub/Gitee/GitLink）免费提供私有仓库</p>
+<p>Q：代码被看到会泄密吗？</p>
+<p>A：创建时选择 🔒Private（私有）选项即可隐藏代码</p>
+<p>以下术语需要读者自行了解：
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Fork、Star、Watch、Issues、Pull Request、CI/CD
+</span></code></pre></div></p>
+<h1 id="git">git 基础配置<a class="headerlink" href="#git" title="Permanent link">&para;</a></h1>
+<p>使用 Git 之前，首先需要进行一些基本的配置，包括设置用户名和邮箱。这些信息会与每次提交（Commit）关联，用于标识代码的贡献者。</p>
+<p>篇幅有限具体操作请读者自行搜索如何配置，如如何使用 SSH 连接远程仓库，然后试着在 GitHub 上找到一个开源仓库（如 https://github.com/octocat/Hello-World），用 SSH 方式克隆它到本地。</p>
+<h1 id="repository">创建并管理仓库 (Repository)<a class="headerlink" href="#repository" title="Permanent link">&para;</a></h1>
+<p>光学会浏览别人的项目那就只能算是停留在非常初步的阶段，我们可以自己创建仓库来管理。</p>
+<p>如何建造仓库并不难，大致搜索下就能知道如何操作。</p>
+<p>同时也可以了解下什么是开源许可证（licence）,了解下如何选择开源许可证，各个许可证的内容是什么，以及自己感兴趣的项目是用的哪个许可证。</p>
+<p>而开发和协作时，我们经常需要区分两个重要概念：本地 &amp; 远程：</p>
+<p>于 Git 中，本地通常指你的本地仓库，而远程指远程仓库（如 GitHub）。你需要通过 git push 将本地的更改同步到远程，或通过 git pull 将远程的更新拉取到本地。这种“本地 - 远程”协作模式是现代开发的核心实践之一。</p>
+<h1 id="git_1">git 基础操作<a class="headerlink" href="#git_1" title="Permanent link">&para;</a></h1>
+<p>git 有很多指令，对于新手来说常用的并不多，以下为一些指令速记：初始化项目 (git init)，克隆仓库 (git clone)，基本操作 (git add、git commit、git status、git log)，分支管理 (git branch、git checkout、git merge)，以及与远程仓库交互 (git pull、git push、git fetch)。</p>
+<p>而新手可以先从<code>git init</code>、<code>git clone</code>、<code>git add</code>、<code>git commit</code>、<code>git pull</code>、<code>git push</code>以及<code>git log</code>开始，其余的完全可以等需要的时候再进行学习。</p>
+<p>补充：在学习过程中推荐了解下何为暂存区（Staging Area），如怎么修改暂存区、如何撤销暂存区的更改等等。</p>
+<h1 id="commit-message">如何写好 commit message<a class="headerlink" href="#commit-message" title="Permanent link">&para;</a></h1>
+<p>commit message 相当于是对自己一次代码更改的简单说明，同时当于他人合作时，别人也可以一眼看出你这次更改主要是什么内容。</p>
+<p>有很多项目都有着自己的贡献指南，有指出在贡献此项目时候 commit message 应该有怎样的一个规范。我们完全可以通过查看别人的commit 记录来模仿以此规范自己的 commit message，在次便不对此进行额外阐述。</p>
+<h1 id="prpull-request">如何提交 PR（Pull Request）<a class="headerlink" href="#prpull-request" title="Permanent link">&para;</a></h1>
+<p>一句话概括其流程：Fork → Clone → 新建分支 → 改代码 → commit → push → 在 GitHub 点 “Compare &amp; pull request” → 填标题/描述 → 提交。</p>
+<p>至于为何要提交 PR，简单来说就是方便让代码在正式合并前可被同事审查、跑自动测试，防止把 bug 直接推进主干。</p>
 
 
 
@@ -4033,11 +4186,12 @@
   <span class="md-source-file__fact">
     <span class="md-icon" title="贡献者">
       
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9 3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.54 5.54 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13zM0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9-.59.68-.95 1.62-.95 2.65V20zm24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65 2.56.34 4.45 1.51 4.45 2.9z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
       
     </span>
     <nav>
       
+        <a href="mailto:39020005+caicaiis@users.noreply.github.com">CAICAII</a>
     </nav>
   </span>
 
