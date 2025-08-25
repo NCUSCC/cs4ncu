@@ -286,7 +286,7 @@ extra_css:
   - 'css/extra.css'
   - https://unpkg.com/katex@0/dist/katex.min.css
 extra_javascript:
-  - 'js/custom.js'
+  - javascripts/readingProgress.js
   - javascripts/katex.js
   - https://unpkg.com/katex@0/dist/katex.min.js
   - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
