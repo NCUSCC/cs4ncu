@@ -1,0 +1,110 @@
+/**
+ * @file        04-reading-progress.css
+ * @description 极简阅读进度样式 - 纯黑白线条风格
+ * @version     1.0
+ */
+
+/* 极简阅读进度 - 纯黑白线条风格 */
+.reading-progress {
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+    z-index: 9999;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+}
+
+.reading-progress.visible {
+    opacity: 1;
+}
+
+/* 极简圆环 */
+.reading-progress-ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* SVG 进度环 */
+.reading-progress-svg {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 38px;
+    height: 38px;
+    transform: rotate(-90deg);
+}
+
+.reading-progress-circle-bg {
+    fill: none;
+    stroke: rgba(0, 0, 0, 0.1);
+    stroke-width: 1;
+}
+
+.reading-progress-circle {
+    fill: none;
+    stroke: #000000;
+    stroke-width: 1;
+    stroke-linecap: round;
+    stroke-dasharray: 119.38;
+    stroke-dashoffset: 119.38;
+    transition: stroke-dashoffset 0.3s ease;
+}
+
+/* 极简文字 */
+.reading-progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 9px;
+    font-weight: 500;
+    color: #000000;
+    text-align: center;
+    line-height: 1;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* MkDocs 深色主题适配 */
+[data-md-color-scheme="slate"] .reading-progress-ring {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+[data-md-color-scheme="slate"] .reading-progress-circle-bg {
+    stroke: rgba(255, 255, 255, 0.2);
+}
+
+[data-md-color-scheme="slate"] .reading-progress-circle {
+    stroke: #ffffff;
+}
+
+[data-md-color-scheme="slate"] .reading-progress-text {
+    color: #ffffff;
+}
+
+/* 移动端 */
+@media (max-width: 768px) {
+    .reading-progress {
+        width: 36px;
+        height: 36px;
+        right: 16px;
+        bottom: 30px;
+    }
+
+    .reading-progress-svg {
+        width: 34px;
+        height: 34px;
+    }
+
+    .reading-progress-text {
+        font-size: 8px;
+    }
+}
