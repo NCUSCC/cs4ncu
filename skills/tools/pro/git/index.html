@@ -2398,6 +2398,51 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    <span class="md-ellipsis">
+      git 基础配置
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建并管理仓库 (Repository)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      git 基础操作
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      为何需要分支管理
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commit-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何写好 commit message
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4094,6 +4139,51 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    <span class="md-ellipsis">
+      git 基础配置
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建并管理仓库 (Repository)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      git 基础操作
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      为何需要分支管理
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commit-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何写好 commit message
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4122,7 +4212,7 @@
 
 
 <h1 id="git-github">git &amp; github<a class="headerlink" href="#git-github" title="Permanent link">&para;</a></h1>
-<p>git 的学习一定是<strong>非常注重实践</strong>的
+<p>git 的学习一定是<strong>非常注重实践</strong>的,
 其中一些指令的作用相信也能在一次次实践中弄懂。</p>
 <p>故以下只对 git 的学习进行简单指导，包括如何注册等便不再提及，还需读者自己多去实践与搜索相关知识。</p>
 <h2 id="git-github_1">简单说说 git &amp; github 能做些什么<a class="headerlink" href="#git-github_1" title="Permanent link">&para;</a></h2>
@@ -4150,25 +4240,36 @@
 <p>以下术语需要读者自行了解：
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Fork、Star、Watch、Issues、Pull Request、CI/CD
 </span></code></pre></div></p>
-<h1 id="git">git 基础配置<a class="headerlink" href="#git" title="Permanent link">&para;</a></h1>
+<h2 id="git">git 基础配置<a class="headerlink" href="#git" title="Permanent link">&para;</a></h2>
 <p>使用 Git 之前，首先需要进行一些基本的配置，包括设置用户名和邮箱。这些信息会与每次提交（Commit）关联，用于标识代码的贡献者。</p>
 <p>篇幅有限具体操作请读者自行搜索如何配置，如如何使用 SSH 连接远程仓库，然后试着在 GitHub 上找到一个开源仓库（如 https://github.com/octocat/Hello-World），用 SSH 方式克隆它到本地。</p>
-<h1 id="repository">创建并管理仓库 (Repository)<a class="headerlink" href="#repository" title="Permanent link">&para;</a></h1>
+<h2 id="repository">创建并管理仓库 (Repository)<a class="headerlink" href="#repository" title="Permanent link">&para;</a></h2>
 <p>光学会浏览别人的项目那就只能算是停留在非常初步的阶段，我们可以自己创建仓库来管理。</p>
 <p>如何建造仓库并不难，大致搜索下就能知道如何操作。</p>
 <p>同时也可以了解下什么是开源许可证（licence）,了解下如何选择开源许可证，各个许可证的内容是什么，以及自己感兴趣的项目是用的哪个许可证。</p>
 <p>而开发和协作时，我们经常需要区分两个重要概念：本地 &amp; 远程：</p>
 <p>于 Git 中，本地通常指你的本地仓库，而远程指远程仓库（如 GitHub）。你需要通过 git push 将本地的更改同步到远程，或通过 git pull 将远程的更新拉取到本地。这种“本地 - 远程”协作模式是现代开发的核心实践之一。</p>
-<h1 id="git_1">git 基础操作<a class="headerlink" href="#git_1" title="Permanent link">&para;</a></h1>
+<h2 id="git_1">git 基础操作<a class="headerlink" href="#git_1" title="Permanent link">&para;</a></h2>
 <p>git 有很多指令，对于新手来说常用的并不多，以下为一些指令速记：初始化项目 (git init)，克隆仓库 (git clone)，基本操作 (git add、git commit、git status、git log)，分支管理 (git branch、git checkout、git merge)，以及与远程仓库交互 (git pull、git push、git fetch)。</p>
 <p>而新手可以先从<code>git init</code>、<code>git clone</code>、<code>git add</code>、<code>git commit</code>、<code>git pull</code>、<code>git push</code>以及<code>git log</code>开始，其余的完全可以等需要的时候再进行学习。</p>
 <p>补充：在学习过程中推荐了解下何为暂存区（Staging Area），如怎么修改暂存区、如何撤销暂存区的更改等等。</p>
-<h1 id="commit-message">如何写好 commit message<a class="headerlink" href="#commit-message" title="Permanent link">&para;</a></h1>
+<h2 id="_1">为何需要分支管理<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ol>
+<li>并行开发：不同功能可以同时开发，互不影响。</li>
+<li>方便试验：新想法在独立分支尝试，失败可直接丢弃。</li>
+<li>协作清晰：每个分支代表一个任务，合并更直观。</li>
+<li>版本管理：不同分支对应不同用途，如：</li>
+<li>main：稳定版</li>
+<li>develop：开发版</li>
+</ol>
+<h2 id="commit-message">如何写好 commit message<a class="headerlink" href="#commit-message" title="Permanent link">&para;</a></h2>
 <p>commit message 相当于是对自己一次代码更改的简单说明，同时当于他人合作时，别人也可以一眼看出你这次更改主要是什么内容。</p>
 <p>有很多项目都有着自己的贡献指南，有指出在贡献此项目时候 commit message 应该有怎样的一个规范。我们完全可以通过查看别人的commit 记录来模仿以此规范自己的 commit message，在次便不对此进行额外阐述。</p>
 <h1 id="prpull-request">如何提交 PR（Pull Request）<a class="headerlink" href="#prpull-request" title="Permanent link">&para;</a></h1>
 <p>一句话概括其流程：Fork → Clone → 新建分支 → 改代码 → commit → push → 在 GitHub 点 “Compare &amp; pull request” → 填标题/描述 → 提交。</p>
 <p>至于为何要提交 PR，简单来说就是方便让代码在正式合并前可被同事审查、跑自动测试，防止把 bug 直接推进主干。</p>
+<h2 id="_2"><strong>学习资料补充</strong>：<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p><a href="https://learngitbranching.js.org/?locale=zh_CN">Learning Git Branching</a> 在此教程中能执行相应的命令，还能看到每个命令的执行情况，被称为最好的 git 学习实践教程。</p>
 
 
 
@@ -4186,12 +4287,13 @@
   <span class="md-source-file__fact">
     <span class="md-icon" title="贡献者">
       
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9 3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.54 5.54 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13zM0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9-.59.68-.95 1.62-.95 2.65V20zm24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65 2.56.34 4.45 1.51 4.45 2.9z"/></svg>
       
     </span>
     <nav>
       
-        <a href="mailto:39020005+caicaiis@users.noreply.github.com">CAICAII</a>
+        <a href="mailto:39020005+caicaiis@users.noreply.github.com">CAICAII</a>, 
+        <a href="mailto:1500532940@qq.com">Jane</a>
     </nav>
   </span>
 
