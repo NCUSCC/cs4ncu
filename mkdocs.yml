@@ -261,6 +261,8 @@ nav:
 
   - '关于我们':
     - '我们的初心': 'aboutus/heart.md'
+    - '打卡教程': 'aboutus/how-to-check-in.md'
+    - '打卡墙': 'aboutus/wall.md'
   # 顶层导航 6: 索引
   - '索引':
     - '标签索引': 'tags.md'
