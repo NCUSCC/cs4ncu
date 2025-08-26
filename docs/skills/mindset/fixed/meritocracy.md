@@ -1,8 +1,7 @@
 ---
 tags:
-  - 思维方式
-  - 个人成长
-  - 心理健康
+  - Topic-MindsetModel
+  - Level-Beginner
 ---
 
 # “只要我足够努力，就一定能成功”——真的是这样吗？
