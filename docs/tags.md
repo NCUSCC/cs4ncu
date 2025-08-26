@@ -11,7 +11,7 @@
 "Topic-ProgrammingLanguage", "Topic-Web-Frontend", "Topic-Web-Backend", "Topic-API", "Topic-Testing", "Topic-Security", 
 "Topic-VSCode", "Topic-IDE", "Topic-FileManagement", "Topic-Typing", "Topic-ProductivityTools", "Topic-AI-AssistedDev", 
 "Topic-Academics", "Topic-CareerPlanning", "Topic-Postgraduate", "Topic-Resume", "Topic-Interview", "Topic-Internship", 
-"Topic-MindsetModel", "Topic-SelfManagement", "Topic-Communication", "Topic-Health", "Topic-Mindfulness", "Topic-PersonalFinance"
+"Topic-MindsetModel", "Topic-SelfManagement", "Topic-Communication", "Topic-Health", "Topic-Mindfulness", "Topic-PersonalFinance", "Topic-InterpersonalSkills"
 ] } -->
 
 ---
