@@ -87,9 +87,9 @@ tags:
     - [ ] `任务管理` (`skills/tools/pkm/task-management.md`)
 - #### 生产力工具
     - [ ] `Git` (`skills/tools/pro/git.md`)
-    - [ ] `Linux` (`skills/tools/pro/linux.md`)
+    - [x] `Linux` (`skills/tools/pro/linux.md`)
     - [ ] `LaTeX` (`skills/tools/pro/latex.md`)
-    - [ ] `Prompt Engineering` (`skills/tools/pro/prompt-engineering.md`)
+    - [x] `Prompt Engineering` (`skills/tools/pro/prompt-engineering.md`)
 - #### VS Code 指南
     - [ ] `导览与配置` (`skills/tools/vscode/index.md`)
     - [ ] `插件推荐` (`skills/tools/vscode/extensions.md`)
