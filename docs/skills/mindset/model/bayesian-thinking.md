@@ -2,7 +2,7 @@
 tags:
   - Topic-MindsetModel
   - Level-Beginner
-  - Type-LearingMethod
+  - Type-LearningMethod
 ---
 
 # 把你的认知“更新”一下：贝叶斯思维
