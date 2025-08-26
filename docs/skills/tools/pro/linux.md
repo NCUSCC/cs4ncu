@@ -37,7 +37,7 @@ Windows 和 macOS 为我们提供了精美的图形界面和“开箱即用”�
     ```bash title="Linux 文件系统结构示例 (简化)"
     / (根目录，所有文件和目录的起点)
     |
-    ├── bin/      (Binaryaries) - 存放所有用户都能使用的基本命令，如 ls、cp
+    ├── bin/      (Binaries) - 存放所有用户都能使用的基本命令，如 ls、cp
     ├── etc/      (Etcetera) - 存放系统范围的配置文件
     ├── home/     (Home) - 存放用户的个人文件和配置
     │   └── your_username/
