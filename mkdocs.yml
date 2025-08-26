@@ -84,6 +84,8 @@ markdown_extensions:
   - md_in_html
   # Details: 可折叠的内容块
   - pymdownx.details
+  - pymdownx.arithmatex:
+      generic: true
 
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
@@ -270,8 +272,12 @@ nav:
 # --- 自定义文件链接 (你的设置很好，予以保留) ---
 extra_css:
   - 'css/extra.css'
+  - https://unpkg.com/katex@0/dist/katex.min.css
 extra_javascript:
   - 'js/custom.js'
+  - javascripts/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
 
 # 额外配置项
 extra:
