@@ -1,11 +1,10 @@
 ---
 tags:
-  - Linux
-  - 操作系统
-  - 计算机科学
-  - 开发者工具
-  - AI
-  - 新手入门
+  - Topic-Linux
+  - Topic-OperatingSystem
+  - Type-Guide
+  - Level-Beginner
+  - Action-Learning
 ---
 
 # 厌倦了你的电脑？也许你该认识一下这只企鹅
