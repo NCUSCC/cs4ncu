@@ -1,8 +1,8 @@
 ---
 tags:
-  - 社区
-  - 贡献指南
-  - 打卡墙
+  - Level-Beginner
+  - Type-guide
+  - Check-Wall
 ---
 
 # 寻路人打卡墙

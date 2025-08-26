@@ -1,8 +1,8 @@
 ---
 tags:
-  - 思维方式
-  - 学习方法
-  - 批判性思维
+  - Topic-MindsetModel
+  - Level-Beginner
+  - Type-LearingMethod
 ---
 
 # 把你的认知“更新”一下：贝叶斯思维

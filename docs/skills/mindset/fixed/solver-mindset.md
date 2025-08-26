@@ -1,8 +1,7 @@
 ---
 tags:
-  - 思维方式
-  - 学习方法
-  - 新手入门
+  - Topic-MindsetModel
+  - Level-Beginner
 ---
 
 # 从解题高手到问题解决者：我们如何升级“做题家思维”

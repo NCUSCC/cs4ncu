@@ -1,9 +1,9 @@
 ---
 tags:
-  - 新手入门
-  - 贡献指南
-  - Git
-  - GitHub
+  - Level-Beginner
+  - Type-Guide
+  - Topic-Git
+  - Topic-GitHub
 ---
 
 # 打卡指南：完成你的第一次贡献
