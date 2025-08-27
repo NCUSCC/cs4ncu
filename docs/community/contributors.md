@@ -27,5 +27,5 @@ tags:
 <!-- 请在这里添加你的打卡记录 -->
 *   [@NCUSCC](https://github.com/NCUSCC) - 欢迎来到 CS for NCU，很高兴能与你同行。（2024-05-21）
 *   [@J621111](https://github.com/J621111) - Ciallo! Please make friends with me.🥺 (2025-08-27)
-*   [@CAICAIIs](https://github.com/CAICAIIs) - 相信的心就是你的魔法
+*   [@CAICAIIs](https://github.com/CAICAIIs) - 相信的心就是你的魔法 (2025-08-27)
 
