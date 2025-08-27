@@ -230,20 +230,31 @@ nav:
 
   # 顶层导航 4: 昌大专属附录
   - '昌大专属资源库':
-    - '本部分导览': 'ncu/index.md'
-    - '保研': 
-      - '计科推免全流程': 'ncu/recommendation/cs.md'
-    - '转专业': 
-      # - '转专业总则'
-      - '计科转专业全流程': 'ncu/transfer/cs.md'
-    - '考研经验分享': 'ncu/a2-postgraduate-entrance-exam.md'
-    # - '转专业完全指南': 'ncu/a3-major-transfer-guide.md'
-    - '各培养方案导读': 'ncu/a4-program-guides.md'
+    - '本部分导览': 'ncu-exclusive/index.md'
+    - '学业发展':
+      # --- 以下为普适性单页内容 ---
+      - '培养方案全解': 'ncu-exclusive/academic-development/program-guide.md'
+      - '学分绩点体系': 'ncu-exclusive/academic-development/credits-and-gpa.md'
+      - '特色实验班': 'ncu-exclusive/academic-development/experimental-classes.md'
+      # --- 以下为可按专业扩展的 Hub 内容 ---
+      - '转专业指南':
+        - '泛计算机': 'ncu-exclusive/major-transfer/cs.md'
+      - '保研之路':
+        - '计算机科学与技术': 'ncu-exclusive/postgraduate-recommendation/cs.md'
+      - '考研经验':
+        - '11408': 'ncu-exclusive/postgraduate-exam/cs.md'
+    - '资源与机会':
+      - '社团与组织':
+        - '计算机相关': 'ncu-exclusive/clubs-and-organizations/cs.md'
+    - '校园生活':
+      - '通识课程体系': 'ncu-exclusive/campus-life/general-education-courses.md'
+      - '体育与体测': 'ncu-exclusive/campus-life/pe-and-fitness-tests.md'
+      - '新生军训': 'ncu-exclusive/campus-life/military-training.md'
 
   - '社区与共建':
     - '我们的初心': 'community/our-story.md'
     - '打卡教程': 'community/how-to-check-in.md'
-    - '贡献者打卡墙': 'community/contributors.md' # <- 我将'打卡墙'改成了更标准的'贡献者打卡墙'
+    - '路友打卡墙': 'community/contributors.md' # <- 我将'打卡墙'改成了更标准的'贡献者打卡墙'
     - '项目共建指南':
       - '核心准则':
         - '行为准则': 'community/contributing/code-of-conduct.md'
