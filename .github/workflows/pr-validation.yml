@@ -74,7 +74,7 @@ jobs:
       - name: Install dependencies
         if: steps.changes.outputs.should-build == 'true'
         # 假设你的依赖文件是 requirements.txt
-        run: uv sync --file requirements.txt
+        run: uv sync
         # 步骤 4.5: 标签规范性检查
       - name: 🏷️ 标签规范性检查
         if: steps.changes.outputs.should-build == 'true'
