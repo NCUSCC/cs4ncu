@@ -1,8 +1,7 @@
 ---
 tags:
   - Level-Beginner
-  - Type-guide
-  - Check-Wall
+  - Type-Guide
 ---
 
 # 寻路人打卡墙

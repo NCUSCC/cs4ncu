@@ -31,8 +31,10 @@ jobs:
       - name: 🔍 智能文件变更检测
         id: changes
         run: |
+          # 注意：我们将 'scripts/' 目录也加入到了检测模式中
+          # 这样，如果只修改了 manage_tags.py 脚本本身，CI 也会运行
           changed_files=$(git diff --name-only ${{ github.event.pull_request.base.sha }}...HEAD)
-          build_patterns=("^docs/" "^mkdocs\.yml$" "^\.github/workflows/pr-validation\.yml$")
+          build_patterns=("^docs/" "^mkdocs\.yml$" "^scripts/" "^\.github/workflows/pr-validation\.yml$")
           echo "检查变更的文件列表:"
           echo "${changed_files}"
           should_build="false"
@@ -67,14 +69,20 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ./.venv
-          key: ${{ runner.os }}-uv-${{ hashFiles('**/pyproject.toml') }}-pr
+          key: ${{ runner.os }}-uv-${{ hashFiles('**/pyproject.toml', '**/requirements.txt') }}-pr
 
       - name: Install dependencies
         if: steps.changes.outputs.should-build == 'true'
-        run: uv sync
+        # 假设你的依赖文件是 requirements.txt
+        run: uv sync --file requirements.txt
+        # 步骤 4.5: 标签规范性检查
+      - name: 🏷️ 标签规范性检查
+        if: steps.changes.outputs.should-build == 'true'
+        # 并且我们使用 'check' 模式，它在发现问题时会以非零状态码退出，从而使工作流失败。
+        run: uv run pyscript/manage_tags.py check
 
       # 步骤 5: 核心验证步骤 - 严格模式构建
-      # 这一步会检查所有内部链接、配置等是否正确。如果构建失败，工作流会失败。
+      # 只有在上面的标签检查通过后，这一步才会执行。
       - name: 🔨 严格模式构建验证
         if: steps.changes.outputs.should-build == 'true'
         run: uv run mkdocs build --clean --strict --verbose
