@@ -34,7 +34,7 @@ jobs:
           # 注意：我们将 'scripts/' 目录也加入到了检测模式中
           # 这样，如果只修改了 manage_tags.py 脚本本身，CI 也会运行
           changed_files=$(git diff --name-only ${{ github.event.pull_request.base.sha }}...HEAD)
-          build_patterns=("^docs/" "^mkdocs\.yml$" "^scripts/" "^\.github/workflows/pr-validation\.yml$")
+          build_patterns=("^docs/" "^mkdocs\.yml$" "^pyscript/" "^\.github/workflows/pr-validation\.yml$")
           echo "检查变更的文件列表:"
           echo "${changed_files}"
           should_build="false"
