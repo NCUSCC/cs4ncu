@@ -50,7 +50,7 @@
     ---
     这里沉淀了独属于南昌大学的**实用信息与经验**。无论是转专业、保研考研，还是如何用好校园资源，这里都有最接地气的答案。
 
-    **[:octicons-arrow-right-24: 查看昌大专属](./ncu/index.md)**
+    **[:octicons-arrow-right-24: 查看昌大专属](./ncu-exclusive/index.md)**
 
 </div>
 
