@@ -12,6 +12,7 @@ dependencies = [
     "pymdown-extensions>=10.16.1",
     "python-frontmatter>=1.1.0",
     "pyyaml>=6.0.2",
+    "rapidfuzz>=3.13.0",
 ]
 
 [tool.setuptools]

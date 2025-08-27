@@ -1,8 +1,8 @@
 ---
 tags:
-  - 思维方式
-  - 新手入门
-  - 自我管理
+  - Topic-MindsetModel
+  - Level-Beginner
+  - Topic-SelfManagement
 ---
 
 # 第负一课：先别慌，我们聊聊
