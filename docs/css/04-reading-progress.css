@@ -54,8 +54,8 @@
     stroke: #000000;
     stroke-width: 1;
     stroke-linecap: round;
-    stroke-dasharray: 119.38;
-    stroke-dashoffset: 119.38;
+    stroke-dasharray: var(--circle-circumference);
+    stroke-dashoffset: var(--circle-circumference);
     transition: stroke-dashoffset 0.3s ease;
 }
 
