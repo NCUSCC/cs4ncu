@@ -4,20 +4,40 @@
  * @version     1.0.0
  */
 
+// 极简阅读进度功能
 (function() {
+    'use strict';
 
     let progressElement = null;
     let progressText = null;
     let progressCircle = null;
     let hideTimer = null;
 
-    // 圆环周长
-    const CIRCLE_RADIUS = 19;
-    const CIRCLE_CIRCUMFERENCE = 2 * Math.PI * CIRCLE_RADIUS;
+    // 圆环周长 (根据屏幕尺寸动态调整)
+    function getCircleParams() {
+        const isMobile = window.innerWidth <= 768;
+        if (isMobile) {
+            return {
+                radius: 15,
+                circumference: 2 * Math.PI * 15,
+                center: 15,
+                viewBox: '0 0 30 30'
+            };
+        } else {
+            return {
+                radius: 17,
+                circumference: 2 * Math.PI * 17,
+                center: 18,
+                viewBox: '0 0 36 36'
+            };
+        }
+    }
 
     // 创建进度圆环
     function createProgressRing() {
         if (progressElement) return;
+
+        const params = getCircleParams();
 
         // 创建主容器
         progressElement = document.createElement('div');
@@ -30,21 +50,21 @@
         // 创建SVG 进度环
         const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
         svg.setAttribute('class', 'reading-progress-svg');
-        svg.setAttribute('viewBox', '0 0 38 38');
+        svg.setAttribute('viewBox', params.viewBox);
 
         // 创建背景圆
         const bgCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
         bgCircle.setAttribute('class', 'reading-progress-circle-bg');
-        bgCircle.setAttribute('cx', '19');
-        bgCircle.setAttribute('cy', '19');
-        bgCircle.setAttribute('r', CIRCLE_RADIUS);
+        bgCircle.setAttribute('cx', params.center);
+        bgCircle.setAttribute('cy', params.center);
+        bgCircle.setAttribute('r', params.radius);
 
         // 创建进度圆
         progressCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
         progressCircle.setAttribute('class', 'reading-progress-circle');
-        progressCircle.setAttribute('cx', '19');
-        progressCircle.setAttribute('cy', '19');
-        progressCircle.setAttribute('r', CIRCLE_RADIUS);
+        progressCircle.setAttribute('cx', params.center);
+        progressCircle.setAttribute('cy', params.center);
+        progressCircle.setAttribute('r', params.radius);
 
         svg.appendChild(bgCircle);
         svg.appendChild(progressCircle);
@@ -59,6 +79,16 @@
         progressElement.appendChild(svg);
         progressElement.appendChild(progressText);
         document.body.appendChild(progressElement);
+
+        // 设置CSS变量（根据屏幕尺寸调整）
+        updateCircleSize();
+    }
+
+    // 更新圆形尺寸
+    function updateCircleSize() {
+        if (!progressElement) return;
+        const params = getCircleParams();
+        progressElement.style.setProperty('--circle-circumference', params.circumference);
     }
 
     // 更新进度
@@ -78,7 +108,8 @@
 
         progressText.textContent = progress + '%';
 
-        const offset = CIRCLE_CIRCUMFERENCE - (progress / 100) * CIRCLE_CIRCUMFERENCE;
+        const params = getCircleParams();
+        const offset = params.circumference - (progress / 100) * params.circumference;
         progressCircle.style.strokeDashoffset = offset;
 
         progressElement.classList.add('visible');
@@ -105,8 +136,13 @@
     function init() {
         createProgressRing();
         const throttledUpdate = throttle(updateProgress, 100);
+        const throttledResize = throttle(() => {
+            updateCircleSize();
+            updateProgress();
+        }, 200);
+
         window.addEventListener('scroll', throttledUpdate, { passive: true });
-        window.addEventListener('resize', throttledUpdate, { passive: true });
+        window.addEventListener('resize', throttledResize, { passive: true });
         updateProgress();
     }
 
