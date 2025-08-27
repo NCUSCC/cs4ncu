@@ -81,6 +81,14 @@
          <lastmod>2025-08-27</lastmod>
     </url>
     <url>
+         <loc>https://cs4ncu.space/community/contributing/workflow/tag/</loc>
+         <lastmod>2025-08-27</lastmod>
+    </url>
+    <url>
+         <loc>https://cs4ncu.space/community/contributing/workflow/todo/</loc>
+         <lastmod>2025-08-27</lastmod>
+    </url>
+    <url>
          <loc>https://cs4ncu.space/growth-general-course/00-before-we-start/overview/</loc>
          <lastmod>2025-08-27</lastmod>
     </url>
@@ -133,23 +141,47 @@
          <lastmod>2025-08-27</lastmod>
     </url>
     <url>
-         <loc>https://cs4ncu.space/ncu/</loc>
+         <loc>https://cs4ncu.space/ncu-exclusive/</loc>
          <lastmod>2025-08-27</lastmod>
     </url>
     <url>
-         <loc>https://cs4ncu.space/ncu/a2-postgraduate-entrance-exam/</loc>
+         <loc>https://cs4ncu.space/ncu-exclusive/academic-development/credits-and-gpa/</loc>
          <lastmod>2025-08-27</lastmod>
     </url>
     <url>
-         <loc>https://cs4ncu.space/ncu/a4-program-guides/</loc>
+         <loc>https://cs4ncu.space/ncu-exclusive/academic-development/experimental-classes/</loc>
          <lastmod>2025-08-27</lastmod>
     </url>
     <url>
-         <loc>https://cs4ncu.space/ncu/recommendation/cs/</loc>
+         <loc>https://cs4ncu.space/ncu-exclusive/academic-development/program-guide/</loc>
          <lastmod>2025-08-27</lastmod>
     </url>
     <url>
-         <loc>https://cs4ncu.space/ncu/transfer/cs/</loc>
+         <loc>https://cs4ncu.space/ncu-exclusive/campus-life/general-education-courses/</loc>
+         <lastmod>2025-08-27</lastmod>
+    </url>
+    <url>
+         <loc>https://cs4ncu.space/ncu-exclusive/campus-life/military-training/</loc>
+         <lastmod>2025-08-27</lastmod>
+    </url>
+    <url>
+         <loc>https://cs4ncu.space/ncu-exclusive/campus-life/pe-and-fitness-tests/</loc>
+         <lastmod>2025-08-27</lastmod>
+    </url>
+    <url>
+         <loc>https://cs4ncu.space/ncu-exclusive/clubs-and-organizations/cs/</loc>
+         <lastmod>2025-08-27</lastmod>
+    </url>
+    <url>
+         <loc>https://cs4ncu.space/ncu-exclusive/major-transfer/cs/</loc>
+         <lastmod>2025-08-27</lastmod>
+    </url>
+    <url>
+         <loc>https://cs4ncu.space/ncu-exclusive/postgraduate-exam/cs/</loc>
+         <lastmod>2025-08-27</lastmod>
+    </url>
+    <url>
+         <loc>https://cs4ncu.space/ncu-exclusive/postgraduate-recommendation/cs/</loc>
          <lastmod>2025-08-27</lastmod>
     </url>
     <url>
