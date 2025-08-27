@@ -1,8 +1,8 @@
 ---
 tags:
-  - 核心原则
-  - 决策系统
-  - 行动框架
+  - Type-Concept
+  - Topic-MindsetModel
+  - Type-Guide
 ---
 
 # 核心原则：构建你的个人决策系统
