@@ -1,8 +1,8 @@
 ---
 tags:
-  - 课程导览
-  - 深度学习
-  - 系统构建
+  - Type-Guide
+  - Action-Learning
+  - Action-Building
 ---
 
 # 完整课程导览

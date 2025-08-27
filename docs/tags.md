@@ -7,11 +7,12 @@
 ## 📚 按主题 (Topic)
 
 <!-- material/tags { include: [
-"Topic-Git", "Topic-GitHub", "Topic-Linux", "Topic-Shell", "Topic-Docker", "Topic-Network", "Topic-OperatingSystem", "Topic-Database", "Topic-Algorithms", "Topic-DevOps", 
-"Topic-ProgrammingLanguage", "Topic-Web-Frontend", "Topic-Web-Backend", "Topic-API", "Topic-Testing", "Topic-Security", 
-"Topic-VSCode", "Topic-IDE", "Topic-FileManagement", "Topic-Typing", "Topic-ProductivityTools", "Topic-AI-AssistedDev", 
-"Topic-Academics", "Topic-CareerPlanning", "Topic-Postgraduate", "Topic-Resume", "Topic-Interview", "Topic-Internship", 
-"Topic-MindsetModel", "Topic-SelfManagement", "Topic-Communication", "Topic-Health", "Topic-Mindfulness", "Topic-PersonalFinance"
+"Topic-AI-AssistedDev", "Topic-Academics", "Topic-ActionPlan", "Topic-Algorithms", "Topic-CSS", 
+"Topic-CareerPlanning", "Topic-Communication", "Topic-ComputerLiteracy", "Topic-CriticalThinking", "Topic-DecisionMaking", 
+"Topic-DevOps", "Topic-FileManagement", "Topic-Git", "Topic-GitHub", "Topic-GoalSetting", 
+"Topic-Health", "Topic-InformationLiteracy", "Topic-InterpersonalSkills", "Topic-Linux", "Topic-MajorTransfer", 
+"Topic-Markdown", "Topic-MindsetModel", "Topic-OperatingSystem", "Topic-Postgraduate", "Topic-Productivity", 
+"Topic-SelfAwareness", "Topic-SelfManagement", "Topic-Shell", "Topic-Typing"
 ] } -->
 
 ---
@@ -19,7 +20,9 @@
 ## 📄 按类型 (Type)
 
 <!-- material/tags { include: [
-"Type-Guide", "Type-Tutorial", "Type-Concept", "Type-Specification", "Type-Example", "Type-Experience", "Type-ResourceList", "Type-Cheatsheet", "Type-CaseStudy", "Type-Troubleshooting"
+"Type-CaseStudy", "Type-Cheatsheet", "Type-Concept", "Type-Example", "Type-Experience", 
+"Type-Guide", "Type-LearningMethod", "Type-Specification", "Type-Tutorial", "Type-guide"
+
 ] } -->
 
 ---
@@ -27,7 +30,7 @@
 ## 📈 按级别 (Level)
 
 <!-- material/tags { include: [
-"Level-Foundational", "Level-Beginner", "Level-Intermediate", "Level-Advanced"
+"Level-Advanced", "Level-Beginner", "Level-Foundational", "Level-Intermediate"
 ] } -->
 
 ---
@@ -35,7 +38,8 @@
 ## ⚡️ 按行为 (Action)
 
 <!-- material/tags { include: [
-"Action-Setup", "Action-Learning", "Action-Writing", "Action-Building", "Action-Collaboration", "Action-Deployment", "Action-Optimizing", "Action-Planning"
+"Action-Building", "Action-Collaboration", "Action-Deployment", "Action-Learning", "Action-Optimizing", 
+"Action-Practical", "Action-Setup", "Action-Thinking", "Action-Writing"
 ] } -->
 
 ---
@@ -45,3 +49,5 @@
 <!-- material/tags { include: [
 "Context-NCU", "Context-Project", "Context-TeamInternal"
 ] } -->
+
+---

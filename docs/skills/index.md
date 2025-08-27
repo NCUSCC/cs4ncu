@@ -1,9 +1,9 @@
 ---
 tags:
-  - 思维方式
-  - 学习方法
-  - 新生入门
-  - 自我提升
+  - Topic-MindsetModel
+  - Action-Learning
+  - Level-Beginner
+  - Topic-SelfManagement
 ---
 
 # 本部分导览
@@ -44,9 +44,9 @@ tags:
     - [x] `名校情节` (`skills/mindset/fixed/elite-complex.md`)
     - [ ] `做题家思维` (`skills/mindset/fixed/solver-mindset.md`)
 - #### 认知偏差
-    - [ ] `幸存者偏差` (`skills/mindset/bias/survivorship-bias.md`)
-    - [ ] `确认偏差` (`skills/mindset/bias/confirmation-bias.md`)
-    - [ ] `沉没成本` (`skills/mindset/bias/sunk-cost.md`)
+    - [x] `幸存者偏差` (`skills/mindset/bias/survivorship-bias.md`)
+    - [x] `确认偏差` (`skills/mindset/bias/confirmation-bias.md`)
+    - [x] `沉没成本` (`skills/mindset/bias/sunk-cost.md`)
 - #### 心智模型
     - [ ] `贝叶斯法则` (`skills/mindset/model/bayesian-thinking.md`)
     - [ ] `合作与博弈` (`skills/mindset/model/collaboration.md`)
@@ -87,9 +87,9 @@ tags:
     - [ ] `任务管理` (`skills/tools/pkm/task-management.md`)
 - #### 生产力工具
     - [ ] `Git` (`skills/tools/pro/git.md`)
-    - [ ] `Linux` (`skills/tools/pro/linux.md`)
+    - [x] `Linux` (`skills/tools/pro/linux.md`)
     - [ ] `LaTeX` (`skills/tools/pro/latex.md`)
-    - [ ] `Prompt Engineering` (`skills/tools/pro/prompt-engineering.md`)
+    - [x] `Prompt Engineering` (`skills/tools/pro/prompt-engineering.md`)
 - #### VS Code 指南
     - [ ] `导览与配置` (`skills/tools/vscode/index.md`)
     - [ ] `插件推荐` (`skills/tools/vscode/extensions.md`)

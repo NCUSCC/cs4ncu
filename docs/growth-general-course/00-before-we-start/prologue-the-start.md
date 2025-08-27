@@ -1,11 +1,14 @@
 ---
 tags:
-  - 思维方式
-  - 新手入门
-  - 自我管理
+  - Topic-MindsetModel
+  - Level-Beginner
+  - Topic-SelfManagement
 ---
 
 # 第负一课：先别慌，我们聊聊
+
+!!! danger "警告"
+    本文仍属于草案阶段
 
 你好，新同学。
 
@@ -69,4 +72,4 @@ tags:
 
 不着急，请完全按照你自己的节奏来。
 
-**➡️ [前往《第零课：构建你的个人决策系统》](../course/the-core.md)**
+**➡️ [前往《第零课：构建你的个人决策系统》](../01-the-zero-course/the-core.md)**

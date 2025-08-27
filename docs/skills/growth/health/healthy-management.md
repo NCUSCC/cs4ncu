@@ -1,9 +1,8 @@
 ---
 tags:
-  - 生活指南
-  - 健康
-  - 运动
-  - 新生入门
+  - Type-Guide
+  - Topic-Health
+  - Level-Beginner
 ---
 
 # 大学生的健康守护与体育运动指南
