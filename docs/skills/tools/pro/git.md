@@ -87,6 +87,9 @@ Commit message 相当于是对自己一次代码更改的简单说明；在与�
 
 至于为何要提交 PR，简单来说就是为了让代码在正式合并前可被同事审查、跑自动测试，防止把 bug 直接推进主干。
 
+
 ## 学习资料补充
 [Learning Git Branching](https://learngitbranching.js.org/?locale=zh_CN)：在此教程中能执行相应的命令，还能看到每个命令的执行情况，被称为较好的 Git 学习实践教程。
+
+
 
