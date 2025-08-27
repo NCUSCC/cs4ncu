@@ -1,9 +1,9 @@
 ---
 tags:
-  - 昌大专属
-  - 升学路径
-  - 决策实践
-  - 计算机
+  - Context-NCU
+  - Topic-Postgraduate
+  - Topic-MindsetModel
+  - Topic-Academics
 ---
 
 # 南昌大学计算机保研全程指南

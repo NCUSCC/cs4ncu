@@ -1,9 +1,9 @@
 ---
 tags:
-  - 决策分析
-  - 信息辨析
-  - 实验班
-  - 路径选择
+  - Topic-MindsetModel
+  - Action-Learning
+  - Topic-Academics
+  - Topic-CareerPlanning
 ---
 
 # 实验班/特殊班型解读：拨开光环，看清现实

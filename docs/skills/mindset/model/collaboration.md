@@ -1,9 +1,9 @@
 ---
 tags:
-  - 思维方式
-  - 人际关系
-  - 大学生活
-  - 合作
+  - Topic-MindsetModel
+  - Topic-InterpersonalSkills
+  - Context-NCU
+  - Action-Collaboration
 ---
 
 # 在合作中保护自己：写给大学新生的博弈论入门

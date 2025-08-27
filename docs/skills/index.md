@@ -1,9 +1,9 @@
 ---
 tags:
-  - 思维方式
-  - 学习方法
-  - 新生入门
-  - 自我提升
+  - Topic-MindsetModel
+  - Action-Learning
+  - Level-Beginner
+  - Topic-SelfManagement
 ---
 
 # 本部分导览
