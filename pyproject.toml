@@ -5,11 +5,27 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "gitpython>=3.1.45",
     "mkdocs>=1.6.1",
     "mkdocs-git-authors-plugin>=0.10.0",
     "mkdocs-material==9.6.17",
     "pymdown-extensions>=10.16.1",
+    "python-frontmatter>=1.1.0",
+    "pyyaml>=6.0.2",
 ]
 
 [tool.setuptools]
 packages = []
+
+[tool.completion-analyzer]
+# --- 可选配置 ---
+
+md_output = "docs/COMPLETION_REPORT.md"
+
+csv_output = "reports/completion_report.csv"
+
+# “内容极少”的字符数阈值
+min_chars = 50
+
+# “内容充实”的字符数阈值
+good_chars = 500
