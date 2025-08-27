@@ -253,6 +253,8 @@ nav:
         - '分支保护策略': 'community/contributing/branch-protection.md'
         - '网站部署': 'community/contributing/deployment.md'
         - '智能 PR 验证系统': 'community/contributing/pr-workflow-guide.md'
+        - 'Tag 系统': 'community/contributing/workflow/tag.md'
+        - '内容完成度分析': 'community/contributing/workflow/todo.md'
       - '开发实践指南':
         - '调整全局样式 (CSS)': 'community/contributing/styling.md'
         - '调整项目配色': 'community/contributing/colors.md'
