@@ -266,6 +266,7 @@ nav:
         - '一份开发手记': 'community/contributing/development-log.md'
   - '索引':
     - '标签索引': 'tags.md'
+    - '项目进度': 'COMPLETION_REPORT.md'
 
 # --- 自定义文件链接 (你的设置很好，予以保留) ---
 extra_css:
