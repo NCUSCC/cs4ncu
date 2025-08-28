@@ -16,8 +16,8 @@
     transform: scale(0.8) translateY(10px);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     pointer-events: none;
-    /* 定义CSS变量 */
-    --circle-circumference: 106.81; /* 2 * π * 17 */
+    /* CSS变量由JavaScript动态设置 */
+    --circle-circumference: 106.81;
 }
 
 .reading-progress.visible {
@@ -101,8 +101,7 @@
         height: 36px;
         right: 16px;
         bottom: 30px;
-        /* 移动端CSS变量调整 */
-        --circle-circumference: 94.25; /* 2 * π * 15 */
+        /* 移动端CSS变量由JavaScript动态调整 */
     }
 
     .reading-progress-svg {

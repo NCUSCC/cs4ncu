@@ -17,17 +17,19 @@
     function getCircleParams() {
         const isMobile = window.innerWidth <= 768;
         if (isMobile) {
+            const radius = 15;
             return {
-                radius: 15,
-                circumference: 2 * Math.PI * 15,
-                center: 15,
+                radius: radius,
+                circumference: 2 * Math.PI * radius,
+                center: radius,
                 viewBox: '0 0 30 30'
             };
         } else {
+            const radius = 17;
             return {
-                radius: 17,
-                circumference: 2 * Math.PI * 17,
-                center: 18,
+                radius: radius,
+                circumference: 2 * Math.PI * radius,
+                center: radius + 1, // SVG中心稍微偏移以适配容器
                 viewBox: '0 0 36 36'
             };
         }
@@ -152,20 +154,10 @@
         init();
     }
 
-    // 设置主题 (兼容MkDocs Material主题系统)
-    function setTheme(theme) {
-        if (theme === 'dark' || theme === 'slate') {
-            document.documentElement.setAttribute('data-md-color-scheme', 'slate');
-        } else {
-            document.documentElement.setAttribute('data-md-color-scheme', 'default');
-        }
-    }
-
-    // 暴露到全局
+    // 暴露到全局 (移除setTheme以避免与MkDocs Material主题系统冲突)
     window.ReadingProgress = {
         init: init,
-        update: updateProgress,
-        setTheme: setTheme
+        update: updateProgress
     };
 
 })();
