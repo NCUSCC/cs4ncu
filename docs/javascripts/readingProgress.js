@@ -17,11 +17,11 @@
     function getCircleParams() {
         const isMobile = window.innerWidth <= 768;
         if (isMobile) {
-            const radius = 15;
+            const radius = 13; // 减小半径确保完整显示
             return {
                 radius: radius,
                 circumference: 2 * Math.PI * radius,
-                center: radius,
+                center: 15, // 30x30 SVG的中心
                 viewBox: '0 0 30 30'
             };
         } else {

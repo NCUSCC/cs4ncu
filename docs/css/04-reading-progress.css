@@ -94,7 +94,7 @@
     color: #ffffff;
 }
 
-/* 移动端 */
+/* 移动端响应式 - 修复边框覆盖问题 */
 @media (max-width: 768px) {
     .reading-progress {
         width: 36px;
@@ -104,6 +104,11 @@
         /* 移动端CSS变量由JavaScript动态调整 */
     }
 
+    .reading-progress-ring {
+        border: none; /* 移除边框避免覆盖圆形边缘 */
+        background: transparent; /* 移除白色背景避免覆盖SVG圆形 */
+    }
+
     .reading-progress-svg {
         width: 30px;
         height: 30px;
@@ -111,5 +116,10 @@
 
     .reading-progress-text {
         font-size: 8px;
+    }
+
+    /* 深色主题移动端也需要透明背景 */
+    [data-md-color-scheme="slate"] .reading-progress-ring {
+        background: transparent;
     }
 }
