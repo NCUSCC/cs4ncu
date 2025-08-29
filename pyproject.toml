@@ -13,6 +13,8 @@ dependencies = [
     "python-frontmatter>=1.1.0",
     "pyyaml>=6.0.2",
     "rapidfuzz>=3.13.0",
+    "ruamel-yaml>=0.18.15",
+    "typer>=0.16.1",
 ]
 
 [tool.completion-analyzer]
