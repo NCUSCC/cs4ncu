@@ -5,7 +5,7 @@ tags:
   - Topic-ComputerLiteracy
 ---
 
-# **项目开发版本控制与依赖管理建议书**
+# 项目开发版本控制与依赖管理建议书
 
 ## **1. 引言：为什么版本控制如此重要？**
 
@@ -18,17 +18,16 @@ tags:
 *   **隐性Bug与不稳定性：** 最新发布的版本（如 `v2.1.0`）可能尚未经过大规模社区测试，存在未知的致命Bug。例如，近期Windows 11的KB5063878更新就疑似出现了下载大规模文件时会出现自动删盘的bug
 *   **性能差异与结果无法复现：** 深度学习框架的不同版本可能在底层实现上有优化或改动，导致同一份代码在不同版本上运行速度不同，甚至产生不同的结果，这使得模型训练和实验复现变得不可能。
 
-**具体案例：深度学习领域的“依赖地狱”**
-
-*   **PyTorch / TensorFlow 与 CUDA：** 这是最经典的版本制约链。
+!!! example " 深度学习领域的“依赖地狱” "
+    **PyTorch / TensorFlow 与 CUDA**—— 这是最经典的版本制约链：
     *   NVIDIA GPU的驱动版本决定了其支持的**最高CUDA版本**（如RTX 3090支持最高CUDA 11.8）。
     *   PyTorch/TensorFlow的每个发布版本都**仅编译支持特定的CUDA版本**（如PyTorch 1.13需要CUDA 11.7，而PyTorch 2.0需要CUDA 11.8或12.1）。
     *   若在仅支持CUDA 11.8的机器上错误安装了需要CUDA 12.1的PyTorch，则会报错 `undefined symbol: ` 或直接提示CUDA不可用。
 
-*   **PyTorch 与 Python：**
+    **PyTorch 与 Python：**
     *   较新的PyTorch版本（如v2.0+）通常会逐步放弃对老旧Python版本（如Python 3.6）的支持。若系统只有Python 3.6，则无法安装PyTorch 2.0。
 
-*   **库与库之间的制约：**
+    **库与库之间的制约：**
     *   `torchvision`、`torchaudio` 必须与 `PyTorch` 主版本严格对应。
     *   `tensorflow-gpu` 2.10是最后一个在原生Windows上支持GPU的版本，2.11及以上版本需要依赖WSL2。
     *   一些高级库如 `mmdetection` (目标检测库) 或 `transformers` (Hugging Face) 会对PyTorch、Python乃至GCC编译器的版本有明确的要求。
@@ -106,6 +105,6 @@ tags:
 
 ---
 
-## **总结**
+!!! author " 总结 "
 
 版本控制是现代软件工程的基石。遵循“选择稍旧的稳定版本”、“善用文档和报错”、“严格进行环境隔离”这三条原则，可以极大地减少环境搭建过程中浪费的时间，提升开发效率和项目稳定性。请将这些实践作为每个项目的标准流程。
