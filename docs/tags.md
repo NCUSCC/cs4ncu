@@ -7,7 +7,7 @@
 ## 📚 按主题 (Topic)
 
 <!-- material/tags { include: [
-"Topic-AI-AssistedDev", "Topic-Academics", "Topic-ActionPlan", "Topic-Algorithms", "Topic-Automation", 
+"Topic-AIAssistedDev", "Topic-Academics", "Topic-ActionPlan", "Topic-Algorithms", "Topic-Automation", 
 "Topic-CSS", "Topic-CareerPlanning", "Topic-Communication", "Topic-ComputerLiteracy", "Topic-CriticalThinking", 
 "Topic-DecisionMaking", "Topic-DevOps", "Topic-FileManagement", "Topic-Git", "Topic-GitHub", 
 "Topic-GoalSetting", "Topic-Health", "Topic-InformationLiteracy", "Topic-InterpersonalSkills", "Topic-Linux", 

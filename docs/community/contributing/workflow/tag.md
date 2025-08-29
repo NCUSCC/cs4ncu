@@ -57,7 +57,7 @@ tags:
 
 ## 自动化管理脚本使用指南
 
-为了让标签管理变得轻松，我们开发了 `pyscript/manage_tags.py` 脚本。它是一个强大的助手，能帮你完成所有检查和维护工作。
+为了让标签管理变得轻松，我们开发了 `tools/manage_tags.py` 脚本。它是一个强大的助手，能帮你完成所有检查和维护工作。
 
 ### 环境准备
 
@@ -81,7 +81,7 @@ uv sync
 
 **如何运行**：
 ```bash title="运行交互式同步"
-uv run pyscript/manage_tags.py sync
+uv run tools/manage_tags.py sync
 ```
 
 **工作流程**：
@@ -101,7 +101,7 @@ uv run pyscript/manage_tags.py sync
 
 **如何运行 (本地模拟)**：
 ```bash title="运行自动化检查"
-uv run pyscript/manage_tags.py check
+uv run tools/manage_tags.py check
 ```
 
 **工作流程**：
@@ -116,6 +116,6 @@ uv run pyscript/manage_tags.py check
 !!! alert "安全须知：为何不自动替换？"
     脚本在 `sync` 模式下，对于识别出的拼写错误，会引导你**手动修改**文件，而不是自动替换。这是一个安全措施，旨在防止脚本意外地、错误地修改你的文件内容，保证你对每一次修改都有最终的控制权。
 
--   **保持更新**: 如果你修改了 `pyscript/manage_tags.py` 脚本本身，请务必在本地运行 `sync` 和 `check` 模式，确保脚本逻辑的正确性。
+-   **保持更新**: 如果你修改了 `tools/manage_tags.py` 脚本本身，请务必在本地运行 `sync` 和 `check` 模式，确保脚本逻辑的正确性。
 
 我们相信，通过这套规范的标签系统和强大的自动化工具，`CS4NCU` 知识库的质量和可用性将达到一个新的高度。感谢每一位遵循规范、严谨认真的贡献者！

@@ -13,10 +13,9 @@ dependencies = [
     "python-frontmatter>=1.1.0",
     "pyyaml>=6.0.2",
     "rapidfuzz>=3.13.0",
+    "ruamel-yaml>=0.18.15",
+    "typer>=0.16.1",
 ]
-
-[tool.setuptools]
-packages = []
 
 [tool.completion-analyzer]
 # --- 可选配置 ---
@@ -30,3 +29,10 @@ min_chars = 50
 
 # “内容充实”的字符数阈值
 good_chars = 500
+
+[project.scripts]
+mtag = "tools.manage_tags:main"
+cana = "tools.completion_analyzer:main"
+
+[tool.setuptools]
+packages = ["tools"]

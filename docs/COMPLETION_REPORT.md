@@ -1,15 +1,15 @@
 # 内容完成情况报告
-> 报告生成时间：2025-08-27 16:26:31
+> 报告生成时间：2025-08-29 12:50:10
 
 ## 报告上下文
-- **版本来源**: [`4d1761a`](https://github.com/NCUSCC/cs4ncu/commit/4d1761a21363af1152fd9ce163b9df9f8476cf30) - *Restructure NCU exclusive resources and add new docs*
-- **生成脚本**: `completion_analyzer.py`
+- **版本来源**: [`45ddae8`](https://github.com/NCUSCC/cs4ncu/commit/45ddae8183e50ba04b605c60301f7c913545ec17) - *Revise and expand Bayesian thinking mindset guide*
+- **生成脚本**: `cana`
 
 ## 完成度概览
 - `[ ]` 表示待办或内容不足
 - `[x]` 表示已完成或内容充实
 
-- [x] **首页** (`index.md`) - *2847字，substantial*
+- [x] **首页** (`index.md`) - *2857字，substantial*
 
 ## 寻路通识课 (12/13)
 
@@ -18,7 +18,7 @@
 - [ ] **全站导览** (`growth-general-course/00-before-we-start/overview.md`) - *66字，basic*
 
 ### 本科生通识第零课 (11/11)
-- [x] **核心原则** (`growth-general-course/01-the-zero-course/the-core.md`) - *1952字，substantial*
+- [x] **核心原则** (`growth-general-course/01-the-zero-course/the-core.md`) - *1962字，substantial*
 - [x] **完整课程导览** (`growth-general-course/01-the-zero-course/index.md`) - *937字，substantial*
 
 #### 一：决策的基础 (3/3)
@@ -53,7 +53,7 @@
 - [x] **沉没成本** (`skills/mindset/bias/sunk-cost.md`) - *2363字，substantial*
 
 #### 心智模型 (2/2)
-- [x] **贝叶斯法则** (`skills/mindset/model/bayesian-thinking.md`) - *2510字，substantial*
+- [x] **贝叶斯法则** (`skills/mindset/model/bayesian-thinking.md`) - *2044字，substantial*
 - [x] **合作与博弈** (`skills/mindset/model/collaboration.md`) - *2657字，substantial*
 
 #### 心理健康 (2/3)
@@ -89,10 +89,10 @@
 - [ ] **任务管理** (`skills/tools/pkm/task-management.md`) - *7字，minimal*
 
 #### 生产力工具 (3/5)
-- [x] **Git** (`skills/tools/pro/git.md`) - *2421字，substantial*
+- [x] **Git** (`skills/tools/pro/git.md`) - *2424字，substantial*
 - [x] **Linux** (`skills/tools/pro/linux.md`) - *3568字，substantial*
 - [ ] **LaTeX** (`skills/tools/pro/latex.md`) - *0字，empty*
-- [x] **Prompt Engineering** (`skills/tools/pro/prompt-engineering.md`) - *4686字，substantial*
+- [x] **Prompt Engineering** (`skills/tools/pro/prompt-engineering.md`) - *4685字，substantial*
 - [ ] **Docker** (`skills/tools/pro/docker.md`) - *0字，empty*
 
 #### VS Code 指南 (0/2)
@@ -145,7 +145,7 @@
 ## 社区与共建 (18/19)
 - [ ] **我们的初心** (`community/our-story.md`) - *11字，minimal*
 - [x] **打卡教程** (`community/how-to-check-in.md`) - *2294字，substantial*
-- [x] **路友打卡墙** (`community/contributors.md`) - *546字，substantial*
+- [x] **路友打卡墙** (`community/contributors.md`) - *784字，substantial*
 
 ### 项目共建指南 (16/16)
 
@@ -158,8 +158,8 @@
 - [x] **分支保护策略** (`community/contributing/branch-protection.md`) - *1214字，substantial*
 - [x] **网站部署** (`community/contributing/deployment.md`) - *1849字，substantial*
 - [x] **智能 PR 验证系统** (`community/contributing/pr-workflow-guide.md`) - *3476字，substantial*
-- [x] **Tag 系统** (`community/contributing/workflow/tag.md`) - *3267字，substantial*
-- [x] **内容完成度分析** (`community/contributing/workflow/todo.md`) - *2160字，substantial*
+- [x] **Tag 系统** (`community/contributing/workflow/tag.md`) - *3255字，substantial*
+- [x] **内容完成度分析** (`community/contributing/workflow/todo.md`) - *2151字，substantial*
 
 #### 开发实践指南 (4/4)
 - [x] **调整全局样式 (CSS)** (`community/contributing/styling.md`) - *3689字，substantial*
@@ -169,12 +169,12 @@
 
 #### 内容贡献指南 (2/2)
 - [x] **写作规范** (`community/contributing/writing-guide.md`) - *7456字，substantial*
-- [x] **写作指令 (prompt)** (`community/contributing/writing-prompt.md`) - *7029字，substantial*
+- [x] **写作指令 (prompt)** (`community/contributing/writing-prompt.md`) - *7028字，substantial*
 
 #### 附录与参考 (2/2)
 - [x] **提示框样式样例** (`community/contributing/admonitions-examples.md`) - *7951字，substantial*
 - [x] **一份开发手记** (`community/contributing/development-log.md`) - *3868字，substantial*
 
 ## 索引 (2/2)
-- [x] **标签索引** (`tags.md`) - *1493字，substantial*
-- [x] **项目进度** (`COMPLETION_REPORT.md`) - *6825字，substantial*
+- [x] **标签索引** (`tags.md`) - *1492字，substantial*
+- [x] **项目进度** (`COMPLETION_REPORT.md`) - *8287字，substantial*
