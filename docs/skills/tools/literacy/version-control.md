@@ -1,7 +1,8 @@
 ---
 tags:
   - Level-Beginner
-  - Topic-version_control
+  - Topic-Academics
+  - Topic-ComputerLiteracy
 ---
 
 # **项目开发版本控制与依赖管理建议书**
