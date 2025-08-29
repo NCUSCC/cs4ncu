@@ -20,17 +20,17 @@ tags:
 
 !!! example " 深度学习领域的“依赖地狱” "
     **PyTorch / TensorFlow 与 CUDA**—— 这是最经典的版本制约链：
-    *   NVIDIA GPU的驱动版本决定了其支持的**最高CUDA版本**（如RTX 3090支持最高CUDA 11.8）。
-    *   PyTorch/TensorFlow的每个发布版本都**仅编译支持特定的CUDA版本**（如PyTorch 1.13需要CUDA 11.7，而PyTorch 2.0需要CUDA 11.8或12.1）。
-    *   若在仅支持CUDA 11.8的机器上错误安装了需要CUDA 12.1的PyTorch，则会报错 `undefined symbol: ` 或直接提示CUDA不可用。
+    NVIDIA GPU的驱动版本决定了其支持的**最高CUDA版本**（如RTX 3090支持最高CUDA 11.8）。
+    PyTorch/TensorFlow的每个发布版本都**仅编译支持特定的CUDA版本**（如PyTorch 1.13需要CUDA 11.7，而PyTorch 2.0需要CUDA 11.8或12.1）。
+    若在仅支持CUDA 11.8的机器上错误安装了需要CUDA 12.1的PyTorch，则会报错 `undefined symbol: ` 或直接提示CUDA不可用。
 
     **PyTorch 与 Python：**
-    *   较新的PyTorch版本（如v2.0+）通常会逐步放弃对老旧Python版本（如Python 3.6）的支持。若系统只有Python 3.6，则无法安装PyTorch 2.0。
+    较新的PyTorch版本（如v2.0+）通常会逐步放弃对老旧Python版本（如Python 3.6）的支持。若系统只有Python 3.6，则无法安装PyTorch 2.0。
 
     **库与库之间的制约：**
-    *   `torchvision`、`torchaudio` 必须与 `PyTorch` 主版本严格对应。
-    *   `tensorflow-gpu` 2.10是最后一个在原生Windows上支持GPU的版本，2.11及以上版本需要依赖WSL2。
-    *   一些高级库如 `mmdetection` (目标检测库) 或 `transformers` (Hugging Face) 会对PyTorch、Python乃至GCC编译器的版本有明确的要求。
+    `torchvision`、`torchaudio` 必须与 `PyTorch` 主版本严格对应。
+    `tensorflow-gpu` 2.10是最后一个在原生Windows上支持GPU的版本，2.11及以上版本需要依赖WSL2。
+    一些高级库如 `mmdetection` (目标检测库) 或 `transformers` (Hugging Face) 会对PyTorch、Python乃至GCC编译器的版本有明确的要求。
 
 ---
 
@@ -66,7 +66,8 @@ tags:
     *   `The requested version of tensorflow (2.12) is not compatible with the current version of keras (2.9). Please install keras 2.12.`：错误信息直接告诉了你需要的版本！
 4.  **求助AI：** 将完整的报错信息复制到ChatGPT或Copilot等AI编程助手中，它们通常能精准地识别出这是版本冲突问题，并直接给出安装正确版本的命令
 
-通过“安装 -> 运行 -> 报错 -> 修正”的快速迭代，可以逐步将环境稳定下来。
+!!! note " 记笔记 "
+    通过“安装 -> 运行 -> 报错 -> 修正”的快速迭代，可以逐步将环境稳定下来。
 
 ---
 
