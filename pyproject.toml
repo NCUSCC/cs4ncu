@@ -15,9 +15,6 @@ dependencies = [
     "rapidfuzz>=3.13.0",
 ]
 
-[tool.setuptools]
-packages = []
-
 [tool.completion-analyzer]
 # --- 可选配置 ---
 
@@ -30,3 +27,10 @@ min_chars = 50
 
 # “内容充实”的字符数阈值
 good_chars = 500
+
+[project.scripts]
+mtag = "tools.manage_tags:main"
+cana = "tools.completion_analyzer:main"
+
+[tool.setuptools]
+packages = ["tools"]
