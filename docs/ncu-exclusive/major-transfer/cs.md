@@ -1,8 +1,11 @@
 ---
 tags:
   - Topic-MajorTransfer
+  - Topic-DecisionMaking
+  - Context-NCU
+  - Level-Foundational
   - Type-Guide
-  - Level-Beginner
+  - Type-Experience
 ---
 
 
