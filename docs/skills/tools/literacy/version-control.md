@@ -59,10 +59,14 @@ tags:
 **ii. 善用报错信息，迭代式安装**
 这是一种非常实用且高效的方法。
 1.  **大胆假设：** 为先为每个库安装一个符合“前1-2个版本”策略的版本。
+   
 2.  **小心验证：** 运行你的项目核心代码。
+   
 3.  **仔细报错：** 当出现版本冲突时，错误信息通常会非常明确。例如：
-    *   `ImportError: cannot import name 'xxx' from 'yyy'`：可能是由于版本过新，API已变更。
+    *   `ImportError: cannot import name 'xxx' from 'yyy'`：可能是由于版本过新，API已变更。   
+
     *   `AssertionError: Torch not compiled with CUDA enabled`：PyTorch版本与CUDA版本不匹配。
+
     *   `The requested version of tensorflow (2.12) is not compatible with the current version of keras (2.9). Please install keras 2.12.`：错误信息直接告诉了你需要的版本！
 4.  **求助AI：** 将完整的报错信息复制到ChatGPT或Copilot等AI编程助手中，它们通常能精准地识别出这是版本冲突问题，并直接给出安装正确版本的命令
 
@@ -76,9 +80,12 @@ tags:
 不同的项目必然会有不同的版本需求。因此，**绝对禁止在操作系统的基础Python环境中安装所有库**。必须为每个项目创建独立的虚拟环境。
 
 推荐工具：
-- **Conda/Miniconda:** 数据科学领域的首选。它不仅管理Python包，还能管理非Python的二进制依赖（如CUDA工具链），功能非常强大。`conda create -n my_project python=3.9`。
-- **UV:** 一款用Rust编写的极其快速的Python包安装器和解析器，兼容`pip`和`pip-tools`，速度远超传统工具。`uv venv` 即可创建虚拟环境。
-- **Virtualenv:** Python官方的轻量级虚拟环境管理工具，通常与 `pip` 结合使用。
+
+*  **Conda/Miniconda:** 数据科学领域的首选。它不仅管理Python包，还能管理非Python的二进制依赖（如CUDA工具链），功能非常强大。`conda create -n my_project python=3.9`。  
+
+*  **UV:** 一款用Rust编写的极其快速的Python包安装器和解析器，兼容`pip`和`pip-tools`，速度远超传统工具。`uv venv` 即可创建虚拟环境。  
+
+*  **Virtualenv:** Python官方的轻量级虚拟环境管理工具，通常与 `pip` 结合使用。
 
 **工作流：一个项目，一个虚拟环境，一份依赖列表。**
 环境搭建完成后，使用 `pip freeze > requirements.txt` 或 `conda env export > environment.yml` 将当前环境的精确版本导出成文件，并随项目代码一同保存。这样，任何协作者都可以一键复现完全相同的环境。
@@ -89,9 +96,12 @@ tags:
 
 **为什么要谨慎对待Windows自动更新？**
 虽然更新旨在提供安全补丁和新功能，但它也引入了不可预知的风险，尤其是对需要稳定开发环境的专业人士而言。
-- **系统不稳定：** 更新可能引入新的驱动程序或系统组件，与现有的开发环境（如GPU驱动、WSL）产生冲突，导致环境崩溃。如前文提到的Win11更新导致文件系统异常的Bug。
-- **中断工作流：** 更新通常在关键时刻（如模型训练到一半）要求重启，强行打断工作。
-- **依赖关系破坏：** 某些更新可能会更改系统级的库或设置，进而影响安装在系统层面的开发工具（如Python、CUDA）的稳定性。
+
+*  **系统不稳定：** 更新可能引入新的驱动程序或系统组件，与现有的开发环境（如GPU驱动、WSL）产生冲突，导致环境崩溃。如前文提到的Win11更新导致文件系统异常的Bug。
+
+*  **中断工作流：** 更新通常在关键时刻（如模型训练到一半）要求重启，强行打断工作。
+
+*  **依赖关系破坏：** 某些更新可能会更改系统级的库或设置，进而影响安装在系统层面的开发工具（如Python、CUDA）的稳定性。
 
 **如何管理Windows更新？**
 修改更新日期教程
