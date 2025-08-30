@@ -103,15 +103,24 @@ tags:
 
 *  **依赖关系破坏：** 某些更新可能会更改系统级的库或设置，进而影响安装在系统层面的开发工具（如Python、CUDA）的稳定性。
 
-**如何管理Windows更新？**
-修改更新日期教程
-（WIN➕R）↓
-运行窗口输入：regedit
-搜索：计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings
-到达settings目录后在空白处新建DWORD
-重命名：FlightSettingsMaxPauseDays
-双击打开后选择十进制，数值可以用10000（差差不多能延期到52年）
-最后再回到系统更新界面选择暂停更新即可
+!!! question " 如何管理Windows更新？ "
+
+  修改更新日期教程
+  
+  （WIN➕R）↓
+  
+  运行窗口输入：regedit
+  
+  搜索：计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings
+  
+  到达settings目录后在空白处新建DWORD
+  
+  重命名：FlightSettingsMaxPauseDays
+  
+  双击打开后选择十进制，数值可以用10000（差差不多能延期到52年）
+  
+  最后再回到系统更新界面选择暂停更新即可
+
 
 
 ---
