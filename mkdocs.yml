@@ -198,6 +198,7 @@ nav:
         - '电脑认知': 'skills/tools/literacy/computer-basics.md'
         - '高效打字': 'skills/tools/literacy/typing.md'
         - '网络工具': 'skills/tools/literacy/network-proxy.md'
+        - '版本选择': 'skills/tools/literacy/version-control.md'
       - '信息管理':
         - '云笔记': 'skills/tools/pkm/cloud-notes.md'
         - '协作文档': 'skills/tools/pkm/collaboration-docs.md'
