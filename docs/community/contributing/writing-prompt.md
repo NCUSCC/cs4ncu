@@ -1,6 +1,6 @@
 ---
 tags:
-  - Topic-AI-AssistedDev
+  - Topic-AIAssistedDev
   - Type-Guide
   - Level-Intermediate
   - Action-Writing

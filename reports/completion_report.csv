@@ -1,8 +1,8 @@
 title,file_path,category,exists,char_count,word_count,line_count,status,completion_level,manual_status,final_status,size_assessment
-首页,index.md,其他,True,2847,322,110,substantial,high,,substantial,非常丰富
+首页,index.md,其他,True,2857,323,110,substantial,high,,substantial,非常丰富
 先别慌，我们聊聊,growth-general-course/00-before-we-start/prologue-the-start.md,其他,True,1403,151,75,substantial,high,,substantial,丰富
 全站导览,growth-general-course/00-before-we-start/overview.md,其他,True,66,11,6,basic,medium,,basic,较少
-核心原则,growth-general-course/01-the-zero-course/the-core.md,其他,True,1952,220,86,substantial,high,,substantial,丰富
+核心原则,growth-general-course/01-the-zero-course/the-core.md,其他,True,1962,221,86,substantial,high,,substantial,丰富
 完整课程导览,growth-general-course/01-the-zero-course/index.md,其他,True,937,100,44,substantial,high,,substantial,较多
 本部分导览,growth-general-course/01-the-zero-course/part1/index.md,其他,True,620,61,35,substantial,high,,substantial,较多
 思维模式转换,growth-general-course/01-the-zero-course/part1/ch1-mindset.md,其他,True,1316,132,63,substantial,high,,substantial,丰富
@@ -21,7 +21,7 @@ title,file_path,category,exists,char_count,word_count,line_count,status,completi
 幸存者偏差,skills/mindset/bias/survivorship-bias.md,认知与心智,True,2661,254,59,substantial,high,,substantial,非常丰富
 确认偏差,skills/mindset/bias/confirmation-bias.md,认知与心智,True,2480,212,58,substantial,high,,substantial,非常丰富
 沉没成本,skills/mindset/bias/sunk-cost.md,认知与心智,True,2363,219,62,substantial,high,,substantial,非常丰富
-贝叶斯法则,skills/mindset/model/bayesian-thinking.md,认知与心智,True,2510,289,89,substantial,high,,substantial,非常丰富
+贝叶斯法则,skills/mindset/model/bayesian-thinking.md,认知与心智,True,2044,202,70,substantial,high,,substantial,非常丰富
 合作与博弈,skills/mindset/model/collaboration.md,认知与心智,True,2657,301,94,substantial,high,,substantial,非常丰富
 冒名顶替综合征,skills/mindset/mental/impostor-syndrome.md,认知与心智,True,10,1,1,minimal,low,,minimal,极少
 学会独处,skills/mindset/mental/learn-to-be-alone.md,认知与心智,True,2402,268,67,substantial,high,,substantial,非常丰富
@@ -43,10 +43,10 @@ title,file_path,category,exists,char_count,word_count,line_count,status,completi
 云笔记,skills/tools/pkm/cloud-notes.md,工具与系统,True,6,1,1,minimal,low,,minimal,极少
 协作文档,skills/tools/pkm/collaboration-docs.md,工具与系统,True,7,1,1,minimal,low,,minimal,极少
 任务管理,skills/tools/pkm/task-management.md,工具与系统,True,7,1,1,minimal,low,,minimal,极少
-Git,skills/tools/pro/git.md,工具与系统,True,2421,334,90,substantial,high,,substantial,非常丰富
+Git,skills/tools/pro/git.md,工具与系统,True,2424,334,92,substantial,high,,substantial,非常丰富
 Linux,skills/tools/pro/linux.md,工具与系统,True,3568,403,107,substantial,high,,substantial,非常丰富
 LaTeX,skills/tools/pro/latex.md,工具与系统,True,0,0,0,empty,none,,empty,空白
-Prompt Engineering,skills/tools/pro/prompt-engineering.md,工具与系统,True,4686,515,126,substantial,high,,substantial,非常丰富
+Prompt Engineering,skills/tools/pro/prompt-engineering.md,工具与系统,True,4685,514,126,substantial,high,,substantial,非常丰富
 Docker,skills/tools/pro/docker.md,工具与系统,True,0,0,0,empty,none,,empty,空白
 导览与配置,skills/tools/vscode/index.md,工具与系统,True,0,0,0,empty,none,,empty,空白
 插件推荐,skills/tools/vscode/extensions.md,工具与系统,True,0,0,0,empty,none,,empty,空白
@@ -71,22 +71,22 @@ Docker,skills/tools/pro/docker.md,工具与系统,True,0,0,0,empty,none,,empty,�
 新生军训,ncu-exclusive/campus-life/military-training.md,其他,True,0,0,0,empty,none,,empty,空白
 我们的初心,community/our-story.md,其他,True,11,2,3,minimal,low,,minimal,极少
 打卡教程,community/how-to-check-in.md,其他,True,2294,302,103,substantial,high,,substantial,非常丰富
-路友打卡墙,community/contributors.md,其他,True,546,64,28,substantial,high,,substantial,较多
+路友打卡墙,community/contributors.md,其他,True,784,96,31,substantial,high,,substantial,较多
 行为准则,community/contributing/code-of-conduct.md,其他,True,1802,170,93,substantial,high,,substantial,丰富
 贡献流程,community/contributing/how-to-contribute.md,其他,True,3222,416,103,substantial,high,,substantial,非常丰富
 搭建基础环境,community/contributing/development-setup.md,其他,True,1987,235,85,substantial,high,,substantial,丰富
 分支保护策略,community/contributing/branch-protection.md,其他,True,1214,150,58,substantial,high,,substantial,丰富
 网站部署,community/contributing/deployment.md,其他,True,1849,218,68,substantial,high,,substantial,丰富
 智能 PR 验证系统,community/contributing/pr-workflow-guide.md,其他,True,3476,411,230,substantial,high,,substantial,非常丰富
-Tag 系统,community/contributing/workflow/tag.md,其他,True,3267,346,121,substantial,high,,substantial,非常丰富
-内容完成度分析,community/contributing/workflow/todo.md,其他,True,2160,231,96,substantial,high,,substantial,非常丰富
+Tag 系统,community/contributing/workflow/tag.md,其他,True,3255,346,121,substantial,high,,substantial,非常丰富
+内容完成度分析,community/contributing/workflow/todo.md,其他,True,2151,231,96,substantial,high,,substantial,非常丰富
 调整全局样式 (CSS),community/contributing/styling.md,其他,True,3689,424,140,substantial,high,,substantial,非常丰富
 调整项目配色,community/contributing/colors.md,其他,True,1415,167,60,substantial,high,,substantial,丰富
 调整提示框样式,community/contributing/admonitions.md,其他,True,3019,339,111,substantial,high,,substantial,非常丰富
 调整图片样式,community/contributing/figure.md,其他,True,841,103,47,substantial,high,,substantial,较多
 写作规范,community/contributing/writing-guide.md,其他,True,7456,808,308,substantial,high,,substantial,非常丰富
-写作指令 (prompt),community/contributing/writing-prompt.md,其他,True,7029,742,246,substantial,high,,substantial,非常丰富
+写作指令 (prompt),community/contributing/writing-prompt.md,其他,True,7028,741,246,substantial,high,,substantial,非常丰富
 提示框样式样例,community/contributing/admonitions-examples.md,其他,True,7951,1085,161,substantial,high,,substantial,非常丰富
 一份开发手记,community/contributing/development-log.md,其他,True,3868,436,137,substantial,high,,substantial,非常丰富
-标签索引,tags.md,其他,True,1493,141,53,substantial,high,,substantial,丰富
-项目进度,COMPLETION_REPORT.md,其他,True,6825,872,160,substantial,high,,substantial,非常丰富
+标签索引,tags.md,其他,True,1492,140,53,substantial,high,,substantial,丰富
+项目进度,COMPLETION_REPORT.md,其他,True,8287,1053,180,substantial,high,,substantial,非常丰富

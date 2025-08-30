@@ -1,0 +1,868 @@
+[
+  {
+    "filepath": "docs/community/contributors.md",
+    "title": "无标题",
+    "tags": [
+      "Level-Beginner",
+      "Type-Guide"
+    ],
+    "intro_summary": "这里是 `CS for NCU` 社区的留言板。我们相信，再远的路，也是从迈出第一步开始的。",
+    "headings": [
+      "大家的足迹"
+    ]
+  },
+  {
+    "filepath": "docs/community/how-to-check-in.md",
+    "title": "无标题",
+    "tags": [
+      "Level-Beginner",
+      "Type-Guide",
+      "Topic-Git",
+      "Topic-GitHub"
+    ],
+    "intro_summary": "别担心，整个过程并不复杂。我们会把步骤拆解得很详细，跟着做就行了。这不仅是一次简单的“打卡”，更是一次非常有用的技能练习。学会这个流程，你就能参与到许多其他优秀的开源项目中去。",
+    "headings": [
+      "准备工作",
+      "分步指南：完成你的贡献",
+      "第 1 步：Fork 项目 (复制一份到你的名下)",
+      "第 2 步：Clone 项目 (下载到你的电脑)",
+      "第 3 步：创建分支并修改文件",
+      "第 4 步：保存并提交你的修改",
+      "第 5 步：发起 Pull Request (请求合并)"
+    ]
+  },
+  {
+    "filepath": "docs/community/contributing/admonitions-examples.md",
+    "title": "无标题",
+    "tags": [
+      "Topic-CSS",
+      "Topic-Markdown",
+      "Type-Example",
+      "Level-Beginner",
+      "Action-Writing",
+      "Context-Project"
+    ],
+    "intro_summary": "这将展示所有自定义和默认的提示框样式，包括静态 `!!!` 和可折叠 `???` 两种形式，以便全面测试 CSS 样式的正确性。",
+    "headings": [
+      "官方支持的类型（已重写样式）",
+      "危险 (Danger)",
+      "警告 (Alert)",
+      "例子 (Example)",
+      "引用 (Quote)",
+      "新增的自定义类型",
+      "声明 (Declaration)",
+      "提醒 (Reminder)",
+      "故事 (Story)",
+      "笔者说 (Author's Note)",
+      "其他官方类型（检查默认回退样式）",
+      "Note (默认)",
+      "Abstract",
+      "Info",
+      "Tip",
+      "Success",
+      "Question",
+      "Failure",
+      "Bug"
+    ]
+  },
+  {
+    "filepath": "docs/community/contributing/admonitions.md",
+    "title": "无标题",
+    "tags": [
+      "Topic-CSS",
+      "Topic-Markdown",
+      "Type-Tutorial",
+      "Level-Intermediate",
+      "Action-Writing",
+      "Context-Project"
+    ],
+    "intro_summary": "本文档旨在清晰说明 `03-admonitions.css` 的设计思想，并提供修改和扩展的具体具体步骤。",
+    "headings": [
+      "核心设计哲学：一套结构，两套调色板",
+      "文件结构剖析",
+      "维护与扩展指南"
+    ]
+  },
+  {
+    "filepath": "docs/community/contributing/branch-protection.md",
+    "title": "无标题",
+    "tags": [
+      "Topic-GitHub",
+      "Type-Specification",
+      "Level-Intermediate",
+      "Action-Collaboration",
+      "Context-Project"
+    ],
+    "intro_summary": "为了保持 `main` 分支的绝对稳定和项目历史的清晰，我们建立了一套明确的协作流程。",
+    "headings": [
+      "`main` 分支的核心保护规则",
+      "所有变更必须通过拉取请求 (Pull Request)",
+      "PR 必须经过审查批准",
+      "更新后需要重新审查",
+      "保持干净、线性的提交历史",
+      "标准贡献流程"
+    ]
+  },
+  {
+    "filepath": "docs/community/contributing/code-of-conduct.md",
+    "title": "无标题",
+    "tags": [
+      "Topic-Communication",
+      "Type-Specification",
+      "Level-Beginner",
+      "Action-Collaboration",
+      "Context-Project"
+    ],
+    "intro_summary": "为了给 `CS for NCU` 项目营造一个开放、包容、友好的环境，我们，作为贡献者和维护者，共同承诺：我们都将致力于让每一位参与者都能在社区中享受到一个无骚扰、互相尊重的协作体验。",
+    "headings": [
+      "我们的承诺",
+      "我们所倡导的行为",
+      "我们所禁止的行为",
+      "执行与报告",
+      "责任",
+      "如何报告",
+      "后果"
+    ]
+  },
+  {
+    "filepath": "docs/community/contributing/colors.md",
+    "title": "无标题",
+    "tags": [
+      "Topic-CSS",
+      "Type-Tutorial",
+      "Level-Intermediate",
+      "Action-Building",
+      "Context-Project"
+    ],
+    "intro_summary": "网站的所有颜色都集中在 `00-variables.css` 文件中进行管理。这种方法利用 CSS 变量（CSS Variables），使主题修改变得简单和安全。",
+    "headings": [
+      "如何修改颜色",
+      "步骤 1：定位文件",
+      "步骤 2：选择模式",
+      "步骤 3：查找并修改颜色变量",
+      "步骤 4：保存并预览"
+    ]
+  },
+  {
+    "filepath": "docs/community/contributing/deployment.md",
+    "title": "无标题",
+    "tags": [
+      "Topic-DevOps",
+      "Topic-GitHub",
+      "Type-Guide",
+      "Level-Intermediate",
+      "Action-Deployment",
+      "Context-Project"
+    ],
+    "intro_summary": "本文档解释了 `CS for NCU` 项目网站的部署流程。我们采用了一套基于 GitHub Actions 的自动化工作流，以确保每一次发布都是**安全、可靠且一致的**。",
+    "headings": [
+      "核心理念：发布权由“系统”而非“个人”掌管",
+      "自动化部署工作流 (`deploy-docs.yml`)",
+      "触发条件",
+      "核心步骤",
+      "这对贡献者意味着什么？"
+    ]
+  },
+  {
+    "filepath": "docs/community/contributing/development-log.md",
+    "title": "无标题",
+    "tags": [
+      "Type-Experience",
+      "Level-Beginner",
+      "Action-Learning",
+      "Context-Project"
+    ],
+    "intro_summary": "大家好，我是 `teapot1de`。欢迎你，未来的开发者！🎉",
+    "headings": [
+      "一、项目初期的架构思考",
+      "1. CSS 架构：从混乱到有序，再到精简",
+      "2. 协作的基石：《写作规范》的诞生",
+      "二、折腾 UI 的那些事",
+      "1. 追求极致：平滑圆角 (Squircle) 的探索",
+      "2. 赋予灵魂：项目专属的提示框视觉语言",
+      "三、踩过的坑与学到的教训",
+      "案例一：Tags 插件的“官方文档陷阱”",
+      "案例二：CSS“幽灵颜色”的侦探笔记",
+      "写在最后：期待你的加入"
+    ]
+  },
+  {
+    "filepath": "docs/community/contributing/development-setup.md",
+    "title": "无标题",
+    "tags": [
+      "Topic-DevOps",
+      "Topic-Shell",
+      "Type-Tutorial",
+      "Level-Beginner",
+      "Action-Setup",
+      "Context-Project"
+    ],
+    "intro_summary": "为了能够实时预览您对文档的修改，或参与网站功能的开发，您需要在本地搭建开发环境。",
+    "headings": [
+      "第一步：准备基础工具",
+      "第二步：Fork 与克隆项目",
+      "第三步：配置环境并启动服务"
+    ]
+  },
+  {
+    "filepath": "docs/community/contributing/figure.md",
+    "title": "无标题",
+    "tags": [
+      "Context-Project"
+    ],
+    "intro_summary": "要自定义图注（Caption）的样式，直接修改主题的 CSS 文件即可。",
+    "headings": [
+      "操作方法",
+      "效果演示",
+      "布局建议：优先使用右对齐"
+    ]
+  },
+  {
+    "filepath": "docs/community/contributing/how-to-contribute.md",
+    "title": "无标题",
+    "tags": [
+      "Topic-Git",
+      "Topic-GitHub",
+      "Type-Guide",
+      "Level-Beginner",
+      "Action-Collaboration",
+      "Context-Project"
+    ],
+    "intro_summary": "首先，我们由衷地感谢您愿意为 `CS for NCU` 项目贡献自己的一份力量！❤️",
+    "headings": [
+      "贡献的核心哲学：万事始于 Issue",
+      "两条贡献路径：选择最适合你的方式",
+      "A. 内容贡献",
+      "B. 开发贡献"
+    ]
+  },
+  {
+    "filepath": "docs/community/contributing/styling.md",
+    "title": "无标题",
+    "tags": [
+      "Topic-CSS",
+      "Type-Guide",
+      "Level-Intermediate",
+      "Action-Building",
+      "Context-Project"
+    ],
+    "intro_summary": "本文档详细说明了 `CS for NCU` 项目的自定义 CSS 体系，旨在帮助任何贡献者快速理解、定位并修改网站的视觉样式。",
+    "headings": [
+      "体系概览：三位一体的协作模式",
+      "1. 总开关：`mkdocs.yml` 的配置",
+      "a. 链接主入口文件",
+      "b. 激活自定义调色板",
+      "2. 调度中心：`css/extra.css` 的作用",
+      "3. 功能模块：职责分离的文件",
+      "日夜间模式的实现",
+      "如何贡献样式？"
+    ]
+  },
+  {
+    "filepath": "docs/community/contributing/writing-guide.md",
+    "title": "无标题",
+    "tags": [
+      "Topic-Markdown",
+      "Type-Specification",
+      "Level-Beginner",
+      "Action-Writing",
+      "Context-Project"
+    ],
+    "intro_summary": "欢迎加入 `CS for NCU` 的内容创作团队！🎉 这份指南是我们共同维护项目质量、提升读者体验的基石，旨在帮助我们将个人的智慧，汇聚成一部风格统一、结构清晰、富有生命力的学习指北。同时为了方便写作者，我们提供一个 [Prompt](./writing-prompt.md) 来帮助你快速构建文档格式。",
+    "headings": [
+      "第一部分：基础书写规范",
+      "1. 标点符号规范",
+      "2. 空格使用规范 (“盘古之白”)",
+      "3. Markdown 基础语法",
+      "第二部分：善用项目特性",
+      "1. 用 `admonition` (提示框) 赋予段落生命",
+      "2. 用 `tabbed` (标签页) 化繁为简",
+      "3. 高级代码块特性",
+      "第三部分：内容结构与协作",
+      "1. `tasklist` (任务列表) 追踪章节进度",
+      "2. `tags` (标签) 构建知识网络",
+      "3. `details` (可折叠内容) 保持页面清爽",
+      "第四部分：Emoji 使用的艺术",
+      "第五部分：零散的细节"
+    ]
+  },
+  {
+    "filepath": "docs/community/contributing/writing-prompt.md",
+    "title": "无标题",
+    "tags": [
+      "Topic-AIAssistedDev",
+      "Type-Guide",
+      "Level-Intermediate",
+      "Action-Writing",
+      "Context-Project"
+    ],
+    "intro_summary": "尝试使用这个 prompt 来帮助你构建文档格式。",
+    "headings": [
+      "**AI 内容标准化处理指令 (Prompt) v3.0 - 最终完整版**",
+      "**第一部分：基础书写规范**",
+      "**第二部分：善用项目特性 (MkDocs Extensions)**",
+      "**第三部分：内容结构与协作**",
+      "**第四部分：Emoji 使用的艺术**",
+      "**第五部分：零散的细节 (最终检查项)**"
+    ]
+  },
+  {
+    "filepath": "docs/community/contributing/workflow/tag.md",
+    "title": "无标题",
+    "tags": [
+      "Type-Specification",
+      "Context-Project",
+      "Topic-Automation"
+    ],
+    "intro_summary": "为了使 `CS4NCU` 知识库的内容保持高度的结构化、可发现性和可维护性，我们设计了一套严格而智能的标签 (Tag) 系统。本指南旨在阐明其设计目的与核心规范。",
+    "headings": [
+      "标签系统的设计与规范",
+      "命名规范",
+      "五维标签模型",
+      "单一事实来源 (Single Source of Truth)",
+      "自动化管理脚本使用指南",
+      "环境准备",
+      "核心功能模式",
+      "其余说明"
+    ]
+  },
+  {
+    "filepath": "docs/community/contributing/workflow/todo.md",
+    "title": "无标题",
+    "tags": [
+      "Type-Specification",
+      "Context-Project",
+      "Topic-Automation"
+    ],
+    "intro_summary": "它通过扫描 `mkdocs.yml` 中定义的导航结构，并逐一检查每个 Markdown 文件的内容量，为项目维护者和贡献者提供一份清晰、直观、可量化的进度报告。这有助于我们识别写作瓶颈，合理分配贡献力量，确保整个知识库的健康发展。",
+    "headings": [
+      "核心功能",
+      "使用指南",
+      "1. 环境准备",
+      "2. 运行脚本",
+      "配置文件 (`pyproject.toml`)",
+      "解读报告"
+    ]
+  },
+  {
+    "filepath": "docs/growth-general-course/00-before-we-start/prologue-the-start.md",
+    "title": "无标题",
+    "tags": [
+      "Topic-MindsetModel",
+      "Level-Beginner",
+      "Topic-SelfManagement"
+    ],
+    "intro_summary": "欢迎来到大学——一片充满无限可能，也因此充满不确定性的原野。",
+    "headings": [
+      "先向内，再向外",
+      "一个帮你重启大脑的微操作",
+      "当你准备好了"
+    ]
+  },
+  {
+    "filepath": "docs/growth-general-course/01-the-zero-course/the-core.md",
+    "title": "无标题",
+    "tags": [
+      "Type-Concept",
+      "Topic-MindsetModel",
+      "Type-Guide"
+    ],
+    "intro_summary": "在上一课，我们通过一次“精神刷新”，为你清空了缓存，创造了一个宝贵的、清晰的“间隙”。",
+    "headings": [
+      "核心比喻：你的“个人决策黑盒”",
+      "核心框架：三步决策循环",
+      "下一步"
+    ]
+  },
+  {
+    "filepath": "docs/growth-general-course/01-the-zero-course/part1/ch1-mindset.md",
+    "title": "无标题",
+    "tags": [
+      "Topic-DecisionMaking",
+      "Topic-MindsetModel",
+      "Type-Guide",
+      "Level-Beginner",
+      "Action-Thinking"
+    ],
+    "intro_summary": "大学与高中的根本区别，在于你的角色变了：**你必须从一名“乘客”，切换为掌握方向盘的“司机”**。",
+    "headings": [
+      "1. 切换到“主动主导模式” (Planner Mode)",
+      "2. 主动模式的核心：为可控之事负责"
+    ]
+  },
+  {
+    "filepath": "docs/growth-general-course/01-the-zero-course/part1/ch2-the-self.md",
+    "title": "无标题",
+    "tags": [
+      "Topic-SelfAwareness",
+      "Topic-DecisionMaking",
+      "Type-Guide",
+      "Level-Beginner",
+      "Action-Thinking"
+    ],
+    "intro_summary": "你已切换为“司机”模式。现在，你需要校准你的内部罗盘，为决策提供最核心的内部指引。",
+    "headings": [
+      "1. 结构化盘点：绘制你的能力与热情图谱",
+      "2. 解读内在信号：校准你的“情绪罗盘”"
+    ]
+  },
+  {
+    "filepath": "docs/growth-general-course/01-the-zero-course/part2/ch3-information-filter.md",
+    "title": "无标题",
+    "tags": [
+      "Topic-InformationLiteracy",
+      "Topic-CriticalThinking",
+      "Type-Guide",
+      "Level-Beginner",
+      "Action-Thinking"
+    ],
+    "intro_summary": "为避免“垃圾进，垃圾出”，你需要一个“信息过滤器”。它有两道防线：审查**信息来源**，和警惕**大脑偏见**。",
+    "headings": [
+      "1. 识别信息来源：信息源金字塔",
+      "2. 警惕大脑偏见：内置的思维漏洞"
+    ]
+  },
+  {
+    "filepath": "docs/growth-general-course/01-the-zero-course/part2/ch4-info-gathering.md",
+    "title": "无标题",
+    "tags": [
+      "Topic-InformationLiteracy",
+      "Topic-Productivity",
+      "Type-Guide",
+      "Level-Beginner",
+      "Action-Practical"
+    ],
+    "intro_summary": "你已装备了“过滤器”，现在来掌握两个最高效的“信息挖掘工具”：**搜索引擎**与**人工智能 (AI)**。",
+    "headings": [
+      "1. 搜索引擎：学会正确地“提问”",
+      "2. 人工智能 (AI)：把它当作一个“聪明的实习生”"
+    ]
+  },
+  {
+    "filepath": "docs/growth-general-course/01-the-zero-course/part3/ch5-the-output.md",
+    "title": "无标题",
+    "tags": [
+      "Topic-ActionPlan",
+      "Topic-GoalSetting",
+      "Type-Guide",
+      "Level-Beginner",
+      "Action-Practical"
+    ],
+    "intro_summary": "你的“决策黑盒”需要输出第一个成果了。我们不称之为沉重的“目标”，而是一个轻盈、可测试的**“方向性假设 (Directional Hypothesis)”**。",
+    "headings": [
+      "综合数据，写下你的第一个假设"
+    ]
+  },
+  {
+    "filepath": "docs/growth-general-course/01-the-zero-course/part3/ch6-the-test.md",
+    "title": "无标题",
+    "tags": [
+      "Topic-ActionPlan",
+      "Topic-Productivity",
+      "Topic-MindsetModel",
+      "Type-Guide",
+      "Level-Beginner",
+      "Action-Practical"
+    ],
+    "intro_summary": "你手中已握着“方向性假设”，现在，是时候用现实来检验它了。",
+    "headings": [
+      "1. 设计你的“最小可行性测试 (MVT)”",
+      "2. 面对现实：用成长型思维处理失败",
+      "3. 迭代：用反馈优化系统"
+    ]
+  },
+  {
+    "filepath": "docs/ncu-exclusive/major-transfer/cs.md",
+    "title": "无标题",
+    "tags": [
+      "Topic-MajorTransfer",
+      "Topic-DecisionMaking",
+      "Context-NCU",
+      "Level-Foundational",
+      "Type-Guide",
+      "Type-Experience"
+    ],
+    "intro_summary": "<div class=\"grid cards\" markdown>",
+    "headings": [
+      "写在前面",
+      "志愿填报的血泪教训",
+      "志愿策略推荐",
+      "审核流程详解",
+      "数计学院 (计科&大数据) 攻略",
+      "考试真相",
+      "2024 级真实数据",
+      "软件学院 (软工&网安) 真相",
+      "评分规则",
+      "面试画风",
+      "保底策略",
+      "给特殊专业学生的建议",
+      "文科生/医学生",
+      "最后叮嘱"
+    ]
+  },
+  {
+    "filepath": "docs/ncu-exclusive/postgraduate-recommendation/cs.md",
+    "title": "无标题",
+    "tags": [
+      "Context-NCU",
+      "Topic-Postgraduate",
+      "Topic-MindsetModel",
+      "Topic-Academics"
+    ],
+    "intro_summary": "本篇指南旨在为你完整解析“保研”这条升学路径，它将清晰地分为两个核心步骤：**第一步，如何在南昌大学获得推免资格；第二步，如何利用这个资格成功申请到目标院校。**",
+    "headings": [
+      "第一步：获得校内推免资格 (The Qualification)",
+      "1. 资格类型：直推 vs. 普通推荐",
+      "2. 校内资格评定细则 (Tips & Rules)",
+      "第二步：利用资格申请目标院校 (The Application)",
+      "1. 申请时间线总览",
+      "2. 关键申请阶段：夏令营、预推免、九推",
+      "第三步：全程通用资源与材料准备 (The Toolbox)",
+      "1. 信息渠道 (External Tools)",
+      "2. 申请材料清单 (Checklist)"
+    ]
+  },
+  {
+    "filepath": "docs/skills/communication/skills/dealing-conflicts.md",
+    "title": "无标题",
+    "tags": [
+      "Topic-MindsetModel",
+      "Topic-InterpersonalSkills",
+      "Level-Beginner"
+    ],
+    "intro_summary": "在计算机专业的学习与生活中，人际矛盾很容易“找上门”：可能是小组项目里队友分工推诿，可能是舍友因作息习惯产生摩擦，也可能是竞赛组队时因技术方案起争执。这些矛盾若处理不当，不仅会影响情绪，还可能耽误学习进度（比如因协作僵局导致项目延期）。",
+    "headings": [
+      "1. 第一步：允许情绪存在，先“单独发泄”再沟通",
+      "2. 第二步：精准定位“矛盾核心”，不陷于细节纠缠",
+      "3. 第三步：选择适配场景的沟通方式",
+      "4. 第四步：接受无法完全共识，及时“设边界”止损",
+      "5. 避坑提醒：三件“不要做”的事",
+      "6. 最后一点：允许自己拥有“不原谅”的权力"
+    ]
+  },
+  {
+    "filepath": "docs/skills/communication/skills/network-of-relationships.md",
+    "title": "无标题",
+    "tags": [
+      "Topic-MindsetModel",
+      "Topic-InterpersonalSkills",
+      "Level-Beginner"
+    ],
+    "intro_summary": "对计算机专业学生而言，大学社交不止是“交朋友”—— 一次优质的人脉联结，可能帮你找到项目队友、获取实习内推，甚至在技术瓶颈时获得前辈指点。但很多人容易陷入两个误区：要么由于物理距离的相近，对身边人（舍友、同班同学）抱有过高期待；要么把所有同学都当成竞争对手，不敢分享、不愿协作。",
+    "headings": [
+      "为什么“关系定位”很重要？",
+      "1. 调整期待：给身边关系“松绑”",
+      "2. 向上铺垫：为“价值联结”打基础",
+      "3. 转变心态：从“竞争对抗”到“人脉共生”",
+      "4. 及时断舍离：剔除消耗型关系",
+      "总结：“关系定位”的核心"
+    ]
+  },
+  {
+    "filepath": "docs/skills/communication/teamwork/teamwork.md",
+    "title": "无标题",
+    "tags": [
+      "Topic-MindsetModel",
+      "Topic-InterpersonalSkills",
+      "Level-Beginner"
+    ],
+    "intro_summary": "在大学的小组作业、竞赛等协作场景中，筛选与匹配优质合作伙伴是避免后续矛盾、提升任务效率的关键。可从以下三方面着手：",
+    "headings": [
+      "1. 优先选择“熟人”，但别丢了“警惕心”",
+      "2. 明确身份定位，主动掌握协作主动权",
+      "3. 任务中途遇“摆烂”，直击问题不妥协",
+      "\"处理“摆烂”队友的三步止损策略\""
+    ]
+  },
+  {
+    "filepath": "docs/skills/growth/health/healthy-management.md",
+    "title": "无标题",
+    "tags": [
+      "Type-Guide",
+      "Topic-Health",
+      "Level-Beginner"
+    ],
+    "intro_summary": "计算机相关专业的学习具有其独特性，这些特性也导致了一系列健康问题的产生。",
+    "headings": [
+      "计算机专业常见的健康挑战",
+      "守护健康的实用方法",
+      "养成良好的作息习惯",
+      "合理安排饮食",
+      "保持正确的学习姿势",
+      "注意用眼卫生",
+      "推荐的体育运动",
+      "有氧运动",
+      "球类运动",
+      "健身"
+    ]
+  },
+  {
+    "filepath": "docs/skills/growth/opportunity/innovation-classes.md",
+    "title": "无标题",
+    "tags": [
+      "Topic-MindsetModel",
+      "Action-Learning",
+      "Topic-Academics",
+      "Topic-CareerPlanning"
+    ],
+    "intro_summary": "无论是高考报考时，还是入校后的二次选拔，那些名字响亮的“实验班”、“荣誉学院”、“AI 创新班”等特殊班型，总是以一种“最优解”或“成功捷径”的姿态出现，吸引着无数优秀的同学。",
+    "headings": [
+      "迷思一：虚高的“成功率”承诺",
+      "1. “保研率”的幻觉：你需要问清三个问题",
+      "2. “名导一对一”的承诺",
+      "3. “风口专业”的短视风险",
+      "迷思二：不稳定的政策与“动态优化”",
+      "迷思三：更扭曲的绩点与评价体系",
+      "迷思四：内卷的“精英”氛围",
+      "迷思五：那份需要签字的“合同陷阱”"
+    ]
+  },
+  {
+    "filepath": "docs/skills/mindset/bias/confirmation-bias.md",
+    "title": "无标题",
+    "tags": [
+      "Topic-MindsetModel",
+      "Topic-InterpersonalSkills",
+      "Level-Beginner"
+    ],
+    "intro_summary": "高中教育与大学教育的一个关键区别在于：高中阶段主要培养的是二维平面上的解题技巧和理论认知，而大学则要求你拓展出三维立体的工程能力与系统建模思维——这才是真正形成个人一技之长的核心。但这种能力往往是抽象且实践驱动的，无法像高中理科那样通过背诵公式或套用既定解法直接获得。也正因如此，确认偏差很容易在你基于以往不充分的认知和主观经验做出判断时悄然形成，进而干扰你的技术决策与专业认知。",
+    "headings": [
+      "1. 揪住确认偏差的小尾巴",
+      "2. 特征提取，剖析确认偏差的产生原因",
+      "3. 打破确认偏差"
+    ]
+  },
+  {
+    "filepath": "docs/skills/mindset/bias/sunk-cost.md",
+    "title": "无标题",
+    "tags": [
+      "Topic-MindsetModel",
+      "Topic-InterpersonalSkills",
+      "Level-Beginner"
+    ],
+    "intro_summary": "在技术浪潮瞬息万变的今天，计算机领域既充满机遇，也遍布抉择与陷阱。作为一名计算机专业的本科生，你可能已经投入了大量时间学习某门编程语言、钻研某个技术栈，或是为一个项目反复调试、持续付出——这些付出本是成长的基石，但也可能悄然成为牵绊你前行的*沉没成本*。当我们因舍不得此前的投入而盲目坚持一条并不合适的职业路径、一种逐渐淘汰的技术，或是一个没有前景的项目，我们便落入了“沉没成本”的认知陷阱。这不仅关乎经济学概念，更关乎如何在一片喧嚣的技术浪潮中，清醒地规划属于自己的成长航线。接下来，让我们一同审视这一现象，学会辨别何时应当坚持，何时应当止损转身。",
+    "headings": [
+      "1. 沉没成本躲猫猫",
+      "2. 沉没的第一因",
+      "3. 应对沉没成本"
+    ]
+  },
+  {
+    "filepath": "docs/skills/mindset/bias/survivorship-bias.md",
+    "title": "无标题",
+    "tags": [
+      "Topic-MindsetModel",
+      "Topic-InterpersonalSkills",
+      "Level-Beginner"
+    ],
+    "intro_summary": "随着计算机领域的日益成熟与应用前景的不断拓展，越来越多学生选择计算机专业，期待能从这座*技术金矿*中挖掘属于自己的财富。然而，有限的资源——包括优质的教育机会、高价值的实习名额以及未来的就业岗位——终究不可能均匀分配给每一个人。这并非像给孩子分蛋糕般简单平均，而是深受个人努力、基础能力、行业需求和社会环境等多重因素影响的复杂博弈。在互联网高度发达的时代，我们总能看见身边或网络上有人拿到顶尖offer、发表高水平论文、创业成功，却往往忽视那些沉默的大多数：他们可能努力却未见成效，也可能在激烈的竞争中逐渐迷失。这种基于可见成功案例的认知，极易带来幸存者偏差，使人在自我定位与发展规划中产生盲目乐观或不必要的焦虑，忽略了对真正扎实的知识积累与全面能力的培养。",
+    "headings": [
+      "1. 生活中的幸存者偏差",
+      "2. 幸存者偏差的诱因",
+      "3. 逃离幸存者偏差陷阱"
+    ]
+  },
+  {
+    "filepath": "docs/skills/mindset/fixed/elite-complex.md",
+    "title": "无标题",
+    "tags": [
+      "Topic-MindsetModel",
+      "Topic-DecisionMaking",
+      "Type-Concept",
+      "Level-Intermediate"
+    ],
+    "intro_summary": "高考的硝烟早已散去，但对许多人来说，一场名为“名校”的战争，似乎还远未结束。",
+    "headings": [
+      "一、不健康的动机：你为何执着于名校？",
+      "二、破除现实迷思：名校 ≠ 高薪保证",
+      "真正决定你价值的，是这些：",
+      "三、核心问题：混淆了“手段”与“目的”",
+      "四、健康的路径：用“决策黑盒”重新思考"
+    ]
+  },
+  {
+    "filepath": "docs/skills/mindset/fixed/meritocracy.md",
+    "title": "无标题",
+    "tags": [
+      "Topic-MindsetModel",
+      "Level-Beginner"
+    ],
+    "intro_summary": "这种“优秀的人就该获得成功”的信念，就是我们今天要聊的“优绩主义”。我们凭借着这套信念体系，一路过关斩将，走进了大学。但在这里，这个曾经无比坚固的信念，却开始出现裂痕。",
+    "headings": [
+      "聊聊我们身边的“优绩主义” (Meritocracy)",
+      "“优绩主义”的美好与陷阱",
+      "如何走出“优绩主义”的迷宫？"
+    ]
+  },
+  {
+    "filepath": "docs/skills/mindset/fixed/solver-mindset.md",
+    "title": "无标题",
+    "tags": [
+      "Topic-MindsetModel",
+      "Level-Beginner"
+    ],
+    "intro_summary": "于是，我们很自然地想在大学里复制这种成功。然而，随着时间推移，不少人会慢慢感到一种困惑：为什么过去那些百试不爽的方法，现在似乎没那么灵了？",
+    "headings": [
+      "现实一：埋头“刷题”，性价比越来越低",
+      "现实二：好成绩的来源，不止是“做题”",
+      "现实三：“做题”不完全等于“求知”",
+      "那么，我们该如何升级思维？",
+      "结语：从“赛道”到“旷野”"
+    ]
+  },
+  {
+    "filepath": "docs/skills/mindset/mental/anxiety-impostor.md",
+    "title": "无标题",
+    "tags": [
+      "Topic-MindsetModel",
+      "Topic-InterpersonalSkills",
+      "Level-Beginner"
+    ],
+    "intro_summary": "在计算机专业的学习中，我们很容易陷入“被他人节奏牵着走”的困境：看到同学刷题就慌着跟风，看到别人报竞赛就盲目报名，哪怕对方技术水平不如自己，只要对方在“努力”，自己就会莫名焦虑。其实这种情绪并非偶然，找到背后的原因、稳住自己的心态，才能真正屏蔽干扰，按自己的节奏成长。",
+    "headings": [
+      "1. 先拆解：为什么“别人努力，我就焦虑”？",
+      "2. 再重申：回到“人脉共生”，打破“竞争对抗”的思维陷阱",
+      "3. 学方法：3 个步骤，化解“见人努力就焦虑”的情绪",
+      "4. 小提醒：找小众地点避扰也可行"
+    ]
+  },
+  {
+    "filepath": "docs/skills/mindset/mental/learn-to-be-alone.md",
+    "title": "无标题",
+    "tags": [
+      "Topic-MindsetModel",
+      "Topic-InterpersonalSkills",
+      "Level-Beginner"
+    ],
+    "intro_summary": "对计算机专业学生来说，社交需要花时间维系，独处需要专注投入 —— 而编程、刷题、调试代码又格外需要**整块时间**，很多人会陷入“要么硬撑社交累到没精力学习，要么躲着社交又怕被孤立”的两难。其实不用强迫自己**非此即彼**，关键是看清社交的本质，接纳独处的价值，找到属于自己的生活学习节奏。",
+    "headings": [
+      "1. 先认账：维系社交本就“费精力”",
+      "2. 别踩坑：无意义社交是“隐形小偷”",
+      "3. 别害怕：独处不是“孤僻”，而是你的“蓄力时光”",
+      "4. 小技巧：轻松找到社交与独处的平衡"
+    ]
+  },
+  {
+    "filepath": "docs/skills/mindset/model/bayesian-thinking.md",
+    "title": "无标题",
+    "tags": [
+      "Topic-MindsetModel",
+      "Level-Beginner",
+      "Type-LearningMethod"
+    ],
+    "intro_summary": "我们每个人都带着一套由过去经验、常识和偏见构成的“心智模型”来看待世界。但世界是持续变化的，如果我们固守旧有的看法，就难免会在新环境中碰壁。",
+    "headings": [
+      "警惕你的起点：“先验概率”的来源",
+      "认知更新的三步法",
+      "1. 审视你的“已有看法”（先验概率）——它是认知，还是偏见？",
+      "2. 拥抱你的“新证据”——别排斥那些让你不舒服的信息",
+      "3. 形成你的“新看法”（后验概率）——不是颠覆，而是融合",
+      "一个最重要的提醒：它是一种思维工具，而非人生信条"
+    ]
+  },
+  {
+    "filepath": "docs/skills/mindset/model/collaboration.md",
+    "title": "无标题",
+    "tags": [
+      "Topic-MindsetModel",
+      "Topic-InterpersonalSkills",
+      "Context-NCU",
+      "Action-Collaboration"
+    ],
+    "intro_summary": "我是 `CS for NCU` 的一位成员。今天想和你们聊一个听起来有点“功利”，但我觉得对我们普通学生来说，特别重要的话题：合作与博弈。",
+    "headings": [
+      "什么是“博弈”？",
+      "基础三步：从“棋子”到“棋手”",
+      "第一步：看清整个“棋盘”",
+      "第二步：主动沟通，“塑造”规则",
+      "第三步：想清楚你的长远目标",
+      "进阶课题：当规则失效时",
+      "写在最后"
+    ]
+  },
+  {
+    "filepath": "docs/skills/tools/literacy/computer-basics.md",
+    "title": "无标题",
+    "tags": [
+      "Topic-ComputerLiteracy",
+      "Topic-FileManagement",
+      "Type-Guide",
+      "Level-Foundational",
+      "Action-Optimizing"
+    ],
+    "intro_summary": "你的笔记本电脑，不仅是用来上课记笔记、看视频的工具，更是你大学四年学习与生活的**中枢**。它是你的图书馆、你的实验室，也是你的画布。",
+    "headings": [
+      "第一部分：物理世界的伙伴 (Hardware Basics)",
+      "1. 关键按键与正确操作",
+      "2. 接口：连接世界的桥梁",
+      "3. 散热：保持冷静的常识",
+      "第二部分：数字世界的秩序 (Digital Organization)",
+      "1. 文件的“身份证”：认识扩展名",
+      "2. 文件的“打包术”：理解压缩与解压",
+      "3. 从认识到掌控：构建你的文件管理系统"
+    ]
+  },
+  {
+    "filepath": "docs/skills/tools/literacy/typing.md",
+    "title": "无标题",
+    "tags": [
+      "Topic-Typing",
+      "Topic-Productivity",
+      "Type-Guide",
+      "Level-Beginner",
+      "Action-Optimizing"
+    ],
+    "intro_summary": "你的键盘，是你的思想与数字世界之间最主要的桥梁。你输入的速度和流畅度，直接决定了你表达、编程和学习的效率。",
+    "headings": [
+      "一、基础：告别“二指禅”，掌握标准指法",
+      "二、进阶：用快捷键为效率加速",
+      "核心快捷键列表"
+    ]
+  },
+  {
+    "filepath": "docs/skills/tools/pro/linux.md",
+    "title": "无标题",
+    "tags": [
+      "Topic-Linux",
+      "Topic-OperatingSystem",
+      "Type-Guide",
+      "Level-Beginner",
+      "Action-Learning"
+    ],
+    "intro_summary": "你是否曾有过这样的感觉：你的电脑，这台你花了不少钱买来的设备，似乎并不完全属于你？没完没了的强制更新，在你最忙的时候突然重启；系统越来越慢，好像每过一年，它都在“变老”；桌面上充斥着你从不使用却又删不掉的软件……",
+    "headings": [
+      "不只是换个系统，更是打开计算机世界的钥匙",
+      "为什么说 Linux 是计算机学生的“必修课”？",
+      "1. 透明的内在，让你看透 OS 的本质",
+      "2. 命令行（CLI），程序员的超能力",
+      "3. 无缝衔接的开发环境",
+      "4. 驰骋在 AI 与数据科学的前沿",
+      "5. 通往服务器与云计算的大门",
+      "如何开启你的 Linux 之旅？",
+      "结语",
+      "学习资料补充"
+    ]
+  },
+  {
+    "filepath": "docs/skills/tools/pro/prompt-engineering.md",
+    "title": "无标题",
+    "tags": [
+      "Topic-AIAssistedDev",
+      "Type-Guide",
+      "Type-Concept",
+      "Level-Beginner",
+      "Level-Intermediate",
+      "Action-Learning",
+      "Action-Writing"
+    ],
+    "intro_summary": "在如今的大AI时代，我们与大语言模型的交互质量，直接决定了其产出内容的价值和我们的工作效率。我们常常发现，同样一个模型，不同人使用会得到天差地别的结果。这其中的差距，就在于**提示词工程 (Prompt Engineering)**。",
+    "headings": [
+      "前言",
+      "第一部分：核心原则",
+      "第二部分：结构化 Prompt 框架",
+      "第三部分：高级提示策略",
+      "结语",
+      "学习资料补充"
+    ]
+  }
+]

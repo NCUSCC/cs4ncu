@@ -307,7 +307,7 @@ def main_check():
 
     if has_critical_errors or has_unknown:
         print(
-            "\n💡 检查失败。请在本地运行 `uv run pyscript/manage_tags.py sync` 来处理这些问题。"
+            "\n💡 检查失败。请在本地运行 `uv run tools/manage_tags.py sync` 来处理这些问题。"
         )
         sys.exit(1)
     else:

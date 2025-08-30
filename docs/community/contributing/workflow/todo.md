@@ -7,7 +7,7 @@ tags:
 
 # 内容完成度分析脚本：使用与配置指南
 
-`pyscript/completion_analyzer.py` 是 `CS4NCU` 项目的一个内部质量保证工具，旨在自动化地分析整个知识库的内容完成情况。
+`tools/completion_analyzer.py` 是 `CS4NCU` 项目的一个内部质量保证工具，旨在自动化地分析整个知识库的内容完成情况。
 
 !!! declaration "设计目的"
     本脚本的核心任务是回答一个问题：“我们项目的哪些部分已经充实，哪些部分还是空架子？”
@@ -41,7 +41,7 @@ uv sync
 直接在项目根目录运行以下命令即可生成最新的报告：
 
 ```bash title="执行分析并生成报告"
-uv run pyscript/completion_analyzer.py
+uv run tools/completion_analyzer.py
 ```
 
 脚本执行完毕后，会打印出报告的保存路径和一份简要的完成情况汇总。
@@ -49,7 +49,7 @@ uv run pyscript/completion_analyzer.py
 **静默模式**：如果你只想生成报告文件而不在终端看到汇总信息，可以添加 `--quiet` 参数。
 
 ```bash
-uv run pyscript/completion_analyzer.py --quiet
+uv run tools/completion_analyzer.py --quiet
 ```
 
 ---
