@@ -104,7 +104,7 @@ source = { virtual = "." }
 dependencies = [
     { name = "gitpython" },
     { name = "mkdocs" },
-    { name = "mkdocs-git-authors-plugin" },
+    { name = "mkdocs-git-committers-plugin-2" },
     { name = "mkdocs-material" },
     { name = "pymdown-extensions" },
     { name = "python-frontmatter" },
@@ -118,7 +118,7 @@ dependencies = [
 requires-dist = [
     { name = "gitpython", specifier = ">=3.1.45" },
     { name = "mkdocs", specifier = ">=1.6.1" },
-    { name = "mkdocs-git-authors-plugin", specifier = ">=0.10.0" },
+    { name = "mkdocs-git-committers-plugin-2" },
     { name = "mkdocs-material", specifier = "==9.6.17" },
     { name = "pymdown-extensions", specifier = ">=10.16.1" },
     { name = "python-frontmatter", specifier = ">=1.1.0" },
@@ -301,15 +301,17 @@ wheels = [
 ]
 
 [[package]]
-name = "mkdocs-git-authors-plugin"
-version = "0.10.0"
+name = "mkdocs-git-committers-plugin-2"
+version = "2.5.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
+    { name = "gitpython" },
     { name = "mkdocs" },
+    { name = "requests" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/64/f1/b784c631b812aab80030db80127a576b68a84caac5229836fb7fcc00e055/mkdocs_git_authors_plugin-0.10.0.tar.gz", hash = "sha256:29d1973b2835663d79986fb756e02f1f0ff3fe35c278e993206bd3c550c205e4", size = 23432, upload-time = "2025-06-10T05:42:40.94Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/b4/8a/4ca4fb7d17f66fa709b49744c597204ad03fb3b011c76919564843426f11/mkdocs_git_committers_plugin_2-2.5.0.tar.gz", hash = "sha256:a01f17369e79ca28651681cddf212770e646e6191954bad884ca3067316aae60", size = 15183, upload-time = "2025-01-30T07:30:48.667Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/41/bc/a4166201c2789657c4d370bfcd71a5107edec185ae245675c8b9a6719243/mkdocs_git_authors_plugin-0.10.0-py3-none-any.whl", hash = "sha256:28421a99c3e872a8e205674bb80ec48524838243e5f59eaf9bd97df103e38901", size = 21899, upload-time = "2025-06-10T05:42:39.244Z" },
+    { url = "https://files.pythonhosted.org/packages/8e/f5/768590251839a148c188d64779b809bde0e78a306295c18fc29d7fc71ce1/mkdocs_git_committers_plugin_2-2.5.0-py3-none-any.whl", hash = "sha256:1778becf98ccdc5fac809ac7b62cf01d3c67d6e8432723dffbb823307d1193c4", size = 11788, upload-time = "2025-01-30T07:30:45.748Z" },
 ]
 
 [[package]]

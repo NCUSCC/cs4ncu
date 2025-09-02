@@ -70,7 +70,10 @@ plugins:
   - search:
       lang: zh # 启用中文搜索支持
   - tags   # 启用标签系统
-  - git-authors
+  - git-committers:
+      repository: NCUSCC/cs4ncu
+      branch: main
+      token: !ENV GITHUB_TOKEN
 
 # --- Markdown 扩展 (增强内容显示) ---
 # 合并后的 mkdocs.yml 配置
