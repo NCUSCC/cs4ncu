@@ -16,16 +16,16 @@ title,file_path,category,exists,char_count,word_count,line_count,status,completi
 本部分导览,skills/index.md,第零点五课堂,True,599,61,30,substantial,high,,substantial,较多
 导览,skills/mindset/index.md,认知与心智,True,11,2,1,minimal,low,,minimal,极少
 优绩主义,skills/mindset/fixed/meritocracy.md,认知与心智,True,2102,217,69,substantial,high,,substantial,非常丰富
-名校情节,skills/mindset/fixed/elite-complex.md,认知与心智,True,2830,308,94,substantial,high,,substantial,非常丰富
+名校情节,skills/mindset/fixed/elite-complex.md,认知与心智,True,2827,307,94,substantial,high,,substantial,非常丰富
 做题家思维,skills/mindset/fixed/solver-mindset.md,认知与心智,True,1931,215,62,substantial,high,,substantial,丰富
 幸存者偏差,skills/mindset/bias/survivorship-bias.md,认知与心智,True,2661,254,59,substantial,high,,substantial,非常丰富
 确认偏差,skills/mindset/bias/confirmation-bias.md,认知与心智,True,2480,212,58,substantial,high,,substantial,非常丰富
 沉没成本,skills/mindset/bias/sunk-cost.md,认知与心智,True,2363,219,62,substantial,high,,substantial,非常丰富
-贝叶斯法则,skills/mindset/model/bayesian-thinking.md,认知与心智,True,2044,202,70,substantial,high,,substantial,非常丰富
+贝叶斯法则,skills/mindset/model/bayesian-thinking.md,认知与心智,True,2510,289,89,substantial,high,,substantial,非常丰富
 合作与博弈,skills/mindset/model/collaboration.md,认知与心智,True,2657,301,94,substantial,high,,substantial,非常丰富
 冒名顶替综合征,skills/mindset/mental/impostor-syndrome.md,认知与心智,True,10,1,1,minimal,low,,minimal,极少
-学会独处,skills/mindset/mental/learn-to-be-alone.md,认知与心智,True,2402,268,67,substantial,high,,substantial,非常丰富
-焦虑与内耗,skills/mindset/mental/anxiety-impostor.md,认知与心智,True,3027,355,73,substantial,high,,substantial,非常丰富
+学会独处,skills/mindset/mental/learn-to-be-alone.md,认知与心智,True,2391,261,67,substantial,high,,substantial,非常丰富
+焦虑与内耗,skills/mindset/mental/anxiety-impostor.md,认知与心智,True,2862,334,71,substantial,high,,substantial,非常丰富
 导览,skills/learning/index.md,学会学习,True,10,2,1,minimal,low,,minimal,极少
 元学习,skills/learning/meta/meta-learning.md,学会学习,True,6,1,1,minimal,low,,minimal,极少
 信息输入,skills/learning/intake/information-intake.md,学会学习,True,7,1,1,minimal,low,,minimal,极少
@@ -33,13 +33,14 @@ title,file_path,category,exists,char_count,word_count,line_count,status,completi
 精力管理,skills/learning/energy/energy-management.md,学会学习,True,0,0,0,empty,none,,empty,空白
 导览,skills/communication/index.md,沟通与协作,True,11,2,1,minimal,low,,minimal,极少
 沟通技巧,skills/communication/skills/communication.md,沟通与协作,True,0,0,0,empty,none,,empty,空白
-构建人际关系网,skills/communication/skills/network-of-relationships.md,沟通与协作,True,3787,452,100,substantial,high,,substantial,非常丰富
-团队协作,skills/communication/teamwork/teamwork.md,沟通与协作,True,1593,180,52,substantial,high,,substantial,丰富
-人际矛盾处理,skills/communication/skills/dealing-conflicts.md,沟通与协作,True,3328,384,99,substantial,high,,substantial,非常丰富
+构建人际关系网,skills/communication/skills/network-of-relationships.md,沟通与协作,True,3699,431,100,substantial,high,,substantial,非常丰富
+团队协作,skills/communication/teamwork/teamwork.md,沟通与协作,True,1592,180,52,substantial,high,,substantial,丰富
+人际矛盾处理,skills/communication/skills/dealing-conflicts.md,沟通与协作,True,3260,383,98,substantial,high,,substantial,非常丰富
 导览,skills/tools/index.md,工具与系统,True,11,2,1,minimal,low,,minimal,极少
 电脑认知,skills/tools/literacy/computer-basics.md,工具与系统,True,2642,308,113,substantial,high,,substantial,非常丰富
 高效打字,skills/tools/literacy/typing.md,工具与系统,True,1956,215,75,substantial,high,,substantial,丰富
 网络工具,skills/tools/literacy/network-proxy.md,工具与系统,True,0,0,0,empty,none,,empty,空白
+版本选择,skills/tools/literacy/version-control.md,工具与系统,True,3944,392,130,substantial,high,,substantial,非常丰富
 云笔记,skills/tools/pkm/cloud-notes.md,工具与系统,True,6,1,1,minimal,low,,minimal,极少
 协作文档,skills/tools/pkm/collaboration-docs.md,工具与系统,True,7,1,1,minimal,low,,minimal,极少
 任务管理,skills/tools/pkm/task-management.md,工具与系统,True,7,1,1,minimal,low,,minimal,极少
@@ -62,16 +63,16 @@ Docker,skills/tools/pro/docker.md,工具与系统,True,0,0,0,empty,none,,empty,�
 培养方案全解,ncu-exclusive/academic-development/program-guide.md,其他,True,15,3,1,minimal,low,,minimal,极少
 学分绩点体系,ncu-exclusive/academic-development/credits-and-gpa.md,其他,True,0,0,0,empty,none,,empty,空白
 特色实验班,ncu-exclusive/academic-development/experimental-classes.md,其他,True,0,0,0,empty,none,,empty,空白
-泛计算机,ncu-exclusive/major-transfer/cs.md,其他,True,3085,344,180,substantial,high,,substantial,非常丰富
-计算机科学与技术,ncu-exclusive/postgraduate-recommendation/cs.md,其他,True,2925,308,113,substantial,high,,substantial,非常丰富
-11408,ncu-exclusive/postgraduate-exam/cs.md,其他,True,14,3,1,minimal,low,,minimal,极少
+计算机转专业,ncu-exclusive/major-transfer/cs.md,其他,True,3150,350,183,substantial,high,,substantial,非常丰富
+计科保研,ncu-exclusive/postgraduate-recommendation/cs.md,其他,True,2925,308,113,substantial,high,,substantial,非常丰富
+11408 备考,ncu-exclusive/postgraduate-exam/cs.md,其他,True,14,3,1,minimal,low,,minimal,极少
 计算机相关,ncu-exclusive/clubs-and-organizations/cs.md,其他,True,0,0,0,empty,none,,empty,空白
 通识课程体系,ncu-exclusive/campus-life/general-education-courses.md,其他,True,0,0,0,empty,none,,empty,空白
 体育与体测,ncu-exclusive/campus-life/pe-and-fitness-tests.md,其他,True,0,0,0,empty,none,,empty,空白
-新生军训,ncu-exclusive/campus-life/military-training.md,其他,True,0,0,0,empty,none,,empty,空白
+新生军训,ncu-exclusive/campus-life/military-training.md,其他,True,1311,140,49,substantial,high,,substantial,丰富
 我们的初心,community/our-story.md,其他,True,11,2,3,minimal,low,,minimal,极少
 打卡教程,community/how-to-check-in.md,其他,True,2294,302,103,substantial,high,,substantial,非常丰富
-路友打卡墙,community/contributors.md,其他,True,784,96,31,substantial,high,,substantial,较多
+路友打卡墙,community/contributors.md,其他,True,714,87,31,substantial,high,,substantial,较多
 行为准则,community/contributing/code-of-conduct.md,其他,True,1802,170,93,substantial,high,,substantial,丰富
 贡献流程,community/contributing/how-to-contribute.md,其他,True,3222,416,103,substantial,high,,substantial,非常丰富
 搭建基础环境,community/contributing/development-setup.md,其他,True,1987,235,85,substantial,high,,substantial,丰富
@@ -88,5 +89,5 @@ Tag 系统,community/contributing/workflow/tag.md,其他,True,3255,346,121,subst
 写作指令 (prompt),community/contributing/writing-prompt.md,其他,True,7028,741,246,substantial,high,,substantial,非常丰富
 提示框样式样例,community/contributing/admonitions-examples.md,其他,True,7951,1085,161,substantial,high,,substantial,非常丰富
 一份开发手记,community/contributing/development-log.md,其他,True,3868,436,137,substantial,high,,substantial,非常丰富
-标签索引,tags.md,其他,True,1492,140,53,substantial,high,,substantial,丰富
-项目进度,COMPLETION_REPORT.md,其他,True,8287,1053,180,substantial,high,,substantial,非常丰富
+标签索引,tags.md,其他,True,1512,142,53,substantial,high,,substantial,丰富
+项目进度,COMPLETION_REPORT.md,其他,True,8266,1051,180,substantial,high,,substantial,非常丰富
