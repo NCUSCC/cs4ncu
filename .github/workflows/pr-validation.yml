@@ -26,6 +26,7 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 0 
+          token: ${{ secret.WORKFLOW_PAT }}
 
       # 步骤 2: 智能文件变更检测 (可选，如果想每次都跑可以删掉这一步)
       - name: 🔍 智能文件变更检测
