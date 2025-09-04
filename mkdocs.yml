@@ -73,7 +73,7 @@ plugins:
   - git-committers:
       repository: NCUSCC/cs4ncu
       branch: main
-      token: !ENV GITHUB_TOKEN
+      token: !ENV WORKFLOW_PAT
 
 # --- Markdown 扩展 (增强内容显示) ---
 # 合并后的 mkdocs.yml 配置
