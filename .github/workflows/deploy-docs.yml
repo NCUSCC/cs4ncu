@@ -131,6 +131,9 @@ jobs:
 
       # 步骤 6: 增强的构建验证
       - name: 🔨 增强构建验证
+        env:
+          ENABLE_COMMITTERS: "true"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo "🔨 开始增强构建验证..."
           
