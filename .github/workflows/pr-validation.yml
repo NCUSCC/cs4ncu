@@ -87,4 +87,4 @@ jobs:
         if: steps.changes.outputs.should-build == 'true'
         run: uv run mkdocs build --clean --strict --verbose
         env:
-          GITHUB_TOKEN: ${{ secrets.WORKFLOW_PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
