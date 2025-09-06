@@ -86,3 +86,6 @@ jobs:
       - name: 🔨 严格模式构建验证
         if: steps.changes.outputs.should-build == 'true'
         run: uv run mkdocs build --clean --strict --verbose
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ENABLE_COMMITTERS: "true"
