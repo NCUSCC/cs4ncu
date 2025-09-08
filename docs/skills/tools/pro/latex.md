@@ -2,7 +2,7 @@
 tags:
   # Topic
   - Topic-Academics
-  - Topic-ProductivityTools
+  - Topic-Productivity
   # Type
   - Type-Guide
   - Type-Concept

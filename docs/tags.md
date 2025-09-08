@@ -13,7 +13,7 @@
 "Topic-GitHub", "Topic-GoalSetting", "Topic-Health", "Topic-InformationLiteracy", "Topic-InterpersonalSkills", 
 "Topic-Linux", "Topic-MajorTransfer", "Topic-Markdown", "Topic-MindsetModel", "Topic-OperatingSystem", 
 "Topic-Postgraduate", "Topic-Productivity", "Topic-SelfAwareness", "Topic-SelfManagement", "Topic-Shell", 
-"Topic-Typing"
+"Topic-Typing", "Topic-Docker"
 ] } -->
 
 ---
