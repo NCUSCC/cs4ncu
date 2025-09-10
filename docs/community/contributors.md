@@ -28,4 +28,5 @@ tags:
 *   [@NCUSCC](https://github.com/NCUSCC) - 欢迎来到 CS for NCU，很高兴能与你同行。（2024-05-21）
 *   [@J621111](https://github.com/J621111) - Ciallo! Please make friends with me.🥺 (2025-08-27)
 *   [@CAICAIIs](https://github.com/CAICAIIs) - 相信的心就是你的魔法 (2025-08-27)
+*   [@codefashion007](https://github.com/codefashion007) - 唯有那份炫目，未曾忘却 (2025-09-10)
 
