@@ -118,6 +118,7 @@ LaTeX 拥有海量的专业模板，无论是顶级期刊的论文、毕业论�
        * **VS Code + LaTeX Workshop 插件**：对于习惯 VS Code 的开发者来说是最佳选择配置简单，功能强大。
        * **TeXstudio**：一个专为 LaTeX 设计的集成开发环境 (IDE)，开箱即用。
 
+
 ## 第五部分：资源推荐与拓展阅读
 
 * **[Overleaf 官方文档 (30分钟入门)](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes)**：Overleaf 出品的快速入门教程，非常适合零基础的新手。
