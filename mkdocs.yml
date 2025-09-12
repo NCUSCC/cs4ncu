@@ -70,7 +70,13 @@ plugins:
   - search:
       lang: zh # 启用中文搜索支持
   - tags   # 启用标签系统
-  - git-authors
+  - git-committers:
+      repository: NCUSCC/cs4ncu
+      branch: main
+      token: !ENV GITHUB_TOKEN
+      # 仅当环境变量 ENABLE_COMMITTERS=true 时才启用此插件
+      # 默认情况下 (本地开发), 此插件是禁用的
+      enabled: !ENV [ENABLE_COMMITTERS, false]
 
 # --- Markdown 扩展 (增强内容显示) ---
 # 合并后的 mkdocs.yml 配置
@@ -84,6 +90,8 @@ markdown_extensions:
   - md_in_html
   # Details: 可折叠的内容块
   - pymdownx.details
+  - pymdownx.arithmatex:
+      generic: true
 
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
@@ -134,24 +142,25 @@ markdown_extensions:
 nav:
   # 顶层导航 1: 首页
   - '首页': 'index.md'
-  - '开始之前':
-    - '先别慌，我们聊聊': 'before/prologue-the-start.md'
-    - '全站导览': 'before/overview.md'
-  - '本科生通识第零课':
-    - '核心原则': 'course/the-core.md'   
-    - '完整课程导览': 'course/index.md'
-    - '第一部分：决策的基础':
-      - '本部分导览': 'course/part1/index.md'
-      - '第一章：思维模式转换': 'course/part1/ch1-mindset.md'
-      - '第二章：自我认知方法': 'course/part1/ch2-the-self.md'
-    - '第二部分：决策的依据':
-      - '本部分导览': 'course/part2/index.md'
-      - '第三章：信息辨析能力': 'course/part2/ch3-information-filter.md'
-      - '第四章：信息获取入门': 'course/part2/ch4-info-gathering.md'
-    - '第三部分：决策的实践':
-      - '本部分导览': 'course/part3/index.md'
-      - '第五章：设定探索方向': 'course/part3/ch5-the-output.md'
-      - '第六章：低成本实践与验证': 'course/part3/ch6-the-test.md'
+  - '寻路通识课':
+    - '开始之前':
+      - '先别慌，我们聊聊': 'growth-general-course/00-before-we-start/prologue-the-start.md'
+      - '全站导览': 'growth-general-course/00-before-we-start/overview.md'
+    - '本科生通识第零课':
+      - '核心原则': 'growth-general-course/01-the-zero-course/the-core.md'   
+      - '完整课程导览': 'growth-general-course/01-the-zero-course/index.md'
+      - '一：决策的基础':
+        - '本部分导览': 'growth-general-course/01-the-zero-course/part1/index.md'
+        - '思维模式转换': 'growth-general-course/01-the-zero-course/part1/ch1-mindset.md'
+        - '自我认知方法': 'growth-general-course/01-the-zero-course/part1/ch2-the-self.md'
+      - '二：决策的依据':
+        - '本部分导览': 'growth-general-course/01-the-zero-course/part2/index.md'
+        - '信息辨析能力': 'growth-general-course/01-the-zero-course/part2/ch3-information-filter.md'
+        - '信息获取入门': 'growth-general-course/01-the-zero-course/part2/ch4-info-gathering.md'
+      - '三：决策的实践':
+        - '本部分导览': 'growth-general-course/01-the-zero-course/part3/index.md'
+        - '设定探索方向': 'growth-general-course/01-the-zero-course/part3/ch5-the-output.md'
+        - '低成本实践与验证': 'growth-general-course/01-the-zero-course/part3/ch6-the-test.md'
   - '第零点五课堂':
     - '本部分导览': 'skills/index.md'
     # 模块一：认知与心智 (内核)
@@ -195,6 +204,7 @@ nav:
         - '电脑认知': 'skills/tools/literacy/computer-basics.md'
         - '高效打字': 'skills/tools/literacy/typing.md'
         - '网络工具': 'skills/tools/literacy/network-proxy.md'
+        - '版本选择': 'skills/tools/literacy/version-control.md'
       - '信息管理':
         - '云笔记': 'skills/tools/pkm/cloud-notes.md'
         - '协作文档': 'skills/tools/pkm/collaboration-docs.md'
@@ -227,49 +237,66 @@ nav:
 
   # 顶层导航 4: 昌大专属附录
   - '昌大专属资源库':
-    - '本部分导览': 'ncu/index.md'
-    - '保研': 
-      - '计科推免全流程': 'ncu/recommendation/cs.md'
-    - '转专业': 
-      # - '转专业总则'
-      - '计科转专业全流程': 'ncu/transfer/cs.md'
-    - '考研经验分享': 'ncu/a2-postgraduate-entrance-exam.md'
-    # - '转专业完全指南': 'ncu/a3-major-transfer-guide.md'
-    - '各培养方案导读': 'ncu/a4-program-guides.md'
+    - '本部分导览': 'ncu-exclusive/index.md'
+    - '学业发展':
+      # --- 以下为普适性单页内容 ---
+      - '培养方案全解': 'ncu-exclusive/academic-development/program-guide.md'
+      - '学分绩点体系': 'ncu-exclusive/academic-development/credits-and-gpa.md'
+      - '特色实验班': 'ncu-exclusive/academic-development/experimental-classes.md'
+      # --- 以下为可按专业扩展的 Hub 内容 ---
+      - '转专业指南':
+        - '计算机转专业': 'ncu-exclusive/major-transfer/cs.md'
+      - '保研之路':
+        - '计科保研': 'ncu-exclusive/postgraduate-recommendation/cs.md'
+      - '考研经验':
+        - '11408 备考': 'ncu-exclusive/postgraduate-exam/cs.md'
+    - '资源与机会':
+      - '社团与组织':
+        - '计算机相关': 'ncu-exclusive/clubs-and-organizations/cs.md'
+    - '校园生活':
+      - '通识课程体系': 'ncu-exclusive/campus-life/general-education-courses.md'
+      - '体育与体测': 'ncu-exclusive/campus-life/pe-and-fitness-tests.md'
+      - '新生军训': 'ncu-exclusive/campus-life/military-training.md'
 
-  # 顶层导航 5: 贡献与开发
-  - '项目共建指南':
-    - '核心准则':
-      - '行为准则': 'guides/contributing/code-of-conduct.md'
-      - '贡献流程': 'guides/contributing/how-to-contribute.md'
-    - '开发环境与工作流':
-      - '搭建基础环境': 'guides/contributing/development-setup.md'
-      - '分支保护策略': 'guides/contributing/branch-protection.md'
-      - '网站部署': 'guides/contributing/deployment.md'
-      - '智能 PR 验证系统': 'guides/contributing/pr-workflow-guide.md'
-    - '开发实践指南':
-      - '调整全局样式 (CSS)': 'guides/contributing/styling.md'
-      - '调整项目配色': 'guides/contributing/colors.md'
-      - '调整提示框样式': 'guides/contributing/admonitions.md'
-      - '调整图片样式': 'guides/contributing/figure.md'
-    - '内容贡献指南':
-        - '写作规范': 'guides/contributing/writing-guide.md'
-        - '写作指令 (prompt)': 'guides/contributing/writing-prompt.md'
-    - '附录与参考':
-      - '提示框样式样例': 'guides/contributing/admonitions-examples.md'
-      - '一份开发手记': 'guides/contributing/development-log.md'
-
-  - '关于我们':
-    - '我们的初心': 'aboutus/heart.md'
-  # 顶层导航 6: 索引
+  - '社区与共建':
+    - '我们的初心': 'community/our-story.md'
+    - '打卡教程': 'community/how-to-check-in.md'
+    - '路友打卡墙': 'community/contributors.md' # <- 我将'打卡墙'改成了更标准的'路友打卡墙'
+    - '项目共建指南':
+      - '核心准则':
+        - '行为准则': 'community/contributing/code-of-conduct.md'
+        - '贡献流程': 'community/contributing/how-to-contribute.md'
+      - '开发环境与工作流':
+        - '搭建基础环境': 'community/contributing/development-setup.md'
+        - '分支保护策略': 'community/contributing/branch-protection.md'
+        - '网站部署': 'community/contributing/deployment.md'
+        - '智能 PR 验证系统': 'community/contributing/pr-workflow-guide.md'
+        - 'Tag 系统': 'community/contributing/workflow/tag.md'
+        - '内容完成度分析': 'community/contributing/workflow/todo.md'
+      - '开发实践指南':
+        - '调整全局样式 (CSS)': 'community/contributing/styling.md'
+        - '调整项目配色': 'community/contributing/colors.md'
+        - '调整提示框样式': 'community/contributing/admonitions.md'
+        - '调整图片样式': 'community/contributing/figure.md'
+      - '内容贡献指南':
+          - '写作规范': 'community/contributing/writing-guide.md'
+          - '写作指令 (prompt)': 'community/contributing/writing-prompt.md'
+      - '附录与参考':
+        - '提示框样式样例': 'community/contributing/admonitions-examples.md'
+        - '一份开发手记': 'community/contributing/development-log.md'
   - '索引':
     - '标签索引': 'tags.md'
+    - '项目进度': 'COMPLETION_REPORT.md'
 
 # --- 自定义文件链接 (你的设置很好，予以保留) ---
 extra_css:
   - 'css/extra.css'
+  - https://unpkg.com/katex@0/dist/katex.min.css
 extra_javascript:
-  - 'js/custom.js'
+  - javascripts/readingProgress.js
+  - javascripts/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
 
 # 额外配置项
 extra:

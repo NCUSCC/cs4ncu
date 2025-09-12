@@ -29,14 +29,14 @@
     ---
     如果你想快速了解本站的全貌，这里有一份完整的**内容导览**。它像一张世界地图，清晰地展示了所有知识点的位置，**并为你推荐了几条浏览路线**。
 
-    **[:octicons-arrow-right-24: 查看全站导览](./before/overview.md)**
+    **[:octicons-arrow-right-24: 查看全站导览](./growth-general-course/00-before-we-start/overview.md)**
 
 -   :material-road-variant: **“我需要一条清晰的路线图”**
 
     ---
     这里是我们为你精心设计的**核心成长路径**，它会像一位向导，带你从重塑思维开始，一步步构建起应对大学挑战的完整能力体系。**这，就是我们的‘本科生通识第零课’。**
 
-    **[:octicons-arrow-right-24: 浏览通识第零课](./course/the-core.md)**
+    **[:octicons-arrow-right-24: 浏览通识第零课](./growth-general-course/01-the-zero-course/index.md)**
 
 -   :material-treasure-chest: **“我想自由探索特定技能”**
 
@@ -50,7 +50,7 @@
     ---
     这里沉淀了独属于南昌大学的**实用信息与经验**。无论是转专业、保研考研，还是如何用好校园资源，这里都有最接地气的答案。
 
-    **[:octicons-arrow-right-24: 查看昌大专属](./ncu/index.md)**
+    **[:octicons-arrow-right-24: 查看昌大专属](./ncu-exclusive/index.md)**
 
 </div>
 
@@ -90,7 +90,7 @@
 -   :material-book-open-page-variant-outline: **阅读贡献指南**
 
     ---
-    我们建议您首先阅读项目的 **[项目共建指南](./guides/contributing/how-to-contribute.md)**，以了解协作的基本流程。
+    我们建议您首先阅读项目的 **[项目共建指南](./community/contributing/how-to-contribute.md)**，以了解协作的基本流程。
 
 -   :fontawesome-brands-github-alt: **从 Issue 开始**
 

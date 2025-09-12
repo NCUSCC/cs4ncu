@@ -1,0 +1,125 @@
+/**
+ * @file        04-reading-progress.css
+ * @description 极简阅读进度样式
+ * @version     1.0
+ */
+
+/* 极简阅读进度 */
+.reading-progress {
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+    z-index: 9999;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    transform: scale(0.8) translateY(10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    /* CSS变量由JavaScript动态设置 */
+    --circle-circumference: 106.81;
+}
+
+.reading-progress.visible {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+/* 极简圆环 */
+.reading-progress-ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* SVG 进度环 */
+.reading-progress-svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 36px;
+    height: 36px;
+    transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.reading-progress-circle-bg {
+    fill: #ffffff;
+    stroke: none;
+}
+
+.reading-progress-circle {
+    fill: none;
+    stroke: #000000;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-dasharray: var(--circle-circumference);
+    stroke-dashoffset: var(--circle-circumference);
+    transition: stroke-dashoffset 0.3s ease;
+}
+
+/* 极简文字 */
+.reading-progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 9px;
+    font-weight: 500;
+    color: #000000;
+    text-align: center;
+    line-height: 1;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* MkDocs 深色主题适配 */
+[data-md-color-scheme="slate"] .reading-progress-ring {
+    background: #1f2937;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+[data-md-color-scheme="slate"] .reading-progress-circle-bg {
+    fill: #1f2937;
+}
+
+[data-md-color-scheme="slate"] .reading-progress-circle {
+    stroke: #ffffff;
+}
+
+[data-md-color-scheme="slate"] .reading-progress-text {
+    color: #ffffff;
+}
+
+/* 移动端响应式 - 修复边框覆盖问题 */
+@media (max-width: 768px) {
+    .reading-progress {
+        width: 36px;
+        height: 36px;
+        right: 16px;
+        bottom: 30px;
+        /* 移动端CSS变量由JavaScript动态调整 */
+    }
+
+    .reading-progress-ring {
+        border: none; /* 移除边框避免覆盖圆形边缘 */
+        background: transparent; /* 移除白色背景避免覆盖SVG圆形 */
+    }
+
+    .reading-progress-svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .reading-progress-text {
+        font-size: 8px;
+    }
+
+    /* 深色主题移动端也需要透明背景 */
+    [data-md-color-scheme="slate"] .reading-progress-ring {
+        background: transparent;
+    }
+}

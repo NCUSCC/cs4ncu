@@ -1,0 +1,14 @@
+# 这是一个 .weaverignore 文件
+# Weaver 会忽略这里列出的所有文件和目录
+# 语法规则类似于 .gitignore
+
+# 1. 忽略特定的文件
+COMPLETION_REPORT.md
+tags.md
+
+# 2. 忽略所有名为 index.md 的文件
+# ** 代表任意层级的目录
+**/index.md
+
+# 3. 如果有其他想忽略的文件或目录，也可以加在这里
+# 例如，忽略整个 our-story 相关的页面
