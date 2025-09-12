@@ -57,11 +57,11 @@ cd cs4ncu
     git checkout -b add-my-name
     ```
 
-2.  **找到打卡墙文件** `docs/aboutus/wall.md`，用你常用的文本编辑器 (比如 VS Code) 打开它。
+2.  **找到打卡墙文件** `docs/community/contributors.md`，用你常用的文本编辑器 (比如 VS Code) 打开它。
 
 3.  **在文件末尾的“大家的足迹”下面，加上你的信息**。格式如下：
 
-    ```markdown title="docs/aboutus/wall.md"
+    ```markdown title="docs/community/contributors.md"
     * [@你的 GitHubID](你的GitHub主页链接) - 随便说点什么 (YYYY-MM-DD)
     ```
 
@@ -75,13 +75,13 @@ cd cs4ncu
 1.  **保存文件**。然后回到终端，用 `git add` 命令告诉 Git 你修改了这个文件：
 
     ```bash title="在终端中执行"
-    git add docs/aboutus/wall.md
+    git add docs/community/contributors.md
     ```
 
-2.  **提交你的修改**，并写一条说明，告诉别人你做了什么：
+2.  **提交你的修改**，并写一条说明（即引号内容），告诉别人你做了什么：
 
     ```bash title="在终端中执行"
-    git commit -m "feat: add my signature to the wall"
+    git commit -m "docs: add my signature to the wall"
     ```
 
 3.  **把你的修改推送到 GitHub 上的个人副本**：
@@ -98,6 +98,6 @@ cd cs4ncu
 3.  在新页面检查一下信息，然后点击 **Create pull request** 按钮。
 
 !!! success "恭喜你，完成了！🎉"
-    现在，你已经成功地向 `CS for NCU` 项目提交了一个 Pull Request (PR)。项目的维护者会看到你的申请，并尽快把它合并进去。之后，你就可以在打卡墙上看到你的留言了！
+    现在，你已经成功地向 `CS for NCU` 项目提交了一个 Pull Request (PR)。项目的维护者会看到你的申请，并尽快把它合并（Merge）进去。之后，你就可以在打卡墙上看到你的留言了！
 
     恭喜你解锁了开源贡献新技能！

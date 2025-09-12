@@ -30,3 +30,5 @@ tags:
 *   [@CAICAIIs](https://github.com/CAICAIIs) - 相信的心就是你的魔法 (2025-08-27)
 *   [@codefashion007](https://github.com/codefashion007) - 唯有那份炫目，未曾忘却 (2025-09-10)
 *   [@zhz8011](https://github.com/zhz8011) - 广其识则天下大 (2025-09-11)
+*   [@Rinai-R](https://github.com/Rinai-R) - 这世上，无论多么短暂的瞬间，都有意义——就像我在此留下足迹的这一刻。 (2025-09-11)
+*   [@PurplePlanen](https://github.com/PurplePlanen) - TCP 连接已建立 🎶 (2025-09-12) 
