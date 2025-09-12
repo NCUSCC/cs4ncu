@@ -64,30 +64,12 @@
     cd cs4ncu
     ```
 
-3. **配置 GitHub 访问令牌 (重要)**
-   为了防止 GitHub API 请求超限，本地开发需要配置一个个人访问令牌 (PAT)。
-
-   * **获取令牌**:
-
-     1. 访问 [GitHub Tokens (classic)](https://github.com/settings/tokens/new) 页面。
-
-     2. 设置令牌：备注填 `cs4ncu-dev`，有效期选 `30 days`，权限勾选 `public_repo`。
-
-     3. 点击 **Generate token** 并复制令牌（以 `ghp_` 开头）。
-
-   * **创建 `.env` 文件**:
-
-     1. 在项目根目录（与 `mkdocs.yml` 同级）创建一个 `.env` 文件。
-
-     2. 在文件中粘贴 `GITHUB_TOKEN="ghp_YourPersonalAccessTokenHere"` 并将引号内的内容替换为你的令牌。
-
-
-4.  **同步环境**
+3.  **同步环境**
     ```bash
     uv sync
     ```
 
-5.  **启动！**
+4.  **启动！**
     ```bash
     uv run mkdocs serve
     ```
