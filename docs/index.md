@@ -13,7 +13,7 @@
 这是我们为你准备的最重要的起点。
 
 <p style="font-size: 1.2em; margin: 1.5em 0;" markdown>
-    <strong><a href="./before/prologue-the-start/">  翻开《第负一课：先别慌，我们聊聊》 :octicons-arrow-right-24:</a></strong>
+    <strong><a href="./growth-general-course/00-before-we-start/prologue-the-start/">  翻开《第负一课：先别慌，我们聊聊》 :octicons-arrow-right-24:</a></strong>
 </p>
 
 ---
