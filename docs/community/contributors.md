@@ -29,7 +29,6 @@ tags:
 *   [@J621111](https://github.com/J621111) - Ciallo! Please make friends with me.🥺 (2025-08-27)
 *   [@CAICAIIs](https://github.com/CAICAIIs) - 相信的心就是你的魔法 (2025-08-27)
 *   [@codefashion007](https://github.com/codefashion007) - 唯有那份炫目，未曾忘却 (2025-09-10)
-*   [@bluedinosaur233](https://github.com/bluedinosaur233) - 第一次提交的时候，并没有什么特殊的感觉 (2025-09-14)
 *   [@zhz8011](https://github.com/zhz8011) - 广其识则天下大 (2025-09-11)
 *   [@Rinai-R](https://github.com/Rinai-R) - 这世上，无论多么短暂的瞬间，都有意义——就像我在此留下足迹的这一刻。 (2025-09-11)
 *   [@PurplePlanen](https://github.com/PurplePlanen) - TCP 连接已建立 🎶 (2025-09-12)
@@ -40,3 +39,4 @@ tags:
 *   [@Snow-kal](https://github.com/Snow-kal) - 循此苦旅，以达群星 (2025-09-13)
 *   [@co2mediium](https://github.com/co2medium) - 山南山北雪晴，千里万里月明 (2025-09-13)
 *   [@TheEastIsleStoker](https://github.com/TheEastIsleStoker) - 你可以去任何地方 (2025-09-14)
+*   [@bluedinosaur233](https://github.com/bluedinosaur233) - 第一次提交的时候，并没有什么特殊的感觉 (2025-09-14)
