@@ -107,4 +107,11 @@
     ---
     觉得我们是群很有趣很棒的人？欢迎加入我们的 **[Discord 社区](https://discord.gg/Rux6DHRStP)**，与更多伙伴交流。
 
+-   :material-handshake: **友联与推荐**
+
+    ---
+    在寻路的旅程中，我们从不孤单。这里汇聚了与我们理念相近的伙伴们，他们同样在为普通学生的成长而努力。
+
+    **[:octicons-arrow-right-24: 查看友联推荐](./community/friends.md)**
+
 </div>

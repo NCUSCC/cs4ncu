@@ -262,6 +262,7 @@ nav:
     - '我们的初心': 'community/our-story.md'
     - '打卡教程': 'community/how-to-check-in.md'
     - '路友打卡墙': 'community/contributors.md' # <- 我将'打卡墙'改成了更标准的'路友打卡墙'
+    - '友联与推荐': 'community/friends.md'
     - '项目共建指南':
       - '核心准则':
         - '行为准则': 'community/contributing/code-of-conduct.md'
