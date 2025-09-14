@@ -29,6 +29,4 @@ tags:
 *   [@J621111](https://github.com/J621111) - Ciallo! Please make friends with me.🥺 (2025-08-27)
 *   [@CAICAIIs](https://github.com/CAICAIIs) - 相信的心就是你的魔法 (2025-08-27)
 *   [@codefashion007](https://github.com/codefashion007) - 唯有那份炫目，未曾忘却 (2025-09-10)
-*   [@bluedinosaur233](https://github.com/bluedinosaur233) - 第一次提交的时候，并没有什么特殊的感觉(2025-09-14)
-
-
+*   [@bluedinosaur233](https://github.com/bluedinosaur233) - 第一次提交的时候，并没有什么特殊的感觉 (2025-09-14)
