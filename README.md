@@ -99,6 +99,10 @@
 
 *(由 [contrib.rocks](https://contrib.rocks) 自动生成)*
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=NCUSCC/cs4ncu&type=Date)](https://www.star-history.com/#NCUSCC/cs4ncu&Date)
+
 ### 开源协议
 
 本项目基于 [**MIT License**](./LICENSE) 授权。

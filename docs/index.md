@@ -13,7 +13,7 @@
 这是我们为你准备的最重要的起点。
 
 <p style="font-size: 1.2em; margin: 1.5em 0;" markdown>
-    <strong><a href="./before/prologue-the-start/">  翻开《第负一课：先别慌，我们聊聊》 :octicons-arrow-right-24:</a></strong>
+    <strong><a href="./growth-general-course/00-before-we-start/prologue-the-start/">  翻开《第负一课：先别慌，我们聊聊》 :octicons-arrow-right-24:</a></strong>
 </p>
 
 ---
@@ -106,5 +106,12 @@
 
     ---
     觉得我们是群很有趣很棒的人？欢迎加入我们的 **[Discord 社区](https://discord.gg/Rux6DHRStP)**，与更多伙伴交流。
+
+-   :material-handshake: **友联与推荐**
+
+    ---
+    在寻路的旅程中，我们从不孤单。这里汇聚了与我们理念相近的伙伴们，他们同样在为普通学生的成长而努力。
+
+    **[:octicons-arrow-right-24: 查看友联推荐](./community/friends.md)**
 
 </div>

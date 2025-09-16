@@ -1,7 +1,9 @@
 # Git 与 GitHub
 
+
 Git 的学习一定**非常注重实践**，
 许多指令的作用也能在一次次实践中弄懂。
+
 
 因此以下只对 Git 的学习进行简单指导，诸如如何注册等不再提及，需读者自行多实践并检索相关知识。
 
@@ -59,8 +61,10 @@ Fork、Star、Watch、Issues、Pull Request、CI/CD
 
 在 Git 中，本地通常指你的本地仓库，而远程指远程仓库（如 GitHub）。你需要通过 git push 将本地的更改同步到远程，或通过 git pull 将远程的更新拉取到本地。这种“本地—远程”协作模式是现代开发的核心实践之一。
 
+
 ## Git 基础操作
 Git 有很多指令，对于新手来说常用的并不多。以下为一些指令速记：初始化项目（git init）、克隆仓库（git clone）、基本操作（git add、git commit、git status、git log）、分支管理（git branch、git checkout、git merge），以及与远程仓库交互（git pull、git push、git fetch）。
+
 
 新手可以先从 `git init`、`git clone`、`git add`、`git commit`、`git pull`、`git push` 以及 `git log` 开始，其余的完全可以等需要的时候再学习。
 
@@ -87,6 +91,6 @@ Commit message 相当于是对自己一次代码更改的简单说明；在与�
 
 至于为何要提交 PR，简单来说就是为了让代码在正式合并前可被同事审查、跑自动测试，防止把 bug 直接推进主干。
 
+## **学习资料补充**：
+[Learning Git Branching](https://learngitbranching.js.org/?locale=zh_CN) 在此教程中能执行相应的命令，还能看到每个命令的执行情况，被称为最好的 git 学习实践教程。
 
-## 学习资料补充
-[Learning Git Branching](https://learngitbranching.js.org/?locale=zh_CN)：在此教程中能执行相应的命令，还能看到每个命令的执行情况，被称为较好的 Git 学习实践教程。
