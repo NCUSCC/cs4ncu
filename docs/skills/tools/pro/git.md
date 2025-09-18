@@ -86,7 +86,7 @@ Commit message 相当于是对自己一次代码更改的简单说明；在与�
 
 有很多项目都有自己的贡献指南，会指出在贡献此项目时 commit message 应该遵循怎样的规范。我们完全可以通过查看别人的 commit 记录来模仿，从而规范自己的 commit message，在此便不做额外阐述。
 
-# 如何提交 PR（Pull Request）
+## 如何提交 PR（Pull Request）
 一句话概括其流程：Fork → Clone → 新建分支 → 修改代码 → commit → push → 在 GitHub 点击 “Compare & pull request” → 填标题/描述 → 提交。
 
 至于为何要提交 PR，简单来说就是为了让代码在正式合并前可被同事审查、跑自动测试，防止把 bug 直接推进主干。
