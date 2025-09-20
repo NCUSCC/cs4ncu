@@ -1,0 +1,186 @@
+{% extends "main.html" %}
+
+{% block content %}
+<!--
+  最终版 404 页面 - 绝对居中与单行链接
+  特色：
+  1. 所有文本内容，包括分析框，均居中对齐。
+  2. 倒计时框样式强化，视觉上更明显。
+  3. 底部操作链接改为单行 | 分隔布局。
+  4. 项目地址已更新。
+-->
+<style>
+  /* 整体布局：所有内容在一个居中容器内 */
+  .not-found-container {
+    max-width: 700px;
+    margin: 0 auto; /* 容器自身居中 */
+    padding: 2rem 1rem;
+    text-align: center; /* 内部所有文本和元素居中 */
+  }
+
+  /* 标题区域 */
+  .not-found-header h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--md-default-fg-color--light);
+  }
+  .not-found-header p {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  /* 倒计时模块 (置顶且强化) */
+  #countdown-container {
+    font-size: 1.1em;
+    padding: 1.5em;
+    margin-bottom: 2.5rem;
+    /* 样式强化 */
+    border: 1px solid var(--md-default-fg-color--lightest);
+    background-color: var(--md-code-bg-color);
+    border-radius: 0.2rem;
+    transition: opacity 0.3s ease-out; /* 平滑消失动画 */
+  }
+  #countdown-timer {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--md-accent-fg-color);
+  }
+  #cancel-redirect-link {
+    color: var(--md-accent-fg-color);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--md-accent-fg-color);
+  }
+
+  /* 分析框 (全局居中) */
+  .reason-box {
+    padding: 1.5em;
+    border-radius: 0.2rem;
+    background-color: var(--md-admonition-bg-color);
+    /* text-align: center; 会从父级继承，无需重复设置 */
+  }
+  .reason-box h3 {
+    margin-top: 0;
+  }
+  .reason-box ul {
+    list-style-type: none; /* 移除列表的点 */
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  /* 底部交互区域 (单行链接) */
+  #action-container {
+    margin-top: 2.5em;
+    padding-top: 1.5em;
+    border-top: 1px solid var(--md-default-fg-color--lightest);
+  }
+  #action-links-container a {
+    margin: 0 0.75em; /* 为链接左右提供间距 */
+  }
+
+</style>
+
+<div class="md-content" data-md-component="content">
+  <article class="md-content__inner md-typeset">
+    <div class="not-found-container">
+
+      <div class="not-found-header">
+        <h1>404</h1>
+        <p>Page Not Found</p>
+      </div>
+
+      <div id="countdown-container">
+        <p>我们将在 <span id="countdown-timer">10</span> 秒后自动带您返回首页...
+          <a href="#" id="cancel-redirect-link">或者留在此页</a>。
+        </p>
+      </div>
+
+      <h2>您访问的页面不存在</h2>
+      <p>别担心，让我们帮您找到正确的方向。</p>
+
+      <div id="reason-container" class="reason-box">
+        <!-- JS 动态内容 -->
+      </div>
+
+      <div id="action-container">
+        <!-- JS 动态内容 -->
+      </div>
+
+    </div>
+  </article>
+</div>
+
+<!-- JS 逻辑 -->
+<script>
+  // 获取所有需要的 DOM 元素
+  var reasonContainer = document.getElementById('reason-container');
+  var countdownContainer = document.getElementById('countdown-container');
+  var countdownTimer = document.getElementById('countdown-timer');
+  var actionContainer = document.getElementById('action-container');
+  var cancelLink = document.getElementById('cancel-redirect-link');
+
+  var currentPath = window.location.pathname;
+  var referrer = document.referrer;
+  var homepageUrl = "{{ config.site_url | url }}";
+  var githubRepoUrl = "https://github.com/NCUSCC/cs4ncu"; // 更新的项目地址
+  var githubIssueUrl = githubRepoUrl + "/issues/new?template=bug_report.md";
+
+  var message = "<h3>情况分析</h3><p>您尝试访问的地址 <code>" + currentPath + "</code> 无法找到。</p><p>您可以：</p><ul><li>检查地址栏中的拼写是否正确。</li><li>使用页面顶部的搜索功能查找相关内容。</li></ul>";
+  if (referrer && referrer.startsWith(window.location.origin)) {
+    message = "<h3>情况分析</h3><p>我们发现您可能是通过我们网站内部的一个链接到达这里的。<br>这很可能是我们的一个疏忽，非常抱歉！</p><p>如果您愿意花些时间帮助我们改进，我们将不胜感激：</p><a href='" + githubIssueUrl + "' target='_blank' rel='noopener'><strong>点击此处提交错误报告</strong></a><p><small>提示：点击后，请在新打开的页面中填写来源和目标链接，感谢！</small></p>";
+  }
+  reasonContainer.innerHTML = message;
+
+  var countdown = 10;
+  var timer = setInterval(function() {
+    countdown--;
+    countdownTimer.textContent = countdown;
+    if (countdown <= 0) {
+      clearInterval(timer);
+      window.location.href = homepageUrl;
+    }
+  }, 1000);
+
+  cancelLink.addEventListener('click', function(event) {
+    event.preventDefault();
+    clearInterval(timer);
+    
+    countdownContainer.style.opacity = '0';
+    setTimeout(function() {
+      countdownContainer.style.display = 'none';
+    }, 300);
+    
+    // 生成单行 | 分隔的链接
+    var helpfulLinksHTML = "<h3>接下来您想？</h3>" +
+      "<div id='action-links-container'>" +
+        "<a href='" + homepageUrl + "'>返回首页</a> | " +
+        "<a href='" + githubRepoUrl + "' target='_blank' rel='noopener'>查看项目源码</a> | " +
+        "<a href='#' id='random-page-link'>随便逛逛 (Feeling Lucky?)</a>" +
+      "</div>";
+    
+    actionContainer.innerHTML = helpfulLinksHTML;
+
+    // 为“随便逛逛”链接添加点击事件
+    document.getElementById('random-page-link').addEventListener('click', function(e) {
+      e.preventDefault();
+      this.textContent = "正在寻找有趣的页面...";
+      fetch('/search/search_index.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data.docs && data.docs.length > 0) {
+            var randomIndex = Math.floor(Math.random() * data.docs.length);
+            var randomPage = data.docs[randomIndex];
+            window.location.href = ('{{ config.site_url | url }}' + randomPage.location).replace(/\/+$/, ''); // Ensure no trailing slash
+          } else {
+            window.location.href = homepageUrl;
+          }
+        })
+        .catch(error => {
+          console.error('Error fetching search index:', error);
+          window.location.href = homepageUrl;
+        });
+    });
+  });
+</script>
+{% endblock %}
