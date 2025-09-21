@@ -1,7 +1,7 @@
 ---
 tags:
-  - Topic-VideoEditing
-  - Topic-CreativeTools
+  - Topic-Productivity 
+  - Action-Learning
   - Level-Beginner
   - Type-Tutorial
 ---
