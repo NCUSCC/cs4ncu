@@ -341,4 +341,4 @@ Adobe 系的软件虽然有着非常明显的分化，但实际协作起来，�
 
 - [Git 与 GitHub 使用指南](../pro/git.md)
 - [更多工具教程](../index.md)
-- [影视飓风/达芬奇教程]https://www.bilibili.com/video/BV1B7411A7M1/?share_source=copy_web&vd_source=164f7a4b5a5edf2a76ebb05a4756b37e
+- [影视飓风/达芬奇教程]（https://www.bilibili.com/video/BV1B7411A7M1/?share_source=copy_web&vd_source=164f7a4b5a5edf2a76ebb05a4756b37e）
