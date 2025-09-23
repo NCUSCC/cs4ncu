@@ -41,3 +41,4 @@ tags:
 *   [@TheEastIsleStoker](https://github.com/TheEastIsleStoker) - 你可以去任何地方 (2025-09-14)
 *   [@bluedinosaur233](https://github.com/bluedinosaur233) - 第一次提交的时候，并没有什么特殊的感觉 (2025-09-14)
 *   [@PingGuoMiaoMiao](https://github.com/PingGuoMiaoMiao) - ciallo～,要一起开源吗!😘 (2025-09-15)
+*   [@HakimYu](https://github.com/HakimYu) - 加入家园工作室谢谢喵❤️ (2025-09-23)
