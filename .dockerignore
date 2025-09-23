@@ -23,7 +23,3 @@ drafts
 # Node/yarn (if ever present)
 node_modules
 *.tsbuildinfo
-
-
-
-
