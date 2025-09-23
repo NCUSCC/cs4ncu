@@ -36,5 +36,3 @@ EXPOSE 8000
 
 # Default command: run mkdocs dev server
 CMD ["mkdocs", "serve", "-a", "0.0.0.0:8000"]
-
-
