@@ -1,0 +1,16 @@
+services:
+  docs:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - ENABLE_COMMITTERS=${ENABLE_COMMITTERS:-false}
+      - GITHUB_TOKEN=${GITHUB_TOKEN:-}
+      - PIP_INDEX_URL=${PIP_INDEX_URL:-https://pypi.tuna.tsinghua.edu.cn/simple}
+    command: mkdocs serve -a 0.0.0.0:8000
+
+
+
+

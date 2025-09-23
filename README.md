@@ -75,6 +75,69 @@
     ```
     在浏览器中打开 `http://127.0.0.1:8000` 即可。
 
+#### 使用 Docker 运行
+
+无需安装本地 Python/uv，直接用 Docker 预览站点：
+
+```bash
+# 方式一：docker compose（推荐，热更新）
+docker compose up --build
+
+# 方式二：纯 docker
+docker build -t cs4ncu-docs .
+docker run --rm -it -p 8000:8000 -v $(pwd):/app \
+  -e ENABLE_COMMITTERS=${ENABLE_COMMITTERS:-false} \
+  -e GITHUB_TOKEN=${GITHUB_TOKEN:-} \
+  cs4ncu-docs
+```
+
+打开 `http://127.0.0.1:8000` 访问。若需启用 `git-committers` 插件，请设置环境变量：
+
+```bash
+export ENABLE_COMMITTERS=true
+export GITHUB_TOKEN=你的GitHubToken
+```
+
+常用 compose 命令：
+
+```bash
+# 后台启动/重建
+docker compose up -d --build
+
+# 查看日志
+docker compose logs -f | cat
+
+# 停止并清理
+docker compose down
+```
+
+拉包/构建过慢？可使用国内镜像加速：
+
+- 临时为容器内 pip 指定镜像（已在 compose 中读取 `PIP_INDEX_URL`）：
+
+```bash
+export PIP_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple
+docker compose up -d --build
+```
+
+- 若构建阶段拉取基础镜像慢，可先手动拉取并打标签（可选）：
+
+```bash
+docker pull docker.m.daocloud.io/library/python:3.12-slim
+docker tag docker.m.daocloud.io/library/python:3.12-slim python:3.12-slim
+```
+
+常见问题：
+
+- 端口已占用：`Bind for 0.0.0.0:8000 failed`
+  - 解决：`docker compose down` 后重启；或改用 `-p 8001:8000` 运行。
+- WSL2 DNS 故障导致拉取失败：`Temporary failure resolving ...`
+  - 解决（暂时）：
+    ```bash
+    sudo bash -c 'printf "nameserver 223.5.5.5\nnameserver 8.8.8.8\n" > /etc/resolv.conf'
+    ```
+  - 建议（长期）：在 `/etc/wsl.conf` 中设置 `generateResolvConf = false`，并手动维护 `/etc/resolv.conf`。
+
 ### 欢迎参与共建
 
 `寻路之南` 的成长离不开每一位社区成员的贡献。我们欢迎任何形式的帮助！

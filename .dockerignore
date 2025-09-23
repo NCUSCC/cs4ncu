@@ -1,0 +1,29 @@
+# VCS
+.git
+.gitignore
+.mailmap
+.weaverignore
+
+# Python/artifacts
+__pycache__
+*.py[cod]
+*.log
+.venv
+.venv*/
+.env
+.env.*
+
+# MkDocs build output
+site
+
+# Local only
+reports
+drafts
+
+# Node/yarn (if ever present)
+node_modules
+*.tsbuildinfo
+
+
+
+
