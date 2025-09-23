@@ -10,7 +10,3 @@ services:
       - GITHUB_TOKEN=${GITHUB_TOKEN:-}
       - PIP_INDEX_URL=${PIP_INDEX_URL:-https://pypi.tuna.tsinghua.edu.cn/simple}
     command: mkdocs serve -a 0.0.0.0:8000
-
-
-
-
