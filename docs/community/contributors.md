@@ -48,3 +48,4 @@ tags:
 *   [@florious0721](https://github.com/florious0721) - Ciallo～(∠・ω< )⌒★ (2025-10-12)
 *   [@bacloud-boop](https://github.com/bacloud-boop) - 走得多远，回头就会看到多少美景 (2025-10-12)
 *   [@LF-luckyfuture](https://github.com/LF-luckyfuture) - 只此前行，莫问荆棘，莫问归期（2025-10-12）
+*   [@Ayeez757](https://github.com/Ayeez757) - 阿叶Ayeez到此一游，大佬们交个朋友吧~我喜欢全栈开发哟！（2025-11-30）
