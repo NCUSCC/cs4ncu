@@ -52,3 +52,4 @@ tags:
 *   [@Pastel420](https://github.com/Pastel420) - 尘心已作沾泥絮，不逐春风上下狂 (2025-10-15)
 *   [@Ayeez757](https://github.com/Ayeez757) - 阿叶Ayeez到此一游，大佬们交个朋友吧~我喜欢全栈开发哟！（2025-11-30）
 *   [@thedyingkai](https://github.com/thedyingkai) - 华风夏韵，洛水天依。 (2025-12-24)
+*   [@wuyanzu828-dev](https://github.com/wuyanzu828-dev) - 塔塔开 (2025-12-27)
