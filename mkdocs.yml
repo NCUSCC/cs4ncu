@@ -325,6 +325,5 @@ extra:
         - icon: material/emoticon-sad-outline
           name: 待改进
           data: 0
-          note:
-            title: 感谢您的反馈！
-            content: 感谢您的反馈！欢迎参考<a href="/NCUSCC/cs4ncu/main/community/contributing/how-to-contribute.md" target="_blank">贡献指南</a>，告诉我们如何做的更好。
+          note: >-
+            感谢您的反馈！欢迎参考<a href="community/contributing/how-to-contribute.md">提议指南</a>，告诉我们如何做得更好。
