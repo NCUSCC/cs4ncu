@@ -55,3 +55,4 @@ tags:
 *   [@wuyanzu828-dev](https://github.com/wuyanzu828-dev) - 塔塔开 (2025-12-27)
 *   [@beijiezaici](https://github.com/beijiezaici) -我是一只刚蜕壳，头一次以自己的声音嘶叫的蝉。  (2026-1-19)
 *   [@AriaLEntropy](https://github.com/AriaLEntropy) - 勇敢为你，无畏地做白日梦。 (2026-2-07)
+*   [@silunuo](https://github.com/silunuo) - 关注塔菲喵，关注塔菲谢谢喵 (2026-02-21)
