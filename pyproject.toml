@@ -1,3 +1,7 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "cs4ncu"
 version = "0.1.0"
@@ -17,9 +21,11 @@ dependencies = [
     "typer>=0.16.1",
 ]
 
-[tool.completion-analyzer]
-# --- 可选配置 ---
+[tool.uv]
+package = true
 
+[tool.completion-analyzer]
+# Markdown 报告为生成文件，默认输出到 docs/COMPLETION_REPORT.md
 md_output = "docs/COMPLETION_REPORT.md"
 
 csv_output = "reports/completion_report.csv"
@@ -31,6 +37,7 @@ min_chars = 50
 good_chars = 500
 
 [project.scripts]
+# 对外统一命令入口
 mtag = "tools.manage_tags:main"
 cana = "tools.completion_analyzer:main"
 

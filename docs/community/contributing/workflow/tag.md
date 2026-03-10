@@ -51,13 +51,13 @@ tags:
 
 ### 单一事实来源 (Single Source of Truth)
 
-项目中所有合法的、官方认可的标签都被统一记录在根目录下的 `tag_dictionary.yml` 文件中。这个文件是整个标签系统的“宪法”，所有自动化校验都以此为准。**任何时候都不应手动编辑此文件**，应通过我们提供的管理脚本进行维护。
+项目中所有合法的、官方认可的标签都被统一记录在根目录下的 `tag_dictionary.yml` 文件中。这个文件是整个标签系统的“宪法”，所有自动化校验都以此为准。**任何时候都不应手动编辑此文件**，应通过 `uv run mtag sync` 进行维护。
 
 ---
 
 ## 自动化管理脚本使用指南
 
-为了让标签管理变得轻松，我们开发了 `tools/manage_tags.py` 脚本。它是一个强大的助手，能帮你完成所有检查和维护工作。
+为了让标签管理变得轻松，我们提供了统一命令入口 `mtag`。它对应的实现脚本是 `tools/manage_tags.py`，负责完成标签检查与维护。
 
 ### 环境准备
 
@@ -81,7 +81,7 @@ uv sync
 
 **如何运行**：
 ```bash title="运行交互式同步"
-uv run tools/manage_tags.py sync
+uv run mtag sync
 ```
 
 **工作流程**：
@@ -93,7 +93,7 @@ uv run tools/manage_tags.py sync
 3.  **智能管理**：
     -   **拼写建议**：如果某个未知标签与词典中的某个标签非常相似（例如 `Type-Guied` vs `Type-Guide`），它会**智能地询问你是否写错了**，并引导你进行修正。
     -   **添加新标签**：对于确认无误的新标签，它会询问你是否要将其添加到官方词典中。
-4.  **自动更新**：在你确认添加新标签后，脚本会自动更新 `tag_dictionary.yml` 文件，并重新生成 `docs/tags.md` 索引页。
+4.  **自动更新**：在你确认添加新标签后，脚本会自动更新 `tag_dictionary.yml` 文件，并重新生成生成文件 `docs/tags.md`。该文件不应手工编辑。
 
 #### 模式二：自动化检查模式 (`check`)
 
@@ -101,7 +101,7 @@ uv run tools/manage_tags.py sync
 
 **如何运行 (本地模拟)**：
 ```bash title="运行自动化检查"
-uv run tools/manage_tags.py check
+uv run mtag check
 ```
 
 **工作流程**：
@@ -116,6 +116,6 @@ uv run tools/manage_tags.py check
 !!! alert "安全须知：为何不自动替换？"
     脚本在 `sync` 模式下，对于识别出的拼写错误，会引导你**手动修改**文件，而不是自动替换。这是一个安全措施，旨在防止脚本意外地、错误地修改你的文件内容，保证你对每一次修改都有最终的控制权。
 
--   **保持更新**: 如果你修改了 `tools/manage_tags.py` 脚本本身，请务必在本地运行 `sync` 和 `check` 模式，确保脚本逻辑的正确性。
+-   **保持更新**: 如果你修改了 `tools/manage_tags.py` 脚本本身，请务必在本地运行 `uv run mtag sync` 和 `uv run mtag check`，确保脚本逻辑的正确性。
 
 我们相信，通过这套规范的标签系统和强大的自动化工具，`CS4NCU` 知识库的质量和可用性将达到一个新的高度。感谢每一位遵循规范、严谨认真的贡献者！

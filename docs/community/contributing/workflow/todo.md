@@ -7,7 +7,7 @@ tags:
 
 # 内容完成度分析脚本：使用与配置指南
 
-`tools/completion_analyzer.py` 是 `CS4NCU` 项目的一个内部质量保证工具，旨在自动化地分析整个知识库的内容完成情况。
+`cana` 是 `CS4NCU` 项目的一个内部质量保证工具，对应实现脚本为 `tools/completion_analyzer.py`，旨在自动化地分析整个知识库的内容完成情况。
 
 !!! declaration "设计目的"
     本脚本的核心任务是回答一个问题：“我们项目的哪些部分已经充实，哪些部分还是空架子？”
@@ -41,7 +41,7 @@ uv sync
 直接在项目根目录运行以下命令即可生成最新的报告：
 
 ```bash title="执行分析并生成报告"
-uv run tools/completion_analyzer.py
+uv run cana
 ```
 
 脚本执行完毕后，会打印出报告的保存路径和一份简要的完成情况汇总。
@@ -49,7 +49,7 @@ uv run tools/completion_analyzer.py
 **静默模式**：如果你只想生成报告文件而不在终端看到汇总信息，可以添加 `--quiet` 参数。
 
 ```bash
-uv run tools/completion_analyzer.py --quiet
+uv run cana --quiet
 ```
 
 ---
@@ -62,7 +62,7 @@ uv run tools/completion_analyzer.py --quiet
 [tool.completion-analyzer]
 # --- 可选配置 ---
 
-# Markdown 报告的输出路径
+# Markdown 报告的输出路径（生成文件，请勿手动编辑）
 md_output = "docs/COMPLETION_REPORT.md"
 
 # CSV 报告的输出路径
@@ -84,7 +84,7 @@ good_chars = 500
 ## 解读报告
 
 !!! info "如何解读 Markdown 报告？"
-    生成的 Markdown 报告 (`COMPLETION_REPORT.md`) 是你了解项目进度的主要窗口。
+    生成的 Markdown 报告 (`COMPLETION_REPORT.md`) 是你了解项目进度的主要窗口。该文件为生成文件，请通过 `uv run cana` 更新，而不要手工修改。
 
     -   **层级结构**：报告的标题层级完全复制自 `mkdocs.yml` 中的 `nav` 结构，让你对项目全貌一目了然。
     -   **进度计数器**：每个章节标题后面都会有一个 `(x/y)` 格式的进度计数器，例如 `(5/12)`，表示该章节下共有 12 篇文章，其中 5 篇被判断为“内容充实”。
