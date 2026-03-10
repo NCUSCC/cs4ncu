@@ -124,7 +124,7 @@ nav:
   - '寻路通识课':
     - '开始之前':
       - '先别慌，我们聊聊': 'growth-general-course/00-before-we-start/prologue-the-start.md'
-      - '全站导览': 'growth-general-course/00-before-we-start/overview.md'
+      - '全站导览与推荐路径': 'growth-general-course/00-before-we-start/overview.md'
     - '本科生通识第零课':
       - '核心原则': 'growth-general-course/01-the-zero-course/the-core.md'   
       - '完整课程导览': 'growth-general-course/01-the-zero-course/index.md'
@@ -215,8 +215,8 @@ nav:
 
 
 
-  - '昌大专属资源库':
-    - '本部分导览': 'ncu-exclusive/index.md'
+  - '昌大专属':
+    - '入口与说明': 'ncu-exclusive/index.md'
     - '学业发展':
       # --- 以下为普适性单页内容 ---
       - '培养方案全解': 'ncu-exclusive/academic-development/program-guide.md'
