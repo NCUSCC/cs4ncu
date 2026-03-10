@@ -1,85 +1,65 @@
 # mkdocs.yml
 
-# --- 网站基本信息 ---
 site_name: 寻路之南
 site_url: https://cs4ncu.space/
 site_author: NCUSCC & Community Contributors
 site_description: '寻路之南——写给普通人的大学成长指南。我们由一群普通本科生发起，致力于分享一套从自我认知开始的成长方法论。'
 
-# --- 仓库信息 ---
 repo_name: NCUSCC/cs4ncu
 repo_url: https://github.com/NCUSCC/cs4ncu
-edit_uri: 'edit/main/docs/' # 允许用户直接在 GitHub 上编辑页面
+edit_uri: 'edit/main/docs/'
 
-# 版权信息
 copyright: Copyright &copy; cs4ncu 2024 ~ now | 南昌大学超算俱乐部 NCUSCC
 
-# --- 主题配置 ---
 theme:
   name: material
-  language: zh # 设置语言为中文
+  language: zh
   favicon: assets/ncuscc-logo.svg
   custom_dir: overrides
 
   icon:
     logo: my-logo/logo
 
-  # --- 外观与功能 ---
-  # 我们在这里配置日夜间模式切换器。
-  # 具体的颜色将由 extra.css 文件精确控制。
   palette:
   - scheme: default
-    primary: custom  # <-- 激活自定义颜色
-    accent: custom   # <-- 激活自定义颜色
+    primary: custom
+    accent: custom
     toggle:
       icon: material/brightness-7
       name: 切换到夜间模式
 
-  # 夜间模式：告诉主题使用你在 CSS 中定义的 'slate' 方案
   - scheme: slate
-    primary: custom  # <-- 激活自定义颜色
-    accent: custom   # <-- 激活自定义颜色
+    primary: custom
+    accent: custom
     toggle:
       icon: material/brightness-4
       name: 切换到日间模式
 
-  # 字体配置 (你的设置很好，予以保留)
   font:
     text: 'Roboto'
     code: 'JetBrains Mono'
 
-  # Logo 和 Favicon (建议添加)
-  # logo: assets/images/logo.svg
-  # favicon: assets/images/favicon.png
-
-  # 增强功能
   features:
-    - navigation.tabs # 启用顶部标签页导航
-    - navigation.sections # 左侧导航自动展开子章节
-    - content.code.copy # 为所有代码块添加“复制”按钮
-    - content.code.annotate # 允许代码块注释
-    - search.suggest # 搜索时提供建议
-    - navigation.tags 
+    - navigation.tabs
+    - navigation.sections
+    - content.code.copy
+    - content.code.annotate
+    - search.suggest
+    - navigation.tags
     - content.action.view
     - navigation.top
-    - navigation.footer  # 显示文档底部区域（导航指示器依赖此区域）
+    - navigation.footer
     - navigation.prev_next
 
-# --- 插件配置 (强烈建议添加) ---
 plugins:
   - search:
-      lang: zh # 启用中文搜索支持
-  - tags   # 启用标签系统
+      lang: zh
+  - tags
   - git-committers:
       repository: NCUSCC/cs4ncu
       branch: main
       token: !ENV GITHUB_TOKEN
-      # 仅当环境变量 ENABLE_COMMITTERS=true 时才启用此插件
-      # 默认情况下 (本地开发), 此插件是禁用的
       enabled: !ENV [ENABLE_COMMITTERS, false]
-
-# --- Markdown 扩展 (增强内容显示) ---
-# 合并后的 mkdocs.yml 配置
 
 markdown_extensions:
   # --- 基础与美化扩展 ---
@@ -114,10 +94,9 @@ markdown_extensions:
 
   - pymdownx.inlinehilite
 
-  # Highlight: 为代码块提供语法高亮 (合并了两个列表的配置)
   - pymdownx.highlight:
-      anchor_linenums: true # 允许链接到代码的特定行
-      line_spans: __span    # (来自第二个列表) 方便 CSS 进行更细致的样式控制
+      anchor_linenums: true
+      line_spans: __span
       pygments_lang_class: true
 
   # InlineHilite: 支持行内代码高亮
@@ -236,7 +215,6 @@ nav:
 
 
 
-  # 顶层导航 4: 昌大专属附录
   - '昌大专属资源库':
     - '本部分导览': 'ncu-exclusive/index.md'
     - '学业发展':
@@ -262,7 +240,7 @@ nav:
   - '社区与共建':
     - '我们的初心': 'community/our-story.md'
     - '打卡教程': 'community/how-to-check-in.md'
-    - '路友打卡墙': 'community/contributors.md' # <- 我将'打卡墙'改成了更标准的'路友打卡墙'
+    - '路友打卡墙': 'community/contributors.md'
     - '友联与推荐': 'community/friends.md'
     - '项目共建指南':
       - '核心准则':
@@ -272,7 +250,7 @@ nav:
         - '搭建基础环境': 'community/contributing/development-setup.md'
         - '分支保护策略': 'community/contributing/branch-protection.md'
         - '网站部署': 'community/contributing/deployment.md'
-        - '智能 PR 验证系统': 'community/contributing/pr-workflow-guide.md'
+        - 'PR 校验工作流': 'community/contributing/pr-workflow-guide.md'
         - 'Tag 系统': 'community/contributing/workflow/tag.md'
         - '内容完成度分析': 'community/contributing/workflow/todo.md'
       - '开发实践指南':
@@ -290,12 +268,12 @@ nav:
     - '标签索引': 'tags.md'
     - '项目进度': 'COMPLETION_REPORT.md'
 
-# --- 自定义文件链接 (你的设置很好，予以保留) ---
 extra_css:
   - 'css/extra.css'
   - https://unpkg.com/katex@0/dist/katex.min.css
 extra_javascript:
   - javascripts/readingProgress.js
+  - javascripts/404.js
   - javascripts/katex.js
   - https://unpkg.com/katex@0/dist/katex.min.js
   - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
@@ -306,14 +284,13 @@ extra:
   social:
   - icon: simple/github
     link: https://github.com/NCUSCC
-  - icon: fontawesome/brands/qq # <--- 示例
+  - icon: fontawesome/brands/qq
     link: https://qm.qq.com/q/VLuObOsLg4
-  - icon: fontawesome/brands/discord # <--- 示例
+  - icon: fontawesome/brands/discord
     link: https://discord.gg/Rux6DHRStP
-extra:
   analytics:
     provider: google
-    property: G-LGCE6HDLE5 # 替换为您的 Google Analytics ID
+    property: G-LGCE6HDLE5
     feedback:
       title: 这个页面对你有帮助吗？
       ratings:
