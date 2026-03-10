@@ -1,31 +1,31 @@
 # 内容完成情况报告
 > 本页为生成文件，请勿手动编辑。如需更新，请运行 `uv run cana`。
-> 报告生成时间：2026-03-10 13:58:58
+> 报告生成时间：2026-03-10 16:32:34
 
 ## 报告上下文
-- **版本来源**: [`7375391`](https://github.com/NCUSCC/cs4ncu/commit/7375391967ba7885acdeb361120e40c88b03d824) - *docs: add my signature to the wall (#157)*
+- **版本来源**: [`b2feb32`](https://github.com/NCUSCC/cs4ncu/commit/b2feb32dc1217ef64e4b6a0a210e6a8817517457) - *chore: regenerate generated documentation outputs*
 - **生成脚本**: `cana`
 
 ## 完成度概览
 - `[ ]` 表示待办或内容不足
 - `[x]` 表示已完成或内容充实
 
-- [x] **首页** (`index.md`) - *3058字，substantial*
+- [x] **首页** (`index.md`) - *3647字，substantial*
 
-## 寻路通识课 (12/13)
+## 寻路通识课 (13/13)
 
-### 开始之前 (1/2)
-- [x] **先别慌，我们聊聊** (`growth-general-course/00-before-we-start/prologue-the-start.md`) - *1403字，substantial*
-- [ ] **全站导览** (`growth-general-course/00-before-we-start/overview.md`) - *66字，basic*
+### 开始之前 (2/2)
+- [x] **先别慌，我们聊聊** (`growth-general-course/00-before-we-start/prologue-the-start.md`) - *1372字，substantial*
+- [x] **全站导览与推荐路径** (`growth-general-course/00-before-we-start/overview.md`) - *3857字，substantial*
 
 ### 本科生通识第零课 (11/11)
 - [x] **核心原则** (`growth-general-course/01-the-zero-course/the-core.md`) - *1962字，substantial*
 - [x] **完整课程导览** (`growth-general-course/01-the-zero-course/index.md`) - *937字，substantial*
 
 #### 一：决策的基础 (3/3)
-- [x] **本部分导览** (`growth-general-course/01-the-zero-course/part1/index.md`) - *620字，substantial*
-- [x] **思维模式转换** (`growth-general-course/01-the-zero-course/part1/ch1-mindset.md`) - *1316字，substantial*
-- [x] **自我认知方法** (`growth-general-course/01-the-zero-course/part1/ch2-the-self.md`) - *1917字，substantial*
+- [x] **本部分导览** (`growth-general-course/01-the-zero-course/part1/index.md`) - *589字，substantial*
+- [x] **思维模式转换** (`growth-general-course/01-the-zero-course/part1/ch1-mindset.md`) - *1285字，substantial*
+- [x] **自我认知方法** (`growth-general-course/01-the-zero-course/part1/ch2-the-self.md`) - *1303字，substantial*
 
 #### 二：决策的依据 (3/3)
 - [x] **本部分导览** (`growth-general-course/01-the-zero-course/part2/index.md`) - *631字，substantial*
@@ -37,8 +37,8 @@
 - [x] **设定探索方向** (`growth-general-course/01-the-zero-course/part3/ch5-the-output.md`) - *995字，substantial*
 - [x] **低成本实践与验证** (`growth-general-course/01-the-zero-course/part3/ch6-the-test.md`) - *1248字，substantial*
 
-## 第零点五课堂 (29/47)
-- [x] **本部分导览** (`skills/index.md`) - *599字，substantial*
+## 第零点五课堂 (41/47)
+- [x] **本部分导览** (`skills/index.md`) - *1983字，substantial*
 
 ### 认知与心智 (12/12)
 - [x] **导览** (`skills/mindset/index.md`) - *735字，substantial*
@@ -62,22 +62,22 @@
 - [x] **学会独处** (`skills/mindset/mental/learn-to-be-alone.md`) - *2391字，substantial*
 - [x] **焦虑与内耗** (`skills/mindset/mental/anxiety-impostor.md`) - *2862字，substantial*
 
-### 学会学习 (2/5)
-- [ ] **导览** (`skills/learning/index.md`) - *10字，minimal*
+### 学会学习 (5/5)
+- [x] **导览** (`skills/learning/index.md`) - *1674字，substantial*
 - [x] **元学习** (`skills/learning/meta/meta-learning.md`) - *3089字，substantial*
-- [ ] **信息输入** (`skills/learning/intake/information-intake.md`) - *7字，minimal*
-- [ ] **知识内化** (`skills/learning/consolidation/knowledge-consolidation.md`) - *7字，minimal*
+- [x] **信息输入** (`skills/learning/intake/information-intake.md`) - *2731字，substantial*
+- [x] **知识内化** (`skills/learning/consolidation/knowledge-consolidation.md`) - *2367字，substantial*
 - [x] **精力管理** (`skills/learning/energy/energy-management.md`) - *2603字，substantial*
 
-### 沟通与协作 (3/5)
-- [ ] **导览** (`skills/communication/index.md`) - *11字，minimal*
-- [ ] **沟通技巧** (`skills/communication/skills/communication.md`) - *0字，empty*
+### 沟通与协作 (5/5)
+- [x] **导览** (`skills/communication/index.md`) - *1438字，substantial*
+- [x] **沟通技巧** (`skills/communication/skills/communication.md`) - *2337字，substantial*
 - [x] **构建人际关系网** (`skills/communication/skills/network-of-relationships.md`) - *3699字，substantial*
 - [x] **团队协作** (`skills/communication/teamwork/teamwork.md`) - *1592字，substantial*
 - [x] **人际矛盾处理** (`skills/communication/skills/dealing-conflicts.md`) - *3260字，substantial*
 
-### 工具与系统 (9/16)
-- [ ] **导览** (`skills/tools/index.md`) - *11字，minimal*
+### 工具与系统 (13/16)
+- [x] **导览** (`skills/tools/index.md`) - *1756字，substantial*
 
 #### 数字素养 (3/4)
 - [x] **电脑认知** (`skills/tools/literacy/computer-basics.md`) - *2642字，substantial*
@@ -85,10 +85,10 @@
 - [ ] **网络工具** (`skills/tools/literacy/network-proxy.md`) - *0字，empty*
 - [x] **版本选择** (`skills/tools/literacy/version-control.md`) - *3944字，substantial*
 
-#### 信息管理 (0/3)
-- [ ] **云笔记** (`skills/tools/pkm/cloud-notes.md`) - *6字，minimal*
+#### 信息管理 (2/3)
+- [x] **云笔记** (`skills/tools/pkm/cloud-notes.md`) - *2322字，substantial*
 - [ ] **协作文档** (`skills/tools/pkm/collaboration-docs.md`) - *7字，minimal*
-- [ ] **任务管理** (`skills/tools/pkm/task-management.md`) - *7字，minimal*
+- [x] **任务管理** (`skills/tools/pkm/task-management.md`) - *2329字，substantial*
 
 #### 生产力工具 (6/6)
 - [x] **Git** (`skills/tools/pro/git.md`) - *2434字，substantial*
@@ -98,28 +98,28 @@
 - [x] **Docker** (`skills/tools/pro/docker.md`) - *4232字，substantial*
 - [x] **Premiere Pro** (`skills/tools/pro/premiere.md`) - *11573字，substantial*
 
-#### VS Code 指南 (0/2)
-- [ ] **导览与配置** (`skills/tools/vscode/index.md`) - *0字，empty*
+#### VS Code 指南 (1/2)
+- [x] **导览与配置** (`skills/tools/vscode/index.md`) - *2547字，substantial*
 - [ ] **插件推荐** (`skills/tools/vscode/extensions.md`) - *0字，empty*
 
-### 成长与规划 (2/8)
-- [ ] **导览** (`skills/growth/index.md`) - *11字，minimal*
+### 成长与规划 (5/8)
+- [x] **导览** (`skills/growth/index.md`) - *1642字，substantial*
 
-#### 财务管理 (0/2)
-- [ ] **财商启蒙** (`skills/growth/finance/financial-literacy.md`) - *7字，minimal*
+#### 财务管理 (1/2)
+- [x] **财商启蒙** (`skills/growth/finance/financial-literacy.md`) - *2258字，substantial*
 - [ ] **聪明消费** (`skills/growth/finance/smart-spending.md`) - *0字，empty*
 
 #### 身体健康 (1/1)
 - [x] **健康管理** (`skills/growth/health/healthy-management.md`) - *2561字，substantial*
 
-#### 机遇探索 (1/4)
+#### 机遇探索 (2/4)
 - [ ] **信息差** (`skills/growth/opportunity/information-gap.md`) - *0字，empty*
 - [ ] **开源之旅** (`skills/growth/opportunity/open-source-journey.md`) - *0字，empty*
 - [x] **实验班解读** (`skills/growth/opportunity/innovation-classes.md`) - *3017字，substantial*
-- [ ] **职业规划** (`skills/growth/opportunity/career-planning.md`) - *7字，minimal*
+- [x] **职业规划** (`skills/growth/opportunity/career-planning.md`) - *2621字，substantial*
 
-## 昌大专属资源库 (4/11)
-- [ ] **本部分导览** (`ncu-exclusive/index.md`) - *73字，basic*
+## 昌大专属 (5/11)
+- [x] **入口与说明** (`ncu-exclusive/index.md`) - *1509字，substantial*
 
 ### 学业发展 (3/6)
 - [ ] **培养方案全解** (`ncu-exclusive/academic-development/program-guide.md`) - *15字，minimal*
@@ -145,11 +145,11 @@
 - [ ] **体育与体测** (`ncu-exclusive/campus-life/pe-and-fitness-tests.md`) - *0字，empty*
 - [x] **新生军训** (`ncu-exclusive/campus-life/military-training.md`) - *1989字，substantial*
 
-## 社区与共建 (19/20)
-- [ ] **我们的初心** (`community/our-story.md`) - *11字，minimal*
-- [x] **打卡教程** (`community/how-to-check-in.md`) - *2338字，substantial*
-- [x] **路友打卡墙** (`community/contributors.md`) - *2965字，substantial*
-- [x] **友联与推荐** (`community/friends.md`) - *537字，substantial*
+## 社区与共建 (20/20)
+- [x] **我们的初心** (`community/our-story.md`) - *2634字，substantial*
+- [x] **打卡教程** (`community/how-to-check-in.md`) - *2416字，substantial*
+- [x] **路友打卡墙** (`community/contributors.md`) - *3346字，substantial*
+- [x] **友联与推荐** (`community/friends.md`) - *1030字，substantial*
 
 ### 项目共建指南 (16/16)
 
@@ -181,4 +181,4 @@
 
 ## 索引 (2/2)
 - [x] **标签索引** (`tags.md`) - *1581字，substantial*
-- [x] **项目进度** (`COMPLETION_REPORT.md`) - *8362字，substantial*
+- [x] **项目进度** (`COMPLETION_REPORT.md`) - *8642字，substantial*
