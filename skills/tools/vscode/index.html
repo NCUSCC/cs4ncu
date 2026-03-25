@@ -91,6 +91,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#vscode" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -2568,6 +2573,21 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    导览与配置
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -2580,6 +2600,79 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      前言
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      编辑器还需编译器
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lsp" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置LSP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      工作区与项目结构
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tasksjson-launchjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      tasks.json 与 launch.json
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      调试程序
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4612,6 +4705,70 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      前言
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      编辑器还需编译器
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lsp" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置LSP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      工作区与项目结构
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tasksjson-launchjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      tasks.json 与 launch.json
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      调试程序
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -4638,9 +4795,102 @@
   
 
 
-  <h1>导览与配置</h1>
-
-
+<h1 id="vscode">无伤通关VSCode配置攻略<a class="headerlink" href="#vscode" title="Permanent link">&para;</a></h1>
+<h2 id="_1">前言<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p><a href="https://code.visualstudio.com/download">Visual Studio Code</a>，是微软主导开发的一款轻量级、拓展性强的代码编辑器。相较于Windows下的记事本或macOS下的TextEdit，VSCode可以提供代码高亮、Git可视化、便捷调试等功能。而相较于Visual Studio、XCode等IDE，VSCode更加轻量，启动速度快，占用资源少。</p>
+<p>对不少初学者来说，劝退的往往不是写代码本身，而是如何拥有一个舒适的开发环境。本节将以C语言为例，教大家上手VSCode。</p>
+<h2 id="_2">编辑器还需编译器<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>VScode本身只能用于编辑代码文本，要借助它来写编程语言，则还需要安装对应的编译器和插件。C语言常用的编译器包括GCC，Clang，MSVC。而Intel、AMD、ARM、苹果、英伟达等厂商则会提供针对自家芯片专门优化的编译器，例如ICC、AOCC、ARM Compiler等。</p>
+<p>对Windows用户：</p>
+<ul>
+<li><a href="https://www.mingw-w64.org/downloads/">MinGW</a>（Minimalist GNU for Windows）能将编译器依赖的工具和库移植到Windows上，从而编译出原生Windows程序。WinLibs提供了MinGW的预编译版本，推荐使用。</li>
+<li><a href="https://www.cygwin.com/">Cygwin</a>（Comprehensive GNU/Linux-like environment for Windows）运行了一个兼容层，能将Linux的系统调用翻译为Windows版本，但性能开销较大。</li>
+<li><a href="https://www.msys2.org/">MSYS2</a>（Minimal SYStem 2）基于 Cygwin提供了Linux命令行环境，同时安装了MinGW子环境，可以编译原生Windows程序。</li>
+<li><a href="https://visualstudio.microsoft.com/downloads/?q=build+tools#build-tools-for-visual-studio-2026">Build Tools for Visual Studio</a> 微软官方的C/C++编译器，适合开发Windows平台程序。</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">LLDB调试</p>
+<p>由于微软的C++插件只支持MI调试协议，而Clang只支持DAP协议，因此要在VSCode上调试Clang编译出的程序，需要安装CodeLLDB或LLDB DAP插件。</p>
+</div>
+<p>对macOS用户：</p>
+<ul>
+<li>xcode-select --install 苹果维护的Clang编译器</li>
+<li><a href="https://brew.sh/">Homebrew</a> 安装GCC、LLVM</li>
+</ul>
+<p>对Linux用户：</p>
+<ul>
+<li>想必无需多讲</li>
+</ul>
+<p>在安装完编译器后，你还需要将可执行文件的路径放入环境变量PATH，以便程序能直接找到它。MSVC编译器的环境则最好通过自带的.bat脚本按需加载。例如，对Windows用户，按下 <span class="keys"><kbd class="key-windows">Win</kbd><span>+</span><kbd class="key-r">R</kbd></span> ，输入sysdm.cpl，然后点击“环境变量”按钮，将MinGW的bin目录添加到环境变量PATH中。对macOS用户，在~/.zshenv中新增一行</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/opt/homebrew/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+</span></code></pre></div>
+<p>配置完成后，重新启动程序，在终端中输入gcc/clang/cl --version，如果能正确显示版本信息，则表示配置成功。</p>
+<h2 id="lsp">配置LSP<a class="headerlink" href="#lsp" title="Permanent link">&para;</a></h2>
+<p><a href="https://microsoft.github.io/language-server-protocol/">Language Server Protocol</a>定义了编辑器和语言服务器之间的通信协议。语言服务器负责解析代码，提供代码补全、代码跳转、语法检查等功能，而编辑器负责显示和交互。</p>
+<p>在VSCode中，你可以通过安装对应语言的插件来配置LSP。例如安装<a href="https://github.com/microsoft/vscode-cpptools">C/C++</a>插件后，VSCode会自动配置LSP。你也可以使用 <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-p">P</kbd></span> ，搜索执行C/C++: Edit Configurations命令来配置LSP，或者直接修改.vscode/c_cpp_properties.json文件。</p>
+<div class="admonition tip">
+<p class="admonition-title">IntelliSense缓存</p>
+<p>长期使用VSCode可能会导致IntelliSense缓存达到数GB，你可以限制缓存大小C_Cpp.intelliSenseCacheSize，或者将缓存目录C_Cpp.intelliSenseCachePath迁移到D盘。</p>
+</div>
+<h2 id="_3">工作区与项目结构<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>在 VSCode 中，你几乎总是以<strong>文件夹</strong>为单位进行开发——打开一个文件夹，它就成为你的「工作区」，你的编辑、搜索、调试等所有操作都将围绕这个文件夹展开。你也可以通过 <code>文件 → 将文件夹添加到工作区</code> 来同时管理多个项目文件夹，或通过 <code>文件 → 打开最近的文件</code> 快速切换历史工作区。</p>
+<p>一个规整的项目在左侧文件管理器中通常看起来像这样：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>my-project/
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>├── src/        # 源代码
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>├── build/      # 编译产物（通常加入 .gitignore）
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>├── lib/        # 第三方依赖库
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>├── docs/       # 文档
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>└── .vscode/    # VSCode 配置（tasks.json, launch.json 等）
+</span></code></pre></div>
+<p>养成良好的目录结构习惯，不仅让自己思路清晰，也方便日后与他人协作。</p>
+<h2 id="tasksjson-launchjson">tasks.json 与 launch.json<a class="headerlink" href="#tasksjson-launchjson" title="Permanent link">&para;</a></h2>
+<p>VSCode 通过 <code>.vscode</code> 文件夹内的两个 JSON 配置文件来管理构建与调试流程：</p>
+<p><strong><code>tasks.json</code></strong> —— 负责构建（编译）</p>
+<p>它定义了如何调用编译器，把你的源代码变成可执行文件。每个「任务」（task）通常包括：使用哪个编译器（<code>command</code>）、传递哪些参数（<code>args</code>，如 <code>-g</code> 参数（GCC/Clang）或 <code>/Zi</code>（MSVC）生成调试信息、<code>-o</code> 指定输出路径）。你可以通过 <code>Terminal → Run Build Task</code>（或 <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-b">B</kbd></span>）来手动触发构建。</p>
+<p><strong><code>launch.json</code></strong> —— 负责调试（运行）</p>
+<p>它定义了如何启动调试器，加载你刚编译好的程序并挂载调试器。关键字段包括：<code>preLaunchTask</code>（<code>tasks.json</code> 中对应任务的名称，每次调试前先自动构建）和<code>type</code>(调试器类型，如<code>cppdbg</code>对应DWARF格式、<code>cppvsdbg</code>对应PDB格式）。</p>
+<div class="admonition tip">
+<p class="admonition-title">自动生成配置</p>
+<p>你不必从零手写这两个文件。在 VSCode 中打开一个 <code>.c</code>或<code>.cpp</code> 文件，点击右上角的「运行」按钮，或者按下 <span class="keys"><kbd class="key-f5">F5</kbd></span>，VSCode 会引导你选择编译器并自动生成初始配置，这通常是最快的上手方式。</p>
+</div>
+<h2 id="_4">调试程序<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>当你发现运行结果与预期不符，但又找不到问题时，就轮到调试功能出马了。调试程序是指在程序运行过程中，暂停程序，检查或修改变量的值，从而找出问题所在。</p>
+<p>常用的调试快捷键如下：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">快捷键</th>
+<th style="text-align: left;">功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><span class="keys"><kbd class="key-f5">F5</kbd></span></td>
+<td style="text-align: left;"><strong>继续运行</strong>（跑到下一个断点）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="keys"><kbd class="key-f10">F10</kbd></span></td>
+<td style="text-align: left;"><strong>单步跳过</strong>（执行当前行，不进入函数）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="keys"><kbd class="key-f11">F11</kbd></span></td>
+<td style="text-align: left;"><strong>单步进入</strong>（进入当前行调用的函数内部）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-f11">F11</kbd></span></td>
+<td style="text-align: left;"><strong>单步跳出</strong>（从当前函数中跳出，返回调用处）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-f5">F5</kbd></span></td>
+<td style="text-align: left;"><strong>停止调试</strong></td>
+</tr>
+</tbody>
+</table>
+<p>在调试过程中，左侧「运行与调试」面板会显示当前的<strong>变量值</strong>（Variables）、<strong>调用栈</strong>（Call Stack）和<strong>断点列表</strong>（Breakpoints）。你可以在代码行号左侧单击来切换断点，当程序运行到断点处时会暂停。对于调用栈顶函数之外的变量，如全局变量，可以在「监视」（Watch）面板中手动输入变量名或表达式来实时观察其变化。</p>
+<div class="admonition tip">
+<p class="admonition-title">调试 vs 直接运行</p>
+<p>如果你只想运行程序而不需要调试，可以在 <code>tasks.json</code> 中创建一个不带 <code>-g</code> 参数的 Release 构建任务，并通过 <code>Terminal → Run Task</code> 触发。这样编译出的程序体积更小、运行速度更快。</p>
+</div>
 
 
 
@@ -4666,14 +4916,19 @@
     
     <nav>
       
-        <a href="https://github.com/ywh555hhh" class="md-author" title="@ywh555hhh">
+        <a href="https://github.com/McTr0" class="md-author" title="@McTr0">
           
-          <img src="https://avatars.githubusercontent.com/u/121592812?v=4&size=72" alt="ywh555hhh">
+          <img src="https://avatars.githubusercontent.com/u/59308218?v=4&size=72" alt="McTr0">
         </a>
       
         <a href="https://github.com/web-flow" class="md-author" title="@web-flow">
           
           <img src="https://avatars.githubusercontent.com/u/19864447?v=4&size=72" alt="web-flow">
+        </a>
+      
+        <a href="https://github.com/ywh555hhh" class="md-author" title="@ywh555hhh">
+          
+          <img src="https://avatars.githubusercontent.com/u/121592812?v=4&size=72" alt="ywh555hhh">
         </a>
       
       
