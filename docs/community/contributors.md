@@ -56,3 +56,4 @@ tags:
 *   [@beijiezaici](https://github.com/beijiezaici) -我是一只刚蜕壳，头一次以自己的声音嘶叫的蝉。  (2026-1-19)
 *   [@AriaLEntropy](https://github.com/AriaLEntropy) - 勇敢为你，无畏地做白日梦。 (2026-2-07)
 *   [@xue274](https://github.com/xue274) - 来自惠州的打卡，认识你们我很开心。😘 (2026-2-23)
+*   [@Juster955](https://github.com/Juster955) - 爱来自XDU。向前辈致敬o7 (2026-6-27)
