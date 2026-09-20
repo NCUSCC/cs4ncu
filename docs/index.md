@@ -115,3 +115,96 @@
     **[:octicons-arrow-right-24: 查看友联推荐](./community/friends.md)**
 
 </div>
+
+---
+
+## :material-bookshelf: 目前已完成的文档
+
+!!! info "维护说明"
+    由于项目的主要维护人员都陆续在准备升学，或正忙于其他重要事务，后续文档更新可能会暂时搁置。已经完成的内容仍会保留并正常开放阅读，感谢大家一直以来的关注、阅读与共建。
+
+以下是目前已经撰写完毕、可以直接阅读的文档。
+
+### 寻路通识课
+
+- [先别慌，我们聊聊](./growth-general-course/00-before-we-start/prologue-the-start.md)
+- [核心原则](./growth-general-course/01-the-zero-course/the-core.md)
+- [完整课程导览](./growth-general-course/01-the-zero-course/index.md)
+- [第一部分导览：决策的基础](./growth-general-course/01-the-zero-course/part1/index.md)
+- [思维模式转换](./growth-general-course/01-the-zero-course/part1/ch1-mindset.md)
+- [自我认知方法](./growth-general-course/01-the-zero-course/part1/ch2-the-self.md)
+- [第二部分导览：决策的依据](./growth-general-course/01-the-zero-course/part2/index.md)
+- [信息辨析能力](./growth-general-course/01-the-zero-course/part2/ch3-information-filter.md)
+- [信息获取入门](./growth-general-course/01-the-zero-course/part2/ch4-info-gathering.md)
+- [第三部分导览：决策的实践](./growth-general-course/01-the-zero-course/part3/index.md)
+- [设定探索方向](./growth-general-course/01-the-zero-course/part3/ch5-the-output.md)
+- [低成本实践与验证](./growth-general-course/01-the-zero-course/part3/ch6-the-test.md)
+
+### 第零点五课堂
+
+#### 认知与心智
+
+- [认知与心智导览](./skills/mindset/index.md)
+- [优绩主义](./skills/mindset/fixed/meritocracy.md)
+- [名校情结](./skills/mindset/fixed/elite-complex.md)
+- [做题家思维](./skills/mindset/fixed/solver-mindset.md)
+- [幸存者偏差](./skills/mindset/bias/survivorship-bias.md)
+- [确认偏差](./skills/mindset/bias/confirmation-bias.md)
+- [沉没成本](./skills/mindset/bias/sunk-cost.md)
+- [贝叶斯法则](./skills/mindset/model/bayesian-thinking.md)
+- [合作与博弈](./skills/mindset/model/collaboration.md)
+- [冒名顶替综合征](./skills/mindset/mental/impostor-syndrome.md)
+- [学会独处](./skills/mindset/mental/learn-to-be-alone.md)
+- [焦虑与内耗](./skills/mindset/mental/anxiety-impostor.md)
+
+#### 学习、沟通与成长
+
+- [元学习](./skills/learning/meta/meta-learning.md)
+- [精力管理](./skills/learning/energy/energy-management.md)
+- [构建人际关系网](./skills/communication/skills/network-of-relationships.md)
+- [团队协作](./skills/communication/teamwork/teamwork.md)
+- [人际矛盾处理](./skills/communication/skills/dealing-conflicts.md)
+- [健康管理](./skills/growth/health/healthy-management.md)
+- [实验班解读](./skills/growth/opportunity/innovation-classes.md)
+
+#### 工具与系统
+
+- [电脑认知](./skills/tools/literacy/computer-basics.md)
+- [高效打字](./skills/tools/literacy/typing.md)
+- [版本选择](./skills/tools/literacy/version-control.md)
+- [Git](./skills/tools/pro/git.md)
+- [Linux](./skills/tools/pro/linux.md)
+- [LaTeX](./skills/tools/pro/latex.md)
+- [Prompt Engineering](./skills/tools/pro/prompt-engineering.md)
+- [Docker](./skills/tools/pro/docker.md)
+- [Premiere Pro](./skills/tools/pro/premiere.md)
+- [VS Code 配置指南](./skills/tools/vscode/index.md)
+
+### 昌大专属资源
+
+- [学分绩点体系](./ncu-exclusive/academic-development/credits-and-gpa.md)
+- [计算机转专业指南](./ncu-exclusive/major-transfer/cs.md)
+- [计算机科学与技术专业保研指南](./ncu-exclusive/postgraduate-recommendation/cs.md)
+- [新生军训指南](./ncu-exclusive/campus-life/military-training.md)
+
+### 社区与共建
+
+- [打卡教程](./community/how-to-check-in.md)
+- [路友打卡墙](./community/contributors.md)
+- [友联与推荐](./community/friends.md)
+- [行为准则](./community/contributing/code-of-conduct.md)
+- [贡献流程](./community/contributing/how-to-contribute.md)
+- [搭建基础环境](./community/contributing/development-setup.md)
+- [分支保护策略](./community/contributing/branch-protection.md)
+- [网站部署](./community/contributing/deployment.md)
+- [智能 PR 验证系统](./community/contributing/pr-workflow-guide.md)
+- [Tag 系统](./community/contributing/workflow/tag.md)
+- [内容完成度分析](./community/contributing/workflow/todo.md)
+- [调整全局样式（CSS）](./community/contributing/styling.md)
+- [调整项目配色](./community/contributing/colors.md)
+- [调整提示框样式](./community/contributing/admonitions.md)
+- [调整图片样式](./community/contributing/figure.md)
+- [写作规范](./community/contributing/writing-guide.md)
+- [写作指令（Prompt）](./community/contributing/writing-prompt.md)
+- [提示框样式样例](./community/contributing/admonitions-examples.md)
+- [一份开发手记](./community/contributing/development-log.md)
