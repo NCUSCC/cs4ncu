@@ -76,9 +76,9 @@ tags:
     INFO    -  Building documentation...
     INFO    -  Documentation built in 0.78 seconds
     INFO    -  [20:52:55] Watching paths for changes: 'docs', 'mkdocs.yml'
-    INFO    -  [20:52:55] Serving on http://127.0.0.1:8000/cs4ncu/
+    INFO    -  [20:52:55] Serving on http://127.0.0.1:8000/
     ```
-    现在，请在您的浏览器中访问 [http://127.0.0.1:8000/cs4ncu/](http://127.0.0.1:8000/cs4ncu/)，您应该能看到与线上版本完全一致的网站了。
+    现在，请在您的浏览器中访问 [http://127.0.0.1:8000/](http://127.0.0.1:8000/)，您应该能看到与线上版本完全一致的网站了。
 
 !!! tip "热重载 (Hot Reloading)"
     本地服务器带有一个非常方便的功能：热重载。

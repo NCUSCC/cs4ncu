@@ -33,7 +33,7 @@
 
 **我们强烈建议您在线阅读，以获得最佳体验。**
 
-**➡️ [https://ncuscc.github.io/cs4ncu/](https://ncuscc.github.io/cs4ncu/)**（https://cs4ncu.space/ 域名已过期，暂时使用原始域名）
+**➡️ [https://cs4ncu.tech/](https://cs4ncu.tech/)**
 
 ---
 

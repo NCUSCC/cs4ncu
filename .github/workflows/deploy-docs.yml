@@ -96,7 +96,7 @@ jobs:
     needs: cleanup-stale-previews
     environment:
       name: production
-      url: https://ncuscc.github.io/cs4ncu/
+      url: https://cs4ncu.tech/
 
     # 任务中的步骤
     steps:
@@ -234,6 +234,7 @@ jobs:
           destination_dir: .
           keep_files: true  # 保留预览环境文件
           exclude_assets: 'pr-preview/**'
+          cname: cs4ncu.tech
 
       # 步骤 9: 部署后验证
       - name: ✅ 部署验证
@@ -245,7 +246,7 @@ jobs:
           sleep 30
           
           # 验证网站可访问性（可选，需要网站已配置完成）
-          site_url="https://ncuscc.github.io/cs4ncu/"
+          site_url="https://cs4ncu.tech/"
           
           echo "🌐 验证网站可访问性: $site_url"
           
