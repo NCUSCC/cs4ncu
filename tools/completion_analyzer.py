@@ -2,6 +2,9 @@
 """
 内容完成情况分析脚本 (v2.1)
 
+标准命令入口：`uv run cana`
+生成文件：`docs/COMPLETION_REPORT.md`，请勿手动编辑。
+
 从 mkdocs.yml 和 docs 目录分析每个小节的完成情况，
 统计字数并做简单判断，输出 CSV 和 Markdown 格式的报告。
 
@@ -47,7 +50,7 @@ def load_config(repo_path: Path, args: argparse.Namespace) -> Dict[str, Any]:
     """加载配置，优先级：命令行参数 > pyproject.toml > 默认值"""
     # 1. 默认值
     defaults = {
-        "md_output": "docs/reports/COMPLETION_REPORT.md",
+        "md_output": "docs/COMPLETION_REPORT.md",
         "csv_output": "reports/completion_report.csv",
         "min_chars": 50,
         "good_chars": 500,
@@ -118,6 +121,8 @@ class CompletionAnalyzer:
             with open(self.mkdocs_path, "r", encoding="utf-8") as f:
                 content = f.read()
                 content = re.sub(r"!!python/name:[^\s\n]+", '""', content)
+                content = re.sub(r"!ENV\s+\[[^\]]+\]", 'false', content)
+                content = re.sub(r"!ENV\s+[^\s\n]+", '""', content)
                 return yaml.safe_load(content)
         except Exception as e:
             print(f"错误：无法加载或解析 mkdocs.yml: {e}", file=sys.stderr)
@@ -317,7 +322,8 @@ class CompletionAnalyzer:
         output_path.parent.mkdir(parents=True, exist_ok=True)
 
         header = [
-            f"# 内容完成情况报告",
+            "# 内容完成情况报告",
+            "> 本页为生成文件，请勿手动编辑。如需更新，请运行 `uv run cana`。",
             f"> 报告生成时间：{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n",
         ]
         if "error" not in commit_info:

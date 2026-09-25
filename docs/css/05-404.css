@@ -1,0 +1,68 @@
+/* 404 页面样式 */
+.not-found-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.not-found-header h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--md-default-fg-color--light);
+}
+
+.not-found-header p {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+#countdown-container {
+  font-size: 1.1em;
+  padding: 1.5em;
+  margin-bottom: 2.5rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  background-color: var(--md-code-bg-color);
+  border-radius: 0.2rem;
+  transition: opacity 0.3s ease-out;
+}
+
+#countdown-timer {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--md-accent-fg-color);
+}
+
+#cancel-redirect-link {
+  color: var(--md-accent-fg-color);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--md-accent-fg-color);
+}
+
+.reason-box {
+  padding: 1.5em;
+  border-radius: 0.2rem;
+  background-color: var(--md-admonition-bg-color);
+}
+
+.reason-box h3 {
+  margin-top: 0;
+}
+
+.reason-box ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+#action-container {
+  margin-top: 2.5em;
+  padding-top: 1.5em;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+#action-links-container a {
+  margin: 0 0.75em;
+}

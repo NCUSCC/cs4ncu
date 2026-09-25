@@ -4,6 +4,9 @@
 #  Author: GitHub Copilot (guided by ywh555hhh)
 #  Date: 2025-08-27
 #
+#  Standard entrypoint: `uv run mtag`
+#  Generated output: `docs/tags.md`，请勿手动编辑。
+#
 #  Features:
 #  - Strict format and prefix validation.
 #  - Canonical case validation for all tags.
@@ -222,7 +225,8 @@ def interactive_unknown_tag_management(unknown_tags: dict, dictionary: dict) -> 
 def generate_index_file(dictionary: dict):
     """根据标签词典重新生成 docs/tags.md。"""
     print(f"\n🚀 正在生成新的标签索引文件：{TAGS_INDEX_FILE}...")
-    content = """# 标签索引
+    content = """<!-- 本页为生成文件，请勿手动编辑。如需更新，请运行 `uv run mtag sync`。 -->
+# 标签索引
 
 这里是本站点的所有内容标签，按不同维度进行分类展示。您可以点击任意标签，查看所有关联的文章。
 
@@ -270,8 +274,12 @@ def main_sync():
 
     if not unknown:
         print("\n✨ 未发现新的未知标签。所有标签均符合规范。")
-        choice = input("   是否需要强制重新生成 tags.md 文件？([y]es/[n]o): ").lower()
-        if choice == "y":
+        if sys.stdin.isatty():
+            choice = input("   是否需要强制重新生成 tags.md 文件？([y]es/[n]o): ").lower()
+            if choice == "y":
+                generate_index_file(dictionary)
+        else:
+            print("   检测到非交互环境，自动重新生成 tags.md 文件。")
             generate_index_file(dictionary)
         return
 
@@ -307,7 +315,7 @@ def main_check():
 
     if has_critical_errors or has_unknown:
         print(
-            "\n💡 检查失败。请在本地运行 `uv run tools/manage_tags.py sync` 来处理这些问题。"
+            "\n💡 检查失败。请在本地运行 `uv run mtag sync` 来处理这些问题。"
         )
         sys.exit(1)
     else:

@@ -1,3 +1,10 @@
+"""
+原始数据库构建脚本。
+
+生成文件：`tools/data/raw_database.json`，请勿手动编辑。
+如需更新，请运行本脚本重新生成。
+"""
+
 import typer
 import json
 import re
@@ -100,7 +107,7 @@ def extract_headings(content: str) -> list[str]:
 
 @app.command(help="构建原始数据库，提取所有文章的元数据和摘要。")
 def build_raw_db():
-    """扫描 docs/ 目录，提取每篇文章的关键信息，生成 raw_database.json。"""
+    """扫描 docs/ 目录，提取每篇文章的关键信息，生成 `tools/data/raw_database.json`。"""
     # (主函数逻辑保持不变，此处省略以保持简洁)
     # ... 你可以从上一个版本复制 build_raw_db 函数的完整内容 ...
     database = []
